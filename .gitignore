@@ -6,3 +6,4 @@
 *.png
 *.Rproj
 /data
+secret.R

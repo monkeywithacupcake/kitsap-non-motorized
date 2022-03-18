@@ -147,13 +147,13 @@ tmp <- clean_roadcl %>%
   mutate(R_miles = CRAB_EMP - CRAB_BMP,
          Portion_Known_Sidewalk = SW_miles/R_miles)
 
-#portion that we have with sidewalk data (< 1%)
+#portion that we have with sidewalk data
 nrow(tmp)/nrow(clean_roadcl) 
 #[1] 0.009929765
 sum(tmp$R_miles, na.rm = TRUE)/(sum(clean_roadcl$LENGTH, na.rm = TRUE)/5280)
 #[1] 0.007842078
 
 # combine that back with the roadcl data
-clean_roadcl_w_shoulders <- left_join(clean_roadcl, select(tmp, -R_miles))
+clean_roadcl_w_both <- left_join(clean_roadcl, select(tmp, -R_miles))
 
-
+# caution!! clean_sidwalks is NOT CLEAN

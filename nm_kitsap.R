@@ -8,7 +8,7 @@
 library(tidyverse)
 library(sf)
 library(mapboxapi)
-mapboxapi::mb_access_token("pk.eyJ1IjoibW9ua2V5d2l0aGFjdXBjYWtlIiwiYSI6ImNremV2MnY5cTNiaHUyb3IxMXRoOTZlaHAifQ.GrVFuSYzkpqbfDocZqmCiA",
+mapboxapi::mb_access_token(my_mapbox, #this will not work for you - need to use a mapbox access token
                            install = TRUE)
 
 library(leaflet)
@@ -36,7 +36,7 @@ mapbox_map <- leaflet() %>%
 #ped_complete <- psrc_bikeped$ped_complete
 
 
-
+# pick a school andn look around 
 clear_creek_elem <- mb_isochrone("3999 NW Sunde Rd Silverdale, WA 98383 ",
                            time = 1:30,
                            profile = "walking")
@@ -97,7 +97,7 @@ elem_school_facilities_arterials <- some_roads %>%
 # of a public elementary 
 
 # now try adding the other roads
-
+# this was before clean up of raods DO NOT USE
 kitsap_roads <- roadcl %>%
   st_transform(crs = 4326) %>%
   st_intersection(walking_isos) %>%
