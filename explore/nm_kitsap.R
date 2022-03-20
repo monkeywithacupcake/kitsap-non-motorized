@@ -2,7 +2,7 @@
 #
 # read in shapefiles
 #
-
+source("secret.R")
 #
 # prep
 library(tidyverse)
@@ -16,10 +16,15 @@ library(leaflet)
 # read in data
 psrc_bikeped <- sf::read_sf("./data/ElmerGeo_BikePed_042021.gdb")
 schools <- sf::read_sf("./data/schools")
-roadcl <- sf::read_sf("./data/roadcl")
-shoulders <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SHOULDERS")
-sidewalks <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SIDEWALKS")
+cities <- sf::read_sf("./data/cities")
+#roadcl <- sf::read_sf("./data/roadcl")
+#shoulders <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SHOULDERS")
+#sidewalks <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SIDEWALKS")
 
+st_erase <- function(x, y) {
+  #https://r-spatial.github.io/sf/reference/geos_binary_ops.html
+  st_difference(x, st_union(st_combine(y)))
+}
 
 
 
@@ -234,4 +239,122 @@ ggplot() +
   geom_sf(data = psrc_bikeped, aes(color = ped_complete)) 
 
 
+
+
+
+## let us look only at county schools
+cities_schools = lengths(st_intersects(schools, cities)) > 0
+schools <- schools %>% 
+  bind_cols(city = cities_schools)
+county_schools <- schools %>%
+  filter(!city) %>%
+  select(-city)
+county_pub_elem_schools <- county_schools %>%
+  filter(TYPE == "PUBLIC" & SCHL_TYPE == "ELEMENTARY") 
+# walking to elementary school
+walking_isos <- mb_isochrone(
+  county_pub_elem_schools,
+  profile = "walking",
+  time = 15,
+  id = "NAME" #this makes the value of id the name
+)
+st_crs(walking_isos)$epsg #4326
+some_roads <- psrc_bikeped %>%
+  st_transform(crs = 4326) %>%
+  st_intersection(walking_isos)
+my_pal <- 
+  leaflet::colorFactor(palette = c("red", "yellow", "green"), 
+                       levels = c("No Facilities", "Partial Facilities", "Complete Facilities"))
+
+
+leaflet::leaflet() %>%
+  addMapboxTiles(style_id = "light-v9", #"streets-v11",
+                 username = "mapbox")  %>%
+  addPolygons(data = walking_isos,
+              stroke = FALSE,
+              popup = ~id) %>%
+  addPolygons(data = some_roads,weight = 1,
+              smoothFactor = .3, fillOpacity = 1,
+              color = ~my_pal(some_roads$ped_complete)) %>%
+  addLegend(values = some_roads$ped_complete,
+            pal = my_pal,
+            title = "Pedestrian Facilities")
+
+base_map <- leaflet::leaflet() %>%
+  addMapboxTiles(style_id = "light-v9", #"streets-v11",
+                           username = "mapbox") 
+school_list <- county_pub_elem_schools %>% 
+  st_set_geometry(., NULL) %>% 
+  select(NAME)
+lapply(county_pub_elem_schools, function(school){
+  print(school$NAME)
+  print("blah blah blah")
+  })
+lapply(walking_isos, function(school_iso){
+  print(school_iso$id)
+  this_school <- filter(schools, NAME == school_iso$id)
+  school_roads <- some_roads %>%
+    st_intersection(school_iso)
+  base_map %>%
+    addPolygons(data = school_iso,
+                stroke = FALSE,
+                label = ~id) %>%
+    addPolygons(data = school_roads,weight = 1,
+                smoothFactor = .3, fillOpacity = 1,
+                color = ~my_pal(some_roads$ped_complete)) %>%
+    addMarkers(data = this_school, label = NAME) %>%
+    addLegend(values = school_roads$ped_complete,
+              pal = my_pal,
+              title = "Pedestrian Facilities")
+})
+yes_no_pal <- 
+  leaflet::colorFactor(palette = c("blue", "orange"), 
+                       levels = c("Yes", "No"))
+
+some_shoulders <- clean_roadcl_w_shoulders %>%
+  st_transform(crs = 4326) %>%
+  st_intersection(walking_isos)%>%
+  mutate(exist = ifelse(LEFT > 4 | RIGHT > 4, "Yes", "No")) 
+some_shoulders <- some_shoulders[some_shoulders$exist == "Yes",]
+library(htmltools)
+maps <- lapply(walking_isos$id,function(x){
+  school_iso <- walking_isos[walking_isos$id == x,]
+  school_roads <- some_roads %>%
+    st_intersection(school_iso)
+  school_shoulders <- some_shoulders %>%
+    st_intersection(school_iso) 
+  base_map %>%
+    addPolygons(data = school_iso,
+                stroke = FALSE,
+                label = ~id) %>%
+    addPolygons(data = school_shoulders,weight = 1,
+                smoothFactor = .3, fillOpacity = 1,
+                color = ~yes_no_pal(school_shoulders$exist)) %>%
+    addPolygons(data = school_roads,weight = 1,
+                smoothFactor = .3, fillOpacity = 1,
+                color = ~my_pal(school_roads$ped_complete)) %>%
+    addControl(html = paste0("<b>",x,"</b>"),position = c("topright")) %>%
+    addControl(html = paste0("<b>","15 minute walk","</b>"),position = c("topright")) %>%
+    addLegend(values = school_roads$ped_complete,
+              pal = my_pal,
+              position = c("bottomright"),
+              title = "Pedestrian Facilities\non Arterials") %>%
+    addLegend(values = school_shoulders$exist,
+            pal = yes_no_pal,
+            position = c("bottomright"),
+            title = "Shoulders > 4 feet")
+   
+})
+maps
+
+print(tagList(maps))
+
+elem_school_facilities_arterials <- some_roads %>% 
+  group_by(id, ped_complete) %>% summarise(FEET = sum(length_ft)) %>% 
+  st_set_geometry(., NULL)
+
+mapbox_map %>%
+  addPolygons(data = walking_isos,
+              stroke = FALSE,
+              popup = ~id)
 
