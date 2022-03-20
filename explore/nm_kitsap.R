@@ -21,10 +21,6 @@ cities <- sf::read_sf("./data/cities")
 #shoulders <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SHOULDERS")
 #sidewalks <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SIDEWALKS")
 
-st_erase <- function(x, y) {
-  #https://r-spatial.github.io/sf/reference/geos_binary_ops.html
-  st_difference(x, st_union(st_combine(y)))
-}
 
 
 
