@@ -115,26 +115,11 @@ clean_sidewalks <- clean_sidewalks %>%
          SW_BMP = BMP,
          SW_EMP = EMP,
          ROADLOGID = as.numeric(ROADLOGID))
-tmp <- clean_roadcl %>% 
-  st_set_geometry(., NULL) %>%  # we don't need to keep the geometry here
-  select(RD_LOG_ID, FULL_NAME, CRAB_BMP, CRAB_EMP) %>%
-  left_join(clean_sidewalks, by=c("RD_LOG_ID" = "ROADLOGID")) %>% 
-  filter((SW_BMP >= CRAB_BMP | SW_EMP <= CRAB_EMP) & SW_BMP < CRAB_EMP & SW_EMP > CRAB_BMP) %>% #or
-  mutate(SW_miles = if_else((SW_BMP >= CRAB_BMP & SW_EMP <= CRAB_EMP), SW_EMP - SW_BMP, # entirely within
-                            if_else(SW_BMP < CRAB_BMP & SW_EMP <= CRAB_EMP, SW_EMP - CRAB_BMP, # starts before roadcl
-                                    ifelse(SW_BMP < CRAB_BMP, CRAB_EMP - CRAB_BMP, # shoulder before after roadcl
-                                           CRAB_EMP - SW_BMP)))) %>% # start safter ends after roadcl
-  group_by(RD_LOG_ID, FULL_NAME, CRAB_BMP, CRAB_EMP, SW_LEFT, SW_RIGHT) %>%
-  summarise(SW_miles = sum(SW_miles, na.rm = TRUE), 
-            .groups = "drop") %>% # all of the shoulder included
-  rowwise() %>%
-  mutate(R_miles = CRAB_EMP - CRAB_BMP,
-         Portion_Known_Sidewalk = SW_miles/R_miles)
 
-tmp <- clean_roadcl %>% 
+tmp <- clean_roadcl_w_shoulders %>% 
   st_set_geometry(., NULL) %>%  # we don't need to keep the geometry here
   select(RD_LOG_ID, FULL_NAME, CRAB_BMP, CRAB_EMP) %>%
-  left_join(select(clean_sidewalks, -LINEAR_FEET), by=c("RD_LOG_ID" = "ROADLOGID")) %>% 
+  left_join(select(clean_sidewalks, -LINEAR_FEET, -LEFT, -RIGHT, -BMP, -EMP, -ROADNAME), by=c("RD_LOG_ID" = "ROADLOGID")) %>% 
   filter((SW_BMP >= CRAB_BMP | SW_EMP <= CRAB_EMP) & SW_BMP < CRAB_EMP & SW_EMP > CRAB_BMP) %>% #or
   mutate(SW_miles = if_else((SW_BMP >= CRAB_BMP & SW_EMP <= CRAB_EMP), SW_EMP - SW_BMP, # entirely within
                            if_else(SW_BMP < CRAB_BMP & SW_EMP <= CRAB_EMP, SW_EMP - CRAB_BMP, # starts before roadcl
@@ -154,6 +139,6 @@ sum(tmp$R_miles, na.rm = TRUE)/(sum(clean_roadcl$LENGTH, na.rm = TRUE)/5280)
 #[1] 0.007842078
 
 # combine that back with the roadcl data
-clean_roadcl_w_both <- left_join(clean_roadcl, select(tmp, -R_miles))
+clean_roadcl_w_both <- left_join(clean_roadcl_w_shoulders, select(tmp, -R_miles))
 
 # caution!! clean_sidwalks is NOT CLEAN

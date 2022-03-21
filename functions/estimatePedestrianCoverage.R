@@ -31,6 +31,29 @@ df %>%
          Percent_Complete = scales::percent(`Both Sides`/R_miles))
 
 
+
+########## 
+
+### what about sidewalks
+clean_roadcl_w_both %>%
+  st_set_geometry(., NULL) %>% 
+  select(SW_LEFT, SW_RIGHT, SW_miles, road_class, LENGTH) %>%
+  mutate(LEFT_m = SW_LEFT >= 0,
+         RIGHT_m = SW_RIGHT >= 0,
+         sw_status = if_else(LEFT_m | RIGHT_m, "One Side","Neither")) %>%
+  #filter(!is.na(SW_LEFT))
+  group_by(road_class, sw_status) %>%
+  summarise(R_miles = sum(LENGTH, na.rm = TRUE)/5280,
+            SW_miles = sum(SW_miles, na.rm = TRUE),
+            .groups = "drop") %>% 
+  pivot_wider(names_from = sw_status, values_from = SW_miles) %>%
+  group_by(road_class) %>%
+  summarise(across(everything(), .f = sum, na.rm = TRUE),
+            .groups = "drop") %>%
+  select(-`NA`) %>%
+  mutate(Unknown = R_miles - `One Side`)
+
+##########
 ## what about according to the PSRC data
 outline <- sf::read_sf("./data/outline")
 st_crs(outline)$epsg
