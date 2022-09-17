@@ -1,0 +1,248 @@
+---
+title: "DRAFT Example Kitsap County Pedestrian Facilities Metrics/Evaluation Report"
+output: html_document
+fig_caption: yes
+bibliography: metrics.bib
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r loaddata, cache = TRUE}
+this_dir <- '~/Documents/non-motorized/'
+source(paste0(this_dir,'functions/getCleanRoadCenterLine.R'))
+library(tidyverse)
+library(sf)
+
+nice_comma <- function(x){
+  format(round(as.numeric(x), 0), digits = 0, nsmall=0, big.mark=",") 
+}
+'%ni%' <- function(x,y)!('%in%'(x,y))
+
+groupcl <- clean_roadcl %>%  
+  st_set_geometry(., NULL) %>% 
+  group_by(RUCODE, road_class) %>% 
+  summarise(roads = n_distinct(FULL_NAME), 
+            segments = n(), 
+            length = sum(LENGTH, na.rm=TRUE))
+
+outline <- sf::read_sf(paste0(this_dir,"data/outline"))
+outline$plain = 1
+kitsap <- ggplot() + 
+  geom_sf(data = outline["plain"]) + 
+  theme_void()
+
+cities <- sf::read_sf(paste0(this_dir,"data/cities"))
+uga <- sf::read_sf(paste0(this_dir,"data/uga"))
+uga$isuga = 1
+lamird <- sf::read_sf(paste0(this_dir,"data/lamird"))
+lamird$islamird = 1
+community <- sf::read_sf(paste0(this_dir,"data/community"))
+
+# start plotting roads
+# want always to see same color for same type of road, so
+#['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf']
+# NOTE: Also make this a factor so that it is sorted properly!!
+road_col <- scale_color_manual(values = c("Freeway / Expressway" = "#e41a1c",
+                                          "Principal Arterial" = "#377eb8",
+                                          "Minor Arterial" = '#4daf4a',
+                                          "Major Collector" = "#984ea3",
+                                          "Minor Collector" ='#ff7f00',
+                                          "Local Access" = '#a65628',
+                                          "Rural Local Access (e.g. easement or other type)" = '#f781bf',
+                                          "Urban Local Access (e.g. easement or other type)" = '#ffff33'
+                                          ))
+clean_roadcl$road_class <- factor(clean_roadcl$road_class, levels = c("Freeway / Expressway",
+                                                                      "Principal Arterial",
+                                                                      "Minor Arterial",
+                                                                      "Major Collector",
+                                                                      "Minor Collector",
+                                                                      "Local Access",
+                                                                      "Rural Local Access (e.g. easement or other type)",
+                                                                      "Urban Local Access (e.g. easement or other type)"))
+
+# exclude Local Access EASEMENTS & Highway/Freeway
+road_df <-st_as_sf(clean_roadcl) %>%
+  filter(FCLASS %ni% c(100,110,1,2))
+
+ncdf <- road_df[!lengths(st_intersects(road_df, cities)), ]
+```
+
+## Purpose
+
+Kitsap County Pedestrian Facilities Metrics/Evaluation Report will:
+
+1. Provide a complete evaluation of pedestrian facilities across the county down to the segment and side of road level
+2. Present an aggregated quality rating for pedestrian facilities in specific areas
+3. Target missing facilities critical to connecting communities or to connecting residential to local services, recreation, and shops
+4. Show measure of progress (over time) of pedestrian facilities improvements (_starting with the second report_)
+
+## This Draft
+
+This draft example was prepared by the Kitsap County Non-Motorized Community Advisory Committee Special Committee on Pedestrian Metrics. It is NOT considered an authoritative source of these data and is NOT an official report of the county. 
+
+## Introduction
+
+This report provides a complete evaluation of pedestrian facilities in Kitsap County comparing the actual facilities to a minimum adequate pedestrian facility level. The minimum adequate pedestrian facility level is either a paved shoulder or a sidewalk of a certain minimum width - depending on the character of the road. 
+
+The intended audience is the people of Kitsap County and law/decision makers determining how to target limited funds for transportation development. 
+
+Not all road segments will be evaluated. This report excludes road segments that are: 
+
+ - Inside of cities (Bremerton, Port Orchard, etc.)^[Draft excludes segments that intersect with the Kitsap County incorporated city limits polygons[@kcgis_cities]]
+ - Local easements^[Draft assuming Function Class 100 or 110 in Road Centerline Data]
+ - Highways^[Draft Assuming Function Class 2 in Road Centerline Data]
+ - Speed limit > 50 MPH^[**these are not currently identified because the road centerline data does not include speed limit**]
+
+
+```{r, cache = TRUE}
+library(tidyverse)
+library(sf)
+kitsap_all_roads <- kitsap +
+  geom_sf(data = clean_roadcl, aes(color = road_class)) + 
+  road_col +
+  theme_void() +
+  labs(title = "Roads in Kitsap County",
+       subtitle = paste0(nice_comma(sum(clean_roadcl$LENGTH)/5280),
+                         " centerline miles"),
+       #caption = "Data source: Kitsap GIS",
+       color = "")
+
+kitsap_roads_no_cities <- kitsap + 
+  geom_sf(data = cities["NAME"], 
+          aes(fill="NAME"),
+          fill="#808080",
+          alpha = 0.5,
+          show.legend = FALSE) +
+  geom_sf(data = ncdf, aes(color = road_class), show.legend = FALSE) + 
+  road_col +
+  theme_void() +
+  labs(title = "No Cities, Easements, & Highways",
+       subtitle = paste0(nice_comma(sum(ncdf$LENGTH)/5280),
+                         " centerline miles"),
+       caption = "Data source: Kitsap GIS")
+
+library(patchwork)
+
+kitsap_all_roads + kitsap_roads_no_cities +
+  plot_layout(guides = 'collect') & theme(legend.position = 'bottom')
+
+#detach("patchwork", unload=TRUE)
+```
+
+## Data and Methods
+
+### Data
+
+Kitsap County maintains data on roads, sidewalks, and shoulders. These data all use the Kitsap County Public Works Road Log Id to identify road segments. Combined, these data allow for assessment of the quality of pedestrian facilities on Kitsap County roads. In addition, Kitsap County maintains data on the geographic representations of the cities, UGAs, LAMIRDs, and some key points of interest (like schools and parks) within the County.[@kcgis]
+
+### Method of Evaluation
+
+Road segments are the basis for evaluation because they are the smallest unit in common across the data and can be grouped together to form trips. Each road segment is evaluated individually. For each road segment, its adequate pedestrian facility level is based on its classification and the Kitsap County Road Standards Table 3.3 and 3.4.[@kc_road_standards]^[revisions of road standards should be followed by review and reevaluation of these criteria]
+
+Road segments that are explicitly excluded from the evaluation will be scored NA and not included in a summary of pedestrian metrics in an area (they will neither improve nor pull down the summary score).
+
+Pedestrian facilities on road segments will be scored based on the sum of the score of the sides. A side of the road for a segment will be scored:
+
+- 5 if it has a sidewalk or shoulder of adequate size (based on road classification & standards)
+- 3 if the sidewalk or shoulder is present and is minimum AASHTO requirement (like a 4 ft shoulder)
+- 1 if the sidewalk or shoulder is present and is narrower than AASHTO
+- 0 if none present or no data
+
+Therefore, segments with sidewalk or shoulder of adequate size (based on road classification) on both sides of road would receive a 10. Segments with no data or with no sidewalk or shoulder would receive a 0. 
+
+Any given area score will be a weighted average of the scores of the segments within the area. Weighting is by centerline linear feet per segment. A simple example is an area composed of 4 segments. 
+
+|Segment|Segment Score | Segment Centerline Linear Feet |
+|------|:-----|:-----|
+|A|6|100|
+|B|0|10|
+|C|10|50|
+|D|8|200|
+|*Total*| *?* | *360*|
+
+The Total Score would be the segment scores multiplied by their linear feet and then divided by the total linear feet of the area (360). For this example, we get a area score of 7.5 $$ 6 x 100 + 0 x 10 + 10 x 50 + 8 x 200 = 2700$$ $$2700/360 = 7.5$$
+
+Interpretation of Scores for Segments and for Areas
+
+|Score| Interpretation |
+|------|:-----|
+|10|Good|
+|5 TO 9 | Adequate^[For a segment, this means one side is good or both sides meet AASHTO minimums]|
+|3 AND 4 | Minimal^[For a segment, this means one side meets AASHTO minimums]|
+|Less than 3 |Poor|
+
+## Results
+
+### Overall
+
+```{r}
+shoulders <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SHOULDERS")
+sidewalks <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SIDEWALKS")
+tmp_sw_ncdf <- st_filter(sidewalks, ncdf, .predicate = st_intersects) %>% 
+  st_as_sf(.) %>%
+  filter(WIDTH > 0, LENG_FT > 0) %>%
+  mutate(LENGTH = LENG_FT,
+         TYPE = paste0("Sidewalk: ",WIDTH, " ft"),
+         RD_LOG_ID = as.integer(ROADLOGID)) %>%
+  select(RD_LOG_ID,SEGMENT_ID = SEG_ID,SIDE_OF_RO, WIDTH, LENGTH, TYPE)
+tmp_sh_ncdf <- st_filter(shoulders, ncdf, .predicate = st_intersects) %>% 
+  st_as_sf(.) %>%
+  filter(SHLDR_WIDT > 0, SHLDR_SURF == "ACP", DISTANCE_F > 0) %>%
+  mutate(LENGTH = DISTANCE_F,
+         TYPE = paste0("Paved Shoulder: ", SHLDR_WIDT," ft"),
+         RD_LOG_ID = as.integer(ROAD_LOG_I)) %>%
+  select(RD_LOG_ID,SEGMENT_ID = SEG_ID,SIDE_OF_RO, WIDTH = SHLDR_WIDT, LENGTH, TYPE)
+tmp_sw_sh <- bind_rows(tmp_sw_ncdf, tmp_sh_ncdf) 
+
+tmp_sw_sh %>%
+  st_set_geometry(., NULL) %>%
+  filter(LENGTH > 0) %>%
+  group_by(RD_LOG_ID, SEGMENT_ID, SIDE_OF_RO, TYPE) %>% # road_type) %>%
+  summarise(miles = sum(LENGTH, na.rm=TRUE)/5280) %>%
+  ungroup() %>%
+  pivot_wider(names_from = SIDE_OF_RO, values_from = "TYPE")
+  
+
+tmp_sw_ncdf %>%  
+  st_set_geometry(., NULL) %>%
+  filter(LENGTH > 0) %>%
+  group_by(SIDE_OF_RO, WIDTH) %>% # road_type) %>%
+  summarise(miles = sum(LENGTH, na.rm=TRUE)/5280)
+
+tmp_sh_ncdf %>%  
+  st_set_geometry(., NULL) %>%
+  filter(LENGTH > 0) %>%
+  group_by(SIDE_OF_RO, WIDTH) %>% # road_type) %>%
+  summarise(miles = sum(LENGTH, na.rm=TRUE)/5280)
+```
+
+
+```{r}
+kitsap +
+  geom_sf(data = tmp_sw_sh, aes(color = as.factor(TYPE))) + 
+  theme_void() +
+  labs(title = 'Kitsap County Sidewalk Data',
+       caption = "Data source: Kitsap GIS - data in development",
+       color = "Pedestrian Facilities")
+```
+
+
+### UGAs
+
+### LAMIRDs
+
+### Pedestrian Generators
+
+#### Schools
+
+#### Libraries
+
+#### Transit
+
+## Conclusion
+
+
+## References

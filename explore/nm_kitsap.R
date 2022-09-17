@@ -21,8 +21,31 @@ cities <- sf::read_sf("./data/cities")
 #shoulders <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SHOULDERS")
 #sidewalks <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SIDEWALKS")
 
-
-
+outline <- sf::read_sf("./data/outline")
+uga <- sf::read_sf("./data/uga")
+uga$isuga = 1
+outline$plain = 1
+plot(outline["plain"]) + plot(c_outline["NAME"])
+c_outline <- outline %>%
+  st_intersection(uga) %>%
+  st_intersection(cities)
+plot(c_outline["NAME"])
+ggplot() + 
+  geom_sf(data = outline["plain"]) + 
+  geom_sf(data = uga["isuga"], 
+          aes(fill="isuga"),
+          fill="#ccf2fe",
+          show.legend = FALSE) +
+  geom_sf(data = cities["NAME"], 
+          aes(fill="NAME"),
+          fill="#58D6FE",
+          show.legend = FALSE) +
+  geom_sf(data = schools, 
+          aes(fill="NAME"),
+          fill="#0000d8",
+          show.legend = FALSE) +
+  theme_void() 
+ggsave(filename = "cty.png",  bg = "transparent")
 
 mapbox_map <- leaflet() %>%
   addMapboxTiles(style_id = "light-v9",
@@ -58,7 +81,7 @@ pub_elem_schools <- schools %>%
 walking_isos <- mb_isochrone(
   pub_elem_schools,
   profile = "walking",
-  time = 30,
+  time = 15,
   id = "NAME" #this makes the value of id the name
 )
 st_crs(walking_isos)$epsg #4326
@@ -99,7 +122,7 @@ elem_school_facilities_arterials <- some_roads %>%
 
 # now try adding the other roads
 # this was before clean up of raods DO NOT USE
-kitsap_roads <- roadcl %>%
+kitsap_roads <- clean_roadcl_w_shoulders %>% #roadcl %>%
   st_transform(crs = 4326) %>%
   st_intersection(walking_isos) %>%
   mutate(road_type = recode(HIERARCHY,
@@ -139,7 +162,7 @@ getMapForSchool <- function(i) {
   school_iso <- mb_isochrone(
     pub_elem_schools[32,],
     profile = "walking",
-    time = 30,
+    time = 15,
     id = "NAME" #this makes the value of id the name
   )
   school_psrc <- psrc_bikeped %>%
@@ -353,4 +376,7 @@ mapbox_map %>%
   addPolygons(data = walking_isos,
               stroke = FALSE,
               popup = ~id)
+
+
+
 
