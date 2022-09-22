@@ -6,27 +6,33 @@ bibliography: metrics.bib
 date: "`r Sys.Date()`"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, message = FALSE)
+```{css, echo = FALSE}
+tfoot {
+  font-size: 80%;
+  font-style: italic;
+}
 ```
 
-```{r loaddata, cache = TRUE}
-this_dir <- '~/Documents/non-motorized/'
-source(paste0(this_dir,'functions/getCleanRoadCenterLine.R'))
-library(tidyverse)
-library(sf)
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, message = FALSE)
+options(scipen=999)
 
-nice_comma <- function(x){
-  format(round(as.numeric(x), 0), digits = 0, nsmall=0, big.mark=",") 
+options(knitr.kable.NA = '') # hides NA in printed table
+
+nice_comma <- function(x, dec = 0){
+  format(round(as.numeric(x), dec), digits = NULL, nsmall=dec, big.mark=",") 
 }
 '%ni%' <- function(x,y)!('%in%'(x,y))
 
-groupcl <- clean_roadcl %>%  
-  st_set_geometry(., NULL) %>% 
-  group_by(RUCODE, road_class) %>% 
-  summarise(roads = n_distinct(FULL_NAME), 
-            segments = n(), 
-            length = sum(LENGTH, na.rm=TRUE))
+this_dir <- '~/Documents/non-motorized/'
+
+```
+
+```{r loaddata, cache = TRUE}
+
+source(paste0(this_dir,'functions/getCleanRoadCenterLine.R'))
+library(tidyverse)
+library(sf)
 
 outline <- sf::read_sf(paste0(this_dir,"data/outline"))
 outline$plain = 1
@@ -65,10 +71,41 @@ clean_roadcl$road_class <- factor(clean_roadcl$road_class, levels = c("Freeway /
 
 # exclude Local Access EASEMENTS & Highway/Freeway
 road_df <-st_as_sf(clean_roadcl) %>%
-  filter(FCLASS %ni% c(100,110,1,2))
+  filter(FCLASS %ni% c(100,110,1,2), RD_LOG_ID > 0) 
 
 ncdf <- road_df[!lengths(st_intersects(road_df, cities)), ]
+#cdf <- st_intersection(road_df, cities)
+#ncdf2 <- st_as_sf(road_df) %>%
+#  mutate(rdseg = paste(SEGMENT_ID, RD_LOG_ID)) %>%
+#  filter(rdseg %ni% mutate(cdf,rdseg = paste(SEGMENT_ID, RD_LOG_ID))$rdseg)
 ```
+
+```{r swshdata, cache = TRUE}
+library(tidyverse)
+library(sf)
+shoulders <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SHOULDERS")
+sidewalks <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SIDEWALKS")
+
+sidewalks_nc <- sidewalks[!lengths(st_intersects(sidewalks, cities)), ]%>% 
+  st_as_sf(.) %>%
+  filter(WIDTH > 0, LENG_FT > 0) %>%
+  mutate(LENGTH = LENG_FT,
+         TYPE = paste0("Sidewalk: ",WIDTH, " ft"),
+         RD_LOG_ID = as.integer(ROADLOGID),
+         SEGMENT_ID = as.integer(SEG_ID)) %>%
+  select(RD_LOG_ID,SEGMENT_ID,BMP,EMP,SIDE_OF_RO, WIDTH, LENGTH, TYPE)
+shoulders_nc <- shoulders[!lengths(st_intersects(shoulders, cities)), ] %>% 
+  st_as_sf(.) %>%
+  filter(SHLDR_WIDT > 0, SHLDR_SURF == "ACP", DISTANCE_F > 0) %>%
+  mutate(LENGTH = DISTANCE_F,
+         TYPE = paste0("Paved Shoulder: ", SHLDR_WIDT," ft"),
+         RD_LOG_ID = as.integer(ROAD_LOG_I),
+         SEGMENT_ID = as.integer(SEG_ID)) %>%
+  select(RD_LOG_ID,SEGMENT_ID,BMP,EMP,SIDE_OF_RO, WIDTH = SHLDR_WIDT, LENGTH, TYPE)
+nc_sw_sh <- bind_rows(sidewalks_nc, shoulders_nc) 
+
+```
+
 
 ## Purpose
 
@@ -129,18 +166,266 @@ library(patchwork)
 kitsap_all_roads + kitsap_roads_no_cities +
   plot_layout(guides = 'collect') & theme(legend.position = 'bottom')
 
-#detach("patchwork", unload=TRUE)
+detach("package:patchwork", unload=TRUE)
 ```
 
 ## Data and Methods
 
-### Data
+### Data {#datasection}
 
 Kitsap County maintains data on roads, sidewalks, and shoulders. These data all use the Kitsap County Public Works Road Log Id to identify road segments. Combined, these data allow for assessment of the quality of pedestrian facilities on Kitsap County roads. In addition, Kitsap County maintains data on the geographic representations of the cities, UGAs, LAMIRDs, and some key points of interest (like schools and parks) within the County.[@kcgis]
 
+These are the roads that will be evaluated.
+```{r}
+library(tidyverse)
+library(sf)
+# groupcl <- ncdf %>% #clean_roadcl %>%  
+#   st_set_geometry(., NULL) %>% 
+#   group_by(RUCODE, road_class) %>% 
+#   summarise(roads = nice_comma(n_distinct(FULL_NAME)), 
+#             segments = nice_comma(n()), 
+#             length = nice_comma(sum(LENGTH, na.rm=TRUE)/5280,1),
+#             .groups = "drop") %>%
+#   mutate(RUCODE = factor(RUCODE, 
+#                          levels = c(0,1,2), 
+#                          labels = c("Unknown", "Rural", "Small Urban")))
+# 
+# colnames(groupcl) <- c("Rural/Urban", "Road Classification", 
+#                        "Count of Roads", "Count of Segments", 
+#                        "Length in Miles") 
+groupcl <- ncdf %>% #clean_roadcl %>%  
+  st_set_geometry(., NULL) %>% 
+  group_by(road_class) %>% 
+  summarise(roads = nice_comma(n_distinct(FULL_NAME)), 
+            segments = nice_comma(n()), 
+            length = nice_comma(sum(LENGTH, na.rm=TRUE)/5280, 1),
+            .groups = "drop") 
+df <- ncdf %>% #clean_roadcl %>%  
+  st_set_geometry(., NULL) %>% 
+  group_by(road_class = "Total") %>% 
+  summarise(roads = nice_comma(n_distinct(FULL_NAME)), 
+            segments = nice_comma(n()), 
+            length = nice_comma(sum(LENGTH, na.rm=TRUE)/5280, 1),
+            .groups = "drop") 
+groupcl <- bind_rows(groupcl, df)
+
+colnames(groupcl) <- c("Road Classification", 
+                       "Count of Roads", "Count of Segments", 
+                       "Length in Miles") 
+knitr::kable(groupcl, 
+             caption = "Roads by Class in Kitsap County, excluding cities, highways, and easements")
+```
+
+These are the sidewalk and shoulders also outside of Cities. Single sides shown. In the data, there are zero segments with sidewalks on both sides of the road. This is one example where we know the data are incomplete; for example, Silverdale Way is not in a city and is known to have sidewalks on both sides.^[For the specific example of Silverdale Way, there are three entries in the sidewalk data with the Road Log Id of 19515 that matches Silverdale Way, and they all indicate sidewalks on the left side of the road. Further note, all three have a segment ID of 0, so they will not match any of the segments in the roads data if we match on Road Log Id and Segment ID - an entirely different problem with the data that is not isolated to Silverdale Way. `r round(sum(nc_sw_sh$SEGMENT_ID ==0)/nrow(nc_sw_sh)*100,1)`% of the sidewalk data do not have segment ids.] For this draft example report it is okay; if the initial report is completed with the incomplete data, it will present a poorer overall condition of pedestrian facilities than is in place.
+
+```{r}
+df <- sidewalks_nc %>%  
+  st_set_geometry(., NULL) %>%
+  mutate(`Width in Feet` = paste(WIDTH, "ft")) %>%
+  group_by(WIDTH, `Width in Feet` ) %>% # road_type) %>%
+  summarise(miles = nice_comma(sum(LENGTH, na.rm=TRUE)/5280,1),
+            .groups = "drop") %>%
+  select(-WIDTH)
+df2 <- sidewalks_nc %>%  
+  st_set_geometry(., NULL) %>%
+  mutate(`Width in Feet` = "Total", WIDTH = 100) %>%
+  group_by(WIDTH, `Width in Feet` ) %>% # road_type) %>%
+  summarise(miles = nice_comma(sum(LENGTH, na.rm=TRUE)/5280,1),
+            .groups = "drop") %>%
+  select(-WIDTH)
+
+
+df <- bind_rows(df, df2)
+
+knitr::kable(df, 
+             caption = "Miles of Sidewalks by Width of Sidewalk (single side)")
+```
+
+```{r}
+df <- shoulders_nc %>%  
+  st_set_geometry(., NULL) %>%
+  mutate(`Width in Feet` = paste(WIDTH, "ft")) %>%
+  group_by(WIDTH, `Width in Feet` ) %>% # road_type) %>%
+  summarise(miles = nice_comma(sum(LENGTH, na.rm=TRUE)/5280,1),
+            .groups = "drop") %>%
+  select(-WIDTH)
+df2 <- shoulders_nc %>%  
+  st_set_geometry(., NULL) %>%
+  mutate(`Width in Feet` = "Total", WIDTH = 100) %>%
+  group_by(WIDTH, `Width in Feet` ) %>% # road_type) %>%
+  summarise(miles = nice_comma(sum(LENGTH, na.rm=TRUE)/5280,1),
+            .groups = "drop") %>%
+  select(-WIDTH)
+
+df <- bind_rows(df, df2)
+
+knitr::kable(df, 
+             caption = "Miles of Paved Shoulder by Width of Shoulder (single side)")
+```
+
+```{r}
+# tmp_sw_sh %>%
+#   st_set_geometry(., NULL) %>%
+#   group_by(RD_LOG_ID, SEGMENT_ID, SIDE_OF_RO, TYPE) %>% # road_type) %>%
+#   summarise(miles = sum(LENGTH, na.rm=TRUE)/5280) %>%
+#   ungroup() %>%
+#   pivot_wider(names_from = SIDE_OF_RO, values_from = "TYPE")
+#%>%
+  #mutate(both = !is.na(RIGHT) & !is.na(LEFT)) %>%
+  #group_by(both) %>%
+  #summarise(n = n())
+  
+
+# tmp_sw_ncdf %>%  
+#   st_set_geometry(., NULL) %>%
+#   filter(LENGTH > 0) %>%
+#   group_by(SIDE_OF_RO, WIDTH) %>% # road_type) %>%
+#   summarise(miles = sum(LENGTH, na.rm=TRUE)/5280)
+# 
+# tmp_sh_ncdf %>%  
+#   st_set_geometry(., NULL) %>%
+#   filter(LENGTH > 0) %>%
+#   group_by(SIDE_OF_RO, WIDTH) %>% # road_type) %>%
+#   summarise(miles = sum(LENGTH, na.rm=TRUE)/5280)
+```
+
+#### Combining the Data
+
+In order to do this evaluation, we must combine the roads data (which has information on the class and setting of roads) with the sidewalk and shoulder data (with information about the pedestrian facilities). However, the most obvious methods of combination fail. 
+
+##### Matching on Road Log Id is good but insufficient
+
+All of the data sets appear to use the same set of road log IDs from public works. Unfortunately, knowing that there is a shoulder or sidewalk somewhere on a road does not get to how much of that road has the sidewalk or shoulder. 
+
+This diagnostic and ugly plot is intended to show the coverage of road log id across the sidewalk and shoulder data sets compared to the raod data. While the sidewalk and shoulder data are more sparse, the range is consistent.
+
+```{r}
+sw_plot <- ggplot(st_set_geometry(nc_sw_sh,NULL), 
+                  aes(x = as.numeric(row.names(nc_sw_sh)), y = RD_LOG_ID)) + 
+  geom_point() +
+  labs(title = "Sidewalk and Shoulder Data",
+       x = "") +
+  expand_limits(y = c(0,100000))
+road_plot <- ggplot(st_set_geometry(ncdf,NULL), 
+                  aes(x = as.numeric(row.names(ncdf)), y = RD_LOG_ID)) + 
+  geom_point() +
+  labs(title = "Roads Data",
+       x = "")
+
+library(patchwork)
+
+sw_plot + road_plot
+
+detach("package:patchwork", unload=TRUE)
+rm(sw_plot)
+rm(road_plot)
+```
+
+```{r}
+match_road_id <- st_set_geometry(sidewalks,NULL) %>%
+  mutate(RD_LOG_ID = as.integer(ROADLOGID)) %>%
+  left_join(select(st_set_geometry(clean_roadcl,NULL),RD_LOG_ID,FULL_NAME)) %>%
+  group_by(RD_LOG_ID, ROADNAME, SIDE_OF_RO, WIDTH) %>%
+  summarise(n = sum(!is.na(FULL_NAME)), .groups = "drop") %>% 
+  filter(n == 0, WIDTH > 0)
+```
+
+
+The most obvious smaller match is the segment id. However, 
+**NOTE: We cannot actually use the SEGMENT ID in this draft report because it does not have the same meaning in the sidewalk and shoulder data as it has in the road data. The following plots are diagnostic but show that the sidewalks and shoulders data do not have segment ids covering the same spectrum as the road data.
+
+```{r}
+sw_plot <- ggplot(st_set_geometry(nc_sw_sh,NULL), 
+                  aes(x = as.numeric(row.names(nc_sw_sh)), y = SEGMENT_ID)) + 
+  geom_point() +
+  labs(title = "Sidewalk and Shoulder Data",
+       x = "")+
+  expand_limits(y = c(0,20000))
+road_plot <- ggplot(st_set_geometry(ncdf,NULL), 
+                  aes(x = as.numeric(row.names(ncdf)), y = SEGMENT_ID)) + 
+  geom_point() +
+  labs(title = "Roads Data",
+       x = "")
+
+library(patchwork)
+
+sw_plot + road_plot
+
+detach("package:patchwork", unload=TRUE)
+rm(sw_plot)
+rm(road_plot)
+```
+
+The segment ids are clearly not from the same space, but the road log ids are consistent. 
+
+
+
+```{r}
+# combine the sidewalk and shoulder and roads data
+```
+
+
 ### Method of Evaluation
 
-Road segments are the basis for evaluation because they are the smallest unit in common across the data and can be grouped together to form trips. Each road segment is evaluated individually. For each road segment, its adequate pedestrian facility level is based on its classification and the Kitsap County Road Standards Table 3.3 and 3.4.[@kc_road_standards]^[revisions of road standards should be followed by review and reevaluation of these criteria]
+Road segments are the basis for evaluation because they are the smallest unit in common across the data and can be grouped together to form trips. Actually matching up the data for roads, shoulders, and sidewalks will prove to be a more complicated task than it appears at first blush. As noted in the [Data section](#datasection), the Segment IDs in the shoulder and sidewalk data do not cover the range of segments as in the road data. Here, we join based on the road log id and beginning and ending mileage point
+
+Each road segment is evaluated individually. For each road segment, its adequate pedestrian facility level is based on its classification and the Kitsap County Road Standards Table 3.3 and 3.4.[@kc_road_standards]^[revisions of road standards should be followed by review and reevaluation of these criteria]
+
+```{r tbl_standards}
+# Road Standards Tables 3.3 and 3.4
+library(tidyverse)
+library(kableExtra)
+road_standards_given <- tribble(
+  ~setting, ~class, ~characteristics, ~sidewalk, ~shoulder, ~note,
+  "Urban", "Local Road", NA, 5, NA,NA,
+  "Urban", "Local Sub-collector", NA, 5, NA,"sub-collector is not defined in road data",
+  "Urban", "Arterial", NA, 6, NA,NA,
+  "Urban", "Collector", NA, 6, NA,NA,
+  "Rural", "Local Road", NA, NA, 3,NA,
+  "Rural", "Local Sub-collector", NA, NA, 4,"sub-collector is not defined in road data",
+  "Rural", "Collector", "ADT 400-750", NA, 3,"ADT not defined in road data",
+  "Rural", "Collector", "ADT 751-1000", NA, 4,"ADT not defined in road data",
+  "Rural", "Collector", "DHV 100-200", NA, 6,"DHV not defined in road data",
+  "Rural", "Collector", "DHV > 200", NA, 8,"DHV not defined in road data",
+  "Rural", "Minor Arterial", "DHV < 100", NA, 4,"DHV not defined in road data",
+  "Rural", "Minor Arterial", "DHV 100-200", NA, 6,"DHV not defined in road data",
+  "Rural", "Minor Arterial", "DHV > 200", NA, 8,"DHV not defined in road data",
+  "Rural", "Principal Arterial", "DHV <200", NA, 6,"DHV not defined in road data",
+  "Rural", "Principal Arterial", "DHV > 200", NA, 8,"DHV not defined in road data",
+)
+
+knitr::kable(road_standards_given,
+             caption = "Summary of Tables 3.3 and 3.4 in Kitsap County Road Standards [@kc_road_standards]")  %>%
+   footnote(general = "Within the road standards, the minimum shoulder width may be reduced to the minimum required by AASHTO, which would be 4-8 feet, depending on the ADT")
+```
+
+
+Because of all of the items that are not available in the road data at this time, this draft makes some assumptions to allow for an evaluation. When the information is known, a more accurate evaluation can be made. 
+
+
+```{r tbl_standards_simple}
+# Road Standards Tables 3.3 and 3.4 translated for data we have
+library(tidyverse)
+library(kableExtra)
+road_standards <- tribble(
+  ~setting, ~class, ~sidewalk, ~shoulder,
+  "Urban", "Local Access", 5, NA,
+  "Urban", "Collector",6, NA,
+  "Urban", "Arterial", 6, NA,
+  "Rural", "Local Access", NA, 3,
+  "Rural", "Minor Collector",NA, 3,
+  "Rural", "Major Collector",NA, 4,
+  "Rural", "Minor Arterial", NA, 4,
+  "Rural", "Principal Arterial", NA, 6,
+)
+
+knitr::kable(road_standards,
+             caption = "Simplified Assumptions to Allow for Evaluation]")  %>%
+   footnote(general = "This is only a simplification to allow for an evaluation without knowledge of ADT or DHV on the roads under evaluation")
+```
+
+
+
 
 Road segments that are explicitly excluded from the evaluation will be scored NA and not included in a summary of pedestrian metrics in an area (they will neither improve nor pull down the summary score).
 
@@ -176,63 +461,143 @@ Interpretation of Scores for Segments and for Areas
 
 ## Results
 
+```{r compare_standards}
+# take the road cl data for the roads under evaluation
+# remove geometry
+# merge with standards to get requirement based on setting (RUCODE) and class (road_class)
+# merge with sidewalk and shoulder data to get what exists
+
+library(tidyverse)
+library(sf)
+
+road_standards <- road_standards %>%
+  rename(standard_sidewalk = sidewalk, 
+         standard_shoulder = shoulder, 
+         road_class = class)
+  # pivot_longer(cols=c(sidewalk, shoulder), 
+  #              names_to = "Standard Pedestrian Facility",
+  #              values_to = "Standard Width") %>% filter
+sw_ncdf <- sidewalks_nc %>%
+  mutate(sidewalk_right = ifelse(SIDE_OF_RO == "RIGHT", WIDTH, NA),
+         sidewalk_left = ifelse(SIDE_OF_RO == "LEFT", WIDTH, NA)) %>%
+  select(RD_LOG_ID, SEGMENT_ID, sidewalk_right, sidewalk_left)
+sh_ncdf <- shoulders_nc %>%
+  mutate(shoulder_right = ifelse(SIDE_OF_RO == "RIGHT", WIDTH, NA),
+         shoulder_left = ifelse(SIDE_OF_RO == "LEFT", WIDTH, NA)) %>%
+  select(RD_LOG_ID, SEGMENT_ID, shoulder_right, shoulder_left)
+sw_sh <- full_join(st_set_geometry(sw_ncdf, NULL), 
+                   st_set_geometry(sh_ncdf, NULL)
+                   )
+
+getSideScore <- function(standard_sidewalk, standard_shoulder,
+                         sidewalk, shoulder) {
+  ifelse(is.na(standard_sidewalk), # dealing with shoulder
+         case_when(
+         shoulder >= standard_shoulder ~ 5,
+         shoulder < standard_shoulder & shoulder > 4 ~ 3,
+         shoulder < standard_shoulder & shoulder > 0 ~ 1,
+         TRUE ~ 0
+         ),
+         case_when(
+         sidewalk >= standard_sidewalk ~ 5,
+         sidewalk < standard_sidewalk & sidewalk > 4 ~ 3,
+         sidewalk < standard_sidewalk & sidewalk > 0 ~ 1,
+         TRUE ~ 0
+         )
+  )
+}
+
+ncdf_w_all_nogeo <- ncdf %>% #clean_roadcl %>%  
+  st_set_geometry(., NULL) %>% 
+  mutate(setting = ifelse(RUCODE == 1, "Rural", 
+                          ifelse(RUCODE == 2, "Urban", "Unknown"))) %>%
+  left_join(road_standards) %>%
+  left_join(sw_sh) %>%
+  mutate(score_left = getSideScore(standard_sidewalk, standard_shoulder, 
+                                   sidewalk_left, shoulder_left),
+         score_right = getSideScore(standard_sidewalk, standard_shoulder, 
+                                   sidewalk_right, shoulder_right),
+         score = score_left + score_right)
+
+# ncdf %>% 
+#   st_set_geometry(., NULL) %>% 
+#   select(RD_LOG_ID, 
+#          BMP = CRAB_BMP, 
+#          EMP = CRAB_EMP,
+#          LENGTH) %>%
+#   left_join(select(st_set_geometry(shoulders_nc, NULL), RD_LOG_ID = ROAD_LOG_I, 
+#                    BMP, EMP,
+#                    SIDE_OF_RO, SHLDR_WIDT, SHLDR_SURF)) %>%
+#   group_by(SHLDR_SURF, SHLDR_WIDT) %>%
+#   summarise(n = n(), LENGTH = sum(LENGTH, na.rm = TRUE)/5280)
+# 
+# ncdf %>% 
+#   st_set_geometry(., NULL) %>% 
+#   select(RD_LOG_ID, FULL_NAME,
+#          BMP = CRAB_BMP, 
+#          EMP = CRAB_EMP,
+#          LENGTH) %>%
+#   left_join(select(mutate(st_set_geometry(sidewalks_nc, NULL), RD_LOG_ID = as.integer(ROADLOGID)), 
+#                    RD_LOG_ID,
+#                    BMP, EMP,
+#                    SIDE_OF_RO, WIDTH)) %>%
+#   filter(!is.na(WIDTH) & WIDTH > 0) %>%
+#   group_by(RD_LOG_ID, FULL_NAME, `Sidewalk Width` = WIDTH) %>%
+#   summarise(n = n(), LENGTH = sum(LENGTH, na.rm = TRUE)/5280)
+
+
+
+knitr::kable(
+  ncdf_w_all_nogeo %>%
+  group_by(setting, road_class, score) %>% 
+  summarise(roads = nice_comma(n_distinct(FULL_NAME)), 
+            segments = nice_comma(n()), 
+            length = nice_comma(sum(LENGTH, na.rm=TRUE)/5280, 1),
+            .groups = "drop") 
+  )
+```
+
+
 ### Overall
 
-```{r}
-shoulders <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SHOULDERS")
-sidewalks <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SIDEWALKS")
-tmp_sw_ncdf <- st_filter(sidewalks, ncdf, .predicate = st_intersects) %>% 
-  st_as_sf(.) %>%
-  filter(WIDTH > 0, LENG_FT > 0) %>%
-  mutate(LENGTH = LENG_FT,
-         TYPE = paste0("Sidewalk: ",WIDTH, " ft"),
-         RD_LOG_ID = as.integer(ROADLOGID)) %>%
-  select(RD_LOG_ID,SEGMENT_ID = SEG_ID,SIDE_OF_RO, WIDTH, LENGTH, TYPE)
-tmp_sh_ncdf <- st_filter(shoulders, ncdf, .predicate = st_intersects) %>% 
-  st_as_sf(.) %>%
-  filter(SHLDR_WIDT > 0, SHLDR_SURF == "ACP", DISTANCE_F > 0) %>%
-  mutate(LENGTH = DISTANCE_F,
-         TYPE = paste0("Paved Shoulder: ", SHLDR_WIDT," ft"),
-         RD_LOG_ID = as.integer(ROAD_LOG_I)) %>%
-  select(RD_LOG_ID,SEGMENT_ID = SEG_ID,SIDE_OF_RO, WIDTH = SHLDR_WIDT, LENGTH, TYPE)
-tmp_sw_sh <- bind_rows(tmp_sw_ncdf, tmp_sh_ncdf) 
-
-tmp_sw_sh %>%
-  st_set_geometry(., NULL) %>%
-  filter(LENGTH > 0) %>%
-  group_by(RD_LOG_ID, SEGMENT_ID, SIDE_OF_RO, TYPE) %>% # road_type) %>%
-  summarise(miles = sum(LENGTH, na.rm=TRUE)/5280) %>%
-  ungroup() %>%
-  pivot_wider(names_from = SIDE_OF_RO, values_from = "TYPE")
-  
-
-tmp_sw_ncdf %>%  
-  st_set_geometry(., NULL) %>%
-  filter(LENGTH > 0) %>%
-  group_by(SIDE_OF_RO, WIDTH) %>% # road_type) %>%
-  summarise(miles = sum(LENGTH, na.rm=TRUE)/5280)
-
-tmp_sh_ncdf %>%  
-  st_set_geometry(., NULL) %>%
-  filter(LENGTH > 0) %>%
-  group_by(SIDE_OF_RO, WIDTH) %>% # road_type) %>%
-  summarise(miles = sum(LENGTH, na.rm=TRUE)/5280)
-```
 
 
-```{r}
-kitsap +
-  geom_sf(data = tmp_sw_sh, aes(color = as.factor(TYPE))) + 
-  theme_void() +
-  labs(title = 'Kitsap County Sidewalk Data',
-       caption = "Data source: Kitsap GIS - data in development",
-       color = "Pedestrian Facilities")
-```
+
 
 
 ### UGAs
 
 ### LAMIRDs
+
+```{r plot_lamirds}
+kitsap +
+  #geom_sf(data = nc_sw_sh, aes(color = as.factor(TYPE))) + 
+  geom_sf(data = lamird, aes(fill = PLAN_AREA), alpha = 0.5) +
+  theme_void() +
+  labs(title = 'Kitsap County LAMIRDS',
+       caption = "Data source: Kitsap GIS - data in development",
+       color = "LAMIRDS")
+
+```
+
+```{r loop_lamirds,include=FALSE,echo=FALSE}
+the_lamirds <- unique(st_set_geometry(lamird, NULL)$PLAN_AREA)
+df <- st_as_sf(lamird) %>% mutate(tomatch = PLAN_AREA)
+                                     
+expanded_child <- lapply(
+    the_lamirds,
+    function(x) {
+      knitr::knit_expand(file = "child_single_geo.Rmd",
+                                   current_geo = x )
+                                   
+    }
+    )
+
+parsed_child <- knitr::knit_child(text = unlist(expanded_child))
+
+```
+
+`r parsed_child`
 
 ### Pedestrian Generators
 
