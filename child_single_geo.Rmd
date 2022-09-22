@@ -1,0 +1,65 @@
+
+
+# {{current_geo}}
+
+```{r} 
+library(broom)
+this_geo <- st_as_sf(df) %>% filter(tomatch == "{{current_geo}}") 
+this_roads <- st_intersection(road_df, st_buffer(this_geo,0))
+this_sw_sh <- st_intersection(nc_sw_sh, st_buffer(this_geo,0))
+
+this_test <- st_intersection(select(this_roads, RD_LOG_ID, FULL_NAME), 
+                             st_buffer(this_sw_sh, 30))
+#this_sw_sh <- st_as_sf(this_sw_sh) %>% 
+#  mutate(f = ifelse("{{current_geo}}" != "Manchester" & RD_LOG_ID == 49435, 1, 0)) %>%
+ # filter(f == 0)
+
+this_miles <- format(round(as.numeric(sum(this_roads$LENGTH)/5280), 1), 
+                           digits = 1, nsmall=0, big.mark=",")
+
+ggplot() +
+  geom_sf(data = this_geo, aes(fill = 1), alpha = 0.5, show.legend = FALSE) +
+  geom_sf(data = this_test, aes(color = as.factor(TYPE))) 
+  geom_sf(data = st_as_sf(this_roads) %>% filter(RD_LOG_ID == 49435), 
+          aes(fill = 1, color = 1)) +
+  geom_sf(data = st_as_sf(this_sw_sh) %>% filter(RD_LOG_ID == 49435), 
+          aes(fill = 2, color = 2))
+```
+
+Within this area, there are `r this_miles` centerline road miles. 
+```{r }
+road_sum <- this_roads %>%  
+  st_set_geometry(., NULL) %>% 
+  group_by(road_class) %>%
+  summarise(miles = format(round(as.numeric(sum(LENGTH)/5280), 1), 
+                           digits = 1, nsmall=0, big.mark=","))
+colnames(road_sum) <- c("Road Class", "Miles")
+knitr::kable(road_sum)
+```
+
+```{r }
+p1 <- kitsap +
+  geom_sf(data = this_geo, aes(fill = 1), alpha = 0.5, show.legend = FALSE) +
+  geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) +
+  geom_sf(data = this_sw_sh, aes(color = as.factor(TYPE))) + 
+  theme_void() +
+  labs(title = paste("Map for","{{current_geo}}"),
+       caption = "Data source: Kitsap GIS - data in development",
+       color = "Pedestrian Facilities")
+
+
+p2 <- ggplot() +
+  geom_sf(data = this_geo, aes(fill = 1), alpha = 0.5, show.legend = FALSE) +
+  geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
+  geom_sf(data = this_sw_sh, aes(color = as.factor(TYPE)), show.legend = FALSE) +
+  theme_void()
+
+library(patchwork)
+
+p1 + p2 +
+  plot_layout(guides = 'collect') #+
+  #labs(title = paste("Map for","{{current_geo}}"))
+
+detach("package:patchwork", unload=TRUE)
+
+```
