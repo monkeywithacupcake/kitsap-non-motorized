@@ -104,6 +104,39 @@ shoulders_nc <- shoulders[!lengths(st_intersects(shoulders, cities)), ] %>%
   select(RD_LOG_ID,SEGMENT_ID,BMP,EMP,SIDE_OF_RO, WIDTH = SHLDR_WIDT, LENGTH, TYPE)
 nc_sw_sh <- bind_rows(sidewalks_nc, shoulders_nc) 
 
+# NOTE: Also make this a factor so that it is sorted properly!!
+sw_sh_col <- scale_color_manual(values = c("Sidewalk: 3 ft"="#E41A1C",
+                                           "Sidewalk: 4 ft"="#874F6F",
+                                           "Sidewalk: 5 ft"="#3881B0",
+                                           "Sidewalk: 8 ft"="#449B75",
+                                           "Paved Shoulder: 1 ft"="#56A255",
+                                           "Paved Shoulder: 2 ft"="#7E6E85",
+                                           "Paved Shoulder: 3 ft"="#AC5782",
+                                           "Paved Shoulder: 4 ft"="#E3712B", 
+                                           "Paved Shoulder: 5 ft"="#FFA10D",
+                                           "Paved Shoulder: 6 ft"="#FFE528",
+                                           "Paved Shoulder: 7 ft"="#E1C62F",
+                                           "Paved Shoulder: 8 ft"="#B16C29",
+                                           "Paved Shoulder: 10 ft"="#C66764",
+                                           "Paved Shoulder: 12 ft"="#F17EB4",
+                                           "Paved Shoulder: 15 ft"="#CB8CAD",
+                                           "Paved Shoulder: 17 ft"="#999999"))
+nc_sw_sh$TYPE <- factor(nc_sw_sh$TYPE, levels = c("Sidewalk: 3 ft",
+                                                  "Sidewalk: 4 ft",
+                                                  "Sidewalk: 5 ft",
+                                                  "Sidewalk: 8 ft" ,
+                                                  "Paved Shoulder: 1 ft",
+                                                  "Paved Shoulder: 2 ft",
+                                                  "Paved Shoulder: 3 ft",
+                                                  "Paved Shoulder: 4 ft", 
+                                                  "Paved Shoulder: 5 ft",
+                                                  "Paved Shoulder: 6 ft",
+                                                  "Paved Shoulder: 7 ft",
+                                                  "Paved Shoulder: 8 ft",
+                                                  "Paved Shoulder: 10 ft",
+                                                  "Paved Shoulder: 12 ft",
+                                                  "Paved Shoulder: 15 ft",
+                                                  "Paved Shoulder: 17 ft"))
 ```
 
 
