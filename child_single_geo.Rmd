@@ -16,8 +16,12 @@ has_both <- has_roads & has_sw_sh
 # do not evaluate most of this child if does not
 ```
 
-```{r, eval=!has_both}
-cat("This area does not have either known roads or known sidewalks or shoulders")
+```{r, results = 'asis', eval=!has_roads}
+cat("This area does not have either known roads.")
+```
+
+```{r, results = 'asis', eval=!has_sw_sh}
+cat("This area does not have known sidewalks or shoulders.")
 ```
 
 ```{r, eval=has_sw_sh & !has_roads}
