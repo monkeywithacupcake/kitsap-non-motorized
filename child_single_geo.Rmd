@@ -8,40 +8,99 @@ this_geo <- st_as_sf(df) %>% filter(tomatch == "{{current_geo}}")
 this_roads <- st_intersection(road_df, st_buffer(this_geo,0))
 this_sw_sh <- st_intersection(nc_sw_sh, st_buffer(this_geo,0))
 
-this_test <- st_intersection(select(this_roads, RD_LOG_ID, FULL_NAME), 
-                             st_buffer(this_sw_sh, 30))
-#this_sw_sh <- st_as_sf(this_sw_sh) %>% 
-#  mutate(f = ifelse("{{current_geo}}" != "Manchester" & RD_LOG_ID == 49435, 1, 0)) %>%
- # filter(f == 0)
+# identified a mislabeled RD_LOG_ID in the sidewalk data for Madrone (as Main)
+x <- st_as_sf(this_sw_sh) %>% filter(RD_LOG_ID == 49435 & LENGTH > 1000)
+x$RD_LOG_ID <- 43809
+# x will have 0 rows if we are not dealing with Manchester
 
-this_miles <- format(round(as.numeric(sum(this_roads$LENGTH)/5280), 1), 
-                           digits = 1, nsmall=0, big.mark=",")
+# comb will have repeating segments when there are sh/sw on both sides
+this_comb <- st_intersection(select(this_roads, RD_LOG_ID_R = RD_LOG_ID, 
+                                     FULL_NAME_R = FULL_NAME, 
+                                     road_class, 
+                                     SEGMENT_ID_R = SEGMENT_ID), 
+                             st_buffer(bind_rows(this_sw_sh, x), 50, endCapStyle="FLAT")) %>% 
+  filter(RD_LOG_ID == RD_LOG_ID_R) %>%
+  distinct(RD_LOG_ID_R, SEGMENT_ID_R, RD_LOG_ID, SEGMENT_ID, SIDE_OF_RO, .keep_all = TRUE) %>%
+  mutate(distance = st_length(.))
 
-ggplot() +
-  geom_sf(data = this_geo, aes(fill = 1), alpha = 0.5, show.legend = FALSE) +
-  geom_sf(data = this_test, aes(color = as.factor(TYPE))) 
-  geom_sf(data = st_as_sf(this_roads) %>% filter(RD_LOG_ID == 49435), 
-          aes(fill = 1, color = 1)) +
-  geom_sf(data = st_as_sf(this_sw_sh) %>% filter(RD_LOG_ID == 49435), 
-          aes(fill = 2, color = 2))
+# this_centerline_miles is CENTERLINE MILES TOTAL
+this_centerline_miles <- format(round(as.numeric(sum(st_length(this_roads))/5280), 1), 
+                           digits = 1, nsmall=1, big.mark=",")
+# this_sw/sh_miles is RIGHT LEFT MILES with SW or SH TOTAL
+this_sw_sh_miles <- format(round(as.numeric(sum(st_length(this_sw_sh))/5280), 1), 
+                           digits = 1, nsmall=1, big.mark=",")
+# this_sw/sh_miles is RIGHT LEFT MILES where we could match SW/SH to a road segment
+this_comb_miles <- format(round(as.numeric(sum(st_length(this_comb))/5280), 1), 
+                           digits = 1, nsmall=1, big.mark=",")
+
+# ggplot() +
+#   geom_sf(data = this_geo, aes(fill = 1), alpha = 0.2, lwd = 0, show.legend = FALSE) + 
+#   geom_sf(data = st_buffer(bind_rows(this_sw_sh, x), 50, endCapStyle="FLAT"),
+#           fill = "#4E22EE", alpha = 0.5) +
+#   geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
+#   geom_sf(data = this_test2, color = "black") +
+#   geom_sf(data = this_sw_sh, aes(color = as.factor(RD_LOG_ID)), lwd = 0) 
+
+
+          
+          + 
+
+
+r <- ggplot() +
+  geom_sf(data = this_geo, aes(fill = 1), alpha = 0.4, lwd = 0, show.legend = FALSE) +
+  geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
+  #geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "RIGHT"), aes(linetype = as.factor(RD_LOG_ID)), color = "black") +
+  geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "RIGHT"), aes(color = as.factor(TYPE))) +
+  sw_sh_col +
+  labs(title = "Right",
+       color = "Pedestrian Facilities") +
+  theme_void()
+
+l <- ggplot() +
+  geom_sf(data = this_geo, aes(fill = 1), alpha = 0.4, lwd = 0, show.legend = FALSE) +
+  geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
+  #geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "LEFT"), aes(linetype = as.factor(RD_LOG_ID)), color = "black") +
+  geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "LEFT"), aes(color = as.factor(TYPE))) +
+  sw_sh_col +
+  labs(title = "Left",
+       color = "Pedestrian Facilities") +
+  theme_void()
+
+
 ```
 
-Within this area, there are `r this_miles` centerline road miles. 
+Within this area, there are `r this_centerline_miles` centerline road miles; `r this_sw_sh_miles` miles of recorded sidewalk or shoulder (either side of road); and `r this_comb_miles` miles where we could match the recorded sidewalk or shoulder to a road segment (either side of road)^[In theory, the miles of recorded sidewalk or shoulder and matched miles could be double the centerline miles if every mile had a sidewalk or shoulder.]
+
 ```{r }
-road_sum <- this_roads %>%  
+road_sum <- this_roads %>%
+  mutate(distance = st_length(.)) %>%  
   st_set_geometry(., NULL) %>% 
   group_by(road_class) %>%
-  summarise(miles = format(round(as.numeric(sum(LENGTH)/5280), 1), 
-                           digits = 1, nsmall=0, big.mark=","))
-colnames(road_sum) <- c("Road Class", "Miles")
-knitr::kable(road_sum)
+  summarise(t_miles = sum(distance)/5280,
+            miles = format(round(as.numeric(sum(distance)/5280), 1), 
+                           digits = 1, nsmall=1, big.mark=","),
+            .groups = "drop")
+df <- select(raod_sum, -t_miles)
+colnames(df) <- c("Road Class", "Miles")
+knitr::kable(df)
+```
+
+And we still need to get this into segment scores, but here are the miles with sidewalks or shoulders.
+
+```{r}
+df <- this_comb %>% st_set_geometry(., NULL) %>% 
+  group_by(road_class, SIDE_OF_RO, TYPE) %>%
+  summarize(miles = sum(distance)/5280,
+            .groups = "drop")
+knitr::kable(df)
 ```
 
 ```{r }
 p1 <- kitsap +
   geom_sf(data = this_geo, aes(fill = 1), alpha = 0.5, show.legend = FALSE) +
   geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) +
-  geom_sf(data = this_sw_sh, aes(color = as.factor(TYPE))) + 
+  geom_sf(data = this_sw_sh, aes(color = as.factor(TYPE)), show.legend = "line") + 
+  sw_sh_col +
   theme_void() +
   labs(title = paste("Map for","{{current_geo}}"),
        caption = "Data source: Kitsap GIS - data in development",
@@ -56,9 +115,14 @@ p2 <- ggplot() +
 
 library(patchwork)
 
-p1 + p2 +
-  plot_layout(guides = 'collect') #+
-  #labs(title = paste("Map for","{{current_geo}}"))
+(p1 + #l + r + #p2 +
+  plot_layout(guides = 'collect') +
+  labs(title = paste("Map for","{{current_geo}}"),
+       caption = "Data source: Kitsap GIS - data in development",
+       color = "Pedestrian Facilities") & 
+    theme(legend.position = "bottom") ) +
+  (l + theme(legend.position = "none") ) +
+  (r + theme(legend.position = "none") )
 
 detach("package:patchwork", unload=TRUE)
 
