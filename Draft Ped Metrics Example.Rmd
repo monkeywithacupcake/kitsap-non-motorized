@@ -618,7 +618,7 @@ kitsap +
 
 ```{r loop_lamirds,include=FALSE,echo=FALSE}
 the_lamirds <- unique(st_set_geometry(lamird, NULL)$PLAN_AREA)
-df <- st_as_sf(lamird) %>% mutate(tomatch = PLAN_AREA)
+loop_df <- st_as_sf(lamird) %>% mutate(tomatch = PLAN_AREA)
                                      
 expanded_child <- lapply(
     the_lamirds,
