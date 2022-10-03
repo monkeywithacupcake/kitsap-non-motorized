@@ -72,10 +72,10 @@ clean_roadcl$road_class <- factor(clean_roadcl$road_class, levels = c("Freeway /
 # exclude Local Access EASEMENTS & Highway/Freeway
 road_df <-st_as_sf(clean_roadcl) %>%
   filter(FCLASS %ni% c(100,110,1,2), RD_LOG_ID > 0) %>%
-  mutate(LENGTH = st_length(.))
+  mutate(LENGTH = as.integer(st_length(.)))
 
 ncdf <- road_df[!lengths(st_intersects(road_df, cities)), ] %>%
-  mutate(LENGTH = st_length(.))
+  mutate(LENGTH = as.integer(st_length(.)))
 
 #cdf <- st_intersection(road_df, cities)
 #ncdf2 <- st_as_sf(road_df) %>%
@@ -92,7 +92,7 @@ sidewalks <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SIDEWALKS")
 sidewalks_nc <- sidewalks[!lengths(st_intersects(sidewalks, cities)), ]%>% 
   st_as_sf(.) %>%
   filter(WIDTH > 0, LENG_FT > 0) %>%
-  mutate(LENGTH = st_length(.),
+  mutate(LENGTH = as.integer(st_length(.)),
          TYPE = paste0("Sidewalk: ",WIDTH, " ft"),
          RD_LOG_ID = as.integer(ROADLOGID),
          SEGMENT_ID = as.integer(SEG_ID)) %>%
@@ -100,7 +100,7 @@ sidewalks_nc <- sidewalks[!lengths(st_intersects(sidewalks, cities)), ]%>%
 shoulders_nc <- shoulders[!lengths(st_intersects(shoulders, cities)), ] %>% 
   st_as_sf(.) %>%
   filter(SHLDR_WIDT > 0, SHLDR_SURF == "ACP", DISTANCE_F > 0) %>%
-  mutate(LENGTH = st_length(.),
+  mutate(LENGTH = as.integer(st_length(.)),
          TYPE = paste0("Paved Shoulder: ", SHLDR_WIDT," ft"),
          RD_LOG_ID = as.integer(ROAD_LOG_I),
          SEGMENT_ID = as.integer(SEG_ID)) %>%

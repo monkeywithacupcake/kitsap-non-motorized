@@ -4,12 +4,12 @@
 
 ```{r} 
 library(broom)
-this_geo <- st_as_sf(loop_df) %>% filter(tomatch == "{{current_geo}}") 
+this_geo <- st_as_sf(loop_df) %>% filter(tomatch == current_geo) #"{{current_geo}}") 
 this_roads <- st_intersection(road_df, st_buffer(this_geo,0))
 this_sw_sh <- st_intersection(nc_sw_sh, st_buffer(this_geo,0))
 
 # identified a mislabeled RD_LOG_ID in the sidewalk data for Madrone (as Main)
-x <- st_as_sf(this_sw_sh) %>% filter(RD_LOG_ID == 49435 & LENGTH > 1000)
+x <- st_as_sf(this_sw_sh) %>% mutate(LENGTH = as.integer(LENGTH)) %>% filter(RD_LOG_ID == 49435 & LENGTH > 1000)
 x$RD_LOG_ID <- 43809
 # x will have 0 rows if we are not dealing with Manchester
 
