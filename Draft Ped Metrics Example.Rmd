@@ -599,9 +599,44 @@ knitr::kable(
 
 
 
-
+We can also look at regions within the County. For these, we identify the roads and any sidewalks or shoulders.^[In theory, the miles of recorded sidewalk or shoulder and matched miles could be double the centerline miles if every mile had a sidewalk or shoulder.]
 
 ### UGAs
+
+```{r plot_ugas}
+uga_no_city <- st_as_sf(uga) %>%
+  filter(substring(GMA_JURISD, 1, 4) != "City")
+kitsap +
+  geom_sf(data = uga_no_city, aes(fill = GMA_JURISD), alpha = 0.5) +
+  theme_void() +
+  labs(title = 'Kitsap County UGAs',
+       caption = "Data source: Kitsap GIS - data in development",
+       color = "UGAS")
+
+
+```
+
+```{r loop_ugas,include=FALSE,echo=FALSE}
+the_ugas <- unique(st_set_geometry(uga_no_city, NULL)$GMA_JURISD)
+loop_df <- st_as_sf(uga_no_city) %>% mutate(tomatch = GMA_JURISD)
+                                     
+expanded_child <- lapply(
+    the_ugas,
+    function(x) {
+      knitr::knit_expand(file = "child_single_geo.Rmd",
+                                   current_geo = x )
+                                   
+    }
+    )
+
+parsed_child <- knitr::knit_child(text = unlist(expanded_child))
+
+```
+
+Kitsap County has `r length(the_ugas)` UGAs - Urban Growth Areas that are outside of cities. Within the Urban Growth Areas, most design and planning standards are similar to what would be expected in an urban environment for new development. 
+
+`r parsed_child`
+
 
 ### LAMIRDs
 
@@ -632,6 +667,7 @@ expanded_child <- lapply(
 parsed_child <- knitr::knit_child(text = unlist(expanded_child))
 
 ```
+Kitsap County has `r length(the_lamirds)` LAMIRDS - Local Area of More Intense Rural Development. 
 
 `r parsed_child`
 

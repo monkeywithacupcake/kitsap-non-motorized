@@ -3,11 +3,42 @@
 # {{current_geo}}
 
 ```{r} 
-library(broom)
+#library(broom)
+
 this_geo <- st_as_sf(loop_df) %>% filter(tomatch == "{{current_geo}}") 
 this_roads <- st_intersection(road_df, st_buffer(this_geo,0))
 this_sw_sh <- st_intersection(nc_sw_sh, st_buffer(this_geo,0))
 
+# need to handle the case where this_sw_sh or this_roads has 0 rows
+has_roads <- nrow(this_roads) != 0
+has_sw_sh <- nrow(this_sw_sh) != 0
+has_both <- has_roads & has_sw_sh
+# do not evaluate most of this child if does not
+```
+
+```{r, eval=!has_both}
+cat("This area does not have either known roads or known sidewalks or shoulders")
+```
+
+```{r, eval=has_sw_sh & !has_roads}
+this_centerline_miles <- 0 # this_centerline_miles is CENTERLINE MILES TOTAL
+# this_sw/sh_miles is RIGHT LEFT MILES with SW or SH TOTAL
+this_sw_sh_miles <- format(round(as.numeric(sum(st_length(this_sw_sh))/5280), 1), 
+                           digits = 1, nsmall=1, big.mark=",")
+# this_comb_miles is RIGHT LEFT MILES where we could match SW/SH to a road segment
+this_comb_miles <- 0
+```
+```{r, eval=!has_sw_sh & has_roads}
+# this_centerline_miles is CENTERLINE MILES TOTAL
+this_centerline_miles <- format(round(as.numeric(sum(st_length(this_roads))/5280), 1), 
+                           digits = 1, nsmall=1, big.mark=",")
+# this_sw/sh_miles is RIGHT LEFT MILES with SW or SH TOTAL
+this_sw_sh_miles <- 0
+# this_sw/sh_miles is RIGHT LEFT MILES where we could match SW/SH to a road segment
+this_comb_miles <- 0
+```
+
+```{r, eval=has_both}
 # identified a mislabeled RD_LOG_ID in the sidewalk data for Madrone (as Main)
 x <- st_as_sf(this_sw_sh) %>% mutate(LENGTH = as.integer(LENGTH)) %>% filter(RD_LOG_ID == 49435 & LENGTH > 1000)
 x$RD_LOG_ID <- 43809
@@ -46,9 +77,10 @@ this_comb_miles <- format(round(as.numeric(sum(st_length(this_comb))/5280), 1),
 
 ```
 
-Within this area, there are `r this_centerline_miles` centerline road miles; `r this_sw_sh_miles` miles of recorded sidewalk or shoulder (either side of road); and `r this_comb_miles` miles where we could match the recorded sidewalk or shoulder to a road segment (either side of road)^[In theory, the miles of recorded sidewalk or shoulder and matched miles could be double the centerline miles if every mile had a sidewalk or shoulder.]
+Within this area, there are `r this_centerline_miles` centerline road miles; `r this_sw_sh_miles` miles of recorded sidewalk or shoulder (either side of road); and `r this_comb_miles` miles where we could match the recorded sidewalk or shoulder to a road segment (either side of road).
 
-```{r }
+```{r, eval=has_both}
+
 road_sum <- this_roads %>%
   mutate(distance = st_length(.)) %>%  
   st_set_geometry(., NULL) %>% 
@@ -57,22 +89,24 @@ road_sum <- this_roads %>%
             miles = format(round(as.numeric(sum(distance)/5280), 1), 
                            digits = 1, nsmall=1, big.mark=","),
             .groups = "drop")
-df <- select(raod_sum, -t_miles)
+df <- select(road_sum, -t_miles)
 colnames(df) <- c("Road Class", "Miles")
 knitr::kable(df)
 ```
 
 And we still need to get this into segment scores, but here are the miles with sidewalks or shoulders.
 
-```{r}
+```{r, eval=has_both}
 df <- this_comb %>% st_set_geometry(., NULL) %>% 
   group_by(road_class, SIDE_OF_RO, TYPE) %>%
-  summarize(miles = sum(distance)/5280,
+  summarize(s_miles = sum(distance)/5280,
+            miles = format(round(as.numeric(sum(distance)/5280), 1), 
+                           digits = 1, nsmall=1, big.mark=","),
             .groups = "drop")
-knitr::kable(df)
+knitr::kable(select(df,-s_miles))
 ```
 
-```{r }
+```{r, eval=has_both}
 p1 <- kitsap +
   geom_sf(data = this_geo, aes(fill = 1), alpha = 0.5, show.legend = FALSE) +
   geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) +
