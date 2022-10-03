@@ -162,3 +162,12 @@ library(patchwork)
 detach("package:patchwork", unload=TRUE)
 
 ```
+
+```{r}
+# next step
+# take the comb data, get the distance for each segment
+# combine that with this roads
+# where no sw sh = 0
+# determine if meets criteria
+
+```
