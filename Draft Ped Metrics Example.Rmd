@@ -19,7 +19,7 @@ options(scipen=999)
 
 options(knitr.kable.NA = '') # hides NA in printed table
 
-nice_comma <- function(x, dec = 0){
+nice_comma <- function(x, dec = 1){
   format(round(as.numeric(x), dec), digits = NULL, nsmall=dec, big.mark=",") 
 }
 '%ni%' <- function(x,y)!('%in%'(x,y))
@@ -71,9 +71,12 @@ clean_roadcl$road_class <- factor(clean_roadcl$road_class, levels = c("Freeway /
 
 # exclude Local Access EASEMENTS & Highway/Freeway
 road_df <-st_as_sf(clean_roadcl) %>%
-  filter(FCLASS %ni% c(100,110,1,2), RD_LOG_ID > 0) 
+  filter(FCLASS %ni% c(100,110,1,2), RD_LOG_ID > 0) %>%
+  mutate(LENGTH = st_length(.))
 
-ncdf <- road_df[!lengths(st_intersects(road_df, cities)), ]
+ncdf <- road_df[!lengths(st_intersects(road_df, cities)), ] %>%
+  mutate(LENGTH = st_length(.))
+
 #cdf <- st_intersection(road_df, cities)
 #ncdf2 <- st_as_sf(road_df) %>%
 #  mutate(rdseg = paste(SEGMENT_ID, RD_LOG_ID)) %>%
@@ -89,7 +92,7 @@ sidewalks <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SIDEWALKS")
 sidewalks_nc <- sidewalks[!lengths(st_intersects(sidewalks, cities)), ]%>% 
   st_as_sf(.) %>%
   filter(WIDTH > 0, LENG_FT > 0) %>%
-  mutate(LENGTH = LENG_FT,
+  mutate(LENGTH = st_length(.),
          TYPE = paste0("Sidewalk: ",WIDTH, " ft"),
          RD_LOG_ID = as.integer(ROADLOGID),
          SEGMENT_ID = as.integer(SEG_ID)) %>%
@@ -97,7 +100,7 @@ sidewalks_nc <- sidewalks[!lengths(st_intersects(sidewalks, cities)), ]%>%
 shoulders_nc <- shoulders[!lengths(st_intersects(shoulders, cities)), ] %>% 
   st_as_sf(.) %>%
   filter(SHLDR_WIDT > 0, SHLDR_SURF == "ACP", DISTANCE_F > 0) %>%
-  mutate(LENGTH = DISTANCE_F,
+  mutate(LENGTH = st_length(.),
          TYPE = paste0("Paved Shoulder: ", SHLDR_WIDT," ft"),
          RD_LOG_ID = as.integer(ROAD_LOG_I),
          SEGMENT_ID = as.integer(SEG_ID)) %>%
@@ -175,7 +178,7 @@ kitsap_all_roads <- kitsap +
   road_col +
   theme_void() +
   labs(title = "Roads in Kitsap County",
-       subtitle = paste0(nice_comma(sum(clean_roadcl$LENGTH)/5280),
+       subtitle = paste0(nice_comma(sum(st_length(clean_roadcl))/5280),
                          " centerline miles"),
        #caption = "Data source: Kitsap GIS",
        color = "")
@@ -190,7 +193,7 @@ kitsap_roads_no_cities <- kitsap +
   road_col +
   theme_void() +
   labs(title = "No Cities, Easements, & Highways",
-       subtitle = paste0(nice_comma(sum(ncdf$LENGTH)/5280),
+       subtitle = paste0(nice_comma(sum(st_length(ncdf))/5280),
                          " centerline miles"),
        caption = "Data source: Kitsap GIS")
 
@@ -328,7 +331,7 @@ In order to do this evaluation, we must combine the roads data (which has inform
 
 ##### Matching on Road Log Id is good but insufficient
 
-All of the data sets appear to use the same set of road log IDs from public works. Unfortunately, knowing that there is a shoulder or sidewalk somewhere on a road does not get to how much of that road has the sidewalk or shoulder. 
+All of the data sets appear to use the same set of road log IDs from public works. Unfortunately, knowing that there is a shoulder or sidewalk somewhere on a road does not get to how much of that road has the sidewalk or shoulder.^[As roads sometimes change names and road log IDs, there are also some breaks between the road data and sidewalk/shoulder data. This was noted for Madrone Ave in Manchester - given the same road log ID as Main St when the road bends.] 
 
 This diagnostic and ugly plot is intended to show the coverage of road log id across the sidewalk and shoulder data sets compared to the raod data. While the sidewalk and shoulder data are more sparse, the range is consistent.
 
