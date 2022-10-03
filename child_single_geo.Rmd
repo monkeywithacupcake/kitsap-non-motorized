@@ -43,29 +43,6 @@ this_comb_miles <- format(round(as.numeric(sum(st_length(this_comb))/5280), 1),
 
 
           
-          + 
-
-
-r <- ggplot() +
-  geom_sf(data = this_geo, aes(fill = 1), alpha = 0.4, lwd = 0, show.legend = FALSE) +
-  geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
-  #geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "RIGHT"), aes(linetype = as.factor(RD_LOG_ID)), color = "black") +
-  geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "RIGHT"), aes(color = as.factor(TYPE))) +
-  sw_sh_col +
-  labs(title = "Right",
-       color = "Pedestrian Facilities") +
-  theme_void()
-
-l <- ggplot() +
-  geom_sf(data = this_geo, aes(fill = 1), alpha = 0.4, lwd = 0, show.legend = FALSE) +
-  geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
-  #geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "LEFT"), aes(linetype = as.factor(RD_LOG_ID)), color = "black") +
-  geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "LEFT"), aes(color = as.factor(TYPE))) +
-  sw_sh_col +
-  labs(title = "Left",
-       color = "Pedestrian Facilities") +
-  theme_void()
-
 
 ```
 
@@ -105,6 +82,30 @@ p1 <- kitsap +
   labs(title = paste("Map for","{{current_geo}}"),
        caption = "Data source: Kitsap GIS - data in development",
        color = "Pedestrian Facilities")
+
+     
+
+
+r <- ggplot() +
+  geom_sf(data = this_geo, aes(fill = 1), alpha = 0.4, lwd = 0, show.legend = FALSE) +
+  geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
+  #geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "RIGHT"), aes(linetype = as.factor(RD_LOG_ID)), color = "black") +
+  geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "RIGHT"), aes(color = as.factor(TYPE))) +
+  sw_sh_col +
+  labs(title = "Right",
+       color = "Pedestrian Facilities") +
+  theme_void()
+
+l <- ggplot() +
+  geom_sf(data = this_geo, aes(fill = 1), alpha = 0.4, lwd = 0, show.legend = FALSE) +
+  geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
+  #geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "LEFT"), aes(linetype = as.factor(RD_LOG_ID)), color = "black") +
+  geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "LEFT"), aes(color = as.factor(TYPE))) +
+  sw_sh_col +
+  labs(title = "Left",
+       color = "Pedestrian Facilities") +
+  theme_void()
+
 
 
 p2 <- ggplot() +
