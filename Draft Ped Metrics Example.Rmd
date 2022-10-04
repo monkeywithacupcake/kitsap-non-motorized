@@ -568,14 +568,15 @@ comb_stand <- comb %>%
   mutate(setting = ifelse(RUCODE == 1, "Rural", 
                           ifelse(RUCODE == 2, "Urban", "Unknown")),
          ped_type = sub("\\:.*", "", TYPE),
-         ped_w = as.numeric(sub(".*?([0-9]+).*", "\\1", TYPE)),
+         #ped_w = as.numeric(sub(".*?([0-9]+).*", "\\1", TYPE)),
          nn = paste(sub("paved ","",tolower(ped_type)), tolower(SIDE_OF_RO),sep ="_")) %>%
   #select(RD_LOG_ID = RD_LOG_ID_R, SEGMENT_ID = SEGMENT_ID_R, FULL_NAME = FULL_NAME_R,
   #       SEGMENT_LENGTH = LENGTH_R, SW_SH_LENGTH = LENGTH, SIDE_OF_RO,
   #       distance, road_class, setting, nn, ped_w) %>%
-  pivot_wider(id_cols = -SIDE_OF_RO, #c(RD_LOG_ID, SEGMENT_ID, FULL_NAME), 
+  pivot_wider(id_cols = c(-RD_LOG_ID:-TYPE,-ped_type), #c(RD_LOG_ID, SEGMENT_ID, FULL_NAME), 
               names_from = nn, 
-              values_from = ped_w) %>%
+              values_from = WIDTH,
+              values_fn = mean) %>%
   left_join(road_standards) 
 
 comb_score <- comb_stand %>%
@@ -585,53 +586,13 @@ comb_score <- comb_stand %>%
                                    sidewalk_right, shoulder_right),
          score = score_left + score_right)
 
-ncdf_w_all_nogeo <- ncdf %>% #clean_roadcl %>%  
-  st_set_geometry(., NULL) %>% 
-  mutate(setting = ifelse(RUCODE == 1, "Rural", 
-                          ifelse(RUCODE == 2, "Urban", "Unknown"))) %>%
-  left_join(road_standards) %>%
-  left_join(sw_sh) %>%
-  mutate(score_left = getSideScore(standard_sidewalk, standard_shoulder, 
-                                   sidewalk_left, shoulder_left),
-         score_right = getSideScore(standard_sidewalk, standard_shoulder, 
-                                   sidewalk_right, shoulder_right),
-         score = score_left + score_right)
-
-# ncdf %>% 
-#   st_set_geometry(., NULL) %>% 
-#   select(RD_LOG_ID, 
-#          BMP = CRAB_BMP, 
-#          EMP = CRAB_EMP,
-#          LENGTH) %>%
-#   left_join(select(st_set_geometry(shoulders_nc, NULL), RD_LOG_ID = ROAD_LOG_I, 
-#                    BMP, EMP,
-#                    SIDE_OF_RO, SHLDR_WIDT, SHLDR_SURF)) %>%
-#   group_by(SHLDR_SURF, SHLDR_WIDT) %>%
-#   summarise(n = n(), LENGTH = sum(LENGTH, na.rm = TRUE)/5280)
-# 
-# ncdf %>% 
-#   st_set_geometry(., NULL) %>% 
-#   select(RD_LOG_ID, FULL_NAME,
-#          BMP = CRAB_BMP, 
-#          EMP = CRAB_EMP,
-#          LENGTH) %>%
-#   left_join(select(mutate(st_set_geometry(sidewalks_nc, NULL), RD_LOG_ID = as.integer(ROADLOGID)), 
-#                    RD_LOG_ID,
-#                    BMP, EMP,
-#                    SIDE_OF_RO, WIDTH)) %>%
-#   filter(!is.na(WIDTH) & WIDTH > 0) %>%
-#   group_by(RD_LOG_ID, FULL_NAME, `Sidewalk Width` = WIDTH) %>%
-#   summarise(n = n(), LENGTH = sum(LENGTH, na.rm = TRUE)/5280)
-
-
-
 knitr::kable(
  # ncdf_w_all_nogeo %>%
   comb_score %>%
   group_by(setting, road_class, score) %>% 
   summarise(roads = nice_comma(n_distinct(RD_LOG_ID_R)), 
             segments = nice_comma(n()), 
-            length = nice_comma(sum(LENGTH, na.rm=TRUE)/5280, 1),
+            #length = nice_comma(sum(LENGTH, na.rm=TRUE)/5280, 1),
             dist = nice_comma(sum(distance, na.rm=TRUE)/5280, 1),
             .groups = "drop") 
   )
