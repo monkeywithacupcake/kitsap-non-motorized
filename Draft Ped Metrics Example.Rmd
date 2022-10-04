@@ -74,6 +74,7 @@ road_df <-st_as_sf(clean_roadcl) %>%
   filter(FCLASS %ni% c(100,110,1,2), RD_LOG_ID > 0) %>%
   mutate(LENGTH = as.integer(st_length(.)))
 
+# need to make sure that this is right
 ncdf <- road_df[!lengths(st_intersects(road_df, cities)), ] %>%
   mutate(LENGTH = as.integer(st_length(.)))
 
@@ -232,15 +233,15 @@ library(sf)
 groupcl <- ncdf %>% #clean_roadcl %>%  
   st_set_geometry(., NULL) %>% 
   group_by(road_class) %>% 
-  summarise(roads = nice_comma(n_distinct(FULL_NAME)), 
-            segments = nice_comma(n()), 
+  summarise(roads = nice_comma(n_distinct(FULL_NAME),0), 
+            segments = nice_comma(n(),0), 
             length = nice_comma(sum(LENGTH, na.rm=TRUE)/5280, 1),
             .groups = "drop") 
 df <- ncdf %>% #clean_roadcl %>%  
   st_set_geometry(., NULL) %>% 
   group_by(road_class = "Total") %>% 
-  summarise(roads = nice_comma(n_distinct(FULL_NAME)), 
-            segments = nice_comma(n()), 
+  summarise(roads = nice_comma(n_distinct(FULL_NAME),0), 
+            segments = nice_comma(n(),0), 
             length = nice_comma(sum(LENGTH, na.rm=TRUE)/5280, 1),
             .groups = "drop") 
 groupcl <- bind_rows(groupcl, df)
@@ -252,7 +253,7 @@ knitr::kable(groupcl,
              caption = "Roads by Class in Kitsap County, excluding cities, highways, and easements")
 ```
 
-These are the sidewalk and shoulders also outside of Cities. Single sides shown. In the data, there are zero segments with sidewalks on both sides of the road. This is one example where we know the data are incomplete; for example, Silverdale Way is not in a city and is known to have sidewalks on both sides.^[For the specific example of Silverdale Way, there are three entries in the sidewalk data with the Road Log Id of 19515 that matches Silverdale Way, and they all indicate sidewalks on the left side of the road. Further note, all three have a segment ID of 0, so they will not match any of the segments in the roads data if we match on Road Log Id and Segment ID - an entirely different problem with the data that is not isolated to Silverdale Way. `r round(sum(nc_sw_sh$SEGMENT_ID ==0)/nrow(nc_sw_sh)*100,1)`% of the sidewalk data do not have segment ids.] For this draft example report it is okay; if the initial report is completed with the incomplete data, it will present a poorer overall condition of pedestrian facilities than is in place.
+These are the sidewalk and shoulders also outside of Cities. Single sides shown. This is one example where we know the data are incomplete; for example, Silverdale Way is not in a city and is known to have sidewalks on both sides.^[For the specific example of Silverdale Way, there are three entries in the sidewalk data with the Road Log Id of 19515 that matches Silverdale Way, and they all indicate sidewalks on the left side of the road. Further note, all three have a segment ID of 0, so they will not match any of the segments in the roads data if we match on Road Log Id and Segment ID - an entirely different problem with the data that is not isolated to Silverdale Way. `r round(sum(nc_sw_sh$SEGMENT_ID ==0)/nrow(nc_sw_sh)*100,1)`% of the sidewalk data do not have segment ids.] For this draft example report it is okay; if the initial report is completed with the incomplete data, it will present a poorer overall condition of pedestrian facilities than is in place.
 
 ```{r}
 df <- sidewalks_nc %>%  
@@ -392,12 +393,29 @@ rm(sw_plot)
 rm(road_plot)
 ```
 
-The segment ids are clearly not from the same space, but the road log ids are consistent. 
+The segment ids are clearly not from the same space, but the road log ids are consistent.^[Mostly.] However, we cannot combine on road log id alone - because the roads change character and the type of pedestrian facilities over space. We combine instead on geometry. 
+
+For now, we are making a space around a sidewalk or shoulder geometry, a buffer, to capture the nearby area where the road would be, and seeing if there are any road segments that intersect. If the road segment intersects and has the same road log id, we keep it. 
 
 
-
-```{r}
+```{r combine-rd-sw-sh, echo = TRUE}
 # combine the sidewalk and shoulder and roads data
+comb <- st_intersection(select(ncdf, RD_LOG_ID_R = RD_LOG_ID, 
+                                     SEGMENT_ID_R = SEGMENT_ID,
+                                     FULL_NAME_R = FULL_NAME, 
+                                     LENGTH_R = LENGTH,
+                                     road_class, RUCODE), 
+                             st_buffer(bind_rows(nc_sw_sh, x), 50, endCapStyle="FLAT")) %>% 
+  filter(RD_LOG_ID == RD_LOG_ID_R) %>%
+  distinct(RD_LOG_ID_R, SEGMENT_ID_R, RD_LOG_ID, SEGMENT_ID, SIDE_OF_RO, .keep_all = TRUE) %>%
+  mutate(distance = as.integer(st_length(.)))
+#distance is the length of the matched road segment and sidewalk or shoulder 
+comb %>% st_set_geometry(., NULL) %>% 
+  group_by(road_class, SIDE_OF_RO, TYPE) %>%
+  summarize(s_miles = sum(distance)/5280,
+            miles = format(round(as.numeric(sum(distance)/5280), 1), 
+                           digits = 1, nsmall=1, big.mark=","),
+            .groups = "drop")
 ```
 
 
@@ -446,8 +464,10 @@ library(kableExtra)
 road_standards <- tribble(
   ~setting, ~class, ~sidewalk, ~shoulder,
   "Urban", "Local Access", 5, NA,
-  "Urban", "Collector",6, NA,
-  "Urban", "Arterial", 6, NA,
+  "Urban", "Minor Collector",6, NA,
+  "Urban", "Major Collector",6, NA,
+  "Urban", "Minor Arterial", 6, NA,
+  "Urban", "Principal Arterial", 6, NA,
   "Rural", "Local Access", NA, 3,
   "Rural", "Minor Collector",NA, 3,
   "Rural", "Major Collector",NA, 4,
@@ -543,6 +563,28 @@ getSideScore <- function(standard_sidewalk, standard_shoulder,
   )
 }
 
+comb_stand <- comb %>% 
+  st_set_geometry(., NULL) %>% 
+  mutate(setting = ifelse(RUCODE == 1, "Rural", 
+                          ifelse(RUCODE == 2, "Urban", "Unknown")),
+         ped_type = sub("\\:.*", "", TYPE),
+         ped_w = as.numeric(sub(".*?([0-9]+).*", "\\1", TYPE)),
+         nn = paste(sub("paved ","",tolower(ped_type)), tolower(SIDE_OF_RO),sep ="_")) %>%
+  #select(RD_LOG_ID = RD_LOG_ID_R, SEGMENT_ID = SEGMENT_ID_R, FULL_NAME = FULL_NAME_R,
+  #       SEGMENT_LENGTH = LENGTH_R, SW_SH_LENGTH = LENGTH, SIDE_OF_RO,
+  #       distance, road_class, setting, nn, ped_w) %>%
+  pivot_wider(id_cols = -SIDE_OF_RO, #c(RD_LOG_ID, SEGMENT_ID, FULL_NAME), 
+              names_from = nn, 
+              values_from = ped_w) %>%
+  left_join(road_standards) 
+
+comb_score <- comb_stand %>%
+  mutate(score_left = getSideScore(standard_sidewalk, standard_shoulder, 
+                                   sidewalk_left, shoulder_left),
+         score_right = getSideScore(standard_sidewalk, standard_shoulder, 
+                                   sidewalk_right, shoulder_right),
+         score = score_left + score_right)
+
 ncdf_w_all_nogeo <- ncdf %>% #clean_roadcl %>%  
   st_set_geometry(., NULL) %>% 
   mutate(setting = ifelse(RUCODE == 1, "Rural", 
@@ -584,11 +626,13 @@ ncdf_w_all_nogeo <- ncdf %>% #clean_roadcl %>%
 
 
 knitr::kable(
-  ncdf_w_all_nogeo %>%
+ # ncdf_w_all_nogeo %>%
+  comb_score %>%
   group_by(setting, road_class, score) %>% 
-  summarise(roads = nice_comma(n_distinct(FULL_NAME)), 
+  summarise(roads = nice_comma(n_distinct(RD_LOG_ID_R)), 
             segments = nice_comma(n()), 
             length = nice_comma(sum(LENGTH, na.rm=TRUE)/5280, 1),
+            dist = nice_comma(sum(distance, na.rm=TRUE)/5280, 1),
             .groups = "drop") 
   )
 ```
