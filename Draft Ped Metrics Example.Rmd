@@ -41,6 +41,10 @@ kitsap <- ggplot() +
   theme_void()
 
 cities <- sf::read_sf(paste0(this_dir,"data/cities"))
+
+# try to make a kitsap without cities
+county_no_cities <- st_difference(outline, st_union(cities))
+
 uga <- sf::read_sf(paste0(this_dir,"data/uga"))
 uga$isuga = 1
 lamird <- sf::read_sf(paste0(this_dir,"data/lamird"))
@@ -75,13 +79,10 @@ road_df <-st_as_sf(clean_roadcl) %>%
   mutate(LENGTH = as.integer(st_length(.)))
 
 # need to make sure that this is right
-ncdf <- road_df[!lengths(st_intersects(road_df, cities)), ] %>%
+
+ncdf <- st_intersection(road_df, st_buffer(county_no_cities,0)) %>%
   mutate(LENGTH = as.integer(st_length(.)))
 
-#cdf <- st_intersection(road_df, cities)
-#ncdf2 <- st_as_sf(road_df) %>%
-#  mutate(rdseg = paste(SEGMENT_ID, RD_LOG_ID)) %>%
-#  filter(rdseg %ni% mutate(cdf,rdseg = paste(SEGMENT_ID, RD_LOG_ID))$rdseg)
 ```
 
 ```{r swshdata, cache = TRUE}
@@ -90,7 +91,7 @@ library(sf)
 shoulders <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SHOULDERS")
 sidewalks <- sf::read_sf("./data/KitsapShapefiles03_04_2022/SIDEWALKS")
 
-sidewalks_nc <- sidewalks[!lengths(st_intersects(sidewalks, cities)), ]%>% 
+sidewalks_nc <- st_intersection(sidewalks, st_buffer(county_no_cities,0)) %>%
   st_as_sf(.) %>%
   filter(WIDTH > 0, LENG_FT > 0) %>%
   mutate(LENGTH = as.integer(st_length(.)),
@@ -98,7 +99,7 @@ sidewalks_nc <- sidewalks[!lengths(st_intersects(sidewalks, cities)), ]%>%
          RD_LOG_ID = as.integer(ROADLOGID),
          SEGMENT_ID = as.integer(SEG_ID)) %>%
   select(RD_LOG_ID,SEGMENT_ID,BMP,EMP,SIDE_OF_RO, WIDTH, LENGTH, TYPE)
-shoulders_nc <- shoulders[!lengths(st_intersects(shoulders, cities)), ] %>% 
+shoulders_nc <- st_intersection(shoulders, st_buffer(county_no_cities,0)) %>%
   st_as_sf(.) %>%
   filter(SHLDR_WIDT > 0, SHLDR_SURF == "ACP", DISTANCE_F > 0) %>%
   mutate(LENGTH = as.integer(st_length(.)),
@@ -197,6 +198,7 @@ kitsap_roads_no_cities <- kitsap +
        subtitle = paste0(nice_comma(sum(st_length(ncdf))/5280),
                          " centerline miles"),
        caption = "Data source: Kitsap GIS")
+
 
 library(patchwork)
 
@@ -587,12 +589,10 @@ comb_score <- comb_stand %>%
          score = score_left + score_right)
 
 knitr::kable(
- # ncdf_w_all_nogeo %>%
   comb_score %>%
   group_by(setting, road_class, score) %>% 
   summarise(roads = nice_comma(n_distinct(RD_LOG_ID_R)), 
             segments = nice_comma(n()), 
-            #length = nice_comma(sum(LENGTH, na.rm=TRUE)/5280, 1),
             dist = nice_comma(sum(distance, na.rm=TRUE)/5280, 1),
             .groups = "drop") 
   )
