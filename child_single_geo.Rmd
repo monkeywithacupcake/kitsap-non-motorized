@@ -50,9 +50,10 @@ x$RD_LOG_ID <- 43809
 
 # comb will have repeating segments when there are sh/sw on both sides
 this_comb <- st_intersection(select(this_roads, RD_LOG_ID_R = RD_LOG_ID, 
+                                     SEGMENT_ID_R = SEGMENT_ID,
                                      FULL_NAME_R = FULL_NAME, 
-                                     road_class, 
-                                     SEGMENT_ID_R = SEGMENT_ID), 
+                                     LENGTH_R = LENGTH,
+                                     road_class, RUCODE), 
                              st_buffer(bind_rows(this_sw_sh, x), 50, endCapStyle="FLAT")) %>% 
   filter(RD_LOG_ID == RD_LOG_ID_R) %>%
   distinct(RD_LOG_ID_R, SEGMENT_ID_R, RD_LOG_ID, SEGMENT_ID, SIDE_OF_RO, .keep_all = TRUE) %>%
@@ -178,7 +179,13 @@ this_comb_stand <- this_comb %>%
               names_from = nn, 
               values_from = WIDTH,
               values_fn = mean) %>%
-  left_join(road_standards) 
+  left_join(road_standards) %>%
+  rowwise() %>% # now make sure that have all the columns
+  mutate(sidewalk_left = ifelse("sidewalk_left" %in% names(.), sidewalk_left, NA),
+         sidewalk_right = ifelse("sidewalk_right" %in% names(.), sidewalk_right, NA),
+         shoulder_left = ifelse("shoulder_left" %in% names(.), shoulder_left, NA),
+         shoulder_right = ifelse("shoulder_right" %in% names(.), shoulder_right, NA)
+         )
 
 this_comb_score <- this_comb_stand %>%
   mutate(score_left = getSideScore(standard_sidewalk, standard_shoulder, 
@@ -198,6 +205,8 @@ this_comb_score2 <- st_set_geometry(this_roads, NULL) %>%
 
 this_comb_total_score <- sum(this_comb_score2$w_score)/sum(this_comb_score2$the_length)
 ```
+
+The overall score for pedestrian facilities in {{current_geo}} is `r nice_comma(this_comb_total_score)`, `r getScoreInterpretation(this_comb_total_score)`.
 
 ```{r}
 # next step

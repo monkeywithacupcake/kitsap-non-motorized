@@ -413,13 +413,14 @@ comb <- st_intersection(select(ncdf, RD_LOG_ID_R = RD_LOG_ID,
   filter(RD_LOG_ID == RD_LOG_ID_R) %>%
   distinct(RD_LOG_ID_R, SEGMENT_ID_R, RD_LOG_ID, SEGMENT_ID, SIDE_OF_RO, .keep_all = TRUE) %>%
   mutate(distance = as.integer(st_length(.)))
+
 #distance is the length of the matched road segment and sidewalk or shoulder 
-comb %>% st_set_geometry(., NULL) %>% 
-  group_by(road_class, SIDE_OF_RO, TYPE) %>%
-  summarize(s_miles = sum(distance)/5280,
-            miles = format(round(as.numeric(sum(distance)/5280), 1), 
-                           digits = 1, nsmall=1, big.mark=","),
-            .groups = "drop")
+#comb %>% st_set_geometry(., NULL) %>% 
+#  group_by(road_class, SIDE_OF_RO, TYPE) %>%
+#  summarize(s_miles = sum(distance)/5280,
+#            miles = format(round(as.numeric(sum(distance)/5280), 1), 
+#                           digits = 1, nsmall=1, big.mark=","),
+#            .groups = "drop")
 ```
 
 
@@ -766,9 +767,20 @@ Kitsap County has `r length(the_lamirds)` LAMIRDS - Local Area of More Intense R
 
 ### Pedestrian Generators
 
+For pedestrian generators, we identify an area that is within 1 mile of the facility and evaluate roads therein in the same manner as the defined county areas, like UGAs and LAMIRDS.
+
 #### Schools
 
+
+
 #### Libraries
+
+```{r}
+libraries <- community %>%
+  filter(TYPE == "PUBLIC LIBRARY")
+```
+
+Kitsap County has `r nrow(libraries)`
 
 #### Transit
 
