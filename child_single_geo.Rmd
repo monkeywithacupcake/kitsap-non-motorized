@@ -167,6 +167,38 @@ detach("package:patchwork", unload=TRUE)
 
 ```
 
+```{r eval=has_both}
+this_comb_stand <- this_comb %>% 
+  st_set_geometry(., NULL) %>% 
+  mutate(setting = ifelse(RUCODE == 1, "Rural", 
+                          ifelse(RUCODE == 2, "Urban", "Unknown")),
+         ped_type = sub("\\:.*", "", TYPE),
+         nn = paste(sub("paved ","",tolower(ped_type)), tolower(SIDE_OF_RO),sep ="_")) %>%
+  pivot_wider(id_cols = c(-RD_LOG_ID:-TYPE,-ped_type), 
+              names_from = nn, 
+              values_from = WIDTH,
+              values_fn = mean) %>%
+  left_join(road_standards) 
+
+this_comb_score <- this_comb_stand %>%
+  mutate(score_left = getSideScore(standard_sidewalk, standard_shoulder, 
+                                   sidewalk_left, shoulder_left),
+         score_right = getSideScore(standard_sidewalk, standard_shoulder, 
+                                   sidewalk_right, shoulder_right),
+         score = score_left + score_right)
+this_comb_score2 <- st_set_geometry(this_roads, NULL) %>% 
+  select(RD_LOG_ID_R = RD_LOG_ID, SEGMENT_ID_R = SEGMENT_ID,
+         FULL_NAME_R = FULL_NAME, road_class, RUCODE, LENGTH) %>%
+  mutate(setting = ifelse(RUCODE == 1, "Rural", 
+                          ifelse(RUCODE == 2, "Urban", "Unknown"))) %>%
+  left_join(this_comb_score) %>%
+  mutate(the_score = ifelse(is.na(score), 0, score),
+         the_length = ifelse(is.na(distance), LENGTH, distance),
+         w_score = the_score*the_length)
+
+this_comb_total_score <- sum(this_comb_score2$w_score)/sum(this_comb_score2$the_length)
+```
+
 ```{r}
 # next step
 # take the comb data, get the distance for each segment

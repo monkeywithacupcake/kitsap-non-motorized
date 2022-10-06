@@ -402,6 +402,8 @@ For now, we are making a space around a sidewalk or shoulder geometry, a buffer,
 
 ```{r combine-rd-sw-sh, echo = TRUE}
 # combine the sidewalk and shoulder and roads data
+x <- st_as_sf(nc_sw_sh) %>% mutate(LENGTH = as.integer(LENGTH)) %>% filter(RD_LOG_ID == 49435 & LENGTH > 1000)
+x$RD_LOG_ID <- 43809
 comb <- st_intersection(select(ncdf, RD_LOG_ID_R = RD_LOG_ID, 
                                      SEGMENT_ID_R = SEGMENT_ID,
                                      FULL_NAME_R = FULL_NAME, 
@@ -478,7 +480,7 @@ road_standards <- tribble(
 )
 
 knitr::kable(road_standards,
-             caption = "Simplified Assumptions to Allow for Evaluation]")  %>%
+             caption = "Simplified Assumptions to Allow for Evaluation")  %>%
    footnote(general = "This is only a simplification to allow for an evaluation without knowledge of ADT or DHV on the roads under evaluation")
 ```
 
@@ -508,16 +510,34 @@ Any given area score will be a weighted average of the scores of the segments wi
 
 The Total Score would be the segment scores multiplied by their linear feet and then divided by the total linear feet of the area (360). For this example, we get a area score of 7.5 $$ 6 x 100 + 0 x 10 + 10 x 50 + 8 x 200 = 2700$$ $$2700/360 = 7.5$$
 
-Interpretation of Scores for Segments and for Areas
 
-|Score| Interpretation |
-|------|:-----|
-|10|Good|
-|5 TO 9 | Adequate^[For a segment, this means one side is good or both sides meet AASHTO minimums]|
-|3 AND 4 | Minimal^[For a segment, this means one side meets AASHTO minimums]|
-|Less than 3 |Poor|
+```{r}
+score_interpretation <- tribble(
+  ~score_at_least, ~interpretation,
+  10, "Good",
+  5, "Adequate",
+  3, "Minimum",
+  0, "Poor",
+)
+
+
+getScoreInterpretation <- function(x){
+  first(score_interpretation$interpretation[
+        score_interpretation$score_at_least <= x]
+    )
+}
+
+knitr::kable(score_interpretation,
+             caption = "Interpretation of Scores for Segments and for Areas")  %>%
+   footnote(general = "For a segment, adequate means one side is good or both sides meet AASHTO minimums and minimal means one side meets AASHTO minimums")
+```
+
 
 ## Results
+First, we calculate the score overall for the county and then break it down for other smaller units of area in our community.
+
+### Overall
+
 
 ```{r compare_standards}
 # take the road cl data for the roads under evaluation
@@ -532,20 +552,7 @@ road_standards <- road_standards %>%
   rename(standard_sidewalk = sidewalk, 
          standard_shoulder = shoulder, 
          road_class = class)
-  # pivot_longer(cols=c(sidewalk, shoulder), 
-  #              names_to = "Standard Pedestrian Facility",
-  #              values_to = "Standard Width") %>% filter
-sw_ncdf <- sidewalks_nc %>%
-  mutate(sidewalk_right = ifelse(SIDE_OF_RO == "RIGHT", WIDTH, NA),
-         sidewalk_left = ifelse(SIDE_OF_RO == "LEFT", WIDTH, NA)) %>%
-  select(RD_LOG_ID, SEGMENT_ID, sidewalk_right, sidewalk_left)
-sh_ncdf <- shoulders_nc %>%
-  mutate(shoulder_right = ifelse(SIDE_OF_RO == "RIGHT", WIDTH, NA),
-         shoulder_left = ifelse(SIDE_OF_RO == "LEFT", WIDTH, NA)) %>%
-  select(RD_LOG_ID, SEGMENT_ID, shoulder_right, shoulder_left)
-sw_sh <- full_join(st_set_geometry(sw_ncdf, NULL), 
-                   st_set_geometry(sh_ncdf, NULL)
-                   )
+
 
 getSideScore <- function(standard_sidewalk, standard_shoulder,
                          sidewalk, shoulder) {
@@ -570,12 +577,8 @@ comb_stand <- comb %>%
   mutate(setting = ifelse(RUCODE == 1, "Rural", 
                           ifelse(RUCODE == 2, "Urban", "Unknown")),
          ped_type = sub("\\:.*", "", TYPE),
-         #ped_w = as.numeric(sub(".*?([0-9]+).*", "\\1", TYPE)),
          nn = paste(sub("paved ","",tolower(ped_type)), tolower(SIDE_OF_RO),sep ="_")) %>%
-  #select(RD_LOG_ID = RD_LOG_ID_R, SEGMENT_ID = SEGMENT_ID_R, FULL_NAME = FULL_NAME_R,
-  #       SEGMENT_LENGTH = LENGTH_R, SW_SH_LENGTH = LENGTH, SIDE_OF_RO,
-  #       distance, road_class, setting, nn, ped_w) %>%
-  pivot_wider(id_cols = c(-RD_LOG_ID:-TYPE,-ped_type), #c(RD_LOG_ID, SEGMENT_ID, FULL_NAME), 
+  pivot_wider(id_cols = c(-RD_LOG_ID:-TYPE,-ped_type), 
               names_from = nn, 
               values_from = WIDTH,
               values_fn = mean) %>%
@@ -588,18 +591,103 @@ comb_score <- comb_stand %>%
                                    sidewalk_right, shoulder_right),
          score = score_left + score_right)
 
+```
+
+
+
+```{r}
+comb_score2 <- st_set_geometry(ncdf, NULL) %>% 
+  select(RD_LOG_ID_R = RD_LOG_ID, SEGMENT_ID_R = SEGMENT_ID,
+         FULL_NAME_R = FULL_NAME, road_class, RUCODE, LENGTH) %>%
+  mutate(setting = ifelse(RUCODE == 1, "Rural", 
+                          ifelse(RUCODE == 2, "Urban", "Unknown"))) %>%
+  left_join(comb_score) %>%
+  mutate(the_score = ifelse(is.na(score), 0, score),
+         the_length = ifelse(is.na(distance), LENGTH, distance),
+         w_score = the_score*the_length)
+
+comb_total_score <- sum(comb_score2$w_score)/sum(comb_score2$the_length)
+
+comb_score_by_setting <- comb_score2 %>%
+  group_by(setting) %>%
+  summarise(score = sum(w_score)/sum(the_length),
+            .groups = "drop") %>%
+  rowwise() %>%
+  mutate(interpretation = getScoreInterpretation(score))
+
+comb_score_by_setting_class <- comb_score2 %>%
+  group_by(setting, road_class) %>%
+  summarise(score = sum(w_score)/sum(the_length),
+            .groups = "drop") %>%
+  rowwise() %>%
+  mutate(interpretation = getScoreInterpretation(score))
+```
+
+The overall score for pedestrian facilities in Kitsap County is `r nice_comma(comb_total_score)`, `r getScoreInterpretation(comb_total_score)`. 
+
+```{r}
+knitr::kable(comb_score_by_setting_class)
+```
+
+
+More detailed information
+```{r}
 knitr::kable(
-  comb_score %>%
+  comb_score2 %>%
   group_by(setting, road_class, score) %>% 
   summarise(roads = nice_comma(n_distinct(RD_LOG_ID_R)), 
             segments = nice_comma(n()), 
+            #road_len = nice_comma(sum(the_len, na.rm=TRUE)/5280, 1),
             dist = nice_comma(sum(distance, na.rm=TRUE)/5280, 1),
             .groups = "drop") 
   )
 ```
 
+```{r}
+ggplot(filter(comb_score2, setting != "Unknown"), 
+       aes(x = as.factor(score), y = the_length/5280))+
+  geom_col() +
+  labs(x = "score based on data available", 
+       y = "centerline miles of road") +
+  theme_minimal() +
+  facet_grid(setting ~ road_class)
+```
 
-### Overall
+If we remove the segments where we do not have information about sidewalks and shoulders at all, we can see that for those, we are generally finding higher scores for rural roads - with paved shoulders. 
+
+```{r}
+ggplot(filter(comb_score2, setting != "Unknown", !is.na(score)), 
+       aes(x = as.factor(score), y = LENGTH/5280))+
+  geom_col() +
+  labs(x = "score based on data available", 
+       y = "centerline miles of road") +
+  theme_minimal() +
+  facet_grid(setting ~ road_class)
+```
+
+Some of the segments with score of 0 are because they have shoulders when they should have sidewalks. Here's a few example segments. If you are familiar with Central Kitsap, you might recognize this on Provost - where there are wide shoulders, but the road is in the urban growth area and identified as urban; therefore, design standards suggest sidewalks are appropriate. 
+
+```{r}
+
+roads_0 <- comb_score2 %>%
+  filter(score == 0) %>%
+  select(setting, road_class, FULL_NAME_R, sidewalk_right:score)
+
+knitr::kable(head(roads_0))
+
+```
+
+```{r}
+roads_10 <- comb_score2 %>%
+  filter(score == 10) %>%
+  group_by(setting, road_class, "Road Name" = FULL_NAME_R) %>%
+  summarise(segments = nice_comma(n()), 
+            road_len = nice_comma(sum(LENGTH, na.rm=TRUE)/5280, 1),
+            dist = nice_comma(sum(distance, na.rm=TRUE)/5280, 1),
+            .groups = "drop") 
+
+knitr::kable(roads_10)
+```
 
 
 
