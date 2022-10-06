@@ -817,32 +817,47 @@ getWalkingPolygonInCounty <- function(locdf, idcol) {
   # doesn't do the clip off of the last part
 }
 library(mapboxapi)
-lib_30min <- mb_isochrone(libraries,
-               time = 30, "walking", id_column="NAME")
+
+lib2 <- getWalkingPolygonInCounty(libraries, "NAME")
 ```
 
-Kitsap County has `r nrow(libraries)` Public libraries.
+Kitsap County has `r nrow(libraries)` Public libraries; however, only `r nrow(lib2)` are outside of city limits. Here they are shown with a 30 minute walking distance. 
 
 ```{r plot_libraries}
 
-lib_circles <- st_intersection(st_buffer(libraries, 5280), st_buffer(county_no_cities,0)) %>%
-  mutate(LENGTH = as.integer(st_length(.)))
-lib2 <- getWalkingPolygonInCounty(libraries, "NAME")
+#lib_circles <- st_intersection(st_buffer(libraries, 5280), st_buffer(county_no_cities,0))
+
 
 kitsap +
-  #geom_sf(data = libraries, aes(color = NAME)) +
   geom_sf(data = lib2, aes(fill = id), 
-          lwd = 0, alpha = 0.3, show.legend = FALSE) 
-  geom_sf(data = lib_circles, aes(fill = NAME), 
-          lwd = 0, alpha = 0.3, show.legend = FALSE) +
-  geom_sf(data = st_buffer(libraries, 5280), aes(fill = NAME), 
-          lwd = 0, alpha = 0.3, show.legend = FALSE) +
+          lwd = 0, alpha = 0.3) +
+  geom_sf(data = libraries, aes(color = 1), color = "black", show.legend = FALSE) +
   theme_void() +
   labs(title = 'Kitsap County libraries',
        caption = "Data source: Kitsap GIS - data in development",
-       color = "Libraries")
+       fill = "Libraries")
 
 ```
+
+
+```{r loop_libraries,include=FALSE,echo=FALSE}
+the_libraries <- unique(st_set_geometry(lib2, NULL)$id)
+loop_df <- st_as_sf(lib2) %>% mutate(tomatch = id)
+
+score_breakdowns <- score_breakdowns %>%
+  bind_rows(tibble(Area = the_libraries, Score = NA))
+                                     
+expanded_child <- lapply(
+    the_libraries,
+    function(x) {
+      knitr::knit_expand(file = "child_single_geo.Rmd",
+                                   current_geo = x )
+    })
+
+parsed_child <- knitr::knit_child(text = unlist(expanded_child))
+```
+
+`r parsed_child`
 
 #### Transit
 
