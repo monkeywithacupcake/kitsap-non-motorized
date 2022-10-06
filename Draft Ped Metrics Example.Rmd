@@ -814,6 +814,7 @@ getWalkingPolygonInCounty <- function(locdf, idcol) {
                time = 30, "walking", id_column=idcol)
   #fdf <- st_transform(fdf, 9003)
   #st_intersection(fdf, st_buffer(county_no_cities,0)) 
+  # doesn't do the clip off of the last part
 }
 library(mapboxapi)
 lib_30min <- mb_isochrone(libraries,

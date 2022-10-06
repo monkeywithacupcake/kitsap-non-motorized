@@ -6,7 +6,7 @@
 #library(broom)
 
 this_geo <- st_as_sf(loop_df) %>% filter(tomatch == "{{current_geo}}") 
-this_roads <- st_intersection(road_df, st_buffer(this_geo,0))
+this_roads <- st_intersection(ncdf, st_buffer(this_geo,0))
 this_sw_sh <- st_intersection(nc_sw_sh, st_buffer(this_geo,0))
 
 # need to handle the case where this_sw_sh or this_roads has 0 rows
