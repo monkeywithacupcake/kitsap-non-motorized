@@ -26,6 +26,9 @@ nice_comma <- function(x, dec = 1){
 
 this_dir <- '~/Documents/non-motorized/'
 
+
+library(kableExtra)
+
 ```
 
 ```{r loaddata, cache = TRUE}
@@ -218,21 +221,8 @@ These are the roads that will be evaluated.
 ```{r}
 library(tidyverse)
 library(sf)
-# groupcl <- ncdf %>% #clean_roadcl %>%  
-#   st_set_geometry(., NULL) %>% 
-#   group_by(RUCODE, road_class) %>% 
-#   summarise(roads = nice_comma(n_distinct(FULL_NAME)), 
-#             segments = nice_comma(n()), 
-#             length = nice_comma(sum(LENGTH, na.rm=TRUE)/5280,1),
-#             .groups = "drop") %>%
-#   mutate(RUCODE = factor(RUCODE, 
-#                          levels = c(0,1,2), 
-#                          labels = c("Unknown", "Rural", "Small Urban")))
-# 
-# colnames(groupcl) <- c("Rural/Urban", "Road Classification", 
-#                        "Count of Roads", "Count of Segments", 
-#                        "Length in Miles") 
-groupcl <- ncdf %>% #clean_roadcl %>%  
+
+groupcl <- ncdf %>%  
   st_set_geometry(., NULL) %>% 
   group_by(road_class) %>% 
   summarise(roads = nice_comma(n_distinct(FULL_NAME),0), 
@@ -252,7 +242,8 @@ colnames(groupcl) <- c("Road Classification",
                        "Count of Roads", "Count of Segments", 
                        "Length in Miles") 
 knitr::kable(groupcl, 
-             caption = "Roads by Class in Kitsap County, excluding cities, highways, and easements")
+             caption = "Roads by Class in Kitsap County, excluding cities, highways, and easements")  %>%
+  kable_material(c("striped", "hover"))
 ```
 
 These are the sidewalk and shoulders also outside of Cities. Single sides shown. This is one example where we know the data are incomplete; for example, Silverdale Way is not in a city and is known to have sidewalks on both sides.^[For the specific example of Silverdale Way, there are three entries in the sidewalk data with the Road Log Id of 19515 that matches Silverdale Way, and they all indicate sidewalks on the left side of the road. Further note, all three have a segment ID of 0, so they will not match any of the segments in the roads data if we match on Road Log Id and Segment ID - an entirely different problem with the data that is not isolated to Silverdale Way. `r round(sum(nc_sw_sh$SEGMENT_ID ==0)/nrow(nc_sw_sh)*100,1)`% of the sidewalk data do not have segment ids.] For this draft example report it is okay; if the initial report is completed with the incomplete data, it will present a poorer overall condition of pedestrian facilities than is in place.
@@ -277,7 +268,8 @@ df2 <- sidewalks_nc %>%
 df <- bind_rows(df, df2)
 
 knitr::kable(df, 
-             caption = "Miles of Sidewalks by Width of Sidewalk (single side)")
+             caption = "Miles of Sidewalks by Width of Sidewalk (single side)") %>%
+  kable_material(c("striped", "hover"))
 ```
 
 ```{r}
@@ -299,7 +291,8 @@ df2 <- shoulders_nc %>%
 df <- bind_rows(df, df2)
 
 knitr::kable(df, 
-             caption = "Miles of Paved Shoulder by Width of Shoulder (single side)")
+             caption = "Miles of Paved Shoulder by Width of Shoulder (single side)") %>%
+  kable_material(c("striped", "hover"))
 ```
 
 ```{r}
@@ -400,7 +393,7 @@ The segment ids are clearly not from the same space, but the road log ids are co
 For now, we are making a space around a sidewalk or shoulder geometry, a buffer, to capture the nearby area where the road would be, and seeing if there are any road segments that intersect. If the road segment intersects and has the same road log id, we keep it. 
 
 
-```{r combine-rd-sw-sh, echo = TRUE}
+```{r combine-rd-sw-sh}
 # combine the sidewalk and shoulder and roads data
 x <- st_as_sf(nc_sw_sh) %>% mutate(LENGTH = as.integer(LENGTH)) %>% filter(RD_LOG_ID == 49435 & LENGTH > 1000)
 x$RD_LOG_ID <- 43809
@@ -414,13 +407,6 @@ comb <- st_intersection(select(ncdf, RD_LOG_ID_R = RD_LOG_ID,
   distinct(RD_LOG_ID_R, SEGMENT_ID_R, RD_LOG_ID, SEGMENT_ID, SIDE_OF_RO, .keep_all = TRUE) %>%
   mutate(distance = as.integer(st_length(.)))
 
-#distance is the length of the matched road segment and sidewalk or shoulder 
-#comb %>% st_set_geometry(., NULL) %>% 
-#  group_by(road_class, SIDE_OF_RO, TYPE) %>%
-#  summarize(s_miles = sum(distance)/5280,
-#            miles = format(round(as.numeric(sum(distance)/5280), 1), 
-#                           digits = 1, nsmall=1, big.mark=","),
-#            .groups = "drop")
 ```
 
 
@@ -435,27 +421,28 @@ Each road segment is evaluated individually. For each road segment, its adequate
 library(tidyverse)
 library(kableExtra)
 road_standards_given <- tribble(
-  ~setting, ~class, ~characteristics, ~sidewalk, ~shoulder, ~note,
-  "Urban", "Local Road", NA, 5, NA,NA,
-  "Urban", "Local Sub-collector", NA, 5, NA,"sub-collector is not defined in road data",
-  "Urban", "Arterial", NA, 6, NA,NA,
-  "Urban", "Collector", NA, 6, NA,NA,
-  "Rural", "Local Road", NA, NA, 3,NA,
-  "Rural", "Local Sub-collector", NA, NA, 4,"sub-collector is not defined in road data",
-  "Rural", "Collector", "ADT 400-750", NA, 3,"ADT not defined in road data",
-  "Rural", "Collector", "ADT 751-1000", NA, 4,"ADT not defined in road data",
-  "Rural", "Collector", "DHV 100-200", NA, 6,"DHV not defined in road data",
-  "Rural", "Collector", "DHV > 200", NA, 8,"DHV not defined in road data",
-  "Rural", "Minor Arterial", "DHV < 100", NA, 4,"DHV not defined in road data",
-  "Rural", "Minor Arterial", "DHV 100-200", NA, 6,"DHV not defined in road data",
-  "Rural", "Minor Arterial", "DHV > 200", NA, 8,"DHV not defined in road data",
-  "Rural", "Principal Arterial", "DHV <200", NA, 6,"DHV not defined in road data",
-  "Rural", "Principal Arterial", "DHV > 200", NA, 8,"DHV not defined in road data",
+  ~setting, ~class, ~characteristics, ~sidewalk, ~shoulder, 
+  "Urban", "Local Road", NA, 5, NA,
+  "Urban", "Local Sub-collector", NA, 5, NA,
+  "Urban", "Arterial", NA, 6, NA,
+  "Urban", "Collector", NA, 6, NA,
+  "Rural", "Local Road", NA, NA, 3,
+  "Rural", "Local Sub-collector", NA, NA, 4,
+  "Rural", "Collector", "ADT 400-750", NA, 3,
+  "Rural", "Collector", "ADT 751-1000", NA, 4,
+  "Rural", "Collector", "DHV 100-200", NA, 6,
+  "Rural", "Collector", "DHV > 200", NA, 8,
+  "Rural", "Minor Arterial", "DHV < 100", NA, 4,
+  "Rural", "Minor Arterial", "DHV 100-200", NA, 6,
+  "Rural", "Minor Arterial", "DHV > 200", NA, 8,
+  "Rural", "Principal Arterial", "DHV <200", NA, 6,
+  "Rural", "Principal Arterial", "DHV > 200", NA, 8,
 )
 
 knitr::kable(road_standards_given,
              caption = "Summary of Tables 3.3 and 3.4 in Kitsap County Road Standards [@kc_road_standards]")  %>%
-   footnote(general = "Within the road standards, the minimum shoulder width may be reduced to the minimum required by AASHTO, which would be 4-8 feet, depending on the ADT")
+   footnote(general = "Within the road standards, the minimum shoulder width may be reduced to the minimum required by AASHTO, which would be 4-8 feet, depending on the ADT. Note: sub-collector, ADT, and DHV are not defined in the publicly available road data.") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 
 
@@ -482,7 +469,8 @@ road_standards <- tribble(
 
 knitr::kable(road_standards,
              caption = "Simplified Assumptions to Allow for Evaluation")  %>%
-   footnote(general = "This is only a simplification to allow for an evaluation without knowledge of ADT or DHV on the roads under evaluation")
+   footnote(general = "This is only a simplification to allow for an evaluation without knowledge of ADT or DHV on the roads under evaluation") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 
 
@@ -501,13 +489,21 @@ Therefore, segments with sidewalk or shoulder of adequate size (based on road cl
 
 Any given area score will be a weighted average of the scores of the segments within the area. Weighting is by centerline linear feet per segment. A simple example is an area composed of 4 segments. 
 
-|Segment|Segment Score | Segment Centerline Linear Feet |
-|------|:-----|:-----|
-|A|6|100|
-|B|0|10|
-|C|10|50|
-|D|8|200|
-|*Total*| *?* | *360*|
+
+```{r}
+example_tbl <- tribble(
+  ~Segment, ~"Segment Score", ~"Segment Centerline Linear Feet",
+  "A", 6, 100,
+  "B", 0, 10,
+  "C",10,50,
+  "D",8,200,
+  "Total",7.5 ,360,
+)
+
+knitr::kable(example_tbl) %>%
+kable_styling(bootstrap_options = "striped", full_width = F, position = "float_left")
+```
+
 
 The Total Score would be the segment scores multiplied by their linear feet and then divided by the total linear feet of the area (360). For this example, we get a area score of 7.5 $$ 6 x 100 + 0 x 10 + 10 x 50 + 8 x 200 = 2700$$ $$2700/360 = 7.5$$
 
@@ -530,7 +526,8 @@ getScoreInterpretation <- function(x){
 
 knitr::kable(score_interpretation,
              caption = "Interpretation of Scores for Segments and for Areas")  %>%
-   footnote(general = "For a segment, adequate means one side is good or both sides meet AASHTO minimums and minimal means one side meets AASHTO minimums")
+   footnote(general = "For a segment, adequate means one side is good or both sides meet AASHTO minimums and minimal means one side meets AASHTO minimums") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 
 
@@ -626,22 +623,26 @@ comb_score_by_setting_class <- comb_score2 %>%
 
 The overall score for pedestrian facilities in Kitsap County is `r nice_comma(comb_total_score)`, `r getScoreInterpretation(comb_total_score)`. 
 
+Looking by the same breakdown that we have for standards, we can see where the scores are highest and lowest. 
+
 ```{r}
-knitr::kable(comb_score_by_setting_class)
+knitr::kable(comb_score_by_setting_class) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 
 
-More detailed information
+
 ```{r}
-knitr::kable(
-  comb_score2 %>%
-  group_by(setting, road_class, score) %>% 
-  summarise(roads = nice_comma(n_distinct(RD_LOG_ID_R)), 
-            segments = nice_comma(n()), 
-            #road_len = nice_comma(sum(the_len, na.rm=TRUE)/5280, 1),
-            dist = nice_comma(sum(distance, na.rm=TRUE)/5280, 1),
-            .groups = "drop") 
-  )
+# More detailed information
+# knitr::kable(
+#   comb_score2 %>%
+#   group_by(setting, road_class, score) %>% 
+#   summarise(roads = nice_comma(n_distinct(RD_LOG_ID_R)), 
+#             segments = nice_comma(n()), 
+#             #road_len = nice_comma(sum(the_len, na.rm=TRUE)/5280, 1),
+#             dist = nice_comma(sum(distance, na.rm=TRUE)/5280, 1),
+#             .groups = "drop") 
+#   )
 ```
 
 ```{r}
@@ -674,10 +675,12 @@ roads_0 <- comb_score2 %>%
   filter(score == 0) %>%
   select(setting, road_class, FULL_NAME_R, sidewalk_right:score)
 
-knitr::kable(head(roads_0))
+knitr::kable(head(roads_0)) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 
 ```
 
+Several road segments were able to achieve a score of 10 - meaning that the segment met the standard on both sides of the road. A few details for roads where at least one segment has a 10 are shown here. 
 ```{r}
 roads_10 <- comb_score2 %>%
   filter(score == 10) %>%
@@ -687,7 +690,8 @@ roads_10 <- comb_score2 %>%
             dist = nice_comma(sum(distance, na.rm=TRUE)/5280, 1),
             .groups = "drop") 
 
-knitr::kable(roads_10)
+knitr::kable(roads_10) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 
 
