@@ -178,6 +178,7 @@ Not all road segments will be evaluated. This report excludes road segments that
 ```{r, cache = TRUE}
 library(tidyverse)
 library(sf)
+
 kitsap_all_roads <- kitsap +
   geom_sf(data = clean_roadcl, aes(color = road_class)) + 
   road_col +
@@ -694,10 +695,25 @@ knitr::kable(roads_10) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 
+Some road segments are missing entirely from the centerline road data - for example, the portion of Rigetop that goes from the end of Myhre and curves back to Silverdale Way. These missing road segments are mostly complete streets with wide sidewalks. Here, showing a map with all roads with the name *RIDGETOP*, you can only see the part going from Silverdale Way to Myhre. These segments, and any others like them, missing from the data decrease the overall pedestrian facilities score. 
 
+```{r}
+kitsap +
+  geom_sf(data = filter(clean_roadcl, STREETNAME == "RIDGETOP"), aes(color = road_class)) + 
+  road_col +
+  theme_void() +
+  labs(title = "STREETNAME == RIDGETOP",
+       color = "")
+```
 
+## Smaller Breakdowns of the County
 
 We can also look at regions within the County. For these, we identify the roads and any sidewalks or shoulders.^[In theory, the miles of recorded sidewalk or shoulder and matched miles could be double the centerline miles if every mile had a sidewalk or shoulder.]
+
+```{r}
+score_breakdowns <- tibble(Area = "Kitsap County", Score = comb_total_score)
+```
+
 
 ### UGAs
 
@@ -717,6 +733,9 @@ kitsap +
 ```{r loop_ugas,include=FALSE,echo=FALSE}
 the_ugas <- unique(st_set_geometry(uga_no_city, NULL)$GMA_JURISD)
 loop_df <- st_as_sf(uga_no_city) %>% mutate(tomatch = GMA_JURISD)
+
+score_breakdowns <- score_breakdowns %>%
+  bind_rows(tibble(Area = the_ugas, Score = NA))
                                      
 expanded_child <- lapply(
     the_ugas,
@@ -752,6 +771,9 @@ kitsap +
 ```{r loop_lamirds,include=FALSE,echo=FALSE}
 the_lamirds <- unique(st_set_geometry(lamird, NULL)$PLAN_AREA)
 loop_df <- st_as_sf(lamird) %>% mutate(tomatch = PLAN_AREA)
+
+score_breakdowns <- score_breakdowns %>%
+  bind_rows(tibble(Area = the_lamirds, Score = NA))
                                      
 expanded_child <- lapply(
     the_lamirds,
@@ -782,13 +804,70 @@ For pedestrian generators, we identify an area that is within 1 mile of the faci
 ```{r}
 libraries <- community %>%
   filter(TYPE == "PUBLIC LIBRARY")
+
+getWalkingPolygonInCounty <- function(locdf, idcol) {
+  # finds the items in locdf that are in the target area
+  # then finds the polygon around them
+  # then limits that again to the area in the target (because the polygon may go into a city)
+  fdf <- st_intersection(locdf, st_buffer(county_no_cities,0)) 
+  mb_isochrone(fdf,
+               time = 30, "walking", id_column=idcol)
+  #fdf <- st_transform(fdf, 9003)
+  #st_intersection(fdf, st_buffer(county_no_cities,0)) 
+}
+library(mapboxapi)
+lib_30min <- mb_isochrone(libraries,
+               time = 30, "walking", id_column="NAME")
 ```
 
-Kitsap County has `r nrow(libraries)`
+Kitsap County has `r nrow(libraries)` Public libraries.
+
+```{r plot_libraries}
+
+lib_circles <- st_intersection(st_buffer(libraries, 5280), st_buffer(county_no_cities,0)) %>%
+  mutate(LENGTH = as.integer(st_length(.)))
+lib2 <- getWalkingPolygonInCounty(libraries, "NAME")
+
+kitsap +
+  #geom_sf(data = libraries, aes(color = NAME)) +
+  geom_sf(data = lib2, aes(fill = id), 
+          lwd = 0, alpha = 0.3, show.legend = FALSE) 
+  geom_sf(data = lib_circles, aes(fill = NAME), 
+          lwd = 0, alpha = 0.3, show.legend = FALSE) +
+  geom_sf(data = st_buffer(libraries, 5280), aes(fill = NAME), 
+          lwd = 0, alpha = 0.3, show.legend = FALSE) +
+  theme_void() +
+  labs(title = 'Kitsap County libraries',
+       caption = "Data source: Kitsap GIS - data in development",
+       color = "Libraries")
+
+```
 
 #### Transit
 
 ## Conclusion
 
+Using the data publicly available and draft criteria (special committee investigating pedestrian metrics), the overall score for pedestrian facilities in Kitsap County is `r nice_comma(comb_total_score)`, which is interpreted (see methods) as `r getScoreInterpretation(comb_total_score)`. 
+
+Smaller breakdowns of the county fare differently.
+
+```{r}
+score_breakdowns %>%
+  rowwise() %>%
+  mutate(Interpretation = getScoreInterpretation(Score))
+
+knitr::kable(score_breakdowns) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+However, there are a couple of known data irregularities, such as:
+
+ * missing part of Ridgetop Blvd in Silverdale where sidewalks are known to exist
+ * unmatched road log identifiers between road and sidewalk and shoulder data
+ 
+ And there are likely unknown data irregularities. 
+ 
+In addition, many roads have shoulders when their standards suggest they should have sidewalks. Is the presence of a shoulder, though not adequate, really the same as **nothing?**
+ 
 
 ## References

@@ -211,6 +211,15 @@ this_comb_total_score <- sum(this_comb_score2$w_score)/sum(this_comb_score2$the_
 **The overall score for pedestrian facilities in {{current_geo}} is `r nice_comma(this_comb_total_score)`, `r getScoreInterpretation(this_comb_total_score)`.**
 
 ```{r}
+# add the score to the score breakdowns
+if (!exists(deparse(substitute(this_comb_total_score)))){
+  this_comb_total_score <- 0
+}
+score_breakdowns$Score[score_breakdowns$Area == "{{current_geo}}"] <- this_comb_total_score
+```
+
+
+```{r}
 # next step
 # take the comb data, get the distance for each segment
 # combine that with this roads
