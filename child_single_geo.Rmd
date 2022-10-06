@@ -96,7 +96,8 @@ road_sum <- this_roads %>%
             .groups = "drop")
 df <- select(road_sum, -t_miles)
 colnames(df) <- c("Road Class", "Miles")
-knitr::kable(df)
+knitr::kable(df) %>%
+  kable_material(c("striped", "hover"))
 ```
 
 And we still need to get this into segment scores, but here are the miles with sidewalks or shoulders.
@@ -108,7 +109,8 @@ df <- this_comb %>% st_set_geometry(., NULL) %>%
             miles = format(round(as.numeric(sum(distance)/5280), 1), 
                            digits = 1, nsmall=1, big.mark=","),
             .groups = "drop")
-knitr::kable(select(df,-s_miles))
+knitr::kable(select(df,-s_miles)) %>%
+  kable_material(c("striped", "hover"))
 ```
 
 ```{r, eval=has_both}
@@ -206,7 +208,7 @@ this_comb_score2 <- st_set_geometry(this_roads, NULL) %>%
 this_comb_total_score <- sum(this_comb_score2$w_score)/sum(this_comb_score2$the_length)
 ```
 
-The overall score for pedestrian facilities in {{current_geo}} is `r nice_comma(this_comb_total_score)`, `r getScoreInterpretation(this_comb_total_score)`.
+**The overall score for pedestrian facilities in {{current_geo}} is `r nice_comma(this_comb_total_score)`, `r getScoreInterpretation(this_comb_total_score)`.**
 
 ```{r}
 # next step
