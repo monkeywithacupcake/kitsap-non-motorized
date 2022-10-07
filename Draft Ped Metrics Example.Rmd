@@ -53,6 +53,7 @@ uga$isuga = 1
 lamird <- sf::read_sf(paste0(this_dir,"data/lamird"))
 lamird$islamird = 1
 community <- sf::read_sf(paste0(this_dir,"data/community"))
+schools <- sf::read_sf(paste0(this_dir,"data/schools"))
 
 # start plotting roads
 # want always to see same color for same type of road, so
@@ -795,28 +796,29 @@ Kitsap County has `r length(the_lamirds)` LAMIRDS - Local Area of More Intense R
 
 For pedestrian generators, we identify an area that is within 1 mile of the facility and evaluate roads therein in the same manner as the defined county areas, like UGAs and LAMIRDS.
 
-#### Schools
-
-
-
-#### Libraries
-
 ```{r}
-libraries <- community %>%
-  filter(TYPE == "PUBLIC LIBRARY")
-
 getWalkingPolygonInCounty <- function(locdf, idcol) {
   # finds the items in locdf that are in the target area
   # then finds the polygon around them
   # then limits that again to the area in the target (because the polygon may go into a city)
-  fdf <- st_intersection(locdf, st_buffer(county_no_cities,0)) 
-  mb_isochrone(fdf,
-               time = 30, "walking", id_column=idcol)
-  #fdf <- st_transform(fdf, 9003)
-  #st_intersection(fdf, st_buffer(county_no_cities,0)) 
-  # doesn't do the clip off of the last part
+  if (!is.na(st_crs(locdf)$epsg)) { # the locdf has a epsg and cnc is NA
+    cnc <- st_transform(county_no_cities, st_crs(locdf)$epsg)
+    fdf <- st_intersection(locdf, st_buffer(cnc,0)) 
+  } else {
+    fdf <- st_intersection(locdf, st_buffer(county_no_cities,0)) 
+  }
+  fdf2 <- mapboxapi::mb_isochrone(fdf,
+                                  time = 30, "walking", id_column=idcol)
+  cnc <- st_transform(county_no_cities, st_crs(fdf2)$epsg)
+  st_intersection(fdf2, st_buffer(cnc,0)) 
 }
-library(mapboxapi)
+```
+
+
+#### Schools
+```{r}
+libraries <- community %>%
+  filter(TYPE == "PUBLIC LIBRARY")
 
 lib2 <- getWalkingPolygonInCounty(libraries, "NAME")
 ```
@@ -834,6 +836,56 @@ kitsap +
   geom_sf(data = libraries, aes(color = 1), color = "black", show.legend = FALSE) +
   theme_void() +
   labs(title = 'Kitsap County libraries',
+       subtitle = "Libraries not labeled with color are not in the unincorporated county",
+       caption = "Data source: Kitsap GIS - data in development",
+       fill = "Libraries")
+
+```
+
+
+```{r loop_libraries,include=FALSE,echo=FALSE}
+the_libraries <- unique(st_set_geometry(lib2, NULL)$id)
+loop_df <- st_as_sf(lib2) %>% mutate(tomatch = id)
+
+score_breakdowns <- score_breakdowns %>%
+  bind_rows(tibble(Area = the_libraries, Score = NA))
+                                     
+expanded_child <- lapply(
+    the_libraries,
+    function(x) {
+      knitr::knit_expand(file = "child_single_geo.Rmd",
+                                   current_geo = x )
+    })
+
+parsed_child <- knitr::knit_child(text = unlist(expanded_child))
+```
+
+`r parsed_child`
+
+
+#### Libraries
+
+```{r}
+libraries <- community %>%
+  filter(TYPE == "PUBLIC LIBRARY")
+
+lib2 <- getWalkingPolygonInCounty(libraries, "NAME")
+```
+
+Kitsap County has `r nrow(libraries)` Public libraries; however, only `r nrow(lib2)` are outside of city limits. Here they are shown with a 30 minute walking distance. 
+
+```{r plot_libraries}
+
+#lib_circles <- st_intersection(st_buffer(libraries, 5280), st_buffer(county_no_cities,0))
+
+
+kitsap +
+  geom_sf(data = lib2, aes(fill = id), 
+          lwd = 0, alpha = 0.3) +
+  geom_sf(data = libraries, aes(color = 1), color = "black", show.legend = FALSE) +
+  theme_void() +
+  labs(title = 'Kitsap County libraries',
+       subtitle = "Libraries not labeled with color are not in the unincorporated county",
        caption = "Data source: Kitsap GIS - data in development",
        fill = "Libraries")
 
@@ -860,6 +912,81 @@ parsed_child <- knitr::knit_child(text = unlist(expanded_child))
 `r parsed_child`
 
 #### Transit
+
+According to Kitsap Transit, "Transit Centers and Transfer Points are locations where Kitsap Transit buses and ferries meet up to allow the safe transfer of passengers from one route to another. "[@ktransit]^[Transit Center location data were manually copied from the Kitsap Transit Website because they are not one of the identified data sets on the Kitsap County GIS site. Future users will need to ensure that these addresses are correct.]
+
+```{r}
+transit_cp <- tribble(
+  ~NAME, ~ADDRESS,
+  "Bremerton Transportation Center (Ferry Terminal)","10 Washington Ave, Bremerton 98337",
+  "Bainbridge Island Ferry Terminal","270 Olympic Drive SE, Bainbridge 98110",
+  "Wheaton Way Transit Center","3915 Wheaton Way, Bremerton 98310",
+  "West Bremerton Transit Center","540 Bruenn Ave, Bremerton 98312",
+  "Silverdale Transit Center","Greaves Way & Kitsap Mall Blvd, Silverdale 98383",
+  "North Viking Transit Center","21992 Viking Ave NW, Poulsbo 98370",
+  "Kingston Ferry Terminal","11264 State Route 104, Kingston 98346",
+  "Port Orchard Ferry Dock","73 Sidney Ave, Port Orchard 98366",
+  "Southworth Ferry Terminal","11564 SE State Hwy. 160, Southworth 98386",
+  "Annapolis Ferry Dock","1076 Bay Street, Port Orchard 98366",
+  "Hwy. 305 & Suquamish Way","16003 WA-305, Poulsbo, Washington 98370",
+  "McWilliams Park & Ride","1601 NE McWilliams Rd, Bremerton, Washington 98311",
+  "Suquamish Park & Ride","18829 Division Ave NE, Suquamish, Washington 98392",
+  "Port Orchard Wal-Mart","3497 Bethel Rd SE, Port Orchard 98366",
+  "George's Corner Park & Ride","27618 Hansville Rd NE, Kingston 98346",
+  "Gateway Fellowship Park & Ride","18901 8th Ave NE, Poulsbo 98370",
+  "Miller Bay & Indianola","23404 Miller Bay Rd NE Poulsbo, Washington 98370",
+  "St. Gabriel's Church","1150 Mitchell Ave SE, Port Orchard 98366"
+)
+# geocode the addresses into geocode = c(lon, lat)
+transit_cp <- transit_cp %>% #tmaptools::geocode_OSM(transit_cp$ADDRESS)
+  rowwise() %>%
+  mutate(geocode = list(set_names(mapboxapi::mb_geocode(ADDRESS),
+                        c("lon","lat")))) %>%
+  unnest_wider(geocode)
+  
+# convert the lat lon into a point geometry
+transit_cp <- st_as_sf(transit_cp, 
+                      coords = c(x = "lon", y = "lat"), 
+                      crs = 4326) 
+transit_cp2 <- getWalkingPolygonInCounty(transit_cp, "NAME")
+```
+
+Kitsap County has `r nrow(transit_cp)` Public libraries; however, only `r nrow(transit_cp2)` are outside of city limits. Here they are shown with a 30 minute walking distance. 
+
+```{r plot_transit}
+kitsap +
+  geom_sf(data = transit_cp2, aes(fill = id), 
+          lwd = 0, alpha = 0.3) +
+  geom_sf(data = transit_cp, aes(color = 1), color = "black", show.legend = FALSE) +
+  theme_void() +
+  labs(title = 'Kitsap County Transit Centers and Transfer Points',
+       subtitle = "Libraries not labeled with color are not in the unincorporated county",
+       caption = "Data source: Kitsap Transit Website[@ktransit]",
+       fill = "Transit Centers")
+
+```
+
+
+```{r loop_transit}
+the_transit <- unique(st_set_geometry(transit_cp2, NULL)$id)
+loop_df <- st_as_sf(transit_cp2) %>% mutate(tomatch = id)
+
+score_breakdowns <- score_breakdowns %>%
+  bind_rows(tibble(Area = the_transit, Score = NA))
+                                     
+expanded_child <- lapply(
+    the_transit,
+    function(x) {
+      knitr::knit_expand(file = "child_single_geo.Rmd",
+                                   current_geo = x )
+    })
+
+parsed_child <- knitr::knit_child(text = unlist(expanded_child))
+```
+
+`r parsed_child`
+
+
 
 ## Conclusion
 
