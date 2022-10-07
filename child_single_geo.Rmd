@@ -3,9 +3,13 @@
 # {{current_geo}}
 
 ```{r} 
-#library(broom)
 
 this_geo <- st_as_sf(loop_df) %>% filter(tomatch == "{{current_geo}}") 
+if (!is.na(st_crs(ncdf)$epsg) & !is.na(st_crs(this_geo)$epsg) & 
+    st_crs(ncdf)$epsg != st_crs(this_geo)$epsg) {
+  ncdf <- st_transform(ncdf, st_crs(this_geo)$epsg)
+  nc_sw_sh <- st_transform(ncdf, st_crs(this_geo)$epsg)
+}
 this_roads <- st_intersection(ncdf, st_buffer(this_geo,0))
 this_sw_sh <- st_intersection(nc_sw_sh, st_buffer(this_geo,0))
 
