@@ -5,6 +5,7 @@
 ```{r} 
 
 this_geo <- st_as_sf(loop_df) %>% filter(tomatch == "{{current_geo}}") 
+
 if (!is.na(st_crs(this_geo)$epsg)) {
   ncdf <- st_transform(ncdf, st_crs(this_geo)$epsg)
   nc_sw_sh <- st_transform(nc_sw_sh, st_crs(this_geo)$epsg)
@@ -93,6 +94,39 @@ this_msg <- ifelse(this_comb_miles > this_sw_sh_miles,
 Within this area, there are `r this_centerline_miles` centerline road miles; `r this_sw_sh_miles` miles of recorded sidewalk or shoulder (either side of road); and `r this_comb_miles` miles where we could match the recorded sidewalk or shoulder to a road segment (either side of road). `r this_msg`
 
 ```{r, eval=has_both}
+ # should we test for points?
+the_points <- c()
+if (exists("the_schools")) { the_points <- append(the_points, "the_schools")} 
+if (exists("the_libraries")) { the_points <- append(the_points, "the_libraries")} 
+if (exists("the_transits")) { the_points <- append(the_points, "the_transits")} 
+check_points <- ifelse(length(the_points) > 0, T, F)
+has_point = FALSE # start with false
+```
+
+
+```{r, eval=has_both & check_points}
+  # see if this geo has a point (is it an area around a place, like a school)
+
+if (length(which(eval(as.symbol(the_points)) == this_geo$tomatch)) !=0) {
+  # we need to figure out which one
+  has_point = TRUE
+  tr <- which(eval(as.symbol(the_points)) == this_geo$tomatch)
+  if (tr <= length(the_schools)) { # it is a school
+    this_point <- st_as_sf(pub_schools) %>%
+      filter(NAME == this_geo$tomatch)
+  } else if (tr > length(the_schools) & 
+             tr <= length(the_schools + length(the_libraries))) { # library
+    this_point <- st_as_sf(libraries) %>%
+      filter(NAME == this_geo$tomatch)
+  } else { #transit
+    this_point <- st_as_sf(transit_cp) %>%
+      filter(NAME == this_geo$tomatch)
+  }
+}
+
+```
+
+```{r, eval=has_both, fig.align = "center", out.width = '100%'}
 p1 <- kitsap +
   geom_sf(data = this_geo, aes(fill = 1), alpha = 0.5, show.legend = FALSE) +
   geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) +
@@ -103,13 +137,12 @@ p1 <- kitsap +
        caption = "Data source: Kitsap GIS - data in development",
        color = "Pedestrian Facilities")
 
-     
-
-
 r <- ggplot() +
   geom_sf(data = this_geo, aes(fill = 1), alpha = 0.4, lwd = 0, show.legend = FALSE) +
   geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
   geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "RIGHT"), aes(color = as.factor(TYPE))) +
+  {if(has_point) geom_sf(data = this_point, 
+                         aes(color = 1), color = "black", show.legend = FALSE)} +
   sw_sh_col +
   labs(title = "Right",
        color = "Pedestrian Facilities") +
@@ -119,6 +152,8 @@ l <- ggplot() +
   geom_sf(data = this_geo, aes(fill = 1), alpha = 0.4, lwd = 0, show.legend = FALSE) +
   geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
   geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "LEFT"), aes(color = as.factor(TYPE))) +
+  {if(has_point) geom_sf(data = this_point, 
+                         aes(color = 1), color = "black", show.legend = FALSE)} +
   sw_sh_col +
   labs(title = "Left",
        color = "Pedestrian Facilities") +
