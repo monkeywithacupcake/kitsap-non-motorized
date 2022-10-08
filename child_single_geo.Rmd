@@ -5,10 +5,9 @@
 ```{r} 
 
 this_geo <- st_as_sf(loop_df) %>% filter(tomatch == "{{current_geo}}") 
-if (!is.na(st_crs(ncdf)$epsg) & !is.na(st_crs(this_geo)$epsg) & 
-    st_crs(ncdf)$epsg != st_crs(this_geo)$epsg) {
+if (!is.na(st_crs(this_geo)$epsg)) {
   ncdf <- st_transform(ncdf, st_crs(this_geo)$epsg)
-  nc_sw_sh <- st_transform(ncdf, st_crs(this_geo)$epsg)
+  nc_sw_sh <- st_transform(nc_sw_sh, st_crs(this_geo)$epsg)
 }
 this_roads <- st_intersection(ncdf, st_buffer(this_geo,0))
 this_sw_sh <- st_intersection(nc_sw_sh, st_buffer(this_geo,0))
@@ -18,6 +17,7 @@ has_roads <- nrow(this_roads) != 0
 has_sw_sh <- nrow(this_sw_sh) != 0
 has_both <- has_roads & has_sw_sh
 # do not evaluate most of this child if does not
+this_comb_total_score <-0
 ```
 
 ```{r, results = 'asis', eval=!has_roads}
@@ -44,6 +44,7 @@ this_centerline_miles <- format(round(as.numeric(sum(st_length(this_roads))/5280
 this_sw_sh_miles <- 0
 # this_sw/sh_miles is RIGHT LEFT MILES where we could match SW/SH to a road segment
 this_comb_miles <- 0
+
 ```
 
 ```{r, eval=has_both}
