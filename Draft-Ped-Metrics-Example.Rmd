@@ -176,7 +176,7 @@ Not all road segments will be evaluated. This report excludes road segments that
  - Speed limit > 50 MPH^[**these are not currently identified because the road centerline data does not include speed limit**]
 
 
-```{r, cache = TRUE}
+```{r kitsapmap, cache = TRUE}
 library(tidyverse)
 library(sf)
 
@@ -517,6 +517,7 @@ score_interpretation <- tribble(
   5, "Adequate",
   3, "Minimum",
   1, "Poor",
+  0.001, "Very Poor",
   0, "Nothing"
 )
 
