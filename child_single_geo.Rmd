@@ -73,6 +73,9 @@ this_sw_sh_miles <- format(round(as.numeric(sum(st_length(this_sw_sh))/5280), 1)
 # this_sw/sh_miles is RIGHT LEFT MILES where we could match SW/SH to a road segment
 this_comb_miles <- format(round(as.numeric(sum(st_length(this_comb))/5280), 1), 
                            digits = 1, nsmall=1, big.mark=",")
+this_msg <- ifelse(this_comb_miles > this_sw_sh_miles, 
+                   "There are duplicate segments matching.", 
+                   "")
 
 # ggplot() +
 #   geom_sf(data = this_geo, aes(fill = 1), alpha = 0.2, lwd = 0, show.legend = FALSE) + 
@@ -87,36 +90,7 @@ this_comb_miles <- format(round(as.numeric(sum(st_length(this_comb))/5280), 1),
 
 ```
 
-Within this area, there are `r this_centerline_miles` centerline road miles; `r this_sw_sh_miles` miles of recorded sidewalk or shoulder (either side of road); and `r this_comb_miles` miles where we could match the recorded sidewalk or shoulder to a road segment (either side of road).
-
-```{r, eval=has_both}
-
-road_sum <- this_roads %>%
-  mutate(distance = st_length(.)) %>%  
-  st_set_geometry(., NULL) %>% 
-  group_by(road_class) %>%
-  summarise(t_miles = sum(distance)/5280,
-            miles = format(round(as.numeric(sum(distance)/5280), 1), 
-                           digits = 1, nsmall=1, big.mark=","),
-            .groups = "drop")
-df <- select(road_sum, -t_miles)
-colnames(df) <- c("Road Class", "Miles")
-knitr::kable(df) %>%
-  kable_material(c("striped", "hover"))
-```
-
-And we still need to get this into segment scores, but here are the miles with sidewalks or shoulders.
-
-```{r, eval=has_both}
-df <- this_comb %>% st_set_geometry(., NULL) %>% 
-  group_by(road_class, SIDE_OF_RO, TYPE) %>%
-  summarize(s_miles = sum(distance)/5280,
-            miles = format(round(as.numeric(sum(distance)/5280), 1), 
-                           digits = 1, nsmall=1, big.mark=","),
-            .groups = "drop")
-knitr::kable(select(df,-s_miles)) %>%
-  kable_material(c("striped", "hover"))
-```
+Within this area, there are `r this_centerline_miles` centerline road miles; `r this_sw_sh_miles` miles of recorded sidewalk or shoulder (either side of road); and `r this_comb_miles` miles where we could match the recorded sidewalk or shoulder to a road segment (either side of road). `r this_msg`
 
 ```{r, eval=has_both}
 p1 <- kitsap +
@@ -135,7 +109,6 @@ p1 <- kitsap +
 r <- ggplot() +
   geom_sf(data = this_geo, aes(fill = 1), alpha = 0.4, lwd = 0, show.legend = FALSE) +
   geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
-  #geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "RIGHT"), aes(linetype = as.factor(RD_LOG_ID)), color = "black") +
   geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "RIGHT"), aes(color = as.factor(TYPE))) +
   sw_sh_col +
   labs(title = "Right",
@@ -145,7 +118,6 @@ r <- ggplot() +
 l <- ggplot() +
   geom_sf(data = this_geo, aes(fill = 1), alpha = 0.4, lwd = 0, show.legend = FALSE) +
   geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
-  #geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "LEFT"), aes(linetype = as.factor(RD_LOG_ID)), color = "black") +
   geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "LEFT"), aes(color = as.factor(TYPE))) +
   sw_sh_col +
   labs(title = "Left",
@@ -153,16 +125,9 @@ l <- ggplot() +
   theme_void()
 
 
-
-p2 <- ggplot() +
-  geom_sf(data = this_geo, aes(fill = 1), alpha = 0.5, show.legend = FALSE) +
-  geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
-  geom_sf(data = this_sw_sh, aes(color = as.factor(TYPE)), show.legend = FALSE) +
-  theme_void()
-
 library(patchwork)
 
-(p1 + #l + r + #p2 +
+(p1 + 
   plot_layout(guides = 'collect') +
   labs(title = paste("Map for","{{current_geo}}"),
        caption = "Data source: Kitsap GIS - data in development",
@@ -215,20 +180,34 @@ this_comb_total_score <- sum(this_comb_score2$w_score)/sum(this_comb_score2$the_
 
 **The overall score for pedestrian facilities in {{current_geo}} is `r nice_comma(this_comb_total_score)`, `r getScoreInterpretation(this_comb_total_score)`.**
 
+A few segments with a score of 0 are shown here. 
+```{r eval=has_both}
+
+roads_0 <- this_comb_score %>%
+  filter(score == 0) %>%
+  select(setting, road_class, FULL_NAME_R, 
+         sidewalk_right, sidewalk_left,
+         shoulder_right, shoulder_left,
+         standard_sidewalk, standard_shoulder)
+
+knitr::kable(head(roads_0) %>%
+               rename(Setting = setting,
+                      Class = road_class,
+                      Name = FULL_NAME_R,
+                      `sidewalk R` = sidewalk_right,
+                      `sidewalk L` = sidewalk_left,
+                      `shoulder R` = shoulder_right,
+                      `shoulder L` = shoulder_left,
+                      `standard sidewalk` = standard_sidewalk,
+                      `standard shoulder` = standard_shoulder)) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+
+```
+
 ```{r}
 # add the score to the score breakdowns
 if (!exists(deparse(substitute(this_comb_total_score)))){
   this_comb_total_score <- 0
 }
 score_breakdowns$Score[score_breakdowns$Area == "{{current_geo}}"] <- this_comb_total_score
-```
-
-
-```{r}
-# next step
-# take the comb data, get the distance for each segment
-# combine that with this roads
-# where no sw sh = 0
-# determine if meets criteria
-
 ```
