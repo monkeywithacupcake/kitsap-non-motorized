@@ -1,6 +1,6 @@
 
 
-# {{current_geo}}
+#### {{current_geo}}
 
 ```{r} 
 
@@ -18,7 +18,13 @@ has_roads <- nrow(this_roads) != 0
 has_sw_sh <- nrow(this_sw_sh) != 0
 has_both <- has_roads & has_sw_sh
 # do not evaluate most of this child if does not
+
+# reset
 this_comb_total_score <-0
+has0 <- F
+has10 <- F
+this0 <- ""
+this10 <- ""
 ```
 
 ```{r, results = 'asis', eval=!has_roads}
@@ -115,7 +121,7 @@ if (length(which(eval(as.symbol(the_points)) == this_geo$tomatch)) !=0) {
     this_point <- st_as_sf(pub_schools) %>%
       filter(NAME == this_geo$tomatch)
   } else if (tr > length(the_schools) & 
-             tr <= length(the_schools + length(the_libraries))) { # library
+             tr <= length(the_schools) + length(the_libraries)) { # library
     this_point <- st_as_sf(libraries) %>%
       filter(NAME == this_geo$tomatch)
   } else { #transit
@@ -126,15 +132,20 @@ if (length(which(eval(as.symbol(the_points)) == this_geo$tomatch)) !=0) {
 
 ```
 
-```{r, eval=has_both, fig.align = "center", out.width = '100%'}
+```{r, eval=has_both}
+
+#| fig.width = 30,
+#| fig.height = 8,
+#| out.width = '100%',
+#| dpi = 96
+
 p1 <- kitsap +
   geom_sf(data = this_geo, aes(fill = 1), alpha = 0.5, show.legend = FALSE) +
   geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) +
   geom_sf(data = this_sw_sh, aes(color = as.factor(TYPE)), show.legend = "line") + 
   sw_sh_col +
   theme_void() +
-  labs(title = paste("Map for","{{current_geo}}"),
-       caption = "Data source: Kitsap GIS - data in development",
+  labs(title = "{{current_geo}}",#paste("Map for","{{current_geo}}"),
        color = "Pedestrian Facilities")
 
 r <- ggplot() +
@@ -146,7 +157,8 @@ r <- ggplot() +
   sw_sh_col +
   labs(title = "Right",
        color = "Pedestrian Facilities") +
-  theme_void()
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
 
 l <- ggplot() +
   geom_sf(data = this_geo, aes(fill = 1), alpha = 0.4, lwd = 0, show.legend = FALSE) +
@@ -157,19 +169,21 @@ l <- ggplot() +
   sw_sh_col +
   labs(title = "Left",
        color = "Pedestrian Facilities") +
-  theme_void()
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
 
+# calculate the number of rows needed to display the legend
+this_rows <- max(4,ceiling(n_distinct(as.character(this_sw_sh$TYPE))/3))
 
 library(patchwork)
 
-(p1 + 
+((p1 + 
   plot_layout(guides = 'collect') +
-  labs(title = paste("Map for","{{current_geo}}"),
-       caption = "Data source: Kitsap GIS - data in development",
-       color = "Pedestrian Facilities") & 
-    theme(legend.position = "bottom") ) +
+  labs(color = "Pedestrian Facilities") & 
+    theme(legend.position = "bottom") &
+    guides(color=guide_legend(nrow=this_rows,byrow=TRUE))) +
   (l + theme(legend.position = "none") ) +
-  (r + theme(legend.position = "none") )
+  (r + theme(legend.position = "none") ) ) 
 
 detach("package:patchwork", unload=TRUE)
 
@@ -211,12 +225,20 @@ this_comb_score2 <- st_set_geometry(this_roads, NULL) %>%
          w_score = the_score*the_length)
 
 this_comb_total_score <- sum(this_comb_score2$w_score)/sum(this_comb_score2$the_length)
+
+# do any with sw sh have score 0?
+has0 <- any(this_comb_score$score == 0)
+# do any with sw sh have score 10? 
+has10 <- any(this_comb_score$score == 10)
+this0 <- ifelse(has0, "A few segments where sidewalks or shoulders were matched to a road segment, but the resulting score was 0 are shown here. ","")
+this10 <- ifelse(has10, "A few good (score 10) segments are shown here. ","")
 ```
 
 **The overall score for pedestrian facilities in {{current_geo}} is `r nice_comma(this_comb_total_score)`, `r getScoreInterpretation(this_comb_total_score)`.**
 
-A few segments with a score of 0 are shown here. 
-```{r eval=has_both}
+`r this0` 
+
+```{r eval=has_both & has0}
 
 roads_0 <- this_comb_score %>%
   filter(score == 0) %>%
@@ -239,6 +261,30 @@ knitr::kable(head(roads_0) %>%
 
 ```
 
+`r this10` 
+
+```{r eval=has_both & has10}
+
+roads_10 <- this_comb_score %>%
+  filter(score == 10) %>%
+  select(setting, road_class, FULL_NAME_R, 
+         sidewalk_right, sidewalk_left,
+         shoulder_right, shoulder_left,
+         standard_sidewalk, standard_shoulder)
+
+knitr::kable(head(roads_10) %>%
+               rename(Setting = setting,
+                      Class = road_class,
+                      Name = FULL_NAME_R,
+                      `sidewalk R` = sidewalk_right,
+                      `sidewalk L` = sidewalk_left,
+                      `shoulder R` = shoulder_right,
+                      `shoulder L` = shoulder_left,
+                      `standard sidewalk` = standard_sidewalk,
+                      `standard shoulder` = standard_shoulder)) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+
+```
 ```{r}
 # add the score to the score breakdowns
 if (!exists(deparse(substitute(this_comb_total_score)))){
@@ -246,3 +292,5 @@ if (!exists(deparse(substitute(this_comb_total_score)))){
 }
 score_breakdowns$Score[score_breakdowns$Area == "{{current_geo}}"] <- this_comb_total_score
 ```
+
+
