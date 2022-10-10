@@ -1,0 +1,257 @@
+
+
+#### {{current_geo}}
+
+```{r} 
+
+this_geo <- st_as_sf(loop_df) %>% filter(tomatch == "{{current_geo}}") 
+
+if (!is.na(st_crs(this_geo)$epsg)) {
+  ncdf <- st_transform(ncdf, st_crs(this_geo)$epsg)
+  nc_sw_sh <- st_transform(nc_sw_sh, st_crs(this_geo)$epsg)
+}
+this_roads <- st_intersection(ncdf, st_buffer(this_geo,0))
+this_sw_sh <- st_intersection(nc_sw_sh, st_buffer(this_geo,0))
+
+# need to handle the case where this_sw_sh or this_roads has 0 rows
+has_roads <- nrow(this_roads) != 0
+has_sw_sh <- nrow(this_sw_sh) != 0
+has_both <- has_roads & has_sw_sh
+# do not evaluate most of this child if does not
+
+# reset
+this_comb_total_score <-0
+has0 <- F
+has10 <- F
+this0 <- ""
+this10 <- ""
+```
+
+```{r, results = 'asis', eval=!has_roads}
+cat("This area does not have known roads.")
+```
+
+```{r, results = 'asis', eval=!has_sw_sh}
+cat("This area does not have known sidewalks or shoulders.")
+```
+
+```{r, eval=has_sw_sh & !has_roads}
+this_centerline_miles <- 0 # this_centerline_miles is CENTERLINE MILES TOTAL
+# this_sw/sh_miles is RIGHT LEFT MILES with SW or SH TOTAL
+this_sw_sh_miles <- format(round(as.numeric(sum(st_length(this_sw_sh))/5280), 1), 
+                           digits = 1, nsmall=1, big.mark=",")
+# this_comb_miles is RIGHT LEFT MILES where we could match SW/SH to a road segment
+this_comb_miles <- 0
+```
+```{r, eval=!has_sw_sh & has_roads}
+# this_centerline_miles is CENTERLINE MILES TOTAL
+this_centerline_miles <- format(round(as.numeric(sum(st_length(this_roads))/5280), 1), 
+                           digits = 1, nsmall=1, big.mark=",")
+# this_sw/sh_miles is RIGHT LEFT MILES with SW or SH TOTAL
+this_sw_sh_miles <- 0
+# this_sw/sh_miles is RIGHT LEFT MILES where we could match SW/SH to a road segment
+this_comb_miles <- 0
+
+```
+
+```{r, eval=has_both}
+# identified a mislabeled RD_LOG_ID in the sidewalk data for Madrone (as Main)
+x <- st_as_sf(this_sw_sh) %>% mutate(LENGTH = as.integer(LENGTH)) %>% filter(RD_LOG_ID == 49435 & LENGTH > 500)
+x$RD_LOG_ID <- 43809
+# x will have 0 rows if we are not dealing with Manchester
+
+# comb will have repeating segments when there are sh/sw on both sides
+this_comb <- st_intersection(select(this_roads, RD_LOG_ID_R = RD_LOG_ID, 
+                                     SEGMENT_ID_R = SEGMENT_ID,
+                                     FULL_NAME_R = FULL_NAME, 
+                                     LENGTH_R = LENGTH,
+                                     road_class, RUCODE), 
+                             st_buffer(bind_rows(this_sw_sh, x), 50, endCapStyle="FLAT")) %>% 
+  filter(RD_LOG_ID == RD_LOG_ID_R) %>%
+  distinct(RD_LOG_ID_R, SEGMENT_ID_R, RD_LOG_ID, SEGMENT_ID, SIDE_OF_RO, .keep_all = TRUE) %>%
+  mutate(distance = st_length(.))
+
+# this_centerline_miles is CENTERLINE MILES TOTAL
+this_centerline_miles <- format(round(as.numeric(sum(st_length(this_roads))/5280), 1), 
+                           digits = 1, nsmall=1, big.mark=",")
+# this_sw/sh_miles is RIGHT LEFT MILES with SW or SH TOTAL
+this_sw_sh_miles <- format(round(as.numeric(sum(st_length(this_sw_sh))/5280), 1), 
+                           digits = 1, nsmall=1, big.mark=",")
+# this_sw/sh_miles is RIGHT LEFT MILES where we could match SW/SH to a road segment
+this_comb_miles <- format(round(as.numeric(sum(st_length(this_comb))/5280), 1), 
+                           digits = 1, nsmall=1, big.mark=",")
+this_msg <- ifelse(this_comb_miles > this_sw_sh_miles, 
+                   "There are duplicate segments matching.", 
+                   "")
+```
+
+Within this area, there are `r this_centerline_miles` centerline road miles; `r this_sw_sh_miles` miles of recorded sidewalk or shoulder (either side of road); and `r this_comb_miles` miles where we could match the recorded sidewalk or shoulder to a road segment (either side of road). `r this_msg`
+
+```{r, eval=has_both & has_points}
+  # see if this geo has a point (is it an area around a place, like a school)
+this_point <- st_as_sf(b_pointdf) %>%
+      filter(NAME == this_geo$tomatch)
+```
+
+```{r, eval=has_both}
+
+#| fig.width = 30,
+#| fig.height = 8,
+#| out.width = '100%',
+#| dpi = 96
+
+p1 <- kitsap +
+  geom_sf(data = this_geo, aes(fill = 1), lwd = 0, alpha = 0.8, show.legend = FALSE) +
+  #geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) +
+  geom_sf(data = this_sw_sh, aes(color = as.factor(TYPE)), show.legend = "line") + 
+  sw_sh_col +
+  theme_void() +
+  labs(title = "{{current_geo}}",#paste("Map for","{{current_geo}}"),
+       color = "")
+
+r <- ggplot() +
+  geom_sf(data = this_geo, aes(fill = 1), alpha = 0.4, lwd = 0, show.legend = FALSE) +
+  geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
+  geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "RIGHT"), aes(color = as.factor(TYPE))) +
+  {if(has_points) geom_sf(data = this_point, 
+                         aes(color = 1), color = "black", show.legend = FALSE)} +
+  sw_sh_col +
+  labs(title = "Right",
+       color = "") +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+l <- ggplot() +
+  geom_sf(data = this_geo, aes(fill = 1), alpha = 0.4, lwd = 0, show.legend = FALSE) +
+  geom_sf(data = this_roads, aes(color = 1), color = "#999999", alpha = 0.5) + 
+  geom_sf(data = filter(this_sw_sh, SIDE_OF_RO == "LEFT"), aes(color = as.factor(TYPE))) +
+  {if(has_points) geom_sf(data = this_point, 
+                         aes(color = 1), color = "black", show.legend = FALSE)} +
+  sw_sh_col +
+  labs(title = "Left",
+       color = "") +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# calculate the number of rows needed to display the legend
+this_rows <- max(4,ceiling(n_distinct(as.character(this_sw_sh$TYPE))/3))
+
+library(patchwork)
+
+((p1 + 
+  plot_layout(guides = 'collect') +
+  labs(color = "") & 
+    theme(legend.position = "bottom") &
+    guides(color=guide_legend(nrow=this_rows,byrow=TRUE))) +
+  (l + theme(legend.position = "none") ) +
+  (r + theme(legend.position = "none") ) ) 
+
+detach("package:patchwork", unload=TRUE)
+
+```
+
+```{r eval=has_both}
+this_comb_stand <- this_comb %>% 
+  st_set_geometry(., NULL) %>% 
+  mutate(setting = ifelse(RUCODE == 1, "Rural", 
+                          ifelse(RUCODE == 2, "Urban", "Unknown")),
+         ped_type = sub("\\:.*", "", TYPE),
+         nn = paste(sub("paved ","",tolower(ped_type)), tolower(SIDE_OF_RO),sep ="_")) %>%
+  pivot_wider(id_cols = c(-RD_LOG_ID:-TYPE,-ped_type), 
+              names_from = nn, 
+              values_from = WIDTH,
+              values_fn = mean) %>%
+  left_join(road_standards) %>%
+  rowwise() %>% # now make sure that have all the columns
+  mutate(sidewalk_left = ifelse("sidewalk_left" %in% names(.), sidewalk_left, NA),
+         sidewalk_right = ifelse("sidewalk_right" %in% names(.), sidewalk_right, NA),
+         shoulder_left = ifelse("shoulder_left" %in% names(.), shoulder_left, NA),
+         shoulder_right = ifelse("shoulder_right" %in% names(.), shoulder_right, NA)
+         )
+
+this_comb_score <- this_comb_stand %>%
+  mutate(score_left = getSideScore(standard_sidewalk, standard_shoulder, 
+                                   sidewalk_left, shoulder_left),
+         score_right = getSideScore(standard_sidewalk, standard_shoulder, 
+                                   sidewalk_right, shoulder_right),
+         score = score_left + score_right)
+this_comb_score2 <- st_set_geometry(this_roads, NULL) %>% 
+  select(RD_LOG_ID_R = RD_LOG_ID, SEGMENT_ID_R = SEGMENT_ID,
+         FULL_NAME_R = FULL_NAME, road_class, RUCODE, LENGTH) %>%
+  mutate(setting = ifelse(RUCODE == 1, "Rural", 
+                          ifelse(RUCODE == 2, "Urban", "Unknown"))) %>%
+  left_join(this_comb_score) %>%
+  mutate(the_score = ifelse(is.na(score), 0, score),
+         the_length = ifelse(is.na(distance), LENGTH, distance),
+         w_score = the_score*the_length)
+
+this_comb_total_score <- sum(this_comb_score2$w_score)/sum(this_comb_score2$the_length)
+
+# do any with sw sh have score 0?
+has0 <- any(this_comb_score$score == 0)
+# do any with sw sh have score 10? 
+has10 <- any(this_comb_score$score == 10)
+this0 <- ifelse(has0, "A few segments where sidewalks or shoulders were matched to a road segment, but the resulting score was 0 are shown here. ","")
+this10 <- ifelse(has10, "A few good (score 10) segments are shown here. ","")
+```
+
+**The overall score for pedestrian facilities in {{current_geo}} is `r nice_comma(this_comb_total_score)`, `r getScoreInterpretation(this_comb_total_score)`.**
+
+`r this0` 
+
+```{r eval=has_both & has0}
+
+roads_0 <- this_comb_score %>%
+  filter(score == 0) %>%
+  select(setting, road_class, FULL_NAME_R, 
+         sidewalk_right, sidewalk_left,
+         shoulder_right, shoulder_left,
+         standard_sidewalk, standard_shoulder)
+
+knitr::kable(head(roads_0) %>%
+               rename(Setting = setting,
+                      Class = road_class,
+                      Name = FULL_NAME_R,
+                      `sidewalk R` = sidewalk_right,
+                      `sidewalk L` = sidewalk_left,
+                      `shoulder R` = shoulder_right,
+                      `shoulder L` = shoulder_left,
+                      `standard sidewalk` = standard_sidewalk,
+                      `standard shoulder` = standard_shoulder)) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+
+```
+
+`r this10` 
+
+```{r eval=has_both & has10}
+
+roads_10 <- this_comb_score %>%
+  filter(score == 10) %>%
+  select(setting, road_class, FULL_NAME_R, 
+         sidewalk_right, sidewalk_left,
+         shoulder_right, shoulder_left,
+         standard_sidewalk, standard_shoulder)
+
+knitr::kable(head(roads_10) %>%
+               rename(Setting = setting,
+                      Class = road_class,
+                      Name = FULL_NAME_R,
+                      `sidewalk R` = sidewalk_right,
+                      `sidewalk L` = sidewalk_left,
+                      `shoulder R` = shoulder_right,
+                      `shoulder L` = shoulder_left,
+                      `standard sidewalk` = standard_sidewalk,
+                      `standard shoulder` = standard_shoulder)) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+
+```
+```{r}
+# add the score to the score breakdowns
+if (!exists(deparse(substitute(this_comb_total_score)))){
+  this_comb_total_score <- 0
+}
+score_breakdowns$Score[score_breakdowns$Area == "{{current_geo}}"] <- this_comb_total_score
+```
+
+

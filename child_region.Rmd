@@ -1,0 +1,81 @@
+
+[comment]: # creates a section for a smaller geo passed with details
+[comment]: # loops over a number i referencing the geo in breakdowns tibble
+[comment]: # called from Draft-Ped-Metrics-Example.Rmd
+
+```{r bdsetup-{{i}}}
+# create intro text
+i <- as.integer({{i}})
+has_points <- !is.na(breakdowns$pointdf[i])
+
+b_name <- breakdowns$Name[i]
+if(has_points){ b_pointdf <- eval(as.symbol(breakdowns$pointdf[i])) }
+b_polydf <- eval(as.symbol(breakdowns$polydf[i]))
+b_items <- eval(as.symbol(breakdowns$items[i]))
+b_idcol <- breakdowns$idcolpoly[i]
+
+loop_df <- st_as_sf(eval(b_polydf)) %>% mutate(tomatch = eval(as.symbol(b_idcol)))
+score_breakdowns <- score_breakdowns %>%
+  bind_rows(tibble(Area = b_items, Score = NA))
+```
+
+### `r b_name`
+
+```{r bdtext-{{i}}}
+intro_text <- paste0("Kitsap County has ",
+                    ifelse(!has_points, # poly only 
+                           paste(nrow(b_polydf), 
+                                 b_name)
+                           , # now the ones with points
+                           paste0(nrow(b_pointdf), 
+                                  " ",
+                                  b_name, 
+                                  "; however, only ",
+                                  nrow(b_polydf),
+                                  " are outside of city limits. Here they are shown with a 30 minute walking distance")
+                           ),".")
+
+title_text <- paste("Kitsap County",b_name)
+subtitle_text <- ifelse(b_name %ni% c("Commissioner Districts","LAMIRDs"),
+                        "only showing those in the unincorporated county","")
+caption_text <- paste("Data source:",breakdowns$data_source[i])
+                    
+```
+
+
+`r intro_text`
+
+```{r bdmap-{{i}}}
+#| fig.width = 8,
+#| fig.height = 8,
+#| out.width = '100%',
+#| dpi = 96
+#| 
+kitsap +
+  geom_sf(data = b_polydf, aes(fill = eval(as.symbol(b_idcol))), 
+          lwd = 0, alpha = 0.6) +
+  {if (has_points) geom_sf(data = b_pointdf, aes(color = 1), 
+                           color = "black", show.legend = FALSE) } +
+  theme_void() +
+  labs(title = title_text,
+       subtitle = subtitle_text,
+       caption = caption_text,
+       fill = b_name)
+
+```
+
+
+```{r bdloop-{{i}}, include=FALSE, echo=FALSE, cache = TRUE}
+                                     
+expanded_child <- lapply(
+    b_items,
+    function(x) {
+      knitr::knit_expand(file = "child_single_geo_in_region.Rmd",
+                                current_geo = x )
+    })
+
+parsed_child <- knitr::knit_child(text = unlist(expanded_child))
+```
+
+`r parsed_child`
+
