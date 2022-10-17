@@ -4,7 +4,9 @@ date: "`r Sys.Date()`"
 bibliography: metrics.bib
 output: 
   html_document:
+    number_sections: true
     toc: true
+    toc_float: true
     toc_depth: 3
     fig_caption: yes
 ---
@@ -512,7 +514,7 @@ comb <- st_intersection(select(ncdf, RD_LOG_ID_R = RD_LOG_ID,
 
 ## Method of Evaluation
 
-Road segments are the basis for evaluation because they are the smallest unit in common across the data and can be grouped together to form trips. Actually matching up the data for roads, shoulders, and sidewalks will prove to be a more complicated task than it appears at first blush. As noted in the [Data section](#datasection), the Segment IDs in the shoulder and sidewalk data do not cover the range of segments as in the road data. Here, we join based on the road log id and beginning and ending mileage point
+Road segments are the basis for evaluation because they are the smallest unit in common across the data and can be grouped together to form trips. Actually matching up the data for roads, shoulders, and sidewalks will prove to be a more complicated task than it appears at first blush. As noted in the [Data section](#datasection), the Segment IDs in the shoulder and sidewalk data do not cover the range of segments as in the road data. Here, we join based on the geometries of the roads and sidewalks/shoulders.^[We intersect the road data with a buffered geometry of the sidewalk or shoulder and then remove any matching roads that do not have the same road log id.]
 
 Each road segment is evaluated individually. For each road segment, its adequate pedestrian facility level is based on its classification and the Kitsap County Road Standards Table 3.3 and 3.4.[@kc_road_standards]^[revisions of road standards should be followed by review and reevaluation of these criteria]
 
@@ -609,6 +611,7 @@ kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive
 
 The Total Score would be the segment scores multiplied by their linear feet and then divided by the total linear feet of the area (360). For this example, we get a area score of 7.5 $$ 6 x 100 + 0 x 10 + 10 x 50 + 8 x 200 = 2700$$ $$2700/360 = 7.5$$
 
+This example shows how the aggregation works. With a weighted score of 7.5, we have to determine how that should be interpreted. We developed a score interpretation. Generally, we want segments to score a 10, right? But if it has at least a 5, it is adequate. 
 
 ```{r}
 score_interpretation <- tribble(
@@ -642,7 +645,7 @@ knitr::kable(df,
 
 
 # Results
-First, we calculate the score overall for the county and then break it down for other smaller units of area in our community.
+First, we calculate the score overall for the county and then break it down for other smaller units of area in our community. Every score shown, except when explicitly for a single segment, is a weighted score based on the length of segments of road and their respective pedestrian facilities (sidewalks or shoulders) as shown in the example above.
 
 ## Overall
 
@@ -844,7 +847,7 @@ knitr::kable(head(roads_0) %>%
 
 ```
 
-Several road segments were able to achieve a score of 10 - meaning that the segment met the standard on both sides of the road. A few details for roads where at least one segment has a 10 are shown here. 
+Several road segments were able to achieve a score of 10 - meaning that the segment met the standard on both sides of the road. A few details for a few roads where at least one segment has a 10 are shown here.^[This table is only showing the first few entries because it is a long table.] 
 ```{r}
 roads_10 <- comb_score2 %>%
   filter(score == 10) %>%
@@ -860,7 +863,7 @@ roads_10 <- comb_score2 %>%
          `Segment Length` = road_len,
          `Ped Fac Length` = dist)
 
-knitr::kable(roads_10) %>%
+knitr::kable(head(roads_10)) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 

@@ -246,6 +246,7 @@ knitr::kable(head(roads_10) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 
 ```
+
 ```{r}
 # add the score to the score breakdowns
 if (!exists(deparse(substitute(this_comb_total_score)))){
