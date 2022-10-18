@@ -272,27 +272,27 @@ breakdowns <- tribble(
 
 Kitsap County Pedestrian Facilities Metrics/Evaluation Report will:
 
-1. Provide a complete evaluation of pedestrian facilities across the county down to the segment and side of road level
+1. Provide a complete evaluation of pedestrian facilities across the unincorporated county down to the segment and side of road level
 2. Present an aggregated quality rating for pedestrian facilities in specific areas
 3. Target missing facilities critical to connecting communities or to connecting residential to local services, recreation, and shops
 4. Show measure of progress (over time) of pedestrian facilities improvements (_starting with the second report_)
 
 ## This Draft
 
-This draft example was prepared by the Kitsap County Non-Motorized Community Advisory Committee Special Committee on Pedestrian Metrics. It is NOT considered an authoritative source of these data and is NOT an official report of the county. 
+This draft example was prepared by the Kitsap County Non-Motorized Community Advisory Committee Special Committee on Pedestrian Metrics. It is NOT considered an authoritative source of these data and is NOT an official report of the county and should NOT be used for any decision-making. 
 
 # Introduction
 
-This report provides a complete evaluation of pedestrian facilities in Kitsap County comparing the actual facilities to a minimum adequate pedestrian facility level. The minimum adequate pedestrian facility level is either a paved shoulder or a sidewalk of a certain minimum width - depending on the character of the road. 
+This report provides a complete evaluation of pedestrian facilities in unincorporated Kitsap County comparing the actual facilities to a minimum adequate pedestrian facility level. The minimum adequate pedestrian facility level is either a paved shoulder or a sidewalk of a certain minimum width - depending on the character of the road. 
 
-The intended audience is the people of Kitsap County and law/decision makers determining how to target limited funds for transportation development. 
+The intended audience is the people of Kitsap County and law/decision makers determining how to target limited funds for transportation development. The information should be used alongside other valuable inputs such as from the community advisory committees, (e.g. Non-motorized, Accessibility, Community Development). 
 
 Not all road segments will be evaluated. This report excludes road segments that are: 
 
- - Inside of cities (Bremerton, Port Orchard, etc.)^[Draft excludes segments that intersect with the Kitsap County incorporated city limits polygons[@kcgis_cities]]
+ - Inside of incorporated cities (Bremerton, Port Orchard, etc.)^[Draft excludes segments that intersect with the Kitsap County incorporated city limits polygons[@kcgis_cities]]
  - Local easements^[Draft assuming Function Class 100 or 110 in Road Centerline Data]
  - Highways^[Draft Assuming Function Class 2 in Road Centerline Data]
- - Speed limit > 50 MPH^[**these are not currently identified because the road centerline data does not include speed limit**]
+ - Speed limit > 50 MPH^[**these are not currently identified because the road centerline data does not include speed limit, but no county road should have a speed limit exceeding this.**]
 
 
 ```{r kitsapmap, cache = TRUE}
@@ -563,8 +563,8 @@ road_standards <- tribble(
   "Urban", "Minor Arterial", 6, NA,
   "Urban", "Principal Arterial", 6, NA,
   "Rural", "Local Access", NA, 3,
-  "Rural", "Minor Collector",NA, 3,
-  "Rural", "Major Collector",NA, 4,
+  "Rural", "Minor Collector",NA, 4,
+  "Rural", "Major Collector",NA, 6,
   "Rural", "Minor Arterial", NA, 4,
   "Rural", "Principal Arterial", NA, 6,
 )
@@ -847,7 +847,7 @@ knitr::kable(head(roads_0) %>%
 
 ```
 
-Several road segments were able to achieve a score of 10 - meaning that the segment met the standard on both sides of the road. A few details for a few roads where at least one segment has a 10 are shown here.^[This table is only showing the first few entries because it is a long table.] 
+Several road segments were able to achieve a score of 10 - meaning that the segment met the standard on both sides of the road. A few details for a few roads where at least one segment has a 10 are shown here.^[This table is only showing the first few entries because it is a long table.] **Debbie - these would be the subset of segments that "meet the standard"**
 ```{r}
 roads_10 <- comb_score2 %>%
   filter(score == 10) %>%

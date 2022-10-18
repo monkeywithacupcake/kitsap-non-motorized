@@ -1,8 +1,8 @@
 Area,Score,Interpretation
-Kitsap County,0.8400325707170757,Very Poor
-3 Central,0.43624499896842267,Very Poor
-1 North,1.0647644031770127,Poor
-2 South,0.8410761169343035,Very Poor
+Kitsap County,0.7346695159759645,Very Poor
+3 Central,0.42673021803193895,Very Poor
+1 North,0.97114604953356,Very Poor
+2 South,0.6634519336179667,Very Poor
 Kingston UGA,0.18813357574269854,Very Poor
 Bremerton West UGA,0.011259066667993825,Very Poor
 Port Orchard UGA,0.06964496134439965,Very Poor
@@ -13,7 +13,7 @@ Silverdale UGA,0.09584795296622155,Very Poor
 Poulsbo UTA,0,Nothing
 Puget Sound Industrial Center - Bremerton,0,Nothing
 Manchester,1.0164588667331989,Poor
-Suquamish,0.5800045901968421,Very Poor
+Suquamish,0.5792161059501738,Very Poor
 Streibels Corner,0,Nothing
 Bond/Gunderson,0,Nothing
 Port Orchard Airport,9.484195008726916,Adequate
@@ -26,7 +26,7 @@ West Hills STEM Academy,0.009235711344977445,Very Poor
 David Wolfle Elementary,0.4019152190040851,Very Poor
 Kingston Middle,0.3574956873506252,Very Poor
 Choice Academy,0.27543948511341065,Very Poor
-Suquamish Elementary,0.48352292058237384,Very Poor
+Suquamish Elementary,0.4295252919816917,Very Poor
 Cougar Valley Elementary,0,Nothing
 Clear Creek Elementary,0.49739958268428147,Very Poor
 Central Kitsap High,0.05578518702622117,Very Poor
@@ -46,11 +46,11 @@ Orchard Heights Elementary,0.05309193208412112,Very Poor
 East Port Orchard Elementary,0.026360611131380475,Very Poor
 Sunnyslope Elementary,0,Nothing
 Hidden Creek Elementary,0.05822298980641428,Very Poor
-South Colby Elementary,0.8458705261208613,Very Poor
-John Sedgwick Middle,0.5341063322433277,Very Poor
-Mullenix Ridge Elementary,0.9659652385433262,Very Poor
+South Colby Elementary,0.8153529595964818,Very Poor
+John Sedgwick Middle,0.45862795258178096,Very Poor
+Mullenix Ridge Elementary,0.868705192757995,Very Poor
 Olalla Elementary,0,Nothing
-Burley Glenwood Elementary,0.7680407732914915,Very Poor
+Burley Glenwood Elementary,0.5297486146493613,Very Poor
 Discovery Alternative High,0.04930276512790545,Very Poor
 Silverdale Elementary,0.08273899059763623,Very Poor
 Klahowya Secondary,0.9272615202763476,Very Poor
@@ -70,10 +70,10 @@ West Bremerton Transit Center,0.008808682951381874,Very Poor
 Silverdale Transit Center,0.02241013178673458,Very Poor
 Kingston Ferry Terminal,0.13713637238624954,Very Poor
 Southworth Ferry Terminal,0.708498070217687,Very Poor
-Hwy. 305 & Suquamish Way,0.7125117537433855,Very Poor
+Hwy. 305 & Suquamish Way,0.5546595505657379,Very Poor
 McWilliams Park & Ride,0.03691899099179771,Very Poor
-Suquamish Park & Ride,0.5018493800466662,Very Poor
+Suquamish Park & Ride,0.4374618806263333,Very Poor
 Port Orchard Wal-Mart,0.030605058581964904,Very Poor
 George's Corner Park & Ride,1.0538544199898372,Poor
-Miller Bay & Indianola,1.6374314894691533,Poor
+Miller Bay & Indianola,1.5797501668488898,Poor
 St. Gabriel's Church,0.037104610958798766,Very Poor
