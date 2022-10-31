@@ -1,0 +1,10 @@
+```{r}
+x <- as.integer({{x}})
+current_geo <- loop_df$tomatch[x]
+```
+
+{{i}}
+
+{{x}}
+
+`r current_geo`

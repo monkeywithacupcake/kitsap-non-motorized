@@ -255,4 +255,60 @@ if (!exists(deparse(substitute(this_comb_total_score)))){
 score_breakdowns$Score[score_breakdowns$Area == "{{current_geo}}"] <- this_comb_total_score
 ```
 
+Overall, for {{current_geo}}, the pedestrian facilities are evaluated as so.
 
+```{r, eval=has_both}
+# problem, we probably want to color the geometry of the sw/sh segments, but how to get the roads
+# that don't have a match and set them at 0
+# this is the challenge now
+this_comb_map <- st_as_sf(this_roads) %>% 
+  select(RD_LOG_ID_R = RD_LOG_ID, SEGMENT_ID_R = SEGMENT_ID,
+         FULL_NAME_R = FULL_NAME, road_class, RUCODE, LENGTH) %>%
+  mutate(setting = ifelse(RUCODE == 1, "Rural", 
+                          ifelse(RUCODE == 2, "Urban", "Unknown"))) %>% 
+  left_join(this_comb_score2) %>%
+  rowwise() %>%
+  mutate(interpretation = getScoreInterpretation(the_score))
+  
+this_comb_map$interpretation <- factor(this_comb_map$interpretation, 
+                                  levels =  score_interpretation$interpretation)
+this_comb_map <-  this_comb_map %>%
+  group_by(interpretation) %>%  # ".x" is refers to the current group:
+  group_modify(~ st_union(.x) %>% as_tibble()) %>%
+  ungroup() %>%
+  st_as_sf()  
+
+ggplot() +
+  geom_sf(data = this_geo, aes(fill = 1), alpha = 0.1, lwd = 0, show.legend = FALSE) +
+  #geom_sf(data = this_roads, aes(color = 1), color = "#808080", show.legend = FALSE) + 
+  geom_sf(data = this_comb_map, aes(color = interpretation), show.legend = "line") + 
+  score_col +
+  theme_void() +
+  labs(title = paste("Calculated Pedestrian Facility Score:","{{current_geo}}"),
+       caption = "Data source: Kitsap GIS, scores calculated",
+       color = "Score Interpretation") 
+
+```
+
+```{r, eval=has_both}
+
+knitr::kable(
+  this_comb_map %>% 
+    mutate(LENGTH = as.integer(st_length(.))) %>%
+    st_set_geometry(., NULL) %>% 
+    group_by(interpretation) %>%
+    summarise(Miles = nice_comma(sum(LENGTH)/5280,1),
+              .groups = "drop") %>%
+    bind_rows(this_comb_map %>% 
+                mutate(LENGTH = as.integer(st_length(.))) %>%
+                st_set_geometry(., NULL) %>% 
+                mutate(interpretation = "Total") %>%
+                group_by(interpretation) %>%
+                summarise(Miles = nice_comma(sum(LENGTH)/5280,1),
+                          .groups = "drop")
+    ) %>%
+    rename(`Score Interpretation` = interpretation),
+    caption = "Miles here more than overall miles is indicative of multiple shoulder or sidewalk geometries matching the same portion of road centerline on the same side of the road. This kind of data error is expected given the state of the sidewalk and shoulder data."
+) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```

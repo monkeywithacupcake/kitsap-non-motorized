@@ -1,0 +1,104 @@
+
+## Smaller Breakdowns of the County
+
+We can also look at regions and pedestrian generators within the County. For these, we identify the roads and any sidewalks or shoulders.^[In theory, the miles of recorded sidewalk or shoulder and matched miles could be double the centerline miles if every mile had a sidewalk or shoulder.] 
+
+Regions are already defined by an area. For pedestrian generators, we identify an area that is within 30 minute walking distance of the facility and evaluate roads therein.^[30 minute walking distance calculated using the mapboxapi function `mb_isochrone`. Isochrones use map data from Mapbox and OpenStreetMap and their data sources. To learn more, visit https://www.mapbox.com/about/maps/ and http://www.openstreetmap.org/copyright.[@mapbox]] 
+
+These regions and pedestrian generators are: 
+
+```{r, results = 'asis'}
+cat(paste0("- ", breakdowns$Name, collapse = "\n"))
+```
+
+For each smaller region or pedestrian generator type, we show a map of Kitsap County (sans incorporated cities) indicating locations of the regions of that type. 
+
+Then, for each individual region, we show the pedestrian facilities on the left side and the right side of the road and calculate scores. 
+
+```{r}
+# this starts the tibble that will hold ALL the scores
+score_breakdowns <- tibble(Area = "Kitsap County", Score = comb_total_score)
+```
+
+
+```{r bdlooping, include=FALSE, echo=FALSE}
+                                     
+expanded_region <- lapply(
+    seq_along(1:nrow(breakdowns)),
+    function(irow) {
+      knitr::knit_expand(file = "child_region.Rmd",
+                                   i = irow )
+    })
+
+parsed_region <- knitr::knit_child(text = unlist(expanded_region))
+```
+
+`r parsed_region`
+
+
+# Conclusion
+
+Using the data publicly available and draft criteria (special committee investigating pedestrian metrics), the overall score for pedestrian facilities in Kitsap County is `r nice_comma(comb_total_score)`, which is interpreted (see methods) as `r getScoreInterpretation(comb_total_score)`. 
+
+Smaller breakdowns of the county fare differently. Here, we show a table for each region type. Any region with no segments getting more than a 0, "Nothing" show up with red text. The best region of that type will have bold text, and any regions with a score of **Adequate** will have green text.
+
+```{r}
+
+score_breakdowns <- score_breakdowns %>%
+  rowwise() %>%
+  mutate(Interpretation = getScoreInterpretation(Score))
+write_csv(score_breakdowns, paste0(this_dir,"score_breakdowns.csv"))
+
+getScoreBreakdownForArea <- function(the_area) {
+  # get name
+  the_area_name <- breakdowns$Name[breakdowns$items == the_area]
+  the_area_df <- score_breakdowns %>% 
+                 filter(Area %in% eval(as.symbol(the_area))) %>%
+                 mutate(s = Score,
+                        Score = ifelse(Score == 0,
+                                       nice_comma(Score,0),
+                                       nice_comma(Score,2))) %>%
+                 arrange(Area)
+  knitr::kable( select(the_area_df, -s),
+                caption = paste("Scores for", the_area_name )
+             ) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  row_spec(which(the_area_df$s == 0), color = "red") %>%
+  row_spec(which(the_area_df$s == max(the_area_df$s)), bold = T) %>%
+  row_spec(which(the_area_df$Interpretation == "Adequate"), bold = T, color = "green")
+}
+
+```
+
+```{r, echo=FALSE, results='asis'}
+score_breakdowns <- read_csv(paste0(this_dir,"score_breakdowns.csv"))
+res <- lapply(breakdowns$items, function(x) {
+  knitr::knit_child(text = c(
+    '',
+    '```{r}',
+    'getScoreBreakdownForArea(x)',
+    '```',
+    ''
+  ), envir = environment(), quiet = TRUE)
+})
+cat(unlist(res), sep = '\n')
+
+```
+
+However, there are a couple of known data irregularities, such as:
+
+ * missing part of Ridgetop Blvd in Silverdale where sidewalks are known to exist
+ * missing data on sidewalks that are known to exist
+ * unmatched road log identifiers between road and sidewalk and shoulder data
+ 
+And there are likely unknown data irregularities. 
+
+One cautionary note - while this method evaluates pedestrian facilities, it is entirely focused on the presence of facilities of adequate width and separation from cars. It is not taking into consideration the quality of those facilities. Disrepair (cracks, uneven surfaces) and encroaching vegetation can greatly reduce the usability of pedestrian facilities. Quality of facilities is beyond the scope of this evaluation. 
+
+
+### Notes to the special committee drafting this
+
+THIS is the alternate scoring and also includes shoulders identified as made of gravel.
+
+ 

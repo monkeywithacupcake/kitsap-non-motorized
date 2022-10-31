@@ -1,0 +1,342 @@
+---
+title: "Example Kitsap County Pedestrian Facilities Evaluation Report"
+date: "`r Sys.Date()`"
+bibliography: metrics.bib
+output: 
+  html_document:
+    number_sections: true
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    fig_caption: yes
+---
+
+```{css, echo = FALSE}
+tfoot {
+  font-size: 80%;
+  font-style: italic;
+}
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      message = FALSE,
+                      fig.align = 'center')
+options(scipen=999)
+
+options(knitr.kable.NA = '') # hides NA in printed table
+
+
+this_dir <- '~/Documents/non-motorized/'
+
+
+library(kableExtra)
+library(tidyverse)
+library(sf)
+source(paste0(this_dir,'functions/reportFunctions.R'))
+```
+
+```{r loaddata, cache = TRUE}
+
+
+source(paste0(this_dir,'functions/getReportData.R'))
+
+cities <- getDataCities()
+county_no_cities <- getDataCountyNoCities()
+kitsap <- getMapKitsap()
+clean_roadcl <- getDataRoad()
+ncdf <- getDataRoadNoCities(clean_roadcl, county_no_cities)
+sidewalks_nc <- getDataSidewalks(county_no_cities)
+shoulders_nc <- getDataShoulders(county_no_cities)
+nc_sw_sh <- getDataFacilities(sidewalks_nc,shoulders_nc)
+
+```
+
+
+```{r moredata, cache = TRUE}
+
+comb_score2 <- getCombScore2(ncdf, nc_sw_sh)
+
+comb_total_score <- getAggregateScore(comb_score2)
+
+comb_map <- getCombMapSFFromScoreAndNCDF(ncdf, comb_score2) 
+```
+
+
+<p style="font-family: times, serif; font-size:24pt; font-weight:bold; font-style:italic">
+    Executive Summary
+</p>
+
+<div style="font-family: times, serif; font-size:14pt;  font-style:italic">
+This is an example of the first in a proposed series of regular Unincorporated Kitsap County Pedestrian Facilities Evaluation Reports.
+
+In this example, pedestrian facilities on Unincorporated Kitsap County roads score **`r nice_comma(comb_total_score)` out of 10** which is evaluated as **`r getScoreInterpretation(comb_total_score)`**. This overall score is weighted by length of centerline roadway and the presence and width of road shoulders or sidewalks compared to the Kitsap County Road Standards.
+
+Details and scores by Commissioner Districts as well as other smaller regions of the county are included in this report.
+
+We are hopeful that future investments will improve the quality of pedestrian facilities across the county, especially around community facilities, like schools and libraries, and in areas designated for urban service - in the Urban Growth Areas.
+</div>
+
+# Purpose
+
+Kitsap County Pedestrian Facilities Metrics/Evaluation Report will:
+
+1. Provide a complete evaluation of pedestrian facilities across the unincorporated county down to the segment and side of road level
+2. Present an aggregated quality rating for pedestrian facilities in specific areas
+3. Target missing facilities critical to connecting communities or to connecting residential to local services, recreation, and shops
+4. Show measure of progress (over time) of pedestrian facilities improvements (_starting with the second report_)
+
+## This Draft
+
+This draft example was prepared by the Kitsap County Non-Motorized Community Advisory Committee Special Committee on Pedestrian Metrics. It is NOT considered an authoritative source of these data and is NOT an official report of the county and should NOT be used for any decision-making. 
+
+# Introduction
+
+This report provides a complete evaluation of pedestrian facilities in unincorporated Kitsap County comparing the actual facilities to a minimum adequate pedestrian facility level. The minimum adequate pedestrian facility level is either a paved shoulder or a sidewalk of a certain minimum width - depending on the character of the road. 
+
+The intended audience is the people of Kitsap County and law/decision makers determining how to target limited funds for transportation development. The information should be used alongside other valuable inputs such as from the community advisory committees, (e.g. Non-motorized, Accessibility, Community Development). 
+
+Not all road segments will be evaluated. This report excludes road segments that are: 
+
+ - Inside of incorporated cities (Bremerton, Port Orchard, etc.)^[Draft excludes segments that intersect with the Kitsap County incorporated city limits polygons[@kcgis_cities]]
+ - Local easements^[Draft assuming Function Class 100 or 110 in Road Centerline Data]
+ - Highways^[Draft Assuming Function Class 2 in Road Centerline Data]
+ - Speed limit > 50 MPH^[**these are not currently identified because the road centerline data does not include speed limit, but no county road should have a speed limit exceeding this.**]
+
+
+```{r kitsapmap}
+#| fig.align = "center", 
+#| fig.width = 12,
+#| fig.height = 8, 
+#| out.width = '100%',
+#| dpi = 96
+
+library(tidyverse)
+library(sf)
+
+getKitsapRoadMap(kitsap, clean_roadcl, ncdf) 
+```
+
+# Data and Methods
+
+## Data {#datasection}
+
+Kitsap County maintains data on roads, sidewalks, and shoulders. These data all use the Kitsap County Public Works Road Log Id to identify road segments. Combined, these data allow for assessment of the quality of pedestrian facilities on Kitsap County roads. In addition, Kitsap County maintains data on the geographic representations of the cities, UGAs, LAMIRDs, and some key points of interest (like schools and parks) within the County.[@kcgis]
+
+These are the roads that will be evaluated.
+```{r}
+
+getKableRoadMiles(ncdf)
+```
+
+These are the sidewalk and shoulders also outside of Cities. Single sides shown. This is one example where we know the data are incomplete; for example, Silverdale Way is not in a city and is known to have sidewalks on both sides.^[For the specific example of Silverdale Way, there are three entries in the sidewalk data with the Road Log Id of 19515 that matches Silverdale Way, and they all indicate sidewalks on the left side of the road. Further note, all three have a segment ID of 0, so they will not match any of the segments in the roads data if we match on Road Log Id and Segment ID - an entirely different problem with the data that is not isolated to Silverdale Way. `r round(sum(nc_sw_sh$SEGMENT_ID ==0)/nrow(nc_sw_sh)*100,1)`% of the sidewalk data do not have segment ids.] For this draft example report it is okay; if the initial report is completed with the incomplete data, it will present a poorer overall condition of pedestrian facilities than is in place.
+
+```{r}
+getKableFacilityMiles(sidewalks_nc, "Sidewalk", "The minimum sidewalk in the Kitsap County Road Standards is 5 ft")
+```
+
+```{r}
+getKableFacilityMiles(shoulders_nc, "Shoulder","The minimum shoulder in the Kitsap County Road Standards is 3 ft")
+```
+
+
+### Combining the Data
+
+In order to do this evaluation, we must combine the roads data (which has information on the class and setting of roads) with the sidewalk and shoulder data (with information about the pedestrian facilities). Here, we join based on the geometries of the roads and sidewalks/shoulders.^[We intersect the road data with a buffered geometry of the sidewalk or shoulder and then remove any matching roads that do not have the same road log id.] Because segments are different for roads and sidewalk shoulder data, a single segment of road centerline may match several segments of sidewalk or shoulder data, and less commonly vice versa.
+
+
+## Method of Evaluation
+
+Each road segment is evaluated individually. For each road segment, its adequate pedestrian facility level is based on its classification and the Kitsap County Road Standards Table 3.3 and 3.4.[@kc_road_standards]^[revisions of road standards should be followed by review and reevaluation of these criteria]
+
+```{r tbl_standards}
+# Road Standards Tables 3.3 and 3.4
+
+getKableRoadStandardsGiven()
+```
+
+
+Because of all of the items that are not available in the road data at this time, this draft makes some assumptions to allow for an evaluation. When the information is known, a more accurate evaluation can be made.^[Roads with unknown setting - RUCODE is 0 are evaluated to the Urban road standards. This may be incorrect.] 
+
+
+```{r tbl_standards_simple}
+# Road Standards Tables 3.3 and 3.4 translated for data we have
+getKableRoadStandards()
+```
+
+
+Road segments that are explicitly excluded from the evaluation will be scored NA and not included in a summary of pedestrian metrics in an area (they will neither improve nor pull down the summary score).
+
+Pedestrian facilities on road segments will be scored based on the sum of the score of the sides. A side of the road for a segment will be scored:
+
+- 5 if it has a sidewalk or shoulder of adequate size (based on road classification & standards) or a sidewalk is present where a shoulder is the standard
+- 3 if the sidewalk or shoulder is present and is minimum AASHTO requirement (like a 4 ft shoulder)
+- 2 if the standard is a sidewalk but a shoulder of adequate size (based on road classification and standards) is present
+- 1 if a sidewalk or shoulder is present and is narrower than AASHTO 
+- 0 if none present or no data
+
+Note that in the absence of ADT data, our interpretation of the AASHTO minimum is limited - we assume it is a 4 foot shoulder for this example. However, AASHTO minimums can be up to 8 feet under certain conditions.
+
+Therefore, segments with sidewalk or shoulder of adequate size (based on road classification) on both sides of road would receive a 10. Segments with no data or with no sidewalk or shoulder would receive a 0. 
+
+Any given area score will be a weighted average of the scores of the segments within the area. Weighting is by centerline linear feet per segment. A simple example is an area composed of 4 segments. 
+
+
+```{r}
+getKableExampleAggregateScore()
+```
+
+
+The Total Score would be the segment scores multiplied by their linear feet and then divided by the total linear feet of the area (360). For this example, we get a area score of 7.5 $$ 6 x 100 + 0 x 10 + 10 x 50 + 8 x 200 = 2700$$ $$2700/360 = 7.5$$
+
+This example shows how the aggregation works. With a weighted score of 7.5, we have to determine how that should be interpreted. We developed a score interpretation. Generally, we want segments to score a 10, right? But if it has at least a 5, it is adequate. 
+
+```{r}
+
+getScoreInterpretationKable()
+```
+
+**NOTE TO SPECIAL COMMITTEE: a single segment can never have a score between 8 and 10. And an aggregation of an area could have a score of 9.9 and still show up as Adequate - it only gets a Good at a 10. Should we consider interpreting anything over an 8 as Good?**
+
+# Results
+First, we calculate the score overall for the county and then break it down for other smaller units of area in our community. Every score shown, except when explicitly for a single segment, is a weighted score based on the length of segments of road and their respective pedestrian facilities (sidewalks or shoulders) as shown in the example above.
+
+## Overall
+
+The overall score for pedestrian facilities in Kitsap County is `r nice_comma(comb_total_score)`, `r getScoreInterpretation(comb_total_score)`.
+
+There are road segments with ratings of Nothing (0) through Good (10). 
+
+A map of the county with roads colored based on their scores shows the distribution of pedestrian facilities. Urban Growth Areas are highlighted.
+
+```{r map_score_overall}
+#| fig.align = "center", 
+#| fig.width = 10, 
+#| fig.height = 8, 
+#| out.width = '100%',
+#| dpi = 96
+#| 
+getMapScoreSummaryOverall(kitsap, uga, cities, comb_map)
+
+```
+
+```{r}
+
+getKableScoreSummaryForMap(comb_map)
+```
+
+
+### By Setting and Road Class
+Looking by the same breakdown that we have for standards - by setting and road class, we can see where the scores are highest and lowest. 
+
+```{r tbl_combscorestandard}
+getKableScoreSummaryForStandards(comb_score2)
+```
+
+
+### By Setting Alone
+
+The character of an area contributes greatly to whether we would expect pedestrians. More pedestrians are expected in urban settings than rural.
+
+```{r tbl_combscoresetting}
+getKableScoreSummaryForSetting(comb_score2)
+```
+
+It may be useful to consider that for the unincorporated county, the roads that are designated as in an Urban setting are mostly inside of the Urban Growth Areas - these areas are identified to develop to an urban service standard, like a city. **With the data and methods used in this example report, these areas are not amenable to pedestrians - contrasting what we might desire in our urban environment.**
+
+## Smaller Regions
+We can also look at regions and pedestrian generators within the County. For these, we identify the roads and any sidewalks or shoulders.^[In theory, the miles of recorded sidewalk or shoulder and matched miles could be double the centerline miles if every mile had a sidewalk or shoulder.] 
+
+Regions are already defined by an area. For pedestrian generators, we identify an area that is within a 15 minute walking distance of the facility and evaluate roads therein.^[A 15 minute walking distance is somewhere between 1/4 and 3/4 mile varying by walking pace. Walking distance calculated using the mapboxapi function `mb_isochrone`. Isochrones use map data from Mapbox and OpenStreetMap and their data sources. To learn more, visit https://www.mapbox.com/about/maps/ and http://www.openstreetmap.org/copyright.[@mapbox]] 
+
+These regions and pedestrian generators are: 
+
+```{r, results = 'asis'}
+cat(paste0("- ", breakdowns$Name, collapse = "\n"))
+```
+
+For each smaller region or pedestrian generator type, we show a map of Kitsap County (sans incorporated cities) indicating locations of the regions of that type. 
+
+Then, for each individual region, we show the evaluated pedestrian facilities and calculate scores. 
+
+```{r}
+# this starts the tibble that will hold ALL the scores
+score_breakdowns <- tibble(Area = "Kitsap County", Score = comb_total_score)
+```
+
+
+```{r bdlooping, include=FALSE, echo=FALSE}
+                                     
+expanded_region <- lapply(
+    seq_along(1:nrow(breakdowns)),
+    function(irow) {
+      knitr::knit_expand(file = "Child-Metrics-Region.Rmd",
+                                   i = irow )
+    })
+
+parsed_region <- knitr::knit_child(text = unlist(expanded_region))
+```
+
+`r parsed_region`
+
+
+# Conclusion
+
+Using the data publicly available and draft criteria (special committee investigating pedestrian metrics), the overall score for pedestrian facilities in Kitsap County is `r nice_comma(comb_total_score)`, which is interpreted (see methods) as `r getScoreInterpretation(comb_total_score)`. 
+
+Smaller breakdowns of the county fare differently. Here, we show a table for each region type. Any region with no segments getting more than a 0, "Nothing" show up with red text. The best region of that type will have bold text, and any regions with a score of **Adequate** will have green text.
+
+```{r}
+
+score_breakdowns <- score_breakdowns %>%
+  rowwise() %>%
+  mutate(Interpretation = getScoreInterpretation(Score))
+write_csv(score_breakdowns, paste0(this_dir,"score_breakdowns.csv"))
+
+getScoreBreakdownForArea <- function(the_area) {
+  # get name
+  the_area_name <- breakdowns$Name[breakdowns$items == the_area]
+  the_area_df <- score_breakdowns %>% 
+                 filter(Area %in% eval(as.symbol(the_area))) %>%
+                 mutate(s = Score,
+                        Score = ifelse(Score == 0,
+                                       nice_comma(Score,0),
+                                       nice_comma(Score,2))) %>%
+                 arrange(Area)
+  knitr::kable( select(the_area_df, -s),
+                caption = paste("Scores for", the_area_name )
+             ) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  row_spec(which(the_area_df$s == 0), color = "red") %>%
+  row_spec(which(the_area_df$s == max(the_area_df$s)), bold = T) %>%
+  row_spec(which(the_area_df$Interpretation == "Adequate"), bold = T, color = "green")
+}
+
+```
+
+```{r, echo=FALSE, results='asis'}
+score_breakdowns <- read_csv(paste0(this_dir,"score_breakdowns.csv"))
+res <- lapply(breakdowns$items, function(x) {
+  knitr::knit_child(text = c(
+    '',
+    '```{r}',
+    'getScoreBreakdownForArea(x)',
+    '```',
+    ''
+  ), envir = environment(), quiet = TRUE)
+})
+cat(unlist(res), sep = '\n')
+
+```
+
+While this method evaluates pedestrian facilities, it is entirely focused on the presence of facilities of adequate width and separation from cars. It is not taking into consideration the quality of those facilities. Disrepair (cracks, uneven surfaces) and encroaching vegetation can greatly reduce the usability of pedestrian facilities. Quality of facilities is beyond the scope of this evaluation.
+
+*Important reader note:  The authors of this example report are aware of errors (mostly of omission) in the sidewalk and shoulder data that we were able to obtain from the County. The County does not officially maintain these records, so we are not surprised that they are out of date. As far as we can tell, these errors skew the scoring downwards - actual pedestrian facilities should evaluate better than shown here. Discriminating readers will see obvious gaps, such as Silverdale Way with "Nothing" when it has sidewalks, and Ridgetop Blvd with "Nothing" when it has mostly complete streets.* 
+
+**DO NOT USE THESE NUMBERS OR GRAPHS FOR ANY OFFICIAL PURPOSE**
+
+
+# References

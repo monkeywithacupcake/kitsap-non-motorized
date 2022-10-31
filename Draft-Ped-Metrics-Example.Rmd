@@ -113,9 +113,17 @@ sidewalks_nc <- st_intersection(sidewalks, st_buffer(county_no_cities,0)) %>%
          RD_LOG_ID = as.integer(ROADLOGID),
          SEGMENT_ID = as.integer(SEG_ID)) %>%
   select(RD_LOG_ID,SEGMENT_ID,BMP,EMP,SIDE_OF_RO, WIDTH, LENGTH, TYPE)
+
+# SHLDR_SURF 
+# ACP - paved
+# BST - bituminous surface (chip seal), like paved
+# GRV - gravel
+# PAP - porous asphalt
 shoulders_nc <- st_intersection(shoulders, st_buffer(county_no_cities,0)) %>%
   st_as_sf(.) %>%
-  filter(SHLDR_WIDT > 0, SHLDR_SURF == "ACP", DISTANCE_F > 0) %>%
+  filter(SHLDR_WIDT > 0, 
+         SHLDR_SURF %in% c("ACP", "BST", "PAP"), # these are the "paved" ones
+         DISTANCE_F > 0) %>%
   mutate(LENGTH = as.integer(st_length(.)),
          TYPE = paste0("Paved Shoulder: ", SHLDR_WIDT," ft"),
          RD_LOG_ID = as.integer(ROAD_LOG_I),

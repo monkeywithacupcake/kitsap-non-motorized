@@ -1,0 +1,104 @@
+
+
+
+
+```{r}
+x <- as.integer({{x}})
+current_geo <- loop_df$tomatch[x]
+current_geo_title <- ifelse(b_name %in% c("LAMIRDs"),
+                            paste(current_geo, sub("s","",b_name)),
+                            current_geo)
+this_geo <- getGeoSFForRegion(loop_df,current_geo) 
+this_comb_score <- getCombSFForRegion(this_geo)
+has_roads <- TRUE # our assumption
+if (is.logical(this_comb_score)) {
+  has_roads <- FALSE
+}
+this_comb_total_score <- 0
+
+```
+
+#### `r current_geo_title`
+
+```{r, results = 'asis', eval=!has_roads}
+cat("This area does not have known pedestrian facilities.")
+```
+
+```{r, eval=has_roads}
+this_comb <- getCombMapForRegion(comb_map, this_geo)
+write_csv(this_comb_score, paste0(this_dir, 'region_score_ref/',b_name, x,'.csv'))
+
+this_comb_total_score <- getAggregateScore(this_comb_score)
+rm(this_comb_score)
+```
+
+```{r}
+# add the score to the score breakdowns
+if (!exists(deparse(substitute(this_comb_total_score)))){
+  this_comb_total_score <- 0
+}
+score_breakdowns$Score[score_breakdowns$Area == current_geo] <- this_comb_total_score
+```
+
+
+```{r, eval=has_roads & has_points}
+  # see if this geo has a point (is it an area around a place, like a school)
+this_point <- st_as_sf(b_pointdf) %>%
+      filter(NAME == this_geo$tomatch)
+```
+
+```{r, results = 'asis', eval=has_roads}
+cat("This area has pedestrian facilities identified in the data; they are shown on the map for the left side and the right side of the road.")
+```
+
+```{r map-{{i}}{{x}}-sides, eval=has_roads}
+#| fig.width = 14,
+#| fig.height = 8,
+#| out.width = '100%',
+#| dpi = 96
+#| 
+
+p1 <- getMapForRegionInCounty(this_geo, current_geo) +
+    labs(title = paste("Pedestrian Facilities:",current_geo_title))
+r <- getMapFacilitiesSideForRegion(this_geo, "right") +
+    {if(has_points) geom_sf(data = this_point, 
+                         aes(color = 1), color = "black", show.legend = FALSE)} 
+l <- getMapFacilitiesSideForRegion(this_geo, "left") +
+    {if(has_points) geom_sf(data = this_point, 
+                         aes(color = 1), color = "black", show.legend = FALSE)} 
+  
+  library(patchwork)
+  
+  p1 + r + l +
+    plot_layout(guides = 'collect') & theme(legend.position = 'bottom')
+  
+  detach("package:patchwork", unload=TRUE)
+```
+
+
+The overall score for pedestrian facilities in `r current_geo_title` is **`r nice_comma(this_comb_total_score)`**, **`r getScoreInterpretation(this_comb_total_score)`.**
+
+
+```{r map-{{i}}{{x}}-scores, eval=has_roads}
+#| out.width = '100%',
+#| dpi = 96
+
+  p1 <- getMapForRegionInCounty(this_geo, current_geo) +
+    labs(title = paste("Calculated Pedestrian Facility Score:",current_geo_title))
+  p2 <- getMapScoreSummaryForRegion(this_geo, this_comb, current_geo) +
+    labs(title = "") +
+    {if(has_points) geom_sf(data = this_point, 
+                         aes(color = 1), color = "black", show.legend = FALSE)} 
+  
+  library(patchwork)
+  
+  p1 + p2 +
+    plot_layout(guides = 'collect') & theme(legend.position = 'bottom')
+  
+  detach("package:patchwork", unload=TRUE)
+```
+
+```{r kbl-{{i}}{{x}}, eval=has_roads}
+
+getKableScoreSummaryForMap(this_comb)
+```
