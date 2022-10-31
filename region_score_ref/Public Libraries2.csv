@@ -1,0 +1,9 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_left,shoulder_right,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+86250,3546,LITTLE BOSTON RD NE,Local Access,1,458,Rural,458,15,Little Boston KRL,2,Little Boston KRL,139,5,5,NA,3,NA,NA,5,5,10,10,139,1390
+86250,9095,LITTLE BOSTON RD NE,Local Access,1,1241,Rural,1241,15,Little Boston KRL,2,Little Boston KRL,378,5,5,NA,3,NA,NA,5,5,10,10,378,3780
+86250,9095,LITTLE BOSTON RD NE,Local Access,1,1241,Rural,1241,15,Little Boston KRL,2,Little Boston KRL,51,5,5,NA,3,NA,NA,5,5,10,10,51,510
+86250,5959,LITTLE BOSTON RD NE,Local Access,1,3761,Rural,3761,15,Little Boston KRL,2,Little Boston KRL,51,5,5,NA,3,NA,NA,5,5,10,10,51,510
+86250,5959,LITTLE BOSTON RD NE,Local Access,1,3761,Rural,3761,15,Little Boston KRL,2,Little Boston KRL,1145,5,5,NA,3,NA,NA,5,5,10,10,1145,11450
+86250,11737,LITTLE BOSTON RD NE,Local Access,1,3103,Rural,3103,15,Little Boston KRL,2,Little Boston KRL,486,5,5,NA,3,NA,NA,5,5,10,10,486,4860
+86250,19123,LITTLE BOSTON RD NE,Local Access,1,363,Rural,363,15,Little Boston KRL,2,Little Boston KRL,110,5,5,NA,3,NA,NA,5,5,10,10,110,1100
+86250,19124,LITTLE BOSTON RD NE,Local Access,1,604,Rural,604,15,Little Boston KRL,2,Little Boston KRL,157,5,5,NA,3,NA,NA,5,5,10,10,157,1570

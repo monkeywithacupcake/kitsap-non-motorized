@@ -1,0 +1,5 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,PLAN_AREA,TYPE.1,DATE_ADOPT,BCC_RESOLU,islamird,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+74590,933,NE MINDER RD,Local Access,1,5070,Rural,5070,Streibels Corner,Employment Center - Type III,20101215,467-2010,1,Streibels Corner,503,4,NA,NA,3,NA,NA,0,5,5,5,503,2515
+74590,933,NE MINDER RD,Local Access,1,5070,Rural,5070,Streibels Corner,Employment Center - Type III,20101215,467-2010,1,Streibels Corner,493,NA,4,NA,3,NA,NA,5,0,5,5,493,2465
+74590,933,NE MINDER RD,Local Access,1,5070,Rural,5070,Streibels Corner,Employment Center - Type III,20101215,467-2010,1,Streibels Corner,2902,9,9,NA,3,NA,NA,5,5,10,10,2902,29020
+75130,8874,RITTER LN NE,Local Access,1,2650,Rural,2650,Streibels Corner,Employment Center - Type III,20101215,467-2010,1,Streibels Corner,1071,1,NA,NA,3,NA,NA,0,1,1,1,1071,1071

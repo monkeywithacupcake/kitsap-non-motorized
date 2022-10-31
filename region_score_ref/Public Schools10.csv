@@ -1,0 +1,9 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_left,shoulder_right,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+51709,13323,OLYMPIC VIEW RD NW,Minor Collector,1,2082,Rural,2082,15,Cougar Valley Elementary,2,Cougar Valley Elementary,352,4,4,NA,4,NA,NA,5,5,10,10,352,3520
+51709,13323,OLYMPIC VIEW RD NW,Minor Collector,1,2082,Rural,2082,15,Cougar Valley Elementary,2,Cougar Valley Elementary,10,4,4,NA,4,NA,NA,5,5,10,10,10,100
+51709,18345,OLYMPIC VIEW RD NW,Minor Collector,1,4088,Rural,4088,15,Cougar Valley Elementary,2,Cougar Valley Elementary,92,4,4,NA,4,NA,NA,5,5,10,10,92,920
+51709,18345,OLYMPIC VIEW RD NW,Minor Collector,1,4088,Rural,4088,15,Cougar Valley Elementary,2,Cougar Valley Elementary,751,NA,4,NA,4,NA,NA,0,5,5,5,751,3755
+51709,18345,OLYMPIC VIEW RD NW,Minor Collector,1,4088,Rural,4088,15,Cougar Valley Elementary,2,Cougar Valley Elementary,755,4,NA,NA,4,NA,NA,5,0,5,5,755,3775
+51709,16387,OLYMPIC VIEW RD NW,Minor Collector,1,229,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,229,0
+51709,10680,OLYMPIC VIEW RD NW,Minor Collector,1,1526,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1526,0
+51709,18580,OLYMPIC VIEW RD NW,Minor Collector,1,800,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,800,0

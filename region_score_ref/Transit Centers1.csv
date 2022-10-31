@@ -1,0 +1,17 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+18520,12738,PRICE RD,Major Collector,2,334,Urban,334,15,West Bremerton Transit Center,2,West Bremerton Transit Center,101,2,2,6,NA,NA,NA,1,1,2,2,101,202
+18550,7383,FRANCIS AVE NW,Local Access,2,365,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,365,0
+18520,3881,PRICE RD,Major Collector,2,495,Urban,495,15,West Bremerton Transit Center,2,West Bremerton Transit Center,117,2,2,6,NA,NA,NA,1,1,2,2,117,234
+18570,9003,DOROTHY AVE NW,Local Access,2,286,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,286,0
+18590,9349,HAZEL AVE NW,Local Access,2,163,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,163,0
+17490,2521,IDA ST W,Major Collector,2,645,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,645,0
+18520,3769,PRICE RD,Major Collector,2,132,Urban,132,15,West Bremerton Transit Center,2,West Bremerton Transit Center,40,2,2,6,NA,NA,NA,1,1,2,2,40,80
+17720,11764,W 1ST ST,Major Collector,2,304,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,304,0
+17550,13362,SUNNYHILL RD W,Local Access,2,2346,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,2346,0
+17402,3360,W WERNER RD,Major Collector,2,326,Urban,326,15,West Bremerton Transit Center,2,West Bremerton Transit Center,9,4,4,6,NA,NA,NA,1,1,2,2,9,18
+18520,7684,PRICE RD,Major Collector,2,286,Urban,286,15,West Bremerton Transit Center,2,West Bremerton Transit Center,87,2,2,6,NA,NA,NA,1,1,2,2,87,174
+17539,12538,HARLOW DR,Major Collector,2,1031,Urban,1031,15,West Bremerton Transit Center,2,West Bremerton Transit Center,313,2,2,6,NA,NA,NA,1,1,2,2,313,626
+17539,10117,HARLOW DR,Major Collector,2,232,Urban,232,15,West Bremerton Transit Center,2,West Bremerton Transit Center,70,2,2,6,NA,NA,NA,1,1,2,2,70,140
+17539,3533,HARLOW DR,Major Collector,2,565,Urban,565,15,West Bremerton Transit Center,2,West Bremerton Transit Center,111,2,2,6,NA,NA,NA,1,1,2,2,111,222
+17539,9331,HARLOW DR,Major Collector,2,169,Urban,169,15,West Bremerton Transit Center,2,West Bremerton Transit Center,51,2,2,6,NA,NA,NA,1,1,2,2,51,102
+17430,10943,BROAD ST W,Major Collector,2,415,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,415,0

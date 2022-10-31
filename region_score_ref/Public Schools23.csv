@@ -1,0 +1,16 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,sidewalk_left,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+12783,4221,ICICLE PL NW,Local Access,1,975,Rural,975,15,Klahowya Secondary,2,Klahowya Secondary,92,NA,4,NA,NA,3,NA,0,5,5,5,92,460
+12777,5117,WENATCHEE PL NW,Local Access,1,935,Rural,935,15,Klahowya Secondary,2,Klahowya Secondary,251,4,NA,NA,NA,3,NA,5,0,5,5,251,1255
+12777,5117,WENATCHEE PL NW,Local Access,1,935,Rural,935,15,Klahowya Secondary,2,Klahowya Secondary,133,NA,4,NA,NA,3,NA,0,5,5,5,133,665
+12777,5117,WENATCHEE PL NW,Local Access,1,935,Rural,935,15,Klahowya Secondary,2,Klahowya Secondary,132,NA,NA,4,NA,3,NA,5,0,5,5,132,660
+12776,9307,TIETON PL NW,Local Access,1,125,Rural,125,15,Klahowya Secondary,2,Klahowya Secondary,38,NA,4,4,NA,3,NA,5,5,10,10,38,380
+12777,3344,WENATCHEE PL NW,Local Access,1,735,Rural,735,15,Klahowya Secondary,2,Klahowya Secondary,40,4,NA,NA,NA,3,NA,5,0,5,5,40,200
+12776,10105,TIETON PL NW,Local Access,1,1304,Rural,1304,15,Klahowya Secondary,2,Klahowya Secondary,397,NA,4,4,NA,3,NA,5,5,10,10,397,3970
+12776,19372,TIETON PL NW,Local Access,1,764,Rural,764,15,Klahowya Secondary,2,Klahowya Secondary,40,NA,4,4,NA,3,NA,5,5,10,10,40,400
+13429,6759,NW NEWBERRY HILL RD,Minor Arterial,1,2309,Rural,2309,15,Klahowya Secondary,2,Klahowya Secondary,96,NA,8,8,NA,4,NA,5,5,10,10,96,960
+13429,6759,NW NEWBERRY HILL RD,Minor Arterial,1,2309,Rural,2309,15,Klahowya Secondary,2,Klahowya Secondary,373,NA,8,8,NA,4,NA,5,5,10,10,373,3730
+13429,6800,NW NEWBERRY HILL RD,Minor Arterial,1,1689,Rural,1689,15,Klahowya Secondary,2,Klahowya Secondary,487,NA,8,8,NA,4,NA,5,5,10,10,487,4870
+13429,6800,NW NEWBERRY HILL RD,Minor Arterial,1,1689,Rural,1689,15,Klahowya Secondary,2,Klahowya Secondary,108,NA,8,8,NA,4,NA,5,5,10,10,108,1080
+13429,6800,NW NEWBERRY HILL RD,Minor Arterial,1,1689,Rural,1689,15,Klahowya Secondary,2,Klahowya Secondary,4,NA,8,NA,NA,4,NA,0,5,5,5,4,20
+13429,6800,NW NEWBERRY HILL RD,Minor Arterial,1,1689,Rural,1689,15,Klahowya Secondary,2,Klahowya Secondary,55,NA,8,8,NA,4,NA,5,5,10,10,55,550
+13429,6800,NW NEWBERRY HILL RD,Minor Arterial,1,1689,Rural,1689,15,Klahowya Secondary,2,Klahowya Secondary,3,NA,NA,8,NA,4,NA,5,0,5,5,3,15

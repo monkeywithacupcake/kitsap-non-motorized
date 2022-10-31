@@ -1,0 +1,10 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+25660,7123,SW RHODODENDRON DR,Local Access,1,425,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,425,0
+22450,12612,SUNNYSLOPE RD SW,Minor Collector,1,518,Rural,518,15,Sunnyslope Elementary,2,Sunnyslope Elementary,13,1,1,NA,4,NA,NA,1,1,2,2,13,26
+25834,8276,VICTORY PL SW,Local Access,1,141,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,141,0
+22450,1705,SUNNYSLOPE RD SW,Minor Collector,1,3929,Rural,3929,15,Sunnyslope Elementary,2,Sunnyslope Elementary,1197,1,1,NA,4,NA,NA,1,1,2,2,1197,2394
+22450,1705,SUNNYSLOPE RD SW,Minor Collector,1,3929,Rural,3929,15,Sunnyslope Elementary,2,Sunnyslope Elementary,57,1,NA,NA,4,NA,NA,0,1,1,1,57,57
+22450,1705,SUNNYSLOPE RD SW,Minor Collector,1,3929,Rural,3929,15,Sunnyslope Elementary,2,Sunnyslope Elementary,60,NA,1,NA,4,NA,NA,1,0,1,1,60,60
+22450,86,SUNNYSLOPE RD SW,Minor Collector,1,182,Rural,182,15,Sunnyslope Elementary,2,Sunnyslope Elementary,55,1,1,NA,4,NA,NA,1,1,2,2,55,110
+22450,10070,SUNNYSLOPE RD SW,Minor Collector,1,578,Rural,578,15,Sunnyslope Elementary,2,Sunnyslope Elementary,176,1,1,NA,4,NA,NA,1,1,2,2,176,352
+25830,16230,VICTORY DR SW,Local Access,1,2299,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,2299,0

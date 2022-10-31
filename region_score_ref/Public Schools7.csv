@@ -1,0 +1,46 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+83210,15933,NORMAN RD NE,Local Access,2,1273,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1273,0
+86671,19176,NE WEST KINGSTON RD,Major Collector,2,1568,Urban,1568,15,Choice Academy,2,Choice Academy,315,10,10,6,NA,NA,NA,2,2,4,4,315,1260
+86671,19176,NE WEST KINGSTON RD,Major Collector,2,1568,Urban,1568,15,Choice Academy,2,Choice Academy,67,10,10,6,NA,NA,NA,2,2,4,4,67,268
+85270,9925,LINDVOG RD NE,Major Collector,2,1650,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1650,0
+83930,7516,JAMES LN NE,Local Access,2,556,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,556,0
+83730,10686,BARRETT RD NE,Local Access,2,1376,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1376,0
+83810,2182,MARSHALL LN NE,Local Access,2,524,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,524,0
+86671,18091,NE WEST KINGSTON RD,Major Collector,2,542,Urban,542,15,Choice Academy,2,Choice Academy,50,6,6,6,NA,NA,NA,2,2,4,4,50,200
+86671,18091,NE WEST KINGSTON RD,Major Collector,2,542,Urban,542,15,Choice Academy,2,Choice Academy,165,6,6,6,NA,NA,NA,2,2,4,4,165,660
+83690,10337,BARBER CUT OFF RD NE,Local Access,2,332,Urban,332,15,Choice Academy,2,Choice Academy,27,6,2,5,NA,NA,NA,1,2,3,3,27,81
+83690,12139,BARBER CUT OFF RD NE,Local Access,2,608,Urban,608,15,Choice Academy,2,Choice Academy,185,6,2,5,NA,NA,NA,1,2,3,3,185,555
+86671,4876,NE WEST KINGSTON RD,Major Collector,2,916,Urban,916,15,Choice Academy,2,Choice Academy,279,6,6,6,NA,NA,NA,2,2,4,4,279,1116
+86671,4876,NE WEST KINGSTON RD,Major Collector,2,916,Urban,916,15,Choice Academy,2,Choice Academy,50,6,6,6,NA,NA,NA,2,2,4,4,50,200
+86671,1726,NE WEST KINGSTON RD,Major Collector,2,286,Urban,286,15,Choice Academy,2,Choice Academy,86,6,6,6,NA,NA,NA,2,2,4,4,86,344
+86671,12309,NE WEST KINGSTON RD,Major Collector,2,632,Urban,632,15,Choice Academy,2,Choice Academy,5,6,6,6,NA,NA,NA,2,2,4,4,5,20
+86671,7826,NE WEST KINGSTON RD,Major Collector,2,134,Urban,134,15,Choice Academy,2,Choice Academy,40,6,6,6,NA,NA,NA,2,2,4,4,40,160
+86671,16474,NE WEST KINGSTON RD,Major Collector,2,57,Urban,57,15,Choice Academy,2,Choice Academy,17,6,6,6,NA,NA,NA,2,2,4,4,17,68
+86671,16474,NE WEST KINGSTON RD,Major Collector,2,57,Urban,57,15,Choice Academy,2,Choice Academy,15,NA,6,6,NA,NA,NA,2,0,2,2,15,30
+86671,2556,NE WEST KINGSTON RD,Major Collector,2,114,Urban,114,15,Choice Academy,2,Choice Academy,34,6,6,6,NA,NA,NA,2,2,4,4,34,136
+86685,16124,SOUTH KINGSTON RD NE,Major Collector,2,332,Urban,332,15,Choice Academy,2,Choice Academy,101,5,5,6,NA,NA,NA,1,1,2,2,101,202
+86685,16124,SOUTH KINGSTON RD NE,Major Collector,2,332,Urban,332,15,Choice Academy,2,Choice Academy,72,NA,5,6,NA,NA,NA,1,0,1,1,72,72
+86685,16124,SOUTH KINGSTON RD NE,Major Collector,2,332,Urban,332,15,Choice Academy,2,Choice Academy,71,5,NA,6,NA,NA,NA,0,1,1,1,71,71
+86671,14193,NE WEST KINGSTON RD,Major Collector,2,24,Urban,24,15,Choice Academy,2,Choice Academy,7,6,6,6,NA,NA,NA,2,2,4,4,7,28
+86671,11287,NE WEST KINGSTON RD,Major Collector,2,1761,Urban,1761,15,Choice Academy,2,Choice Academy,33,10,10,6,NA,NA,NA,2,2,4,4,33,132
+86671,11287,NE WEST KINGSTON RD,Major Collector,2,1761,Urban,1761,15,Choice Academy,2,Choice Academy,376,10,10,6,NA,NA,NA,2,2,4,4,376,1504
+86671,11287,NE WEST KINGSTON RD,Major Collector,2,1761,Urban,1761,15,Choice Academy,2,Choice Academy,261,10,10,6,NA,NA,NA,2,2,4,4,261,1044
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Choice Academy,2,Choice Academy,190,10,10,6,NA,NA,NA,2,2,4,4,190,760
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Choice Academy,2,Choice Academy,147,10,10,6,NA,NA,NA,2,2,4,4,147,588
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Choice Academy,2,Choice Academy,41,NA,10,6,NA,NA,NA,2,0,2,2,41,82
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Choice Academy,2,Choice Academy,115,NA,10,6,NA,NA,NA,2,0,2,2,115,230
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Choice Academy,2,Choice Academy,114,10,NA,6,NA,NA,NA,0,2,2,2,114,228
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Choice Academy,2,Choice Academy,42,10,NA,6,NA,NA,NA,0,2,2,2,42,84
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Choice Academy,2,Choice Academy,212,6,6,6,NA,NA,NA,2,2,4,4,212,848
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Choice Academy,2,Choice Academy,91,10,10,6,NA,NA,NA,2,2,4,4,91,364
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Choice Academy,2,Choice Academy,147,10,10,6,NA,NA,NA,2,2,4,4,147,588
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Choice Academy,2,Choice Academy,183,6,6,6,NA,NA,NA,2,2,4,4,183,732
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Choice Academy,2,Choice Academy,152,6,6,6,NA,NA,NA,2,2,4,4,152,608
+86671,18285,NE WEST KINGSTON RD,Major Collector,2,318,Urban,318,15,Choice Academy,2,Choice Academy,96,10,10,6,NA,NA,NA,2,2,4,4,96,384
+86671,18285,NE WEST KINGSTON RD,Major Collector,2,318,Urban,318,15,Choice Academy,2,Choice Academy,9,10,10,6,NA,NA,NA,2,2,4,4,9,36
+86671,18285,NE WEST KINGSTON RD,Major Collector,2,318,Urban,318,15,Choice Academy,2,Choice Academy,58,10,10,6,NA,NA,NA,2,2,4,4,58,232
+86671,8397,NE WEST KINGSTON RD,Major Collector,2,99,Urban,99,15,Choice Academy,2,Choice Academy,30,6,6,6,NA,NA,NA,2,2,4,4,30,120
+83210,12709,NORMAN RD NE,Local Access,2,1283,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1283,0
+86685,1951,SOUTH KINGSTON RD NE,Major Collector,2,1229,Urban,1229,15,Choice Academy,2,Choice Academy,242,5,5,6,NA,NA,NA,1,1,2,2,242,484
+86685,16123,SOUTH KINGSTON RD NE,Major Collector,2,327,Urban,327,15,Choice Academy,2,Choice Academy,99,5,5,6,NA,NA,NA,1,1,2,2,99,198
+83210,15892,NORMAN RD NE,Local Access,2,78,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,78,0

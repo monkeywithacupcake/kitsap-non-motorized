@@ -1,0 +1,9 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,PLAN_AREA,TYPE.1,DATE_ADOPT,BCC_RESOLU,islamird,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+71650,3155,STOTTLEMEYER RD NE,Local Access,1,1396,Rural,1396,Bond/Gunderson,Employment Center - Type III,20101215,467-2010,1,Bond/Gunderson,1302,4,4,NA,3,NA,NA,5,5,10,10,1302,13020
+71650,8777,STOTTLEMEYER RD NE,Major Collector,1,2192,Rural,2192,Bond/Gunderson,Employment Center - Type III,20101215,467-2010,1,Bond/Gunderson,428,NA,6,NA,6,NA,NA,5,0,5,5,428,2140
+71650,8777,STOTTLEMEYER RD NE,Major Collector,1,2192,Rural,2192,Bond/Gunderson,Employment Center - Type III,20101215,467-2010,1,Bond/Gunderson,22,8,NA,NA,6,NA,NA,0,5,5,5,22,110
+74660,11688,NE GUNDERSON RD,Major Collector,1,3337,Rural,3337,Bond/Gunderson,Employment Center - Type III,20101215,467-2010,1,Bond/Gunderson,81,4,NA,NA,6,NA,NA,0,3,3,3,81,243
+74660,11688,NE GUNDERSON RD,Major Collector,1,3337,Rural,3337,Bond/Gunderson,Employment Center - Type III,20101215,467-2010,1,Bond/Gunderson,247,NA,7,NA,6,NA,NA,5,0,5,5,247,1235
+74660,8032,NE GUNDERSON RD,Major Collector,1,252,Rural,252,Bond/Gunderson,Employment Center - Type III,20101215,467-2010,1,Bond/Gunderson,145,4,7,NA,6,NA,NA,5,3,8,8,145,1160
+74660,8032,NE GUNDERSON RD,Major Collector,1,252,Rural,252,Bond/Gunderson,Employment Center - Type III,20101215,467-2010,1,Bond/Gunderson,107,NA,7,NA,6,NA,NA,5,0,5,5,107,535
+74660,8032,NE GUNDERSON RD,Major Collector,1,252,Rural,252,Bond/Gunderson,Employment Center - Type III,20101215,467-2010,1,Bond/Gunderson,104,4,NA,NA,6,NA,NA,0,3,3,3,104,312

@@ -1,0 +1,39 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,sidewalk_left,sidewalk_right,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,score_left,score_right,score,the_score,the_length,w_score
+83670,481,PARCELLS RD NE,Local Access,1,271,Rural,271,15,Richard Gordon Elementary,2,Richard Gordon Elementary,82,NA,NA,1,1,NA,3,1,1,2,2,82,164
+85100,4133,NE SHORTY CAMPBELL RD,Local Access,1,1356,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1356,0
+83670,12785,PARCELLS RD NE,Local Access,1,1348,Rural,1348,15,Richard Gordon Elementary,2,Richard Gordon Elementary,85,NA,NA,1,1,NA,3,1,1,2,2,85,170
+85270,9925,LINDVOG RD NE,Major Collector,2,1650,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1650,0
+83930,7516,JAMES LN NE,Local Access,2,556,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,556,0
+83730,10686,BARRETT RD NE,Local Access,2,1376,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1376,0
+83810,2182,MARSHALL LN NE,Local Access,2,524,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,524,0
+83696,605,MONTERA LOOP NE,Local Access,2,1351,Urban,1351,15,Richard Gordon Elementary,2,Richard Gordon Elementary,411,NA,3,NA,NA,5,NA,0,1,1,1,411,411
+83697,11546,SIMON PL NE,Local Access,2,230,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,230,0
+83730,2114,BARRETT RD NE,Local Access,2,536,Urban,536,15,Richard Gordon Elementary,2,Richard Gordon Elementary,63,3,NA,NA,NA,5,NA,1,0,1,1,63,63
+86671,18091,NE WEST KINGSTON RD,Major Collector,2,542,Urban,542,15,Richard Gordon Elementary,2,Richard Gordon Elementary,50,NA,NA,6,6,6,NA,2,2,4,4,50,200
+86671,18091,NE WEST KINGSTON RD,Major Collector,2,542,Urban,542,15,Richard Gordon Elementary,2,Richard Gordon Elementary,124,NA,NA,6,6,6,NA,2,2,4,4,124,496
+83690,10337,BARBER CUT OFF RD NE,Local Access,2,332,Urban,332,15,Richard Gordon Elementary,2,Richard Gordon Elementary,101,NA,NA,6,2,5,NA,1,2,3,3,101,303
+83690,12139,BARBER CUT OFF RD NE,Local Access,2,608,Urban,608,15,Richard Gordon Elementary,2,Richard Gordon Elementary,185,NA,NA,6,2,5,NA,1,2,3,3,185,555
+86671,4876,NE WEST KINGSTON RD,Major Collector,2,916,Urban,916,15,Richard Gordon Elementary,2,Richard Gordon Elementary,279,NA,NA,6,6,6,NA,2,2,4,4,279,1116
+86671,4876,NE WEST KINGSTON RD,Major Collector,2,916,Urban,916,15,Richard Gordon Elementary,2,Richard Gordon Elementary,50,NA,NA,6,6,6,NA,2,2,4,4,50,200
+86671,1726,NE WEST KINGSTON RD,Major Collector,2,286,Urban,286,15,Richard Gordon Elementary,2,Richard Gordon Elementary,86,NA,NA,6,6,6,NA,2,2,4,4,86,344
+86671,12309,NE WEST KINGSTON RD,Major Collector,2,632,Urban,632,15,Richard Gordon Elementary,2,Richard Gordon Elementary,51,NA,NA,6,6,6,NA,2,2,4,4,51,204
+86671,12309,NE WEST KINGSTON RD,Major Collector,2,632,Urban,632,15,Richard Gordon Elementary,2,Richard Gordon Elementary,129,NA,NA,6,6,6,NA,2,2,4,4,129,516
+86671,7826,NE WEST KINGSTON RD,Major Collector,2,134,Urban,134,15,Richard Gordon Elementary,2,Richard Gordon Elementary,40,NA,NA,6,6,6,NA,2,2,4,4,40,160
+86671,16474,NE WEST KINGSTON RD,Major Collector,2,57,Urban,57,15,Richard Gordon Elementary,2,Richard Gordon Elementary,17,NA,NA,6,6,6,NA,2,2,4,4,17,68
+86671,16474,NE WEST KINGSTON RD,Major Collector,2,57,Urban,57,15,Richard Gordon Elementary,2,Richard Gordon Elementary,15,NA,NA,6,6,6,NA,2,2,4,4,15,60
+86671,2556,NE WEST KINGSTON RD,Major Collector,2,114,Urban,114,15,Richard Gordon Elementary,2,Richard Gordon Elementary,34,NA,NA,6,6,6,NA,2,2,4,4,34,136
+86685,16124,SOUTH KINGSTON RD NE,Major Collector,2,332,Urban,332,15,Richard Gordon Elementary,2,Richard Gordon Elementary,101,NA,NA,5,5,6,NA,1,1,2,2,101,202
+86685,16124,SOUTH KINGSTON RD NE,Major Collector,2,332,Urban,332,15,Richard Gordon Elementary,2,Richard Gordon Elementary,72,NA,NA,NA,5,6,NA,1,0,1,1,72,72
+86685,16124,SOUTH KINGSTON RD NE,Major Collector,2,332,Urban,332,15,Richard Gordon Elementary,2,Richard Gordon Elementary,71,NA,NA,5,NA,6,NA,0,1,1,1,71,71
+86671,14193,NE WEST KINGSTON RD,Major Collector,2,24,Urban,24,15,Richard Gordon Elementary,2,Richard Gordon Elementary,7,NA,NA,6,6,6,NA,2,2,4,4,7,28
+83695,10488,TUCKERMAN AVE NE,Local Access,2,146,Urban,146,15,Richard Gordon Elementary,2,Richard Gordon Elementary,44,NA,3,NA,NA,5,NA,0,1,1,1,44,44
+83690,4880,BARBER CUT OFF RD NE,Local Access,2,1239,Urban,1239,15,Richard Gordon Elementary,2,Richard Gordon Elementary,377,NA,NA,6,2,5,NA,1,2,3,3,377,1131
+83695,12764,TUCKERMAN AVE NE,Local Access,2,815,Urban,815,15,Richard Gordon Elementary,2,Richard Gordon Elementary,42,NA,3,NA,NA,5,NA,0,1,1,1,42,42
+83695,6398,TUCKERMAN AVE NE,Local Access,2,257,Urban,257,15,Richard Gordon Elementary,2,Richard Gordon Elementary,78,NA,3,NA,NA,5,NA,0,1,1,1,78,78
+83697,6929,SIMON PL NE,Local Access,2,285,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,285,0
+83698,5460,NE HANNAH CT,Local Access,2,146,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,146,0
+86671,8397,NE WEST KINGSTON RD,Major Collector,2,99,Urban,99,15,Richard Gordon Elementary,2,Richard Gordon Elementary,30,NA,NA,6,6,6,NA,2,2,4,4,30,120
+86685,16123,SOUTH KINGSTON RD NE,Major Collector,2,327,Urban,327,15,Richard Gordon Elementary,2,Richard Gordon Elementary,44,NA,NA,5,5,6,NA,1,1,2,2,44,88
+83690,9406,BARBER CUT OFF RD NE,Local Access,2,3133,Urban,3133,15,Richard Gordon Elementary,2,Richard Gordon Elementary,954,NA,NA,6,2,5,NA,1,2,3,3,954,2862
+83695,8760,TUCKERMAN AVE NE,Local Access,2,500,Urban,500,15,Richard Gordon Elementary,2,Richard Gordon Elementary,152,NA,3,NA,NA,5,NA,0,1,1,1,152,152
+83695,404,TUCKERMAN AVE NE,Local Access,2,266,Urban,266,15,Richard Gordon Elementary,2,Richard Gordon Elementary,81,NA,3,NA,NA,5,NA,0,1,1,1,81,81

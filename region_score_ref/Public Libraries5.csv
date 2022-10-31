@@ -1,0 +1,109 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,sidewalk_right,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,score_left,score_right,score,the_score,the_length,w_score
+56000,11707,NW SCHUYLER RD,Local Access,2,103,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,103,0
+56050,10820,HOLLAND RD NW,Local Access,2,203,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,203,0
+56050,7296,HOLLAND RD NW,Local Access,2,207,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,207,0
+56050,2883,HOLLAND RD NW,Local Access,2,1369,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1369,0
+56050,6573,HOLLAND RD NW,Local Access,2,343,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,343,0
+56050,3596,HOLLAND RD NW,Local Access,2,156,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,156,0
+56000,9266,NW SCHUYLER RD,Local Access,2,795,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,795,0
+50509,10313,TRACYTON BEACH RD NW,Major Collector,2,295,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,295,0
+55270,321,ESSEX ST NW,Local Access,2,231,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,231,0
+50509,10262,TRACYTON BEACH RD NW,Major Collector,2,1114,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1114,0
+50509,16646,TRACYTON BEACH RD NW,Major Collector,2,1758,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1758,0
+50509,1439,TRACYTON BEACH RD NW,Major Collector,2,0,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,0
+55160,8618,NW TRACY AVE,Local Access,2,254,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,254,0
+54600,11360,NE RIDDELL RD,Minor Arterial,2,1465,Urban,1465,15,Tracyton Community Library,2,Tracyton Community Library,402,NA,5,5,6,NA,NA,1,1,2,2,402,804
+54600,2639,NE RIDDELL RD,Minor Arterial,2,179,Urban,179,15,Tracyton Community Library,2,Tracyton Community Library,54,NA,5,5,6,NA,NA,1,1,2,2,54,108
+54600,13144,NW RIDDELL RD,Minor Arterial,2,260,Urban,260,15,Tracyton Community Library,2,Tracyton Community Library,79,NA,5,5,6,NA,NA,1,1,2,2,79,158
+55370,11782,JOHNSON ST NW,Local Access,2,363,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,363,0
+55090,10997,NW NICHOLS AVE,Local Access,2,275,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,275,0
+54600,74,NW RIDDELL RD,Minor Arterial,2,255,Urban,255,15,Tracyton Community Library,2,Tracyton Community Library,77,NA,5,5,6,NA,NA,1,1,2,2,77,154
+54600,74,NW RIDDELL RD,Minor Arterial,2,255,Urban,255,15,Tracyton Community Library,2,Tracyton Community Library,50,NA,5,NA,6,NA,NA,0,1,1,1,50,50
+54600,74,NW RIDDELL RD,Minor Arterial,2,255,Urban,255,15,Tracyton Community Library,2,Tracyton Community Library,49,NA,NA,5,6,NA,NA,1,0,1,1,49,49
+55370,10535,JOHNSON ST NW,Local Access,2,405,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,405,0
+55275,11040,TRACYTON BLVD NW,Minor Arterial,2,349,Urban,349,15,Tracyton Community Library,2,Tracyton Community Library,106,NA,2,2,6,NA,NA,1,1,2,2,106,212
+55275,11040,TRACYTON BLVD NW,Minor Arterial,2,349,Urban,349,15,Tracyton Community Library,2,Tracyton Community Library,53,NA,3,NA,6,NA,NA,0,1,1,1,53,53
+55275,11040,TRACYTON BLVD NW,Minor Arterial,2,349,Urban,349,15,Tracyton Community Library,2,Tracyton Community Library,59,NA,NA,3,6,NA,NA,1,0,1,1,59,59
+55540,12948,NE VENA ST,Local Access,2,157,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,157,0
+55960,3521,NW MOSHER CANYON RD,Local Access,2,727,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,727,0
+56139,9604,NE MCWILLIAMS CT,Local Access,2,2173,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,2173,0
+55980,7947,NW BROOKWOOD LN,Local Access,2,709,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,709,0
+55095,4369,NAOMI ST NW,Local Access,2,660,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,660,0
+55160,8940,NW TRACY AVE,Local Access,2,294,Urban,294,15,Tracyton Community Library,2,Tracyton Community Library,89,NA,8,8,5,NA,NA,2,2,4,4,89,356
+55160,11076,NW TRACY AVE,Local Access,2,257,Urban,257,15,Tracyton Community Library,2,Tracyton Community Library,78,NA,8,8,5,NA,NA,2,2,4,4,78,312
+53530,12154,BENITA PL NE,Local Access,2,558,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,558,0
+53911,3389,NW DYES VIEW CT,Local Access,2,339,Urban,339,15,Tracyton Community Library,2,Tracyton Community Library,103,3,NA,NA,5,NA,NA,0,1,1,1,103,103
+55450,9127,BUNKER ST NW,Local Access,2,647,Urban,647,15,Tracyton Community Library,2,Tracyton Community Library,197,NA,3,3,5,NA,NA,1,1,2,2,197,394
+55450,566,BUNKER ST NW,Local Access,2,665,Urban,665,15,Tracyton Community Library,2,Tracyton Community Library,202,NA,3,3,5,NA,NA,1,1,2,2,202,404
+55090,11888,NW NICHOLS AVE,Local Access,2,254,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,254,0
+55275,5858,TRACYTON BLVD NW,Minor Arterial,2,279,Urban,279,15,Tracyton Community Library,2,Tracyton Community Library,85,NA,3,3,6,NA,NA,1,1,2,2,85,170
+55275,5858,TRACYTON BLVD NW,Minor Arterial,2,279,Urban,279,15,Tracyton Community Library,2,Tracyton Community Library,50,NA,4,4,6,NA,NA,1,1,2,2,50,100
+55090,11906,NW NICHOLS AVE,Local Access,2,263,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,263,0
+55110,5202,PAINTER ST NW,Local Access,2,656,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,656,0
+55370,2238,JOHNSON ST NW,Local Access,2,662,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,662,0
+55250,3120,HART ST NW,Local Access,2,648,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,648,0
+55275,1281,TRACYTON BLVD NW,Minor Arterial,2,249,Urban,249,15,Tracyton Community Library,2,Tracyton Community Library,46,NA,2,NA,6,NA,NA,0,1,1,1,46,46
+55275,1281,TRACYTON BLVD NW,Minor Arterial,2,249,Urban,249,15,Tracyton Community Library,2,Tracyton Community Library,51,NA,NA,2,6,NA,NA,1,0,1,1,51,51
+55275,1281,TRACYTON BLVD NW,Minor Arterial,2,249,Urban,249,15,Tracyton Community Library,2,Tracyton Community Library,76,NA,3,3,6,NA,NA,1,1,2,2,76,152
+55275,11974,TRACYTON BLVD NW,Minor Arterial,2,341,Urban,341,15,Tracyton Community Library,2,Tracyton Community Library,49,NA,4,4,6,NA,NA,1,1,2,2,49,98
+55275,11974,TRACYTON BLVD NW,Minor Arterial,2,341,Urban,341,15,Tracyton Community Library,2,Tracyton Community Library,104,NA,4,4,6,NA,NA,1,1,2,2,104,208
+55170,9118,MAY ST NW,Minor Arterial,2,651,Urban,651,15,Tracyton Community Library,2,Tracyton Community Library,198,NA,5,3,6,NA,NA,1,1,2,2,198,396
+53530,8556,BENITA PL NE,Local Access,2,299,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,299,0
+55165,14175,KATHERINE ST NW,Local Access,2,169,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,169,0
+55275,13289,TRACYTON BLVD NW,Minor Arterial,2,603,Urban,603,15,Tracyton Community Library,2,Tracyton Community Library,117,NA,2,2,6,NA,NA,1,1,2,2,117,234
+55210,7078,STINGLE ST NW,Local Access,2,653,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,653,0
+55165,15684,KATHERINE ST NW,Local Access,2,165,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,165,0
+55095,4780,NAOMI ST NW,Local Access,2,649,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,649,0
+54600,279,NW RIDDELL RD,Local Access,2,197,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,197,0
+54600,4523,NW RIDDELL RD,Local Access,2,266,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,266,0
+55110,3755,PAINTER ST NW,Local Access,2,651,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,651,0
+55160,11496,NW TRACY AVE,Local Access,2,241,Urban,241,15,Tracyton Community Library,2,Tracyton Community Library,73,NA,8,8,5,NA,NA,2,2,4,4,73,292
+55160,5855,NW TRACY AVE,Local Access,2,266,Urban,266,15,Tracyton Community Library,2,Tracyton Community Library,81,NA,8,8,5,NA,NA,2,2,4,4,81,324
+55210,6544,STINGLE ST NW,Local Access,2,650,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,650,0
+54600,5615,NW RIDDELL RD,Local Access,2,253,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,253,0
+54600,4794,NW RIDDELL RD,Local Access,2,311,Urban,311,15,Tracyton Community Library,2,Tracyton Community Library,54,NA,5,NA,5,NA,NA,0,2,2,2,54,108
+54600,4794,NW RIDDELL RD,Local Access,2,311,Urban,311,15,Tracyton Community Library,2,Tracyton Community Library,48,NA,NA,5,5,NA,NA,2,0,2,2,48,96
+54600,10613,NW RIDDELL RD,Minor Arterial,2,241,Urban,241,15,Tracyton Community Library,2,Tracyton Community Library,73,NA,5,5,6,NA,NA,1,1,2,2,73,146
+55250,13233,HART ST NW,Local Access,2,668,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,668,0
+54600,1444,NW RIDDELL RD,Minor Arterial,2,520,Urban,520,15,Tracyton Community Library,2,Tracyton Community Library,52,NA,5,5,6,NA,NA,1,1,2,2,52,104
+54600,1444,NW RIDDELL RD,Minor Arterial,2,520,Urban,520,15,Tracyton Community Library,2,Tracyton Community Library,158,NA,5,5,6,NA,NA,1,1,2,2,158,316
+55540,2582,NE VENA ST,Local Access,2,285,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,285,0
+55450,18499,BUNKER ST NW,Local Access,2,654,Urban,654,15,Tracyton Community Library,2,Tracyton Community Library,199,NA,3,3,5,NA,NA,1,1,2,2,199,398
+55540,8292,NE VENA ST,Local Access,2,2307,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,2307,0
+56141,4066,NE TERI CT,Local Access,2,983,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,983,0
+55090,10133,NW NICHOLS AVE,Local Access,2,267,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,267,0
+55940,3177,NW HOLMBERG ST,Local Access,2,685,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,685,0
+53909,12792,HANSBERRY ST NW,Minor Arterial,2,652,Urban,652,15,Tracyton Community Library,2,Tracyton Community Library,198,NA,4,4,6,NA,NA,1,1,2,2,198,396
+53909,12792,HANSBERRY ST NW,Minor Arterial,2,652,Urban,652,15,Tracyton Community Library,2,Tracyton Community Library,49,NA,2,NA,6,NA,NA,0,1,1,1,49,49
+53909,12792,HANSBERRY ST NW,Minor Arterial,2,652,Urban,652,15,Tracyton Community Library,2,Tracyton Community Library,50,NA,NA,2,6,NA,NA,1,0,1,1,50,50
+53909,10245,HANSBERRY ST NW,Minor Arterial,2,1016,Urban,1016,15,Tracyton Community Library,2,Tracyton Community Library,309,NA,4,4,6,NA,NA,1,1,2,2,309,618
+55275,7301,TRACYTON BLVD NW,Minor Arterial,2,483,Urban,483,15,Tracyton Community Library,2,Tracyton Community Library,147,NA,2,2,6,NA,NA,1,1,2,2,147,294
+55275,16782,TRACYTON BLVD NW,Minor Arterial,2,246,Urban,246,15,Tracyton Community Library,2,Tracyton Community Library,75,NA,2,2,6,NA,NA,1,1,2,2,75,150
+55090,6449,NW NICHOLS AVE,Local Access,2,247,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,247,0
+55160,7055,NW TRACY AVE,Local Access,2,281,Urban,281,15,Tracyton Community Library,2,Tracyton Community Library,85,NA,8,8,5,NA,NA,2,2,4,4,85,340
+55160,6656,NW TRACY AVE,Local Access,2,531,Urban,531,15,Tracyton Community Library,2,Tracyton Community Library,49,NA,8,8,5,NA,NA,2,2,4,4,49,196
+55090,5540,NW NICHOLS AVE,Local Access,2,259,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,259,0
+55090,2563,NW NICHOLS AVE,Local Access,2,541,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,541,0
+55160,5010,NW TRACY AVE,Local Access,2,265,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,265,0
+55970,11476,NORA ST NW,Local Access,2,571,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,571,0
+53909,3404,HANSBERRY ST NW,Minor Arterial,2,663,Urban,663,15,Tracyton Community Library,2,Tracyton Community Library,52,NA,4,NA,6,NA,NA,0,1,1,1,52,52
+53909,3404,HANSBERRY ST NW,Minor Arterial,2,663,Urban,663,15,Tracyton Community Library,2,Tracyton Community Library,202,NA,2,2,6,NA,NA,1,1,2,2,202,404
+53909,3404,HANSBERRY ST NW,Minor Arterial,2,663,Urban,663,15,Tracyton Community Library,2,Tracyton Community Library,51,NA,NA,4,6,NA,NA,1,0,1,1,51,51
+55450,5887,BUNKER ST NW,Local Access,2,336,Urban,336,15,Tracyton Community Library,2,Tracyton Community Library,102,NA,3,3,5,NA,NA,1,1,2,2,102,204
+55170,8218,MAY ST NW,Minor Arterial,2,629,Urban,629,15,Tracyton Community Library,2,Tracyton Community Library,191,NA,5,3,6,NA,NA,1,1,2,2,191,382
+59050,3582,CENTRAL VALLEY RD NE,Minor Arterial,2,770,Urban,770,15,Tracyton Community Library,2,Tracyton Community Library,234,NA,4,2,6,NA,NA,1,1,2,2,234,468
+59050,4217,CENTRAL VALLEY RD NE,Minor Arterial,2,499,Urban,499,15,Tracyton Community Library,2,Tracyton Community Library,152,NA,4,2,6,NA,NA,1,1,2,2,152,304
+59050,5337,CENTRAL VALLEY RD NE,Minor Arterial,2,206,Urban,206,15,Tracyton Community Library,2,Tracyton Community Library,50,NA,4,2,6,NA,NA,1,1,2,2,50,100
+59050,5337,CENTRAL VALLEY RD NE,Minor Arterial,2,206,Urban,206,15,Tracyton Community Library,2,Tracyton Community Library,62,NA,4,2,6,NA,NA,1,1,2,2,62,124
+59050,4216,CENTRAL VALLEY RD NE,Minor Arterial,2,1149,Urban,1149,15,Tracyton Community Library,2,Tracyton Community Library,143,NA,4,2,6,NA,NA,1,1,2,2,143,286
+59050,4216,CENTRAL VALLEY RD NE,Minor Arterial,2,1149,Urban,1149,15,Tracyton Community Library,2,Tracyton Community Library,51,NA,4,2,6,NA,NA,1,1,2,2,51,102
+55275,16235,TRACYTON BLVD NW,Minor Arterial,2,448,Urban,448,15,Tracyton Community Library,2,Tracyton Community Library,77,NA,NA,4,6,NA,NA,1,0,1,1,77,77
+55275,16235,TRACYTON BLVD NW,Minor Arterial,2,448,Urban,448,15,Tracyton Community Library,2,Tracyton Community Library,78,NA,4,NA,6,NA,NA,0,1,1,1,78,78
+55275,16235,TRACYTON BLVD NW,Minor Arterial,2,448,Urban,448,15,Tracyton Community Library,2,Tracyton Community Library,51,NA,3,NA,6,NA,NA,0,1,1,1,51,51
+55275,16235,TRACYTON BLVD NW,Minor Arterial,2,448,Urban,448,15,Tracyton Community Library,2,Tracyton Community Library,49,NA,NA,3,6,NA,NA,1,0,1,1,49,49
+55275,16235,TRACYTON BLVD NW,Minor Arterial,2,448,Urban,448,15,Tracyton Community Library,2,Tracyton Community Library,136,NA,4,4,6,NA,NA,1,1,2,2,136,272
+55275,4407,TRACYTON BLVD NW,Minor Arterial,2,630,Urban,630,15,Tracyton Community Library,2,Tracyton Community Library,192,NA,4,4,6,NA,NA,1,1,2,2,192,384
+55275,4407,TRACYTON BLVD NW,Minor Arterial,2,630,Urban,630,15,Tracyton Community Library,2,Tracyton Community Library,50,NA,4,4,6,NA,NA,1,1,2,2,50,100
+55275,4407,TRACYTON BLVD NW,Minor Arterial,2,630,Urban,630,15,Tracyton Community Library,2,Tracyton Community Library,23,NA,4,4,6,NA,NA,1,1,2,2,23,46
+55095,8751,NAOMI ST NW,Local Access,2,513,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,513,0
+55095,19277,NAOMI ST NW,Local Access,2,198,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,198,0

@@ -1,0 +1,5 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,PLAN_AREA,TYPE.1,DATE_ADOPT,BCC_RESOLU,islamird,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+70400,461,HANSVILLE RD NE,Major Collector,1,1974,Rural,1974,George's Corner,Rural Commercial - Type I,20041025,038A-2004,1,George's Corner,918,7,NA,NA,6,NA,NA,0,5,5,5,918,4590
+70400,461,HANSVILLE RD NE,Major Collector,1,1974,Rural,1974,George's Corner,Rural Commercial - Type I,20041025,038A-2004,1,George's Corner,505,NA,8,NA,6,NA,NA,5,0,5,5,505,2525
+70370,10518,MILLER BAY RD NE,Major Collector,1,1599,Rural,1599,George's Corner,Rural Commercial - Type I,20041025,038A-2004,1,George's Corner,463,3,NA,NA,6,NA,NA,0,1,1,1,463,463
+70370,10518,MILLER BAY RD NE,Major Collector,1,1599,Rural,1599,George's Corner,Rural Commercial - Type I,20041025,038A-2004,1,George's Corner,618,NA,3,NA,6,NA,NA,1,0,1,1,618,618

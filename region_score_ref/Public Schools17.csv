@@ -1,0 +1,49 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+12782,4075,NW CANYON TRL,Local Access,1,1001,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1001,0
+12768,13903,STEELHEAD DR NW,Local Access,1,421,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,421,0
+12820,11663,NW OVERLAND TRL,Local Access,1,864,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,864,0
+12779,5375,LONGHORN DR NW,Local Access,1,141,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,141,0
+12781,6916,DEERHORN TRL NW,Local Access,1,711,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,711,0
+12769,4935,BOUNDARY TRL NW,Local Access,1,815,Rural,815,15,Green Mountain Elementary,2,Green Mountain Elementary,48,5,2,NA,3,NA,NA,1,5,6,6,48,288
+12769,4935,BOUNDARY TRL NW,Local Access,1,815,Rural,815,15,Green Mountain Elementary,2,Green Mountain Elementary,248,2,2,NA,3,NA,NA,1,1,2,2,248,496
+12784,4954,KELLUM RANCH RD NW,Local Access,1,765,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,765,0
+12769,2048,BOUNDARY TRL NW,Local Access,1,873,Rural,873,15,Green Mountain Elementary,2,Green Mountain Elementary,266,5,2,NA,3,NA,NA,1,5,6,6,266,1596
+12769,2048,BOUNDARY TRL NW,Local Access,1,873,Rural,873,15,Green Mountain Elementary,2,Green Mountain Elementary,5,2,2,NA,3,NA,NA,1,1,2,2,5,10
+12740,27,NW COHO RUN,Local Access,1,428,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,428,0
+12770,7460,REDWING TRL NW,Local Access,1,366,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,366,0
+12770,1862,REDWING TRL NW,Local Access,1,1328,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1328,0
+12780,7895,BIG BEEF CROSSING NW,Local Access,1,660,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,660,0
+12780,1751,BIG BEEF CROSSING NW,Local Access,1,346,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,346,0
+12780,13177,BIG BEEF CROSSING NW,Local Access,1,507,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,507,0
+12780,8668,BIG BEEF CROSSING NW,Local Access,1,376,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,376,0
+12764,11080,ELKHORN TRL NW,Local Access,1,358,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,358,0
+12769,7724,BOUNDARY TRL NW,Local Access,1,155,Rural,155,15,Green Mountain Elementary,2,Green Mountain Elementary,47,3.5,2,NA,3,NA,NA,1,5,6,6,47,282
+12764,7330,ELKHORN TRL NW,Local Access,1,388,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,388,0
+12779,12934,LONGHORN DR NW,Local Access,1,584,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,584,0
+12775,10282,THIS A WAY NW,Local Access,1,319,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,319,0
+12779,6149,LONGHORN DR NW,Local Access,1,474,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,474,0
+12779,9610,LONGHORN DR NW,Local Access,1,1023,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1023,0
+12802,3941,WHISPER DR NW,Local Access,1,1001,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1001,0
+12775,4693,THIS A WAY NW,Local Access,1,715,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,715,0
+12762,11119,THAT A WAY NW,Local Access,1,830,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,830,0
+12770,12692,REDWING TRL NW,Local Access,1,956,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,956,0
+12009,18138,NW HOLLY RD,Major Collector,1,85,Rural,85,15,Green Mountain Elementary,2,Green Mountain Elementary,26,6,6,NA,6,NA,NA,5,5,10,10,26,260
+12009,355,NW HOLLY RD,Major Collector,1,895,Rural,895,15,Green Mountain Elementary,2,Green Mountain Elementary,53,6,6,NA,6,NA,NA,5,5,10,10,53,530
+12009,355,NW HOLLY RD,Major Collector,1,895,Rural,895,15,Green Mountain Elementary,2,Green Mountain Elementary,51,6,6,NA,6,NA,NA,5,5,10,10,51,510
+12009,355,NW HOLLY RD,Major Collector,1,895,Rural,895,15,Green Mountain Elementary,2,Green Mountain Elementary,272,6,6,NA,6,NA,NA,5,5,10,10,272,2720
+12009,2,NW HOLLY RD,Major Collector,1,235,Rural,235,15,Green Mountain Elementary,2,Green Mountain Elementary,52,6,6,NA,6,NA,NA,5,5,10,10,52,520
+12009,14212,NW HOLLY RD,Major Collector,1,207,Rural,207,15,Green Mountain Elementary,2,Green Mountain Elementary,63,6,6,NA,6,NA,NA,5,5,10,10,63,630
+12009,15123,NW HOLLY RD,Major Collector,1,87,Rural,87,15,Green Mountain Elementary,2,Green Mountain Elementary,26,6,6,NA,6,NA,NA,5,5,10,10,26,260
+12780,7974,BIG BEEF CROSSING NW,Local Access,1,780,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,780,0
+12770,40,REDWING TRL NW,Local Access,1,472,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,472,0
+12009,11032,NW HOLLY RD,Major Collector,1,375,Rural,375,15,Green Mountain Elementary,2,Green Mountain Elementary,114,6,6,NA,6,NA,NA,5,5,10,10,114,1140
+12009,11032,NW HOLLY RD,Major Collector,1,375,Rural,375,15,Green Mountain Elementary,2,Green Mountain Elementary,50,6,NA,NA,6,NA,NA,0,5,5,5,50,250
+12009,11032,NW HOLLY RD,Major Collector,1,375,Rural,375,15,Green Mountain Elementary,2,Green Mountain Elementary,48,NA,6,NA,6,NA,NA,5,0,5,5,48,240
+12740,1963,NW COHO RUN,Local Access,1,766,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,766,0
+12740,16028,NW COHO RUN,Local Access,1,442,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,442,0
+12009,5465,NW HOLLY RD,Major Collector,1,4908,Rural,4908,15,Green Mountain Elementary,2,Green Mountain Elementary,186,6,6,NA,6,NA,NA,5,5,10,10,186,1860
+12009,5465,NW HOLLY RD,Major Collector,1,4908,Rural,4908,15,Green Mountain Elementary,2,Green Mountain Elementary,534,6,6,NA,6,NA,NA,5,5,10,10,534,5340
+12009,5465,NW HOLLY RD,Major Collector,1,4908,Rural,4908,15,Green Mountain Elementary,2,Green Mountain Elementary,28,6,6,NA,6,NA,NA,5,5,10,10,28,280
+12009,3,NW HOLLY RD,Major Collector,1,892,Rural,892,15,Green Mountain Elementary,2,Green Mountain Elementary,271,6,6,NA,6,NA,NA,5,5,10,10,271,2710
+12778,5387,NW SHORTHORN DR,Local Access,1,346,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,346,0
+12009,16674,NW HOLLY RD,Major Collector,1,77,Rural,77,15,Green Mountain Elementary,2,Green Mountain Elementary,23,6,6,NA,6,NA,NA,5,5,10,10,23,230

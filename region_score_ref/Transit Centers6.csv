@@ -1,0 +1,120 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,sidewalk_left,sidewalk_right,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,score_left,score_right,score,the_score,the_length,w_score
+56261,5389,ST CHARLES LN NE,Local Access,2,295,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,295,0
+56140,1750,NE MCWILLIAMS RD,Minor Arterial,2,621,Urban,621,15,McWilliams Park & Ride,2,McWilliams Park & Ride,106,NA,NA,4,4,6,NA,1,1,2,2,106,212
+56140,1750,NE MCWILLIAMS RD,Minor Arterial,2,621,Urban,621,15,McWilliams Park & Ride,2,McWilliams Park & Ride,183,NA,NA,3,5,6,NA,1,1,2,2,183,366
+56140,19402,NE MCWILLIAMS RD,Minor Arterial,2,530,Urban,530,15,McWilliams Park & Ride,2,McWilliams Park & Ride,14,5,NA,NA,NA,6,NA,3,0,3,3,14,42
+56140,19402,NE MCWILLIAMS RD,Minor Arterial,2,530,Urban,530,15,McWilliams Park & Ride,2,McWilliams Park & Ride,161,NA,NA,4,4,6,NA,1,1,2,2,161,322
+56140,19402,NE MCWILLIAMS RD,Minor Arterial,2,530,Urban,530,15,McWilliams Park & Ride,2,McWilliams Park & Ride,52,NA,NA,4,4,6,NA,1,1,2,2,52,104
+56142,11722,JUANITA CIR NE,Local Access,2,161,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,161,0
+56334,10413,NE LEXINGTON DR,Local Access,2,296,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,296,0
+56230,651,GRACELAND RD NE,Local Access,2,519,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,519,0
+56333,11033,AVON CT NE,Local Access,2,514,Urban,514,15,McWilliams Park & Ride,2,McWilliams Park & Ride,156,NA,NA,1,1,5,NA,1,1,2,2,156,312
+55670,11514,HYLEN AVE NE,Local Access,2,325,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,325,0
+56140,7351,NE MCWILLIAMS RD,Minor Arterial,2,519,Urban,519,15,McWilliams Park & Ride,2,McWilliams Park & Ride,157,NA,NA,4,4,6,NA,1,1,2,2,157,314
+56140,15145,NE MCWILLIAMS RD,Minor Arterial,2,172,Urban,172,15,McWilliams Park & Ride,2,McWilliams Park & Ride,52,NA,NA,4,4,6,NA,1,1,2,2,52,104
+56320,11311,JOHNSON RD NE,Local Access,2,993,Urban,993,15,McWilliams Park & Ride,2,McWilliams Park & Ride,156,NA,NA,1,1,5,NA,1,1,2,2,156,312
+55700,4358,NE VENA AVE,Local Access,2,533,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,533,0
+55700,8531,NE VENA AVE,Local Access,2,670,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,670,0
+56261,10218,ST CHARLES LN NE,Local Access,2,52,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,52,0
+56261,974,ST CHARLES LN NE,Local Access,2,132,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,132,0
+56139,9604,NE MCWILLIAMS CT,Local Access,2,2173,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,2173,0
+56330,9531,CLOVER BLOSSOM LN NE,Local Access,2,377,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,377,0
+56270,4802,BENTLEY CIR NE,Local Access,2,638,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,638,0
+56375,10539,TATE PL NE,Local Access,2,329,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,329,0
+51660,1453,NE DAWN RD,Local Access,2,646,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,646,0
+51660,11206,NE DAWN RD,Local Access,2,239,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,239,0
+56261,6378,ST CHARLES LN NE,Local Access,2,52,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,52,0
+56261,900,ST CHARLES LN NE,Local Access,2,133,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,133,0
+56261,553,ST CHARLES LN NE,Local Access,2,62,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,62,0
+56261,5926,ST CHARLES LN NE,Local Access,2,134,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,134,0
+56260,190,NE BENTLEY DR,Local Access,2,514,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,514,0
+56260,2056,NE BENTLEY DR,Local Access,2,469,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,469,0
+55640,12239,NE FRANKLIN AVE,Local Access,2,631,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,631,0
+51665,5245,NE MARRIC CT,Local Access,2,826,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,826,0
+56370,3465,NE REGAL CT,Local Access,2,534,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,534,0
+56409,4732,NE FAIRGROUNDS RD,Minor Arterial,2,957,Urban,957,15,McWilliams Park & Ride,2,McWilliams Park & Ride,156,NA,NA,5,5,6,NA,1,1,2,2,156,312
+56140,7324,NE MCWILLIAMS RD,Minor Arterial,2,1773,Urban,1773,15,McWilliams Park & Ride,2,McWilliams Park & Ride,538,NA,NA,4,4,6,NA,1,1,2,2,538,1076
+56140,7324,NE MCWILLIAMS RD,Minor Arterial,2,1773,Urban,1773,15,McWilliams Park & Ride,2,McWilliams Park & Ride,50,NA,NA,4,4,6,NA,1,1,2,2,50,100
+56330,3962,CLOVER BLOSSOM LN NE,Local Access,2,190,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,190,0
+56330,6981,CLOVER BLOSSOM LN NE,Local Access,2,265,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,265,0
+56190,10765,OLD MILITARY RD NE,Major Collector,2,1047,Urban,1047,15,McWilliams Park & Ride,2,McWilliams Park & Ride,55,NA,NA,4,4,6,NA,1,1,2,2,55,110
+56130,6549,GRAND PINE LOOP NE,Local Access,2,1530,Urban,1530,15,McWilliams Park & Ride,2,McWilliams Park & Ride,208,NA,3,NA,NA,5,NA,0,1,1,1,208,208
+56330,4930,CLOVER BLOSSOM LN NE,Local Access,2,201,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,201,0
+56330,5366,CLOVER BLOSSOM LN NE,Local Access,2,227,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,227,0
+56330,5625,CLOVER BLOSSOM LN NE,Local Access,2,191,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,191,0
+51680,7729,NE RIMROCK DR,Local Access,2,861,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,861,0
+56261,2334,ST CHARLES LN NE,Local Access,2,50,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,50,0
+56190,11569,OLD MILITARY RD NE,Major Collector,2,181,Urban,181,15,McWilliams Park & Ride,2,McWilliams Park & Ride,55,NA,NA,4,4,6,NA,1,1,2,2,55,110
+56260,3928,NE BENTLEY DR,Local Access,2,218,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,218,0
+56560,3507,NE JOHN CARLSON RD,Major Collector,2,841,Urban,841,15,McWilliams Park & Ride,2,McWilliams Park & Ride,33,NA,NA,5,5,6,NA,1,1,2,2,33,66
+56338,5840,NE WINDSOR CT,Local Access,2,273,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,273,0
+56240,1472,NE BLOSSOM PL,Local Access,2,375,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,375,0
+56330,1409,CLOVER BLOSSOM LN NE,Local Access,2,185,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,185,0
+56324,3734,NE ATHENS CT,Local Access,2,179,Urban,179,15,McWilliams Park & Ride,2,McWilliams Park & Ride,22,NA,NA,1,1,5,NA,1,1,2,2,22,44
+56320,10242,JOHNSON RD NE,Local Access,2,689,Urban,689,15,McWilliams Park & Ride,2,McWilliams Park & Ride,210,NA,NA,1,1,5,NA,1,1,2,2,210,420
+56323,11896,NE ATHENS WAY,Local Access,2,591,Urban,591,15,McWilliams Park & Ride,2,McWilliams Park & Ride,179,NA,NA,1,1,5,NA,1,1,2,2,179,358
+56140,9204,NE MCWILLIAMS RD,Minor Arterial,2,970,Urban,970,15,McWilliams Park & Ride,2,McWilliams Park & Ride,4,NA,NA,4,4,6,NA,1,1,2,2,4,8
+56140,7965,NE MCWILLIAMS RD,Minor Arterial,2,481,Urban,481,15,McWilliams Park & Ride,2,McWilliams Park & Ride,146,NA,NA,4,4,6,NA,1,1,2,2,146,292
+56140,7965,NE MCWILLIAMS RD,Minor Arterial,2,481,Urban,481,15,McWilliams Park & Ride,2,McWilliams Park & Ride,53,NA,NA,4,4,6,NA,1,1,2,2,53,106
+56140,7965,NE MCWILLIAMS RD,Minor Arterial,2,481,Urban,481,15,McWilliams Park & Ride,2,McWilliams Park & Ride,49,NA,NA,4,NA,6,NA,0,1,1,1,49,49
+56140,7965,NE MCWILLIAMS RD,Minor Arterial,2,481,Urban,481,15,McWilliams Park & Ride,2,McWilliams Park & Ride,50,NA,NA,NA,4,6,NA,1,0,1,1,50,50
+56323,6351,NE ATHENS WAY,Local Access,2,680,Urban,680,15,McWilliams Park & Ride,2,McWilliams Park & Ride,24,NA,NA,1,1,5,NA,1,1,2,2,24,48
+51780,676,NE MICHELLE CT,Local Access,2,291,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,291,0
+56325,4728,HELENA DR NE,Local Access,2,226,Urban,226,15,McWilliams Park & Ride,2,McWilliams Park & Ride,22,NA,NA,1,1,5,NA,1,1,2,2,22,44
+56323,2207,NE ATHENS WAY,Local Access,2,141,Urban,141,15,McWilliams Park & Ride,2,McWilliams Park & Ride,5,NA,NA,1,1,5,NA,1,1,2,2,5,10
+56140,11651,NE MCWILLIAMS RD,Minor Arterial,2,497,Urban,497,15,McWilliams Park & Ride,2,McWilliams Park & Ride,51,NA,NA,4,NA,6,NA,0,1,1,1,51,51
+56140,11651,NE MCWILLIAMS RD,Minor Arterial,2,497,Urban,497,15,McWilliams Park & Ride,2,McWilliams Park & Ride,151,NA,NA,4,4,6,NA,1,1,2,2,151,302
+56140,11651,NE MCWILLIAMS RD,Minor Arterial,2,497,Urban,497,15,McWilliams Park & Ride,2,McWilliams Park & Ride,50,NA,NA,NA,4,6,NA,1,0,1,1,50,50
+56323,15143,NE ATHENS WAY,Local Access,2,188,Urban,188,15,McWilliams Park & Ride,2,McWilliams Park & Ride,57,NA,NA,1,1,5,NA,1,1,2,2,57,114
+56323,15143,NE ATHENS WAY,Local Access,2,188,Urban,188,15,McWilliams Park & Ride,2,McWilliams Park & Ride,44,NA,NA,1,NA,5,NA,0,1,1,1,44,44
+56323,15143,NE ATHENS WAY,Local Access,2,188,Urban,188,15,McWilliams Park & Ride,2,McWilliams Park & Ride,46,NA,NA,NA,1,5,NA,1,0,1,1,46,46
+56332,9595,NE ETON LN,Local Access,2,436,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,436,0
+55740,9525,NE DAWN RD,Local Access,2,1131,Urban,1131,15,McWilliams Park & Ride,2,McWilliams Park & Ride,79,5,NA,NA,NA,5,NA,5,0,5,5,79,395
+55740,9525,NE DAWN RD,Local Access,2,1131,Urban,1131,15,McWilliams Park & Ride,2,McWilliams Park & Ride,148,NA,NA,NA,1,5,NA,1,0,1,1,148,148
+56374,3472,NE MARWOOD DR,Local Access,2,308,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,308,0
+56190,3612,OLD MILITARY RD NE,Major Collector,2,237,Urban,237,15,McWilliams Park & Ride,2,McWilliams Park & Ride,72,NA,NA,4,4,6,NA,1,1,2,2,72,144
+56375,4308,TATE PL NE,Local Access,2,233,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,233,0
+56140,10009,NE MCWILLIAMS RD,Minor Arterial,2,1467,Urban,1467,15,McWilliams Park & Ride,2,McWilliams Park & Ride,50,NA,NA,4,4,6,NA,1,1,2,2,50,100
+56140,10009,NE MCWILLIAMS RD,Minor Arterial,2,1467,Urban,1467,15,McWilliams Park & Ride,2,McWilliams Park & Ride,342,NA,NA,4,4,6,NA,1,1,2,2,342,684
+56140,10009,NE MCWILLIAMS RD,Minor Arterial,2,1467,Urban,1467,15,McWilliams Park & Ride,2,McWilliams Park & Ride,203,NA,NA,4,4,6,NA,1,1,2,2,203,406
+56140,12990,NE MCWILLIAMS RD,Minor Arterial,2,523,Urban,523,15,McWilliams Park & Ride,2,McWilliams Park & Ride,102,NA,NA,3,5,6,NA,1,1,2,2,102,204
+56140,12990,NE MCWILLIAMS RD,Minor Arterial,2,523,Urban,523,15,McWilliams Park & Ride,2,McWilliams Park & Ride,50,NA,NA,3,5,6,NA,1,1,2,2,50,100
+56140,8770,NE MCWILLIAMS RD,Minor Arterial,2,526,Urban,526,15,McWilliams Park & Ride,2,McWilliams Park & Ride,160,5,NA,NA,NA,6,NA,3,0,3,3,160,480
+56140,8770,NE MCWILLIAMS RD,Minor Arterial,2,526,Urban,526,15,McWilliams Park & Ride,2,McWilliams Park & Ride,48,NA,NA,4,4,6,NA,1,1,2,2,48,96
+56140,8770,NE MCWILLIAMS RD,Minor Arterial,2,526,Urban,526,15,McWilliams Park & Ride,2,McWilliams Park & Ride,80,NA,NA,4,NA,6,NA,0,1,1,1,80,80
+56140,8770,NE MCWILLIAMS RD,Minor Arterial,2,526,Urban,526,15,McWilliams Park & Ride,2,McWilliams Park & Ride,81,NA,NA,NA,4,6,NA,1,0,1,1,81,81
+56143,8435,JAGGER PL NE,Local Access,2,370,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,370,0
+55640,9180,NE FRANKLIN AVE,Local Access,2,668,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,668,0
+56180,6917,NE MELIA LN,Local Access,2,469,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,469,0
+56334,4280,NE LEXINGTON DR,Local Access,2,444,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,444,0
+56332,6205,NE ETON LN,Local Access,2,658,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,658,0
+56331,5001,WELLINGTON LN NE,Local Access,2,527,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,527,0
+55720,3482,NE FUSON RD,Local Access,2,1343,Urban,1343,15,McWilliams Park & Ride,2,McWilliams Park & Ride,340,NA,NA,4,4,5,NA,1,1,2,2,340,680
+56360,1693,NE ECHO DR,Local Access,2,1254,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1254,0
+56331,13143,WELLINGTON LN NE,Local Access,2,295,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,295,0
+56376,862,NE COLBY CT,Local Access,2,411,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,411,0
+56140,469,NE MCWILLIAMS RD,Minor Arterial,2,283,Urban,283,15,McWilliams Park & Ride,2,McWilliams Park & Ride,51,NA,NA,3,NA,6,NA,0,1,1,1,51,51
+56140,469,NE MCWILLIAMS RD,Minor Arterial,2,283,Urban,283,15,McWilliams Park & Ride,2,McWilliams Park & Ride,50,NA,NA,NA,5,6,NA,1,0,1,1,50,50
+56140,469,NE MCWILLIAMS RD,Minor Arterial,2,283,Urban,283,15,McWilliams Park & Ride,2,McWilliams Park & Ride,86,NA,NA,3,5,6,NA,1,1,2,2,86,172
+56140,469,NE MCWILLIAMS RD,Minor Arterial,2,283,Urban,283,15,McWilliams Park & Ride,2,McWilliams Park & Ride,49,NA,NA,3,5,6,NA,1,1,2,2,49,98
+51690,11802,PINE RD NE,Major Collector,2,770,Urban,770,15,McWilliams Park & Ride,2,McWilliams Park & Ride,234,NA,NA,4,4,6,NA,1,1,2,2,234,468
+51690,13046,PINE RD NE,Major Collector,2,291,Urban,291,15,McWilliams Park & Ride,2,McWilliams Park & Ride,88,NA,NA,4,4,6,NA,1,1,2,2,88,176
+56140,68,NE MCWILLIAMS RD,Minor Arterial,2,488,Urban,488,15,McWilliams Park & Ride,2,McWilliams Park & Ride,42,5,NA,NA,NA,6,NA,3,0,3,3,42,126
+56140,68,NE MCWILLIAMS RD,Minor Arterial,2,488,Urban,488,15,McWilliams Park & Ride,2,McWilliams Park & Ride,114,NA,NA,4,4,6,NA,1,1,2,2,114,228
+51690,3635,PINE RD NE,Major Collector,2,516,Urban,516,15,McWilliams Park & Ride,2,McWilliams Park & Ride,157,NA,NA,4,4,6,NA,1,1,2,2,157,314
+51690,5362,PINE RD NE,Major Collector,2,292,Urban,292,15,McWilliams Park & Ride,2,McWilliams Park & Ride,81,NA,NA,4,4,6,NA,1,1,2,2,81,162
+56261,2038,ST CHARLES LN NE,Local Access,2,520,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,520,0
+56140,2124,NE MCWILLIAMS RD,Minor Arterial,2,91,Urban,91,15,McWilliams Park & Ride,2,McWilliams Park & Ride,27,5,NA,NA,NA,6,NA,3,0,3,3,27,81
+56336,477,NE WELLSLY PL,Local Access,2,192,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,192,0
+56140,13009,NE MCWILLIAMS RD,Minor Arterial,2,359,Urban,359,15,McWilliams Park & Ride,2,McWilliams Park & Ride,47,NA,NA,4,4,6,NA,1,1,2,2,47,94
+56140,13009,NE MCWILLIAMS RD,Minor Arterial,2,359,Urban,359,15,McWilliams Park & Ride,2,McWilliams Park & Ride,109,NA,NA,4,4,6,NA,1,1,2,2,109,218
+56142,7594,JUANITA CIR NE,Local Access,2,160,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,160,0
+56142,11735,JUANITA CIR NE,Local Access,2,132,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,132,0
+56142,10090,JUANITA CIR NE,Local Access,2,756,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,756,0
+56140,8472,NE MCWILLIAMS RD,Minor Arterial,2,365,Urban,365,15,McWilliams Park & Ride,2,McWilliams Park & Ride,51,NA,NA,3,5,6,NA,1,1,2,2,51,102
+56140,8472,NE MCWILLIAMS RD,Minor Arterial,2,365,Urban,365,15,McWilliams Park & Ride,2,McWilliams Park & Ride,111,NA,NA,3,5,6,NA,1,1,2,2,111,222
+56190,8894,OLD MILITARY RD NE,Major Collector,2,2020,Urban,2020,15,McWilliams Park & Ride,2,McWilliams Park & Ride,615,NA,NA,4,4,6,NA,1,1,2,2,615,1230
+56560,5605,NE JOHN CARLSON RD,Major Collector,2,303,Urban,303,15,McWilliams Park & Ride,2,McWilliams Park & Ride,92,NA,NA,5,5,6,NA,1,1,2,2,92,184
+51690,4616,PINE RD NE,Major Collector,2,110,Urban,110,15,McWilliams Park & Ride,2,McWilliams Park & Ride,33,NA,NA,4,4,6,NA,1,1,2,2,33,66
+5086,15144,HANEBERG LN NE,Local Access,2,236,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,236,0
+55720,6056,NE FUSON RD,Local Access,2,1047,Urban,1047,15,McWilliams Park & Ride,2,McWilliams Park & Ride,50,NA,NA,4,4,5,NA,1,1,2,2,50,100

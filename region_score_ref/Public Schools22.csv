@@ -1,0 +1,27 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+86671,10010,NE WEST KINGSTON RD,Major Collector,1,1972,Rural,1972,15,Kingston Middle,2,Kingston Middle,440,10,10,NA,6,NA,NA,5,5,10,10,440,4400
+83090,10395,CHRIS LN NE,Local Access,1,1361,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1361,0
+83090,15868,CHRIS LN NE,Local Access,1,622,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,622,0
+83290,3559,LEYMAN LN NE,Local Access,1,1319,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1319,0
+83210,15933,NORMAN RD NE,Local Access,2,1273,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1273,0
+86671,19176,NE WEST KINGSTON RD,Major Collector,2,1568,Urban,1568,15,Kingston Middle,2,Kingston Middle,476,10,10,6,NA,NA,NA,2,2,4,4,476,1904
+86671,19176,NE WEST KINGSTON RD,Major Collector,2,1568,Urban,1568,15,Kingston Middle,2,Kingston Middle,67,10,10,6,NA,NA,NA,2,2,4,4,67,268
+86671,11287,NE WEST KINGSTON RD,Major Collector,2,1761,Urban,1761,15,Kingston Middle,2,Kingston Middle,33,10,10,6,NA,NA,NA,2,2,4,4,33,132
+86671,11287,NE WEST KINGSTON RD,Major Collector,2,1761,Urban,1761,15,Kingston Middle,2,Kingston Middle,376,10,10,6,NA,NA,NA,2,2,4,4,376,1504
+86671,11287,NE WEST KINGSTON RD,Major Collector,2,1761,Urban,1761,15,Kingston Middle,2,Kingston Middle,261,10,10,6,NA,NA,NA,2,2,4,4,261,1044
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Kingston Middle,2,Kingston Middle,190,10,10,6,NA,NA,NA,2,2,4,4,190,760
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Kingston Middle,2,Kingston Middle,147,10,10,6,NA,NA,NA,2,2,4,4,147,588
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Kingston Middle,2,Kingston Middle,41,NA,10,6,NA,NA,NA,2,0,2,2,41,82
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Kingston Middle,2,Kingston Middle,115,NA,10,6,NA,NA,NA,2,0,2,2,115,230
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Kingston Middle,2,Kingston Middle,114,10,NA,6,NA,NA,NA,0,2,2,2,114,228
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Kingston Middle,2,Kingston Middle,42,10,NA,6,NA,NA,NA,0,2,2,2,42,84
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Kingston Middle,2,Kingston Middle,131,6,6,6,NA,NA,NA,2,2,4,4,131,524
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Kingston Middle,2,Kingston Middle,91,10,10,6,NA,NA,NA,2,2,4,4,91,364
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Kingston Middle,2,Kingston Middle,147,10,10,6,NA,NA,NA,2,2,4,4,147,588
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Kingston Middle,2,Kingston Middle,183,6,6,6,NA,NA,NA,2,2,4,4,183,732
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Kingston Middle,2,Kingston Middle,152,6,6,6,NA,NA,NA,2,2,4,4,152,608
+86671,18285,NE WEST KINGSTON RD,Major Collector,2,318,Urban,318,15,Kingston Middle,2,Kingston Middle,96,10,10,6,NA,NA,NA,2,2,4,4,96,384
+86671,18285,NE WEST KINGSTON RD,Major Collector,2,318,Urban,318,15,Kingston Middle,2,Kingston Middle,9,10,10,6,NA,NA,NA,2,2,4,4,9,36
+86671,18285,NE WEST KINGSTON RD,Major Collector,2,318,Urban,318,15,Kingston Middle,2,Kingston Middle,58,10,10,6,NA,NA,NA,2,2,4,4,58,232
+83210,12709,NORMAN RD NE,Local Access,2,1283,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1283,0
+83210,15892,NORMAN RD NE,Local Access,2,78,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,78,0

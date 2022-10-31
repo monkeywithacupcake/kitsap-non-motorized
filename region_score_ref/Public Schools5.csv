@@ -1,0 +1,121 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,sidewalk_left,sidewalk_right,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,score_left,score_right,score,the_score,the_length,w_score
+57730,10164,NW RANDALL WAY,Minor Arterial,2,526,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,526,0
+13855,3068,ASHLEY DR NW,Local Access,2,271,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,271,0
+57810,1465,OLD FRONTIER RD NW,Major Collector,2,210,Urban,210,15,Central Kitsap Middle,2,Central Kitsap Middle,7,NA,NA,2,3,6,NA,1,1,2,2,7,14
+57684,5608,NW HIGHLAND CT,Local Access,2,860,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,860,0
+57768,15416,NW GREAVES WAY,Minor Arterial,0,2281,Unknown,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,2281,0
+13549,9493,NW ANDERSON HILL RD,Minor Arterial,2,706,Urban,706,15,Central Kitsap Middle,2,Central Kitsap Middle,117,NA,NA,4,4,6,NA,1,1,2,2,117,234
+57813,683,FRONTIER PL NW,Local Access,2,180,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,180,0
+57813,1078,FRONTIER PL NW,Local Access,2,974,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,974,0
+57813,12839,FRONTIER PL NW,Local Access,2,736,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,736,0
+1047,4545,NW HARRISON AVE,Local Access,2,166,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,166,0
+1045,6920,SHORE PL NW,Local Access,2,377,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,377,0
+1046,9577,SHORE PL NW,Local Access,2,210,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,210,0
+57810,15414,OLD FRONTIER RD NW,Major Collector,2,2232,Urban,2232,15,Central Kitsap Middle,2,Central Kitsap Middle,206,NA,NA,2,3,6,NA,1,1,2,2,206,412
+57810,15414,OLD FRONTIER RD NW,Major Collector,2,2232,Urban,2232,15,Central Kitsap Middle,2,Central Kitsap Middle,179,NA,NA,3,3,6,NA,1,1,2,2,179,358
+57810,15414,OLD FRONTIER RD NW,Major Collector,2,2232,Urban,2232,15,Central Kitsap Middle,2,Central Kitsap Middle,379,NA,NA,3,3,6,NA,1,1,2,2,379,758
+57810,15414,OLD FRONTIER RD NW,Major Collector,2,2232,Urban,2232,15,Central Kitsap Middle,2,Central Kitsap Middle,146,NA,NA,3,3,6,NA,1,1,2,2,146,292
+57810,15414,OLD FRONTIER RD NW,Major Collector,2,2232,Urban,2232,15,Central Kitsap Middle,2,Central Kitsap Middle,142,NA,NA,3,NA,6,NA,0,1,1,1,142,142
+57810,15414,OLD FRONTIER RD NW,Major Collector,2,2232,Urban,2232,15,Central Kitsap Middle,2,Central Kitsap Middle,130,NA,NA,3,NA,6,NA,0,1,1,1,130,130
+57810,15414,OLD FRONTIER RD NW,Major Collector,2,2232,Urban,2232,15,Central Kitsap Middle,2,Central Kitsap Middle,129,NA,NA,NA,3,6,NA,1,0,1,1,129,129
+57810,15414,OLD FRONTIER RD NW,Major Collector,2,2232,Urban,2232,15,Central Kitsap Middle,2,Central Kitsap Middle,141,NA,NA,NA,3,6,NA,1,0,1,1,141,141
+57740,7648,NW BUCKLIN HILL RD,Minor Arterial,2,1202,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1202,0
+57740,11879,NW BUCKLIN HILL RD,Minor Arterial,2,963,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,963,0
+19515,11598,SILVERDALE WAY NW,Principal Arterial,2,1117,Urban,1117,15,Central Kitsap Middle,2,Central Kitsap Middle,46,NA,NA,3,3,6,NA,1,1,2,2,46,92
+19515,11598,SILVERDALE WAY NW,Principal Arterial,2,1117,Urban,1117,15,Central Kitsap Middle,2,Central Kitsap Middle,340,NA,NA,3,3,6,NA,1,1,2,2,340,680
+19515,1014,SILVERDALE WAY NW,Principal Arterial,2,470,Urban,470,15,Central Kitsap Middle,2,Central Kitsap Middle,0,8,NA,NA,NA,6,NA,5,0,5,5,0,0
+19515,1014,SILVERDALE WAY NW,Principal Arterial,2,470,Urban,470,15,Central Kitsap Middle,2,Central Kitsap Middle,143,NA,NA,3,3,6,NA,1,1,2,2,143,286
+19515,1014,SILVERDALE WAY NW,Principal Arterial,2,470,Urban,470,15,Central Kitsap Middle,2,Central Kitsap Middle,45,NA,NA,3,3,6,NA,1,1,2,2,45,90
+19515,1014,SILVERDALE WAY NW,Principal Arterial,2,470,Urban,470,15,Central Kitsap Middle,2,Central Kitsap Middle,55,NA,NA,3,NA,6,NA,0,1,1,1,55,55
+19515,1014,SILVERDALE WAY NW,Principal Arterial,2,470,Urban,470,15,Central Kitsap Middle,2,Central Kitsap Middle,54,NA,NA,NA,3,6,NA,1,0,1,1,54,54
+57769,11991,KITSAP MALL BLVD NW,Principal Arterial,2,654,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,654,0
+57769,12569,KITSAP MALL BLVD NW,Principal Arterial,2,719,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,719,0
+56675,8833,BLAINE AVE NW,Local Access,2,1342,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1342,0
+13549,11536,NW ANDERSON HILL RD,Minor Arterial,2,739,Urban,739,15,Central Kitsap Middle,2,Central Kitsap Middle,224,NA,NA,4,4,6,NA,1,1,2,2,224,448
+13549,11536,NW ANDERSON HILL RD,Minor Arterial,2,739,Urban,739,15,Central Kitsap Middle,2,Central Kitsap Middle,0,NA,NA,4,NA,6,NA,0,1,1,1,0,0
+13549,11536,NW ANDERSON HILL RD,Minor Arterial,2,739,Urban,739,15,Central Kitsap Middle,2,Central Kitsap Middle,4,NA,NA,4,4,6,NA,1,1,2,2,4,8
+13549,11536,NW ANDERSON HILL RD,Minor Arterial,2,739,Urban,739,15,Central Kitsap Middle,2,Central Kitsap Middle,1,NA,NA,NA,4,6,NA,1,0,1,1,1,1
+13549,11604,NW ANDERSON HILL RD,Minor Arterial,2,1314,Urban,1314,15,Central Kitsap Middle,2,Central Kitsap Middle,400,NA,NA,4,4,6,NA,1,1,2,2,400,800
+13549,11604,NW ANDERSON HILL RD,Minor Arterial,2,1314,Urban,1314,15,Central Kitsap Middle,2,Central Kitsap Middle,83,NA,NA,4,4,6,NA,1,1,2,2,83,166
+13549,4368,NW ANDERSON HILL RD,Minor Arterial,2,1320,Urban,1320,15,Central Kitsap Middle,2,Central Kitsap Middle,18,NA,NA,4,4,6,NA,1,1,2,2,18,36
+13549,4368,NW ANDERSON HILL RD,Minor Arterial,2,1320,Urban,1320,15,Central Kitsap Middle,2,Central Kitsap Middle,48,NA,NA,4,4,6,NA,1,1,2,2,48,96
+13549,11105,NW ANDERSON HILL RD,Minor Arterial,2,262,Urban,262,15,Central Kitsap Middle,2,Central Kitsap Middle,27,NA,NA,4,NA,6,NA,0,1,1,1,27,27
+13549,11105,NW ANDERSON HILL RD,Minor Arterial,2,262,Urban,262,15,Central Kitsap Middle,2,Central Kitsap Middle,79,NA,NA,4,4,6,NA,1,1,2,2,79,158
+13549,11105,NW ANDERSON HILL RD,Minor Arterial,2,262,Urban,262,15,Central Kitsap Middle,2,Central Kitsap Middle,54,NA,NA,4,NA,6,NA,0,1,1,1,54,54
+13549,11105,NW ANDERSON HILL RD,Minor Arterial,2,262,Urban,262,15,Central Kitsap Middle,2,Central Kitsap Middle,24,NA,NA,NA,4,6,NA,1,0,1,1,24,24
+13549,11105,NW ANDERSON HILL RD,Minor Arterial,2,262,Urban,262,15,Central Kitsap Middle,2,Central Kitsap Middle,58,NA,NA,NA,4,6,NA,1,0,1,1,58,58
+13549,14360,NW ANDERSON HILL RD,Minor Arterial,2,82,Urban,82,15,Central Kitsap Middle,2,Central Kitsap Middle,24,NA,NA,4,4,6,NA,1,1,2,2,24,48
+13549,223,NW ANDERSON HILL RD,Minor Arterial,2,424,Urban,424,15,Central Kitsap Middle,2,Central Kitsap Middle,128,NA,NA,4,4,6,NA,1,1,2,2,128,256
+13549,223,NW ANDERSON HILL RD,Minor Arterial,2,424,Urban,424,15,Central Kitsap Middle,2,Central Kitsap Middle,26,NA,NA,4,NA,6,NA,0,1,1,1,26,26
+13549,223,NW ANDERSON HILL RD,Minor Arterial,2,424,Urban,424,15,Central Kitsap Middle,2,Central Kitsap Middle,51,NA,NA,4,NA,6,NA,0,1,1,1,51,51
+13549,223,NW ANDERSON HILL RD,Minor Arterial,2,424,Urban,424,15,Central Kitsap Middle,2,Central Kitsap Middle,19,NA,NA,NA,4,6,NA,1,0,1,1,19,19
+13549,223,NW ANDERSON HILL RD,Minor Arterial,2,424,Urban,424,15,Central Kitsap Middle,2,Central Kitsap Middle,53,NA,NA,NA,4,6,NA,1,0,1,1,53,53
+13549,223,NW ANDERSON HILL RD,Minor Arterial,2,424,Urban,424,15,Central Kitsap Middle,2,Central Kitsap Middle,20,NA,NA,4,4,6,NA,1,1,2,2,20,40
+13549,223,NW ANDERSON HILL RD,Minor Arterial,2,424,Urban,424,15,Central Kitsap Middle,2,Central Kitsap Middle,57,NA,NA,4,NA,6,NA,0,1,1,1,57,57
+13549,223,NW ANDERSON HILL RD,Minor Arterial,2,424,Urban,424,15,Central Kitsap Middle,2,Central Kitsap Middle,56,NA,NA,NA,4,6,NA,1,0,1,1,56,56
+13549,14378,NW ANDERSON HILL RD,Minor Arterial,2,75,Urban,75,15,Central Kitsap Middle,2,Central Kitsap Middle,22,NA,NA,4,4,6,NA,1,1,2,2,22,44
+13549,14419,NW ANDERSON HILL RD,Minor Arterial,2,92,Urban,92,15,Central Kitsap Middle,2,Central Kitsap Middle,28,NA,NA,4,4,6,NA,1,1,2,2,28,56
+13549,14408,NW ANDERSON HILL RD,Minor Arterial,2,106,Urban,106,15,Central Kitsap Middle,2,Central Kitsap Middle,32,NA,NA,4,4,6,NA,1,1,2,2,32,64
+57730,9228,NW RANDALL WAY,Minor Arterial,2,1196,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1196,0
+57740,9767,NW BUCKLIN HILL RD,Minor Arterial,2,632,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,632,0
+14000,12677,SILVERDALE LOOP RD NW,Local Access,2,2318,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,2318,0
+57771,3696,POPLARS AVE NW,Local Access,2,1058,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1058,0
+57730,5793,NW RANDALL WAY,Minor Arterial,2,428,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,428,0
+57740,4762,NW BUCKLIN HILL RD,Minor Arterial,2,354,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,354,0
+14140,2098,LINDER WAY NW,Local Access,2,754,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,754,0
+14390,9840,BAY SHORE DR NW,Local Access,2,1638,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1638,0
+19515,12391,SILVERDALE WAY NW,Principal Arterial,2,571,Urban,571,15,Central Kitsap Middle,2,Central Kitsap Middle,49,NA,NA,3,3,6,NA,1,1,2,2,49,98
+57740,988,NW BUCKLIN HILL RD,Minor Arterial,2,319,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,319,0
+57740,3117,NW BUCKLIN HILL RD,Minor Arterial,2,408,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,408,0
+57740,19100,NW BUCKLIN HILL RD,Minor Arterial,2,117,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,117,0
+57740,19101,NW BUCKLIN HILL RD,Minor Arterial,2,288,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,288,0
+19515,11994,SILVERDALE WAY NW,Principal Arterial,2,1096,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1096,0
+19801,11285,PROVOST RD NW,Major Collector,2,2974,Urban,2974,15,Central Kitsap Middle,2,Central Kitsap Middle,655,NA,NA,6,6,6,NA,2,2,4,4,655,2620
+13549,5595,NW ANDERSON HILL RD,Minor Arterial,2,158,Urban,158,15,Central Kitsap Middle,2,Central Kitsap Middle,11,NA,NA,4,4,6,NA,1,1,2,2,11,22
+13549,5595,NW ANDERSON HILL RD,Minor Arterial,2,158,Urban,158,15,Central Kitsap Middle,2,Central Kitsap Middle,48,NA,NA,4,4,6,NA,1,1,2,2,48,96
+19515,12112,SILVERDALE WAY NW,Principal Arterial,2,323,Urban,323,15,Central Kitsap Middle,2,Central Kitsap Middle,0,8,NA,NA,NA,6,NA,5,0,5,5,0,0
+19515,12112,SILVERDALE WAY NW,Principal Arterial,2,323,Urban,323,15,Central Kitsap Middle,2,Central Kitsap Middle,48,NA,NA,3,NA,6,NA,0,1,1,1,48,48
+19515,12112,SILVERDALE WAY NW,Principal Arterial,2,323,Urban,323,15,Central Kitsap Middle,2,Central Kitsap Middle,47,NA,NA,NA,3,6,NA,1,0,1,1,47,47
+19515,12112,SILVERDALE WAY NW,Principal Arterial,2,323,Urban,323,15,Central Kitsap Middle,2,Central Kitsap Middle,98,NA,NA,12,2,6,NA,1,2,3,3,98,294
+19515,10380,SILVERDALE WAY NW,Principal Arterial,2,2242,Urban,2242,15,Central Kitsap Middle,2,Central Kitsap Middle,35,8,NA,NA,NA,6,NA,5,0,5,5,35,175
+19515,10380,SILVERDALE WAY NW,Principal Arterial,2,2242,Urban,2242,15,Central Kitsap Middle,2,Central Kitsap Middle,187,NA,NA,7,7,6,NA,2,2,4,4,187,748
+19515,10380,SILVERDALE WAY NW,Principal Arterial,2,2242,Urban,2242,15,Central Kitsap Middle,2,Central Kitsap Middle,51,NA,NA,12,2,6,NA,1,2,3,3,51,153
+19515,10797,SILVERDALE WAY NW,Principal Arterial,2,332,Urban,332,15,Central Kitsap Middle,2,Central Kitsap Middle,101,8,NA,12,2,6,NA,5,2,7,7,101,707
+19515,10797,SILVERDALE WAY NW,Principal Arterial,2,332,Urban,332,15,Central Kitsap Middle,2,Central Kitsap Middle,49,NA,NA,7,7,6,NA,2,2,4,4,49,196
+13848,5746,PEACH TREE PL NW,Local Access,2,230,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,230,0
+19515,9128,SILVERDALE WAY NW,Principal Arterial,2,134,Urban,134,15,Central Kitsap Middle,2,Central Kitsap Middle,41,8,NA,7.5,2.5,6,NA,5,2,7,7,41,287
+13549,6614,NW ANDERSON HILL RD,Minor Arterial,2,582,Urban,582,15,Central Kitsap Middle,2,Central Kitsap Middle,96,NA,NA,4,4,6,NA,1,1,2,2,96,192
+13549,6614,NW ANDERSON HILL RD,Minor Arterial,2,582,Urban,582,15,Central Kitsap Middle,2,Central Kitsap Middle,177,NA,NA,4,4,6,NA,1,1,2,2,177,354
+19515,1415,SILVERDALE WAY NW,Principal Arterial,2,198,Urban,198,15,Central Kitsap Middle,2,Central Kitsap Middle,60,8,NA,3,3,6,NA,5,1,6,6,60,360
+19515,1415,SILVERDALE WAY NW,Principal Arterial,2,198,Urban,198,15,Central Kitsap Middle,2,Central Kitsap Middle,55,NA,NA,3,3,6,NA,1,1,2,2,55,110
+19515,1415,SILVERDALE WAY NW,Principal Arterial,2,198,Urban,198,15,Central Kitsap Middle,2,Central Kitsap Middle,11,NA,NA,12,2,6,NA,1,2,3,3,11,33
+13855,960,ASHLEY DR NW,Local Access,2,291,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,291,0
+14000,12116,SILVERDALE LOOP RD NW,Local Access,2,442,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,442,0
+13950,7900,ERIE AVE NW,Local Access,2,833,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,833,0
+14040,18483,NW MUNSON ST,Local Access,2,405,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,405,0
+14280,5363,NW CARLTON ST,Local Access,2,134,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,134,0
+14280,3442,NW CARLTON ST,Local Access,2,356,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,356,0
+14392,7809,WASHINGTON AVE NW,Local Access,2,270,Urban,270,15,Central Kitsap Middle,2,Central Kitsap Middle,19,5,5,NA,NA,5,NA,5,5,10,10,19,190
+14392,10178,WASHINGTON AVE NW,Local Access,2,273,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,273,0
+14392,10950,WASHINGTON AVE NW,Local Access,2,275,Urban,275,15,Central Kitsap Middle,2,Central Kitsap Middle,41,5,5,NA,NA,5,NA,5,5,10,10,41,410
+14392,11970,WASHINGTON AVE NW,Local Access,2,276,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,276,0
+14280,9449,NW CARLTON ST,Local Access,2,345,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,345,0
+14170,2659,PACIFIC AVE NW,Local Access,2,279,Urban,279,15,Central Kitsap Middle,2,Central Kitsap Middle,4,5,NA,NA,NA,5,NA,5,0,5,5,4,20
+14240,12781,NW LOWELL ST,Local Access,2,359,Urban,359,15,Central Kitsap Middle,2,Central Kitsap Middle,40,3,NA,NA,NA,5,NA,1,0,1,1,40,40
+14240,12099,NW LOWELL ST,Local Access,2,280,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,280,0
+14210,10619,MCCONNELL AVE NW,Local Access,2,275,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,275,0
+14240,9382,NW LOWELL ST,Local Access,2,401,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,401,0
+14170,8720,PACIFIC AVE NW,Local Access,2,286,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,286,0
+14100,9936,NW BYRON ST,Local Access,2,359,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,359,0
+14040,7494,NW MUNSON ST,Local Access,2,881,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,881,0
+14100,7472,NW BYRON ST,Local Access,2,306,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,306,0
+14210,8395,MCCONNELL AVE NW,Local Access,2,342,Urban,342,15,Central Kitsap Middle,2,Central Kitsap Middle,104,5,NA,NA,NA,5,NA,5,0,5,5,104,520
+14210,8400,MCCONNELL AVE NW,Local Access,2,275,Urban,275,15,Central Kitsap Middle,2,Central Kitsap Middle,44,5,NA,NA,NA,5,NA,5,0,5,5,44,220
+14100,6521,NW BYRON ST,Local Access,2,355,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,355,0
+14240,7332,NW LOWELL ST,Local Access,2,192,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,192,0
+14240,6073,NW LOWELL ST,Local Access,2,345,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,345,0
+13856,255,NW SCARLET CT,Local Access,2,249,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,249,0
+14100,3237,NW BYRON ST,Local Access,2,291,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,291,0
+14240,2967,NW LOWELL ST,Local Access,2,317,Urban,317,15,Central Kitsap Middle,2,Central Kitsap Middle,86,3,NA,NA,NA,5,NA,1,0,1,1,86,86
+14170,591,PACIFIC AVE NW,Local Access,2,267,Urban,267,15,Central Kitsap Middle,2,Central Kitsap Middle,47,4,NA,NA,NA,5,NA,1,0,1,1,47,47
+14170,2250,PACIFIC AVE NW,Local Access,2,210,Urban,210,15,Central Kitsap Middle,2,Central Kitsap Middle,64,4,NA,NA,NA,5,NA,1,0,1,1,64,64

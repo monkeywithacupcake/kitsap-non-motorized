@@ -1,0 +1,70 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,sidewalk_right,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,score_left,score_right,score,the_score,the_length,w_score
+40398,3996,SE VALE RD,Local Access,2,328,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,328,0
+40490,2328,HARRIS RD SE,Local Access,2,226,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,226,0
+40490,19251,HARRIS RD SE,Local Access,2,191,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,191,0
+34286,9424,SE BANDERA CT,Local Access,2,1106,Urban,1106,15,Hidden Creek Elementary,2,Hidden Creek Elementary,336,NA,2,2,5,NA,NA,1,1,2,2,336,672
+34265,7639,SE KARLI WAY,Local Access,2,942,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,942,0
+34263,6878,KC PL SE,Local Access,2,285,Urban,285,15,Hidden Creek Elementary,2,Hidden Creek Elementary,38,3,NA,NA,5,NA,NA,0,1,1,1,38,38
+34205,7757,SE CEDAR RD,Local Access,2,1298,Urban,1298,15,Hidden Creek Elementary,2,Hidden Creek Elementary,49,NA,5,5,5,NA,NA,2,2,4,4,49,196
+34205,7757,SE CEDAR RD,Local Access,2,1298,Urban,1298,15,Hidden Creek Elementary,2,Hidden Creek Elementary,104,NA,5,5,5,NA,NA,2,2,4,4,104,416
+34205,10687,SE CEDAR RD,Local Access,2,1128,Urban,1128,15,Hidden Creek Elementary,2,Hidden Creek Elementary,342,NA,5,5,5,NA,NA,2,2,4,4,342,1368
+34205,10687,SE CEDAR RD,Local Access,2,1128,Urban,1128,15,Hidden Creek Elementary,2,Hidden Creek Elementary,50,NA,5,5,5,NA,NA,2,2,4,4,50,200
+34262,12551,SE KRISTA ST,Local Access,2,505,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,505,0
+34290,10948,CONVERSE AVE SE,Local Access,2,407,Urban,407,15,Hidden Creek Elementary,2,Hidden Creek Elementary,124,NA,6,6,5,NA,NA,2,2,4,4,124,496
+34290,10661,CONVERSE AVE SE,Local Access,2,281,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,281,0
+34287,11960,SE AZTEC CT,Local Access,2,216,Urban,216,15,Hidden Creek Elementary,2,Hidden Creek Elementary,65,NA,2,2,5,NA,NA,1,1,2,2,65,130
+34290,11376,CONVERSE AVE SE,Local Access,2,332,Urban,332,15,Hidden Creek Elementary,2,Hidden Creek Elementary,101,NA,6,6,5,NA,NA,2,2,4,4,101,404
+34460,10325,DANA DR SE,Local Access,2,276,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,276,0
+34292,7239,SE CONVERSE PL,Local Access,2,174,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,174,0
+34295,6899,ESTONIA CT SE,Local Access,2,1216,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1216,0
+34215,4697,SE CELEBRITY CT,Local Access,2,562,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,562,0
+34286,1914,SE BANDERA CT,Local Access,2,449,Urban,449,15,Hidden Creek Elementary,2,Hidden Creek Elementary,98,NA,2,2,5,NA,NA,1,1,2,2,98,196
+34263,416,KC PL SE,Local Access,2,275,Urban,275,15,Hidden Creek Elementary,2,Hidden Creek Elementary,49,3,NA,NA,5,NA,NA,0,1,1,1,49,49
+34285,8528,ALONAH PL SE,Local Access,2,606,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,606,0
+34240,661,SE HILLWOOD LN,Local Access,2,1229,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1229,0
+34205,4968,SE CEDAR RD,Local Access,2,254,Urban,254,15,Hidden Creek Elementary,2,Hidden Creek Elementary,77,NA,5,5,5,NA,NA,2,2,4,4,77,308
+34280,4475,SE DALEA PL,Local Access,2,674,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,674,0
+40303,5084,SCHERMERHORN PL SE,Local Access,2,259,Urban,259,15,Hidden Creek Elementary,2,Hidden Creek Elementary,38,NA,NA,1,5,NA,NA,1,0,1,1,38,38
+40201,2453,SE COPPER CREEK DR,Local Access,2,903,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,903,0
+40396,4891,SE VALE CT,Local Access,2,199,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,199,0
+40394,11486,SE CONVERSE CT,Local Access,2,210,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,210,0
+40392,6283,SE CONVERSE CIR,Local Access,2,153,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,153,0
+34242,12865,SE PENNSWOOD CT,Local Access,2,520,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,520,0
+34205,14587,SE CEDAR RD,Local Access,2,12,Urban,12,15,Hidden Creek Elementary,2,Hidden Creek Elementary,3,NA,5,5,5,NA,NA,2,2,4,4,3,12
+34205,7452,SE CEDAR RD,Local Access,2,447,Urban,447,15,Hidden Creek Elementary,2,Hidden Creek Elementary,93,NA,5,5,5,NA,NA,2,2,4,4,93,372
+34205,3729,SE CEDAR RD,Local Access,2,1175,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1175,0
+34285,11485,ALONAH PL SE,Local Access,2,149,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,149,0
+34285,10349,ALONAH PL SE,Local Access,2,175,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,175,0
+34205,4353,SE CEDAR RD,Local Access,2,139,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,139,0
+34263,12010,KC PL SE,Local Access,2,820,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,820,0
+34291,3439,PERDEMCO AVE SE,Local Access,2,249,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,249,0
+40304,12471,SE BAKKEN CT,Local Access,2,900,Urban,900,15,Hidden Creek Elementary,2,Hidden Creek Elementary,75,NA,NA,1,5,NA,NA,1,0,1,1,75,75
+40303,3292,SCHERMERHORN PL SE,Local Access,2,310,Urban,310,15,Hidden Creek Elementary,2,Hidden Creek Elementary,94,NA,NA,1,5,NA,NA,1,0,1,1,94,94
+34290,11217,CONVERSE AVE SE,Local Access,2,264,Urban,264,15,Hidden Creek Elementary,2,Hidden Creek Elementary,80,NA,6,6,5,NA,NA,2,2,4,4,80,320
+34290,11217,CONVERSE AVE SE,Local Access,2,264,Urban,264,15,Hidden Creek Elementary,2,Hidden Creek Elementary,50,NA,6,6,5,NA,NA,2,2,4,4,50,200
+40398,1023,SE VALE RD,Local Access,2,156,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,156,0
+40398,4763,SE VALE RD,Local Access,2,185,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,185,0
+34289,6092,BONNIEVILLE PL SE,Local Access,2,626,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,626,0
+34291,10769,PERDEMCO AVE SE,Local Access,2,2093,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,2093,0
+21107,11438,BETHEL RD SE,Minor Arterial,2,518,Urban,518,15,Hidden Creek Elementary,2,Hidden Creek Elementary,122,NA,4,4,6,NA,NA,1,1,2,2,122,244
+21107,11438,BETHEL RD SE,Minor Arterial,2,518,Urban,518,15,Hidden Creek Elementary,2,Hidden Creek Elementary,49,NA,4,4,6,NA,NA,1,1,2,2,49,98
+21107,8127,BETHEL RD SE,Minor Arterial,2,668,Urban,668,15,Hidden Creek Elementary,2,Hidden Creek Elementary,50,NA,4,NA,6,NA,NA,0,1,1,1,50,50
+21107,8127,BETHEL RD SE,Minor Arterial,2,668,Urban,668,15,Hidden Creek Elementary,2,Hidden Creek Elementary,51,NA,NA,4,6,NA,NA,1,0,1,1,51,51
+21107,8127,BETHEL RD SE,Minor Arterial,2,668,Urban,668,15,Hidden Creek Elementary,2,Hidden Creek Elementary,103,NA,4,4,6,NA,NA,1,1,2,2,103,206
+40301,13307,OKANOGAN DR SE,Local Access,2,590,Urban,590,15,Hidden Creek Elementary,2,Hidden Creek Elementary,179,NA,NA,1,5,NA,NA,1,0,1,1,179,179
+34490,12294,SHERLYN AVE SE,Local Access,2,1248,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1248,0
+34450,3287,BRASCH RD SE,Local Access,2,533,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,533,0
+34294,11781,SE CONVERSE CV,Local Access,2,169,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,169,0
+34470,8197,LAURA LN SE,Local Access,2,350,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,350,0
+34290,4617,CONVERSE AVE SE,Local Access,2,403,Urban,403,15,Hidden Creek Elementary,2,Hidden Creek Elementary,52,NA,6,6,5,NA,NA,2,2,4,4,52,208
+34290,11118,CONVERSE AVE SE,Local Access,2,1064,Urban,1064,15,Hidden Creek Elementary,2,Hidden Creek Elementary,324,NA,6,6,5,NA,NA,2,2,4,4,324,1296
+34290,5002,CONVERSE AVE SE,Local Access,2,337,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,337,0
+34290,8086,CONVERSE AVE SE,Local Access,2,823,Urban,823,15,Hidden Creek Elementary,2,Hidden Creek Elementary,251,NA,6,6,5,NA,NA,2,2,4,4,251,1004
+34290,6631,CONVERSE AVE SE,Local Access,2,303,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,303,0
+34290,9959,CONVERSE AVE SE,Local Access,2,275,Urban,275,15,Hidden Creek Elementary,2,Hidden Creek Elementary,54,NA,6,6,5,NA,NA,2,2,4,4,54,216
+34290,9959,CONVERSE AVE SE,Local Access,2,275,Urban,275,15,Hidden Creek Elementary,2,Hidden Creek Elementary,83,NA,6,6,5,NA,NA,2,2,4,4,83,332
+34290,564,CONVERSE AVE SE,Local Access,2,217,Urban,217,15,Hidden Creek Elementary,2,Hidden Creek Elementary,66,NA,6,6,5,NA,NA,2,2,4,4,66,264
+34290,10507,CONVERSE AVE SE,Local Access,2,811,Urban,811,15,Hidden Creek Elementary,2,Hidden Creek Elementary,247,NA,6,6,5,NA,NA,2,2,4,4,247,988
+34460,8763,DANA DR SE,Local Access,2,764,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,764,0
+40302,9264,ABDULA PL SE,Local Access,2,156,Urban,156,15,Hidden Creek Elementary,2,Hidden Creek Elementary,47,5,NA,1,5,NA,NA,1,5,6,6,47,282
+34480,6864,GRANADA PL SE,Local Access,2,966,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,966,0

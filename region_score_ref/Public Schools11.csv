@@ -1,0 +1,8 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+70400,461,HANSVILLE RD NE,Major Collector,1,1974,Rural,1974,15,David Wolfle Elementary,2,David Wolfle Elementary,261,7,8,NA,6,NA,NA,5,5,10,10,261,2610
+75210,1032,HIGHLAND RD NE,Local Access,1,4837,Rural,4837,15,David Wolfle Elementary,2,David Wolfle Elementary,1245,2,5,NA,3,NA,NA,5,1,6,6,1245,7470
+75210,1032,HIGHLAND RD NE,Local Access,1,4837,Rural,4837,15,David Wolfle Elementary,2,David Wolfle Elementary,312,2,NA,NA,3,NA,NA,0,1,1,1,312,312
+75210,1032,HIGHLAND RD NE,Local Access,1,4837,Rural,4837,15,David Wolfle Elementary,2,David Wolfle Elementary,98,NA,5,NA,3,NA,NA,5,0,5,5,98,490
+75210,1032,HIGHLAND RD NE,Local Access,1,4837,Rural,4837,15,David Wolfle Elementary,2,David Wolfle Elementary,313,NA,4,NA,3,NA,NA,5,0,5,5,313,1565
+75130,8874,RITTER LN NE,Local Access,1,2650,Rural,2650,15,David Wolfle Elementary,2,David Wolfle Elementary,8,1,1,NA,3,NA,NA,1,1,2,2,8,16
+70370,10518,MILLER BAY RD NE,Major Collector,1,1599,Rural,1599,15,David Wolfle Elementary,2,David Wolfle Elementary,288,3,3,NA,6,NA,NA,1,1,2,2,288,576

@@ -1,0 +1,20 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+44790,6982,WESTWAY DR SE,Local Access,1,447,Rural,447,15,John Sedgwick Middle,2,John Sedgwick Middle,127,2,2,NA,3,NA,NA,1,1,2,2,127,254
+44810,5950,EASTWAY DR SE,Local Access,1,2985,Rural,2985,15,John Sedgwick Middle,2,John Sedgwick Middle,120,1,1,NA,3,NA,NA,1,1,2,2,120,240
+44810,5950,EASTWAY DR SE,Local Access,1,2985,Rural,2985,15,John Sedgwick Middle,2,John Sedgwick Middle,96,3,NA,NA,3,NA,NA,0,5,5,5,96,480
+44810,5950,EASTWAY DR SE,Local Access,1,2985,Rural,2985,15,John Sedgwick Middle,2,John Sedgwick Middle,101,NA,3,NA,3,NA,NA,5,0,5,5,101,505
+36150,9640,AMBERLY PL SE,Local Access,1,411,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,411,0
+44800,9741,SE NORTHWAY PL,Local Access,1,436,Rural,436,15,John Sedgwick Middle,2,John Sedgwick Middle,132,3,3,NA,3,NA,NA,5,5,10,10,132,1320
+44810,9737,EASTWAY DR SE,Local Access,1,777,Rural,777,15,John Sedgwick Middle,2,John Sedgwick Middle,237,3,3,NA,3,NA,NA,5,5,10,10,237,2370
+44810,9295,EASTWAY DR SE,Local Access,1,886,Rural,886,15,John Sedgwick Middle,2,John Sedgwick Middle,44,1,NA,NA,3,NA,NA,0,1,1,1,44,44
+44810,9295,EASTWAY DR SE,Local Access,1,886,Rural,886,15,John Sedgwick Middle,2,John Sedgwick Middle,54,NA,1,NA,3,NA,NA,1,0,1,1,54,54
+44810,9295,EASTWAY DR SE,Local Access,1,886,Rural,886,15,John Sedgwick Middle,2,John Sedgwick Middle,270,3,3,NA,3,NA,NA,5,5,10,10,270,2700
+3023,5582,HOSKIN HILL LN SE,Local Access,1,1964,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1964,0
+44530,1377,ARVICK RD SE,Local Access,1,2673,Rural,2673,15,John Sedgwick Middle,2,John Sedgwick Middle,247,4,4,NA,3,NA,NA,5,5,10,10,247,2470
+44940,4966,HARPER HILL RD SE,Local Access,1,1684,Rural,1684,15,John Sedgwick Middle,2,John Sedgwick Middle,263,2,2,NA,3,NA,NA,1,1,2,2,263,526
+44790,12959,WESTWAY DR SE,Local Access,1,808,Rural,808,15,John Sedgwick Middle,2,John Sedgwick Middle,246,2,2,NA,3,NA,NA,1,1,2,2,246,492
+44800,1200,SE NORTHWAY PL,Local Access,1,139,Rural,139,15,John Sedgwick Middle,2,John Sedgwick Middle,42,3,3,NA,3,NA,NA,5,5,10,10,42,420
+41009,1290,COTTONWOOD DR SE,Local Access,1,1319,Rural,1319,15,John Sedgwick Middle,2,John Sedgwick Middle,287,1,1,NA,3,NA,NA,1,1,2,2,287,574
+36850,2033,PETERSON RD SE,Local Access,1,1956,Rural,1956,15,John Sedgwick Middle,2,John Sedgwick Middle,486,1,1,NA,3,NA,NA,1,1,2,2,486,972
+36850,9961,PETERSON RD SE,Local Access,1,1292,Rural,1292,15,John Sedgwick Middle,2,John Sedgwick Middle,394,1,1,NA,3,NA,NA,1,1,2,2,394,788
+44940,19016,HARPER HILL RD SE,Local Access,1,1314,Rural,1314,15,John Sedgwick Middle,2,John Sedgwick Middle,400,2,2,NA,3,NA,NA,1,1,2,2,400,800

@@ -1,0 +1,24 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_left,shoulder_right,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+56740,1546,NW SID UHINCK DR,Local Access,2,129,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,129,0
+56791,12937,RIDGETOP BLVD NW,Principal Arterial,2,783,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,783,0
+56740,19349,NW SID UHINCK DR,Local Access,2,651,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,651,0
+57690,6039,MYHRE PL NW,Local Access,2,459,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,459,0
+56791,2604,RIDGETOP BLVD NW,Principal Arterial,2,493,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,493,0
+56791,1966,RIDGETOP BLVD NW,Principal Arterial,2,547,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,547,0
+57730,7282,NW RANDALL WAY,Minor Arterial,2,1667,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1667,0
+57730,3504,NW RANDALL WAY,Minor Arterial,2,669,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,669,0
+19515,2167,SILVERDALE WAY NW,Principal Arterial,2,1303,Urban,1303,15,Silverdale Transit Center,2,Silverdale Transit Center,317,7,7,6,NA,NA,NA,2,2,4,4,317,1268
+19515,2167,SILVERDALE WAY NW,Principal Arterial,2,1303,Urban,1303,15,Silverdale Transit Center,2,Silverdale Transit Center,134,4,NA,6,NA,NA,NA,1,0,1,1,134,134
+19515,2167,SILVERDALE WAY NW,Principal Arterial,2,1303,Urban,1303,15,Silverdale Transit Center,2,Silverdale Transit Center,133,NA,4,6,NA,NA,NA,0,1,1,1,133,133
+57720,18376,NW MYHRE RD,Minor Arterial,2,1357,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1357,0
+56770,10519,MICKELBERRY RD NW,Minor Arterial,2,656,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,656,0
+56770,5033,MICKELBERRY RD NW,Minor Arterial,2,1993,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1993,0
+19515,9188,SILVERDALE WAY NW,Principal Arterial,2,1817,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1817,0
+19515,15192,SILVERDALE WAY NW,Principal Arterial,2,32,Urban,32,15,Silverdale Transit Center,2,Silverdale Transit Center,9,7,7,6,NA,NA,NA,2,2,4,4,9,36
+19515,5053,SILVERDALE WAY NW,Principal Arterial,2,926,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,926,0
+57720,4583,NW MYHRE RD,Local Access,2,467,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,467,0
+19515,12698,SILVERDALE WAY NW,Principal Arterial,2,662,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,662,0
+57720,8374,NW MYHRE RD,Minor Arterial,2,887,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,887,0
+57720,15432,NW MYHRE RD,Minor Arterial,2,1705,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1705,0
+19515,10694,SILVERDALE WAY NW,Principal Arterial,2,119,Urban,119,15,Silverdale Transit Center,2,Silverdale Transit Center,8,7,7,6,NA,NA,NA,2,2,4,4,8,32
+19515,11059,SILVERDALE WAY NW,Principal Arterial,2,121,Urban,121,15,Silverdale Transit Center,2,Silverdale Transit Center,37,7,7,6,NA,NA,NA,2,2,4,4,37,148

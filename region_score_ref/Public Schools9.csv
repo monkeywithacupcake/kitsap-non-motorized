@@ -1,0 +1,141 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,sidewalk_left,sidewalk_right,shoulder_left,shoulder_right,standard_sidewalk,standard_shoulder,score_left,score_right,score,the_score,the_length,w_score
+57023,8901,NW GREEN HILL CT,Local Access,2,397,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,397,0
+57015,4681,NW SOLNAE PL,Local Access,2,1040,Urban,1040,15,Cottonwood Elementary,2,Cottonwood Elementary,316,NA,3,NA,NA,5,NA,0,1,1,1,316,316
+56201,1747,SHADY FOREST PL NE,Local Access,2,182,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,182,0
+57010,12957,NW DONCEE DR,Local Access,2,838,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,838,0
+56190,5693,OLD MILITARY RD NE,Major Collector,2,417,Urban,417,15,Cottonwood Elementary,2,Cottonwood Elementary,51,NA,NA,4,4,6,NA,1,1,2,2,51,102
+56190,5693,OLD MILITARY RD NE,Major Collector,2,417,Urban,417,15,Cottonwood Elementary,2,Cottonwood Elementary,127,NA,NA,2,4,6,NA,1,1,2,2,127,254
+57013,10524,PERRY CT NE,Local Access,2,175,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,175,0
+57016,3896,NW FIRWAY LN,Local Access,2,345,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,345,0
+56965,2321,BENDER CIR NE,Local Access,2,105,Urban,105,15,Cottonwood Elementary,2,Cottonwood Elementary,32,5,NA,NA,NA,5,NA,5,0,5,5,32,160
+56965,11088,BENDER CIR NE,Local Access,2,1106,Urban,1106,15,Cottonwood Elementary,2,Cottonwood Elementary,111,5,NA,NA,NA,5,NA,5,0,5,5,111,555
+59050,15063,CENTRAL VALLEY RD NE,Minor Arterial,2,435,Urban,435,15,Cottonwood Elementary,2,Cottonwood Elementary,132,NA,NA,5,5,6,NA,1,1,2,2,132,264
+59050,4088,CENTRAL VALLEY RD NE,Minor Arterial,2,225,Urban,225,15,Cottonwood Elementary,2,Cottonwood Elementary,51,NA,NA,5,5,6,NA,1,1,2,2,51,102
+59050,4088,CENTRAL VALLEY RD NE,Minor Arterial,2,225,Urban,225,15,Cottonwood Elementary,2,Cottonwood Elementary,68,NA,NA,5,5,6,NA,1,1,2,2,68,136
+59050,5114,CENTRAL VALLEY RD NE,Minor Arterial,2,192,Urban,192,15,Cottonwood Elementary,2,Cottonwood Elementary,58,NA,NA,5,5,6,NA,1,1,2,2,58,116
+59050,7381,CENTRAL VALLEY RD NE,Minor Arterial,2,656,Urban,656,15,Cottonwood Elementary,2,Cottonwood Elementary,200,NA,NA,5,5,6,NA,1,1,2,2,200,400
+59050,7381,CENTRAL VALLEY RD NE,Minor Arterial,2,656,Urban,656,15,Cottonwood Elementary,2,Cottonwood Elementary,1,NA,NA,5,5,6,NA,1,1,2,2,1,2
+59050,8478,CENTRAL VALLEY RD NE,Minor Arterial,2,1151,Urban,1151,15,Cottonwood Elementary,2,Cottonwood Elementary,50,NA,NA,5,5,6,NA,1,1,2,2,50,100
+59050,8478,CENTRAL VALLEY RD NE,Minor Arterial,2,1151,Urban,1151,15,Cottonwood Elementary,2,Cottonwood Elementary,350,NA,NA,5,5,6,NA,1,1,2,2,350,700
+59050,11739,CENTRAL VALLEY RD NE,Minor Arterial,2,589,Urban,589,15,Cottonwood Elementary,2,Cottonwood Elementary,179,NA,NA,5,5,6,NA,1,1,2,2,179,358
+59050,13290,CENTRAL VALLEY RD NE,Minor Arterial,2,162,Urban,162,15,Cottonwood Elementary,2,Cottonwood Elementary,49,NA,NA,5,5,6,NA,1,1,2,2,49,98
+59050,2447,CENTRAL VALLEY RD NE,Minor Arterial,2,207,Urban,207,15,Cottonwood Elementary,2,Cottonwood Elementary,63,NA,NA,5,5,6,NA,1,1,2,2,63,126
+56190,2711,OLD MILITARY RD NE,Major Collector,2,614,Urban,614,15,Cottonwood Elementary,2,Cottonwood Elementary,187,NA,NA,2,4,6,NA,1,1,2,2,187,374
+56190,16335,OLD MILITARY RD NE,Major Collector,2,491,Urban,491,15,Cottonwood Elementary,2,Cottonwood Elementary,149,NA,NA,2,4,6,NA,1,1,2,2,149,298
+57005,9631,CANTERSHIRE AVE NE,Local Access,2,518,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,518,0
+56190,18626,OLD MILITARY RD NE,Major Collector,2,307,Urban,307,15,Cottonwood Elementary,2,Cottonwood Elementary,11,NA,NA,2,4,6,NA,1,1,2,2,11,22
+56190,9914,OLD MILITARY RD NE,Major Collector,2,201,Urban,201,15,Cottonwood Elementary,2,Cottonwood Elementary,61,NA,NA,2,4,6,NA,1,1,2,2,61,122
+59050,10407,CENTRAL VALLEY RD NE,Minor Arterial,2,442,Urban,442,15,Cottonwood Elementary,2,Cottonwood Elementary,134,NA,NA,5,5,6,NA,1,1,2,2,134,268
+59050,10407,CENTRAL VALLEY RD NE,Minor Arterial,2,442,Urban,442,15,Cottonwood Elementary,2,Cottonwood Elementary,52,NA,NA,NA,5,6,NA,0,1,1,1,52,52
+59050,10407,CENTRAL VALLEY RD NE,Minor Arterial,2,442,Urban,442,15,Cottonwood Elementary,2,Cottonwood Elementary,50,NA,NA,5,NA,6,NA,1,0,1,1,50,50
+57014,12983,NW BRIDLE RIDGE BLVD,Local Access,2,390,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,390,0
+56190,1761,OLD MILITARY RD NE,Major Collector,2,187,Urban,187,15,Cottonwood Elementary,2,Cottonwood Elementary,57,NA,NA,4,4,6,NA,1,1,2,2,57,114
+56190,1761,OLD MILITARY RD NE,Major Collector,2,187,Urban,187,15,Cottonwood Elementary,2,Cottonwood Elementary,51,NA,NA,2,4,6,NA,1,1,2,2,51,102
+56990,12093,NE WATSON CT,Local Access,2,649,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,649,0
+56986,3221,COVINA LOOP NE,Local Access,2,320,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,320,0
+56986,9202,COVINA LOOP NE,Local Access,2,1477,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1477,0
+56190,18627,OLD MILITARY RD NE,Major Collector,2,252,Urban,252,15,Cottonwood Elementary,2,Cottonwood Elementary,71,NA,NA,2,4,6,NA,1,1,2,2,71,142
+56990,15071,NE WATSON CT,Local Access,2,607,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,607,0
+56990,430,NE WATSON CT,Local Access,2,174,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,174,0
+57740,10879,NW BUCKLIN HILL RD,Minor Arterial,2,1543,Urban,1543,15,Cottonwood Elementary,2,Cottonwood Elementary,149,NA,NA,8,6,6,NA,2,2,4,4,149,596
+56967,12507,HICKORY PL NE,Local Access,2,756,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,756,0
+56998,7035,NW MEADOW LN,Local Access,2,564,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,564,0
+57001,6215,NE TOWNE RD,Local Access,2,243,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,243,0
+57014,1309,NW BRIDLE RIDGE BLVD,Local Access,2,694,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,694,0
+56967,14170,HICKORY PL NE,Local Access,2,483,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,483,0
+57009,3998,HILLRISE CT NE,Local Access,2,636,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,636,0
+57003,2836,CANTERSHIRE CT NE,Local Access,2,256,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,256,0
+57007,6269,HILLRISE PL NE,Local Access,2,314,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,314,0
+56193,907,OVERLOOK CIR NE,Local Access,2,453,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,453,0
+57015,11007,NW SOLNAE PL,Local Access,2,400,Urban,400,15,Cottonwood Elementary,2,Cottonwood Elementary,121,NA,3,NA,NA,5,NA,0,1,1,1,121,121
+57011,1330,CANTERSHIRE PL NE,Local Access,2,463,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,463,0
+57012,385,NE TOWNE CT,Local Access,2,142,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,142,0
+57008,1727,NE TOWNE PL,Local Access,2,129,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,129,0
+57001,12394,TOWNE RD NE,Local Access,2,508,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,508,0
+56191,10631,NE STEELE CREEK DR,Local Access,2,211,Urban,211,15,Cottonwood Elementary,2,Cottonwood Elementary,62,3,NA,NA,NA,5,NA,1,0,1,1,62,62
+56191,11648,NE STEELE CREEK DR,Local Access,2,1111,Urban,1111,15,Cottonwood Elementary,2,Cottonwood Elementary,205,3,NA,NA,NA,5,NA,1,0,1,1,205,205
+56192,6268,STEELE CREEK LOOP NE,Local Access,2,1461,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1461,0
+56191,8438,NE STEELE CREEK DR,Local Access,2,208,Urban,208,15,Cottonwood Elementary,2,Cottonwood Elementary,42,3,NA,NA,NA,5,NA,1,0,1,1,42,42
+56200,2070,NE SHADYBROOK CT,Local Access,2,564,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,564,0
+57006,14318,TOWNE RD NE,Local Access,2,100,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,100,0
+56991,12066,WATSON PL NE,Local Access,2,714,Urban,714,15,Cottonwood Elementary,2,Cottonwood Elementary,217,3,NA,NA,NA,5,NA,1,0,1,1,217,217
+56200,3736,NE SHADYBROOK CT,Local Access,2,436,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,436,0
+57001,4537,NE TOWNE RD,Local Access,2,625,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,625,0
+57001,8968,NE TOWNE RD,Local Access,2,497,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,497,0
+57001,9606,NE TOWNE RD,Local Access,2,359,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,359,0
+57025,4113,KAROLENA PL NE,Local Access,2,521,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,521,0
+57002,14316,TOWNE RD NE,Local Access,2,99,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,99,0
+57026,998,FOSTER GROVE CT NE,Local Access,2,391,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,391,0
+56190,4608,OLD MILITARY RD NE,Major Collector,2,260,Urban,260,15,Cottonwood Elementary,2,Cottonwood Elementary,79,NA,NA,4,4,6,NA,1,1,2,2,79,158
+57004,5486,NW BRIDLE RIDGE PL,Local Access,2,702,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,702,0
+57000,3685,NE FOSTER RD,Local Access,2,712,Urban,712,15,Cottonwood Elementary,2,Cottonwood Elementary,216,NA,NA,4,4,5,NA,1,1,2,2,216,432
+57000,3685,NE FOSTER RD,Local Access,2,712,Urban,712,15,Cottonwood Elementary,2,Cottonwood Elementary,13,NA,NA,4,4,5,NA,1,1,2,2,13,26
+57000,3685,NE FOSTER RD,Local Access,2,712,Urban,712,15,Cottonwood Elementary,2,Cottonwood Elementary,50,NA,NA,4,4,5,NA,1,1,2,2,50,100
+57000,1939,NE FOSTER RD,Local Access,2,120,Urban,120,15,Cottonwood Elementary,2,Cottonwood Elementary,36,NA,NA,4,4,5,NA,1,1,2,2,36,72
+57000,8221,NE FOSTER RD,Local Access,2,164,Urban,164,15,Cottonwood Elementary,2,Cottonwood Elementary,49,NA,NA,4,4,5,NA,1,1,2,2,49,98
+57000,3655,NE FOSTER RD,Local Access,2,819,Urban,819,15,Cottonwood Elementary,2,Cottonwood Elementary,249,NA,NA,4,4,5,NA,1,1,2,2,249,498
+57000,3051,NE FOSTER RD,Local Access,2,493,Urban,493,15,Cottonwood Elementary,2,Cottonwood Elementary,150,NA,NA,4,4,5,NA,1,1,2,2,150,300
+57000,6727,NE FOSTER RD,Local Access,2,318,Urban,318,15,Cottonwood Elementary,2,Cottonwood Elementary,50,NA,NA,4,4,5,NA,1,1,2,2,50,100
+57000,6727,NE FOSTER RD,Local Access,2,318,Urban,318,15,Cottonwood Elementary,2,Cottonwood Elementary,14,NA,NA,4,4,5,NA,1,1,2,2,14,28
+57000,6727,NE FOSTER RD,Local Access,2,318,Urban,318,15,Cottonwood Elementary,2,Cottonwood Elementary,96,NA,NA,4,4,5,NA,1,1,2,2,96,192
+57000,8402,NE FOSTER RD,Local Access,2,81,Urban,81,15,Cottonwood Elementary,2,Cottonwood Elementary,24,NA,NA,4,4,5,NA,1,1,2,2,24,48
+56210,7022,NE OPAL CT,Local Access,2,658,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,658,0
+57000,13280,NE FOSTER RD,Local Access,2,510,Urban,510,15,Cottonwood Elementary,2,Cottonwood Elementary,155,NA,NA,4,4,5,NA,1,1,2,2,155,310
+57000,13280,NE FOSTER RD,Local Access,2,510,Urban,510,15,Cottonwood Elementary,2,Cottonwood Elementary,50,NA,NA,4,4,5,NA,1,1,2,2,50,100
+57001,14317,TOWNE RD NE,Local Access,2,284,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,284,0
+56967,8474,HICKORY PL NE,Local Access,2,271,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,271,0
+56994,834,NE SILVER PINE DR,Local Access,2,240,Urban,240,15,Cottonwood Elementary,2,Cottonwood Elementary,73,3,NA,NA,NA,5,NA,1,0,1,1,73,73
+56417,7911,ORCAS PL NW,Local Access,2,445,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,445,0
+56963,12452,BLUE OAK PKWY NE,Local Access,2,463,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,463,0
+56963,12969,BLUE OAK PKWY NE,Local Access,2,212,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,212,0
+56961,11027,HICKORY ST NE,Local Access,2,471,Urban,471,15,Cottonwood Elementary,2,Cottonwood Elementary,143,NA,3,NA,NA,5,NA,0,1,1,1,143,143
+56416,357,CAMANO CT NW,Local Access,2,106,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,106,0
+56994,10564,NE SILVER PINE DR,Local Access,2,199,Urban,199,15,Cottonwood Elementary,2,Cottonwood Elementary,60,3,NA,NA,NA,5,NA,1,0,1,1,60,60
+56960,3008,NE CONIFER DR,Local Access,2,186,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,186,0
+56960,11993,NE CONIFER DR,Local Access,2,661,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,661,0
+56962,7016,NE HAZELWOOD PL,Local Access,2,561,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,561,0
+56160,9192,NE WINSTON DR,Local Access,2,247,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,247,0
+56190,12335,OLD MILITARY RD NE,Major Collector,2,381,Urban,381,15,Cottonwood Elementary,2,Cottonwood Elementary,116,NA,NA,4,4,6,NA,1,1,2,2,116,232
+56983,10026,NE COCO CT,Local Access,2,823,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,823,0
+56190,12143,OLD MILITARY RD NE,Major Collector,2,288,Urban,288,15,Cottonwood Elementary,2,Cottonwood Elementary,87,NA,NA,4,4,6,NA,1,1,2,2,87,174
+56984,11977,NE LOMBARD CT,Local Access,2,884,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,884,0
+56190,11112,OLD MILITARY RD NE,Major Collector,2,442,Urban,442,15,Cottonwood Elementary,2,Cottonwood Elementary,134,NA,NA,4,4,6,NA,1,1,2,2,134,268
+57014,6943,NW BRIDLE RIDGE BLVD,Local Access,2,978,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,978,0
+56190,3733,OLD MILITARY RD NE,Major Collector,2,1785,Urban,1785,15,Cottonwood Elementary,2,Cottonwood Elementary,67,NA,NA,4,4,6,NA,1,1,2,2,67,134
+56413,10821,NW SAN JUAN DR,Local Access,2,219,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,219,0
+56413,7791,NW SAN JUAN DR,Local Access,2,265,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,265,0
+56413,11568,NW SAN JUAN DR,Local Access,2,623,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,623,0
+56961,7806,HICKORY ST NE,Local Access,2,105,Urban,105,15,Cottonwood Elementary,2,Cottonwood Elementary,32,NA,3,NA,NA,5,NA,0,1,1,1,32,32
+56963,6300,BLUE OAK PKWY NE,Local Access,2,180,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,180,0
+56994,7187,NE SILVER PINE DR,Local Access,2,470,Urban,470,15,Cottonwood Elementary,2,Cottonwood Elementary,143,3,NA,NA,NA,5,NA,1,0,1,1,143,143
+56960,8129,NE CONIFER DR,Local Access,2,1248,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1248,0
+56994,10659,NE SILVER PINE DR,Local Access,2,236,Urban,236,15,Cottonwood Elementary,2,Cottonwood Elementary,63,3,NA,NA,NA,5,NA,1,0,1,1,63,63
+56994,6947,NE SILVER PINE DR,Local Access,2,321,Urban,321,15,Cottonwood Elementary,2,Cottonwood Elementary,19,3,NA,NA,NA,5,NA,1,0,1,1,19,19
+56996,6034,NE REDBUD LN,Local Access,2,664,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,664,0
+57024,4275,NW SANDY CT,Local Access,2,276,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,276,0
+56968,5372,NE HOLLY LEAF LN,Local Access,2,661,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,661,0
+56960,3061,NE CONIFER DR,Local Access,2,565,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,565,0
+56960,4970,NE CONIFER DR,Local Access,2,1224,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1224,0
+56964,3780,NE BUCKEYE LN,Local Access,2,675,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,675,0
+56994,1685,NE SILVER PINE DR,Local Access,2,541,Urban,541,15,Cottonwood Elementary,2,Cottonwood Elementary,164,3,NA,NA,NA,5,NA,1,0,1,1,164,164
+56419,992,FIDALGO CT NW,Local Access,2,169,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,169,0
+56966,13237,NE MULBERRY LN,Local Access,2,824,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,824,0
+56982,8796,NE CIMERON CT,Local Access,2,198,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,198,0
+57018,9869,NW WILDWOOD LN,Local Access,2,390,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,390,0
+56961,9172,HICKORY ST NE,Local Access,2,250,Urban,250,15,Cottonwood Elementary,2,Cottonwood Elementary,76,NA,3,NA,NA,5,NA,0,1,1,1,76,76
+56189,4065,NE WILSHIRE CT,Local Access,2,260,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,260,0
+56961,1217,HICKORY ST NE,Local Access,2,227,Urban,227,15,Cottonwood Elementary,2,Cottonwood Elementary,69,NA,3,NA,NA,5,NA,0,1,1,1,69,69
+56961,674,HICKORY ST NE,Local Access,2,225,Urban,225,15,Cottonwood Elementary,2,Cottonwood Elementary,68,NA,3,NA,NA,5,NA,0,1,1,1,68,68
+59050,1364,CENTRAL VALLEY RD NE,Minor Arterial,2,316,Urban,316,15,Cottonwood Elementary,2,Cottonwood Elementary,96,NA,NA,5,5,6,NA,1,1,2,2,96,192
+59050,1780,CENTRAL VALLEY RD NE,Minor Arterial,2,373,Urban,373,15,Cottonwood Elementary,2,Cottonwood Elementary,113,NA,NA,5,5,6,NA,1,1,2,2,113,226
+59050,3807,CENTRAL VALLEY RD NE,Minor Arterial,2,169,Urban,169,15,Cottonwood Elementary,2,Cottonwood Elementary,51,NA,NA,5,5,6,NA,1,1,2,2,51,102
+59050,11185,CENTRAL VALLEY RD NE,Minor Arterial,2,625,Urban,625,15,Cottonwood Elementary,2,Cottonwood Elementary,190,NA,NA,5,5,6,NA,1,1,2,2,190,380
+59050,12514,CENTRAL VALLEY RD NE,Minor Arterial,2,478,Urban,478,15,Cottonwood Elementary,2,Cottonwood Elementary,36,NA,NA,5,5,6,NA,1,1,2,2,36,72
+59050,13081,CENTRAL VALLEY RD NE,Minor Arterial,2,537,Urban,537,15,Cottonwood Elementary,2,Cottonwood Elementary,163,NA,NA,5,5,6,NA,1,1,2,2,163,326
+56960,12242,NE CONIFER DR,Local Access,2,157,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,157,0
+56960,9555,NE CONIFER DR,Local Access,2,187,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,187,0
+59050,8495,CENTRAL VALLEY RD NE,Minor Arterial,1,42,Rural,42,15,Cottonwood Elementary,2,Cottonwood Elementary,3,NA,NA,5,5,NA,4,5,5,10,10,3,30
+59050,14928,CENTRAL VALLEY RD NE,Minor Arterial,2,35,Urban,35,15,Cottonwood Elementary,2,Cottonwood Elementary,0,NA,NA,5,5,6,NA,1,1,2,2,0,0
+59050,13949,CENTRAL VALLEY RD NE,Minor Arterial,2,41,Urban,41,15,Cottonwood Elementary,2,Cottonwood Elementary,12,NA,NA,5,5,6,NA,1,1,2,2,12,24
+57001,5827,TOWNE RD NE,Local Access,2,322,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,322,0
+56190,18400,OLD MILITARY RD NE,Major Collector,2,138,Urban,138,15,Cottonwood Elementary,2,Cottonwood Elementary,42,NA,NA,2,4,6,NA,1,1,2,2,42,84

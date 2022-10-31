@@ -1,0 +1,158 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,sidewalk_left,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+56560,885,NE JOHN CARLSON RD,Major Collector,2,232,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,232,0
+56346,1969,NE 73RD ST,Local Access,2,914,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,914,0
+54452,630,CREEK WOOD PL NE,Local Access,2,412,Urban,412,15,Esquire Hills Elementary,2,Esquire Hills Elementary,125,NA,NA,3,5,NA,NA,1,0,1,1,125,125
+56564,8624,NE SHEFFIELD PL,Local Access,2,551,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,551,0
+56356,10057,NE LOYOLA ST,Local Access,2,1098,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1098,0
+56349,7492,KIMI CT NE,Local Access,2,120,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,120,0
+56344,12436,THASOS AVE NE,Local Access,2,1071,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1071,0
+54802,12024,TYEE PL NE,Local Access,2,69,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,69,0
+56321,10995,TROY LN NE,Local Access,2,988,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,988,0
+56353,10573,TRICA AVE NE,Local Access,2,232,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,232,0
+54804,5522,NE MAKAH CT,Local Access,2,159,Urban,159,15,Esquire Hills Elementary,2,Esquire Hills Elementary,48,NA,1,1,5,NA,NA,1,1,2,2,48,96
+56330,4395,CLOVER BLOSSOM LN NE,Local Access,2,201,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,201,0
+54803,12121,NE QUINAULT DR,Local Access,2,409,Urban,409,15,Esquire Hills Elementary,2,Esquire Hills Elementary,124,NA,1,1,5,NA,NA,1,1,2,2,124,248
+56640,12070,NE GOLDEN ROD AVE,Local Access,2,270,Urban,270,15,Esquire Hills Elementary,2,Esquire Hills Elementary,82,NA,3,3,5,NA,NA,1,1,2,2,82,164
+56346,5739,NE 73RD ST,Local Access,2,236,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,236,0
+56640,10056,NE GOLDEN ROD AVE,Local Access,2,370,Urban,370,15,Esquire Hills Elementary,2,Esquire Hills Elementary,112,NA,3,3,5,NA,NA,1,1,2,2,112,224
+56351,10548,GREVENA AVE NE,Local Access,2,801,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,801,0
+56561,8973,WEMBLY AVE NE,Local Access,2,754,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,754,0
+54475,6728,SUNSET AVE NE,Local Access,2,409,Urban,409,15,Esquire Hills Elementary,2,Esquire Hills Elementary,124,NA,NA,3,5,NA,NA,1,0,1,1,124,124
+54475,7165,SUNSET AVE NE,Local Access,2,661,Urban,661,15,Esquire Hills Elementary,2,Esquire Hills Elementary,54,NA,1,1,5,NA,NA,1,1,2,2,54,108
+54475,7165,SUNSET AVE NE,Local Access,2,661,Urban,661,15,Esquire Hills Elementary,2,Esquire Hills Elementary,46,NA,1,NA,5,NA,NA,0,1,1,1,46,46
+54475,7165,SUNSET AVE NE,Local Access,2,661,Urban,661,15,Esquire Hills Elementary,2,Esquire Hills Elementary,201,NA,1,1,5,NA,NA,1,1,2,2,201,402
+54475,7165,SUNSET AVE NE,Local Access,2,661,Urban,661,15,Esquire Hills Elementary,2,Esquire Hills Elementary,49,NA,NA,1,5,NA,NA,1,0,1,1,49,49
+54475,7165,SUNSET AVE NE,Local Access,2,661,Urban,661,15,Esquire Hills Elementary,2,Esquire Hills Elementary,13,NA,NA,3,5,NA,NA,1,0,1,1,13,13
+56353,9260,TRICA AVE NE,Local Access,2,262,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,262,0
+56533,9764,AUTUMN HILLS PL NE,Local Access,2,597,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,597,0
+56550,9665,LAZY S LN NE,Local Access,2,381,Urban,381,15,Esquire Hills Elementary,2,Esquire Hills Elementary,51,NA,3,3,5,NA,NA,1,1,2,2,51,102
+56550,9665,LAZY S LN NE,Local Access,2,381,Urban,381,15,Esquire Hills Elementary,2,Esquire Hills Elementary,116,NA,3,3,5,NA,NA,1,1,2,2,116,232
+56560,10072,NE JOHN CARLSON RD,Major Collector,2,339,Urban,339,15,Esquire Hills Elementary,2,Esquire Hills Elementary,11,NA,5,NA,6,NA,NA,0,1,1,1,11,11
+56560,10072,NE JOHN CARLSON RD,Major Collector,2,339,Urban,339,15,Esquire Hills Elementary,2,Esquire Hills Elementary,78,NA,NA,5,6,NA,NA,1,0,1,1,78,78
+56560,10072,NE JOHN CARLSON RD,Major Collector,2,339,Urban,339,15,Esquire Hills Elementary,2,Esquire Hills Elementary,10,NA,NA,5,6,NA,NA,1,0,1,1,10,10
+56500,10003,NE WINTERS RD,Local Access,2,138,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,138,0
+56560,10399,NE JOHN CARLSON RD,Major Collector,2,151,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,151,0
+56500,11432,NE WINTERS RD,Local Access,2,469,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,469,0
+56570,8213,FOREST RIDGE DR NE,Local Access,2,1081,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1081,0
+56500,246,NE WINTERS RD,Local Access,2,324,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,324,0
+56570,2778,FOREST RIDGE DR NE,Local Access,2,450,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,450,0
+56342,10575,DELPHI LOOP NE,Local Access,2,253,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,253,0
+56560,7450,NE JOHN CARLSON RD,Local Access,2,479,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,479,0
+56564,11113,NE SHEFFIELD PL,Local Access,2,241,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,241,0
+56353,8052,TRICA AVE NE,Local Access,2,153,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,153,0
+56510,4097,KASTER DR NE,Local Access,2,812,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,812,0
+56255,7224,CORFU BLVD NE,Local Access,2,407,Urban,407,15,Esquire Hills Elementary,2,Esquire Hills Elementary,124,3,NA,NA,5,NA,NA,1,0,1,1,124,124
+56265,7027,THEBES ST NE,Local Access,2,1093,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1093,0
+56282,5421,AEGEAN BLVD NE,Major Collector,2,457,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,457,0
+56282,3414,AEGEAN BLVD NE,Major Collector,2,327,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,327,0
+56282,2773,AEGEAN BLVD NE,Major Collector,2,550,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,550,0
+56282,13118,AEGEAN BLVD NE,Major Collector,2,254,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,254,0
+56560,8783,NE JOHN CARLSON RD,Major Collector,2,487,Urban,487,15,Esquire Hills Elementary,2,Esquire Hills Elementary,148,NA,5,5,6,NA,NA,1,1,2,2,148,296
+56560,8783,NE JOHN CARLSON RD,Major Collector,2,487,Urban,487,15,Esquire Hills Elementary,2,Esquire Hills Elementary,50,NA,5,5,6,NA,NA,1,1,2,2,50,100
+56550,9250,LAZY S LN NE,Local Access,2,258,Urban,258,15,Esquire Hills Elementary,2,Esquire Hills Elementary,78,NA,3,3,5,NA,NA,1,1,2,2,78,156
+56409,4732,NE FAIRGROUNDS RD,Minor Arterial,2,957,Urban,957,15,Esquire Hills Elementary,2,Esquire Hills Elementary,243,NA,5,5,6,NA,NA,1,1,2,2,243,486
+56409,4732,NE FAIRGROUNDS RD,Minor Arterial,2,957,Urban,957,15,Esquire Hills Elementary,2,Esquire Hills Elementary,148,NA,15,5,6,NA,NA,1,2,3,3,148,444
+56409,13319,NE FAIRGROUNDS RD,Minor Arterial,2,531,Urban,531,15,Esquire Hills Elementary,2,Esquire Hills Elementary,4,NA,15,5,6,NA,NA,1,2,3,3,4,12
+56255,6439,CORFU BLVD NE,Local Access,2,703,Urban,703,15,Esquire Hills Elementary,2,Esquire Hills Elementary,214,3,NA,NA,5,NA,NA,1,0,1,1,214,214
+56350,6445,NE 72ND ST,Local Access,2,1107,Urban,1107,15,Esquire Hills Elementary,2,Esquire Hills Elementary,50,NA,NA,3,5,NA,NA,1,0,1,1,50,50
+54450,4337,VALLEY WOOD PL NE,Local Access,2,230,Urban,230,15,Esquire Hills Elementary,2,Esquire Hills Elementary,70,NA,NA,3,5,NA,NA,1,0,1,1,70,70
+56560,7968,NE JOHN CARLSON RD,Major Collector,2,409,Urban,409,15,Esquire Hills Elementary,2,Esquire Hills Elementary,0,NA,5,5,6,NA,NA,1,1,2,2,0,0
+56560,7968,NE JOHN CARLSON RD,Major Collector,2,409,Urban,409,15,Esquire Hills Elementary,2,Esquire Hills Elementary,124,NA,5,5,6,NA,NA,1,1,2,2,124,248
+54451,2469,MORNING VIEW AVE NE,Local Access,2,435,Urban,435,15,Esquire Hills Elementary,2,Esquire Hills Elementary,132,NA,4,3,5,NA,NA,1,1,2,2,132,264
+56690,13088,GOLDEN ROD PL NE,Local Access,2,203,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,203,0
+54451,1861,MORNING VIEW AVE NE,Local Access,2,793,Urban,793,15,Esquire Hills Elementary,2,Esquire Hills Elementary,73,NA,4,3,5,NA,NA,1,1,2,2,73,146
+54451,1861,MORNING VIEW AVE NE,Local Access,2,793,Urban,793,15,Esquire Hills Elementary,2,Esquire Hills Elementary,241,NA,NA,3,5,NA,NA,1,0,1,1,241,241
+56300,1074,NE TREEMONT CT,Local Access,2,146,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,146,0
+56353,6591,TRICA AVE NE,Local Access,2,827,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,827,0
+56562,7057,NE COVENTRY PL,Local Access,2,317,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,317,0
+56335,10250,CLOVER BLOSSOM LN NE,Local Access,2,343,Urban,343,15,Esquire Hills Elementary,2,Esquire Hills Elementary,104,NA,NA,4,5,NA,NA,1,0,1,1,104,104
+56335,6413,CLOVER BLOSSOM LN NE,Local Access,2,290,Urban,290,15,Esquire Hills Elementary,2,Esquire Hills Elementary,88,NA,NA,4,5,NA,NA,1,0,1,1,88,88
+56335,6272,CLOVER BLOSSOM LN NE,Local Access,2,341,Urban,341,15,Esquire Hills Elementary,2,Esquire Hills Elementary,104,NA,NA,4,5,NA,NA,1,0,1,1,104,104
+56335,1622,CLOVER BLOSSOM LN NE,Local Access,2,463,Urban,463,15,Esquire Hills Elementary,2,Esquire Hills Elementary,141,NA,NA,4,5,NA,NA,1,0,1,1,141,141
+56335,1631,CLOVER BLOSSOM LN NE,Local Access,2,673,Urban,673,15,Esquire Hills Elementary,2,Esquire Hills Elementary,51,NA,NA,4,5,NA,NA,1,0,1,1,51,51
+56560,12328,NE JOHN CARLSON RD,Major Collector,2,349,Urban,349,15,Esquire Hills Elementary,2,Esquire Hills Elementary,106,NA,5,5,6,NA,NA,1,1,2,2,106,212
+54803,6930,NE QUINAULT DR,Local Access,2,254,Urban,254,15,Esquire Hills Elementary,2,Esquire Hills Elementary,77,NA,1,1,5,NA,NA,1,1,2,2,77,154
+56500,4621,NE WINTERS RD,Local Access,2,774,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,774,0
+54475,4172,SUNSET AVE NE,Local Access,2,270,Urban,270,15,Esquire Hills Elementary,2,Esquire Hills Elementary,82,NA,1,2,5,NA,NA,1,1,2,2,82,164
+54475,4172,SUNSET AVE NE,Local Access,2,270,Urban,270,15,Esquire Hills Elementary,2,Esquire Hills Elementary,46,NA,1,NA,5,NA,NA,0,1,1,1,46,46
+54475,4172,SUNSET AVE NE,Local Access,2,270,Urban,270,15,Esquire Hills Elementary,2,Esquire Hills Elementary,47,NA,NA,1,5,NA,NA,1,0,1,1,47,47
+54475,4172,SUNSET AVE NE,Local Access,2,270,Urban,270,15,Esquire Hills Elementary,2,Esquire Hills Elementary,53,NA,NA,3,5,NA,NA,1,0,1,1,53,53
+54475,4594,SUNSET AVE NE,Local Access,2,198,Urban,198,15,Esquire Hills Elementary,2,Esquire Hills Elementary,4,NA,1,NA,5,NA,NA,0,1,1,1,4,4
+54475,4594,SUNSET AVE NE,Local Access,2,198,Urban,198,15,Esquire Hills Elementary,2,Esquire Hills Elementary,60,NA,NA,3,5,NA,NA,1,0,1,1,60,60
+54475,4594,SUNSET AVE NE,Local Access,2,198,Urban,198,15,Esquire Hills Elementary,2,Esquire Hills Elementary,47,NA,NA,3,5,NA,NA,1,0,1,1,47,47
+54475,4594,SUNSET AVE NE,Local Access,2,198,Urban,198,15,Esquire Hills Elementary,2,Esquire Hills Elementary,3,NA,NA,1,5,NA,NA,1,0,1,1,3,3
+54475,5780,SUNSET AVE NE,Local Access,2,401,Urban,401,15,Esquire Hills Elementary,2,Esquire Hills Elementary,122,NA,NA,3,5,NA,NA,1,0,1,1,122,122
+56350,5851,NE 72ND ST,Local Access,2,277,Urban,277,15,Esquire Hills Elementary,2,Esquire Hills Elementary,84,NA,NA,3,5,NA,NA,1,0,1,1,84,84
+56353,5076,TRICA AVE NE,Local Access,2,54,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,54,0
+56577,10961,KASTER CT NE,Local Access,2,181,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,181,0
+56500,2062,NE WINTERS RD,Local Access,2,367,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,367,0
+56560,3507,NE JOHN CARLSON RD,Major Collector,2,841,Urban,841,15,Esquire Hills Elementary,2,Esquire Hills Elementary,255,NA,5,5,6,NA,NA,1,1,2,2,255,510
+56560,8553,NE JOHN CARLSON RD,Major Collector,2,416,Urban,416,15,Esquire Hills Elementary,2,Esquire Hills Elementary,126,NA,5,5,6,NA,NA,1,1,2,2,126,252
+56660,13121,NE MEADOWLARK CIR,Local Access,2,402,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,402,0
+56645,11995,NE GOLDEN ROD CIR,Local Access,2,350,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,350,0
+56550,8093,LAZY S LN NE,Local Access,2,959,Urban,959,15,Esquire Hills Elementary,2,Esquire Hills Elementary,292,NA,3,3,5,NA,NA,1,1,2,2,292,584
+56568,4291,NE CROMWELL ST,Local Access,2,507,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,507,0
+56720,1049,PHEASANT CIR NE,Local Access,2,197,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,197,0
+56321,107,TROY LN NE,Local Access,2,212,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,212,0
+56321,8161,TROY LN NE,Local Access,2,246,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,246,0
+56560,4104,NE JOHN CARLSON RD,Local Access,2,573,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,573,0
+56550,3652,LAZY S LN NE,Local Access,2,1837,Urban,1837,15,Esquire Hills Elementary,2,Esquire Hills Elementary,559,NA,3,3,5,NA,NA,1,1,2,2,559,1118
+56550,3652,LAZY S LN NE,Local Access,2,1837,Urban,1837,15,Esquire Hills Elementary,2,Esquire Hills Elementary,51,NA,3,3,5,NA,NA,1,1,2,2,51,102
+56282,8981,AEGEAN BLVD NE,Major Collector,2,250,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,250,0
+56282,9122,AEGEAN BLVD NE,Major Collector,2,249,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,249,0
+56353,2332,TRICA AVE NE,Local Access,2,245,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,245,0
+56357,2287,BERKELEY PL NE,Local Access,2,535,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,535,0
+56282,10955,AEGEAN BLVD NE,Major Collector,2,254,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,254,0
+56567,5835,NE WESTCHESTER ST,Local Access,2,562,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,562,0
+56345,3683,ISIS CT NE,Local Access,2,164,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,164,0
+56255,315,CORFU BLVD NE,Local Access,2,382,Urban,382,15,Esquire Hills Elementary,2,Esquire Hills Elementary,24,3,NA,NA,5,NA,NA,1,0,1,1,24,24
+56561,5861,WEMBLY AVE NE,Local Access,2,186,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,186,0
+54475,2736,SUNSET AVE NE,Local Access,2,867,Urban,867,15,Esquire Hills Elementary,2,Esquire Hills Elementary,139,NA,1,1,5,NA,NA,1,1,2,2,139,278
+54475,2736,SUNSET AVE NE,Local Access,2,867,Urban,867,15,Esquire Hills Elementary,2,Esquire Hills Elementary,53,NA,1,NA,5,NA,NA,0,1,1,1,53,53
+54475,2736,SUNSET AVE NE,Local Access,2,867,Urban,867,15,Esquire Hills Elementary,2,Esquire Hills Elementary,56,NA,NA,1,5,NA,NA,1,0,1,1,56,56
+56560,1556,NE JOHN CARLSON RD,Major Collector,2,412,Urban,412,15,Esquire Hills Elementary,2,Esquire Hills Elementary,50,NA,5,5,6,NA,NA,1,1,2,2,50,100
+56560,1556,NE JOHN CARLSON RD,Major Collector,2,412,Urban,412,15,Esquire Hills Elementary,2,Esquire Hills Elementary,125,NA,5,5,6,NA,NA,1,1,2,2,125,250
+54803,1108,NE QUINAULT DR,Local Access,2,508,Urban,508,15,Esquire Hills Elementary,2,Esquire Hills Elementary,103,NA,1,1,5,NA,NA,1,1,2,2,103,206
+56282,12762,AEGEAN BLVD NE,Major Collector,2,1015,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1015,0
+56343,6875,NE SPARTACUS ST,Local Access,2,374,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,374,0
+56565,13291,SHEFFIELD CT NE,Local Access,2,439,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,439,0
+56561,12862,WEMBLY AVE NE,Local Access,2,213,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,213,0
+56560,10285,NE JOHN CARLSON RD,Local Access,2,224,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,224,0
+56561,12140,WEMBLY AVE NE,Local Access,2,480,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,480,0
+56561,9519,WEMBLY AVE NE,Local Access,2,246,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,246,0
+56563,12610,NE COVENTRY CT,Local Access,2,215,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,215,0
+56321,8240,TROY LN NE,Local Access,2,744,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,744,0
+56560,1318,NE JOHN CARLSON RD,Local Access,2,242,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,242,0
+56560,2675,NE JOHN CARLSON RD,Major Collector,2,497,Urban,497,15,Esquire Hills Elementary,2,Esquire Hills Elementary,151,NA,5,5,6,NA,NA,1,1,2,2,151,302
+56560,2675,NE JOHN CARLSON RD,Major Collector,2,497,Urban,497,15,Esquire Hills Elementary,2,Esquire Hills Elementary,101,NA,5,5,6,NA,NA,1,1,2,2,101,202
+56560,2675,NE JOHN CARLSON RD,Major Collector,2,497,Urban,497,15,Esquire Hills Elementary,2,Esquire Hills Elementary,90,NA,NA,5,6,NA,NA,1,0,1,1,90,90
+56250,1210,TREEMONT LN NE,Local Access,2,209,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,209,0
+54453,226,CANYON VISTA PL NE,Local Access,2,350,Urban,350,15,Esquire Hills Elementary,2,Esquire Hills Elementary,106,NA,NA,3,5,NA,NA,1,0,1,1,106,106
+56342,194,DELPHI LOOP NE,Local Access,2,1061,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1061,0
+54835,6900,NE ARROWHEAD DR,Local Access,2,1044,Urban,1044,15,Esquire Hills Elementary,2,Esquire Hills Elementary,41,NA,1,1,5,NA,NA,1,1,2,2,41,82
+56680,8817,NE SHADY LN,Local Access,2,213,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,213,0
+56255,6171,CORFU BLVD NE,Local Access,2,497,Urban,497,15,Esquire Hills Elementary,2,Esquire Hills Elementary,151,3,NA,NA,5,NA,NA,1,0,1,1,151,151
+56700,6239,NE ORIOLE WAY,Local Access,2,318,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,318,0
+56564,4874,NE SHEFFIELD PL,Local Access,2,211,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,211,0
+56255,2566,CORFU BLVD NE,Local Access,2,537,Urban,537,15,Esquire Hills Elementary,2,Esquire Hills Elementary,163,3,NA,NA,5,NA,NA,1,0,1,1,163,163
+56553,110,SPRINGHILL PL NE,Local Access,2,233,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,233,0
+56564,1975,NE SHEFFIELD PL,Local Access,2,167,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,167,0
+56506,7799,NE HACKAMORE CT,Local Access,2,156,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,156,0
+56355,2319,NE YALE WAY,Local Access,2,540,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,540,0
+56354,6760,NE MERCER CT,Local Access,2,363,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,363,0
+56352,5792,NE ARTA CT,Local Access,2,195,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,195,0
+56285,10595,AEGEAN CT NE,Local Access,2,393,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,393,0
+56574,6299,NE FOREST RIDGE LN,Local Access,2,337,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,337,0
+56971,3434,COLONY CT NE,Local Access,2,610,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,610,0
+56347,8224,OSIRIS CT NE,Local Access,2,159,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,159,0
+56343,5844,NE SPARTACUS ST,Local Access,2,459,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,459,0
+56348,5897,NE CARLSON CT,Local Access,2,122,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,122,0
+56356,2331,NE LOYOLA ST,Local Access,2,133,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,133,0
+56341,11961,DELPHI CT NE,Local Access,2,262,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,262,0
+56500,12597,NE WINTERS RD,Local Access,2,50,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,50,0
+56560,5927,NE JOHN CARLSON RD,Major Collector,2,21,Urban,21,15,Esquire Hills Elementary,2,Esquire Hills Elementary,6,NA,5,5,6,NA,NA,1,1,2,2,6,12
+54451,9314,MORNING VIEW AVE NE,Local Access,2,34,Urban,34,15,Esquire Hills Elementary,2,Esquire Hills Elementary,10,NA,4,3,5,NA,NA,1,1,2,2,10,20
+56560,5605,NE JOHN CARLSON RD,Major Collector,2,303,Urban,303,15,Esquire Hills Elementary,2,Esquire Hills Elementary,92,NA,5,5,6,NA,NA,1,1,2,2,92,184
+56566,10883,HOOGENRAAD PL NE,Local Access,2,210,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,210,0
+54451,4223,MORNING VIEW AVE NE,Local Access,2,77,Urban,77,15,Esquire Hills Elementary,2,Esquire Hills Elementary,23,NA,4,3,5,NA,NA,1,1,2,2,23,46
+54451,4223,MORNING VIEW AVE NE,Local Access,2,77,Urban,77,15,Esquire Hills Elementary,2,Esquire Hills Elementary,20,NA,NA,3,5,NA,NA,1,0,1,1,20,20

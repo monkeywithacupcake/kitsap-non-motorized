@@ -1,0 +1,12 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,PLAN_AREA,TYPE.1,DATE_ADOPT,BCC_RESOLU,islamird,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+7015,13221,BREIDABLICK PL NW,Local Access,1,628,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,628,0
+7031,16559,TWELVE TREES LN NW,Local Access,1,1066,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1066,0
+78220,9030,PIONEER WAY NW,Major Collector,1,1286,Rural,1286,Twelve Trees,Employment Center - Type III,20101215,467-2010,1,Twelve Trees,1131,10,NA,NA,6,NA,NA,0,5,5,5,1131,5655
+78220,9030,PIONEER WAY NW,Major Collector,1,1286,Rural,1286,Twelve Trees,Employment Center - Type III,20101215,467-2010,1,Twelve Trees,1129,NA,6,NA,6,NA,NA,5,0,5,5,1129,5645
+78220,9030,PIONEER WAY NW,Major Collector,1,1286,Rural,1286,Twelve Trees,Employment Center - Type III,20101215,467-2010,1,Twelve Trees,10,4,4,NA,6,NA,NA,3,3,6,6,10,60
+78220,4460,PIONEER WAY NW,Major Collector,1,856,Rural,856,Twelve Trees,Employment Center - Type III,20101215,467-2010,1,Twelve Trees,856,4,NA,NA,6,NA,NA,0,3,3,3,856,2568
+78220,4460,PIONEER WAY NW,Major Collector,1,856,Rural,856,Twelve Trees,Employment Center - Type III,20101215,467-2010,1,Twelve Trees,441,NA,4,NA,6,NA,NA,3,0,3,3,441,1323
+77650,10011,WAGHORN RD NW,Local Access,1,1283,Rural,1283,Twelve Trees,Employment Center - Type III,20101215,467-2010,1,Twelve Trees,245,6,NA,NA,3,NA,NA,0,5,5,5,245,1225
+77650,10011,WAGHORN RD NW,Local Access,1,1283,Rural,1283,Twelve Trees,Employment Center - Type III,20101215,467-2010,1,Twelve Trees,20,NA,2,NA,3,NA,NA,1,0,1,1,20,20
+78220,10483,PIONEER WAY NW,Major Collector,1,456,Rural,456,Twelve Trees,Employment Center - Type III,20101215,467-2010,1,Twelve Trees,402,4,NA,NA,6,NA,NA,0,3,3,3,402,1206
+78220,10483,PIONEER WAY NW,Major Collector,1,456,Rural,456,Twelve Trees,Employment Center - Type III,20101215,467-2010,1,Twelve Trees,403,NA,4,NA,6,NA,NA,3,0,3,3,403,1209

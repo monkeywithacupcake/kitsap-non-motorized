@@ -1,0 +1,43 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,sidewalk_left,sidewalk_right,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,score_left,score_right,score,the_score,the_length,w_score
+44910,3673,MARJORIE LN SE,Local Access,1,1206,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1206,0
+44710,4426,HARVEY ST SE,Local Access,1,395,Rural,395,15,South Colby Elementary,2,South Colby Elementary,120,NA,NA,1,1,NA,3,1,1,2,2,120,240
+44850,7060,ANDERSON RD SE,Local Access,1,1687,Rural,1687,15,South Colby Elementary,2,South Colby Elementary,160,NA,NA,1,1,NA,3,1,1,2,2,160,320
+44730,12985,SE BERRY ST,Local Access,1,361,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,361,0
+44850,1665,ANDERSON RD SE,Local Access,1,273,Rural,273,15,South Colby Elementary,2,South Colby Elementary,83,NA,NA,1,1,NA,3,1,1,2,2,83,166
+32309,11126,BANNER RD SE,Major Collector,1,867,Rural,867,15,South Colby Elementary,2,South Colby Elementary,57,NA,NA,8,6,NA,6,5,5,10,10,57,570
+32309,11126,BANNER RD SE,Major Collector,1,867,Rural,867,15,South Colby Elementary,2,South Colby Elementary,264,NA,NA,8,6,NA,6,5,5,10,10,264,2640
+32309,11227,BANNER RD SE,Major Collector,1,1305,Rural,1305,15,South Colby Elementary,2,South Colby Elementary,397,NA,NA,8,6,NA,6,5,5,10,10,397,3970
+32309,11227,BANNER RD SE,Major Collector,1,1305,Rural,1305,15,South Colby Elementary,2,South Colby Elementary,48,NA,NA,8,6,NA,6,5,5,10,10,48,480
+44630,7395,SE SOUTH ST,Local Access,1,628,Rural,628,15,South Colby Elementary,2,South Colby Elementary,190,NA,NA,2,2,NA,3,1,1,2,2,190,380
+44880,15565,SE JOHN ST,Local Access,1,420,Rural,420,15,South Colby Elementary,2,South Colby Elementary,127,3,3,NA,NA,NA,3,5,5,10,10,127,1270
+44880,11923,SE JOHN ST,Local Access,1,108,Rural,108,15,South Colby Elementary,2,South Colby Elementary,33,3,3,NA,NA,NA,3,5,5,10,10,33,330
+32309,6421,BANNER RD SE,Major Collector,1,1347,Rural,1347,15,South Colby Elementary,2,South Colby Elementary,410,NA,NA,8,6,NA,6,5,5,10,10,410,4100
+32309,4385,BANNER RD SE,Major Collector,1,2737,Rural,2737,15,South Colby Elementary,2,South Colby Elementary,359,NA,NA,8,6,NA,6,5,5,10,10,359,3590
+32309,2248,BANNER RD SE,Major Collector,1,464,Rural,464,15,South Colby Elementary,2,South Colby Elementary,141,NA,NA,8,6,NA,6,5,5,10,10,141,1410
+44710,13069,HARVEY ST SE,Local Access,1,607,Rural,607,15,South Colby Elementary,2,South Colby Elementary,185,NA,NA,1,1,NA,3,1,1,2,2,185,370
+44710,12475,HARVEY ST SE,Local Access,1,199,Rural,199,15,South Colby Elementary,2,South Colby Elementary,13,NA,NA,NA,1,NA,3,1,0,1,1,13,13
+44680,10885,SE BAY ST,Local Access,1,367,Rural,367,15,South Colby Elementary,2,South Colby Elementary,111,NA,NA,3,3,NA,3,5,5,10,10,111,1110
+44680,10885,SE BAY ST,Local Access,1,367,Rural,367,15,South Colby Elementary,2,South Colby Elementary,55,NA,NA,3,3,NA,3,5,5,10,10,55,550
+38010,15776,SE SOUTHWORTH DR,Minor Arterial,1,77,Rural,77,15,South Colby Elementary,2,South Colby Elementary,23,NA,NA,5,4,NA,4,5,5,10,10,23,230
+38010,648,SE SOUTHWORTH DR,Minor Arterial,1,826,Rural,826,15,South Colby Elementary,2,South Colby Elementary,7,NA,NA,5,4,NA,4,5,5,10,10,7,70
+38010,648,SE SOUTHWORTH DR,Minor Arterial,1,826,Rural,826,15,South Colby Elementary,2,South Colby Elementary,251,NA,NA,5,4,NA,4,5,5,10,10,251,2510
+38010,15777,SE SOUTHWORTH DR,Minor Arterial,1,6,Rural,6,15,South Colby Elementary,2,South Colby Elementary,1,NA,NA,5,4,NA,4,5,5,10,10,1,10
+44680,16534,SE BAY ST,Local Access,0,120,Unknown,120,15,South Colby Elementary,2,South Colby Elementary,36,NA,NA,3,3,NA,NA,0,0,0,0,36,0
+44530,12953,ARVICK RD SE,Local Access,1,304,Rural,304,15,South Colby Elementary,2,South Colby Elementary,92,NA,NA,4,4,NA,3,5,5,10,10,92,920
+44410,12971,MCGREGOR DR SE,Local Access,1,1215,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1215,0
+44270,5754,YUKON HARBOR RD SE,Local Access,1,1095,Rural,1095,15,South Colby Elementary,2,South Colby Elementary,333,NA,NA,3,3,NA,3,5,5,10,10,333,3330
+38010,4899,SE SOUTHWORTH DR,Minor Arterial,1,2155,Rural,2155,15,South Colby Elementary,2,South Colby Elementary,266,NA,NA,5,4,NA,4,5,5,10,10,266,2660
+38010,3383,SE SOUTHWORTH DR,Minor Arterial,1,736,Rural,736,15,South Colby Elementary,2,South Colby Elementary,224,NA,NA,5,4,NA,4,5,5,10,10,224,2240
+38010,10532,SE SOUTHWORTH DR,Minor Arterial,1,115,Rural,115,15,South Colby Elementary,2,South Colby Elementary,35,NA,NA,5,4,NA,4,5,5,10,10,35,350
+38010,5062,SE SOUTHWORTH DR,Minor Arterial,1,389,Rural,389,15,South Colby Elementary,2,South Colby Elementary,118,NA,NA,5,4,NA,4,5,5,10,10,118,1180
+38010,5062,SE SOUTHWORTH DR,Minor Arterial,1,389,Rural,389,15,South Colby Elementary,2,South Colby Elementary,21,NA,NA,5,4,NA,4,5,5,10,10,21,210
+38010,6761,SE SOUTHWORTH DR,Minor Arterial,1,158,Rural,158,15,South Colby Elementary,2,South Colby Elementary,48,NA,NA,5,4,NA,4,5,5,10,10,48,480
+38010,3381,SE SOUTHWORTH DR,Minor Arterial,1,911,Rural,911,15,South Colby Elementary,2,South Colby Elementary,277,NA,NA,5,4,NA,4,5,5,10,10,277,2770
+38010,8540,SE SOUTHWORTH DR,Minor Arterial,1,545,Rural,545,15,South Colby Elementary,2,South Colby Elementary,165,NA,NA,5,4,NA,4,5,5,10,10,165,1650
+38010,1384,SE SOUTHWORTH DR,Minor Arterial,1,966,Rural,966,15,South Colby Elementary,2,South Colby Elementary,293,NA,NA,5,4,NA,4,5,5,10,10,293,2930
+38010,3879,SE SOUTHWORTH DR,Minor Arterial,1,1101,Rural,1101,15,South Colby Elementary,2,South Colby Elementary,20,NA,NA,5,4,NA,4,5,5,10,10,20,200
+44259,6902,LOCKER RD SE,Local Access,1,2232,Rural,2232,15,South Colby Elementary,2,South Colby Elementary,402,NA,NA,4,3,NA,3,5,5,10,10,402,4020
+44730,10044,SE BERRY ST,Local Access,1,362,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,362,0
+44270,8707,YUKON HARBOR RD SE,Local Access,1,1674,Rural,1674,15,South Colby Elementary,2,South Colby Elementary,180,NA,NA,3,3,NA,3,5,5,10,10,180,1800
+44410,7387,MCGREGOR DR SE,Local Access,1,402,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,402,0
+44530,6375,ARVICK RD SE,Local Access,1,2452,Rural,2452,15,South Colby Elementary,2,South Colby Elementary,372,NA,NA,4,4,NA,3,5,5,10,10,372,3720

@@ -1,0 +1,84 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,sidewalk_left,shoulder_left,shoulder_right,standard_sidewalk,standard_shoulder,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+56140,1750,NE MCWILLIAMS RD,Minor Arterial,2,621,Urban,621,15,Pinecrest Elementary,2,Pinecrest Elementary,106,NA,4,4,6,NA,NA,1,1,2,2,106,212
+56140,1750,NE MCWILLIAMS RD,Minor Arterial,2,621,Urban,621,15,Pinecrest Elementary,2,Pinecrest Elementary,113,NA,5,3,6,NA,NA,1,1,2,2,113,226
+56140,19402,NE MCWILLIAMS RD,Minor Arterial,2,530,Urban,530,15,Pinecrest Elementary,2,Pinecrest Elementary,14,5,NA,NA,6,NA,NA,3,0,3,3,14,42
+56140,19402,NE MCWILLIAMS RD,Minor Arterial,2,530,Urban,530,15,Pinecrest Elementary,2,Pinecrest Elementary,161,NA,4,4,6,NA,NA,1,1,2,2,161,322
+56140,19402,NE MCWILLIAMS RD,Minor Arterial,2,530,Urban,530,15,Pinecrest Elementary,2,Pinecrest Elementary,52,NA,4,4,6,NA,NA,1,1,2,2,52,104
+55640,9817,NE FRANKLIN AVE,Local Access,2,309,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,309,0
+55640,19246,NE FRANKLIN AVE,Local Access,2,143,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,143,0
+54600,14276,NE RIDDELL RD,Minor Arterial,2,130,Urban,130,15,Pinecrest Elementary,2,Pinecrest Elementary,18,NA,4,4,6,NA,NA,1,1,2,2,18,36
+54600,14276,NE RIDDELL RD,Minor Arterial,2,130,Urban,130,15,Pinecrest Elementary,2,Pinecrest Elementary,39,NA,4,4,6,NA,NA,1,1,2,2,39,78
+51670,3873,NE WOODS PL,Local Access,2,887,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,887,0
+54600,11884,NE RIDDELL RD,Minor Arterial,2,964,Urban,964,15,Pinecrest Elementary,2,Pinecrest Elementary,287,NA,5,5,6,NA,NA,1,1,2,2,287,574
+54600,11884,NE RIDDELL RD,Minor Arterial,2,964,Urban,964,15,Pinecrest Elementary,2,Pinecrest Elementary,50,NA,6,4,6,NA,NA,2,1,3,3,50,150
+54600,2060,NE RIDDELL RD,Minor Arterial,2,543,Urban,543,15,Pinecrest Elementary,2,Pinecrest Elementary,51,NA,NA,5,6,NA,NA,0,1,1,1,51,51
+54600,2060,NE RIDDELL RD,Minor Arterial,2,543,Urban,543,15,Pinecrest Elementary,2,Pinecrest Elementary,134,NA,4,4,6,NA,NA,1,1,2,2,134,268
+54600,2060,NE RIDDELL RD,Minor Arterial,2,543,Urban,543,15,Pinecrest Elementary,2,Pinecrest Elementary,131,NA,6,4,6,NA,NA,2,1,3,3,131,393
+54600,2060,NE RIDDELL RD,Minor Arterial,2,543,Urban,543,15,Pinecrest Elementary,2,Pinecrest Elementary,49,NA,5,NA,6,NA,NA,1,0,1,1,49,49
+54600,604,NE RIDDELL RD,Minor Arterial,2,1291,Urban,1291,15,Pinecrest Elementary,2,Pinecrest Elementary,85,NA,3,NA,6,NA,NA,1,0,1,1,85,85
+54600,5916,NE RIDDELL RD,Minor Arterial,2,373,Urban,373,15,Pinecrest Elementary,2,Pinecrest Elementary,113,NA,4,4,6,NA,NA,1,1,2,2,113,226
+54600,5916,NE RIDDELL RD,Minor Arterial,2,373,Urban,373,15,Pinecrest Elementary,2,Pinecrest Elementary,12,NA,4,4,6,NA,NA,1,1,2,2,12,24
+55670,11514,HYLEN AVE NE,Local Access,2,325,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,325,0
+51740,7744,NE SUTTON PL,Local Access,2,524,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,524,0
+51760,71,NE MELANIE CT,Local Access,2,515,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,515,0
+51762,7319,NE PINECREST DR,Local Access,2,176,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,176,0
+51762,1419,NE PINECREST DR,Local Access,2,340,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,340,0
+55700,4358,NE VENA AVE,Local Access,2,533,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,533,0
+55700,8531,NE VENA AVE,Local Access,2,670,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,670,0
+51660,1453,NE DAWN RD,Local Access,2,646,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,646,0
+51763,1519,PINERIDGE DR NE,Local Access,2,542,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,542,0
+51660,11206,NE DAWN RD,Local Access,2,239,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,239,0
+55640,12239,NE FRANKLIN AVE,Local Access,2,631,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,631,0
+51763,4817,PINERIDGE DR NE,Local Access,2,813,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,813,0
+51665,5245,NE MARRIC CT,Local Access,2,826,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,826,0
+51763,6164,PINERIDGE DR NE,Local Access,2,212,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,212,0
+55590,9099,SANDRA LN NE,Local Access,2,1504,Urban,1504,15,Pinecrest Elementary,2,Pinecrest Elementary,80,NA,4,4,5,NA,NA,1,1,2,2,80,160
+51690,2039,PINE RD NE,Major Collector,2,285,Urban,285,15,Pinecrest Elementary,2,Pinecrest Elementary,86,NA,4,4,6,NA,NA,1,1,2,2,86,172
+51690,38,PINE RD NE,Major Collector,2,90,Urban,90,15,Pinecrest Elementary,2,Pinecrest Elementary,27,NA,4,4,6,NA,NA,1,1,2,2,27,54
+51730,9828,RIDGEMONT CT NE,Local Access,2,83,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,83,0
+51680,7729,NE RIMROCK DR,Local Access,2,861,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,861,0
+51710,10187,RIDGEMONT DR NE,Local Access,2,550,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,550,0
+51710,9269,RIDGEMONT DR NE,Local Access,2,254,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,254,0
+51700,2030,BRENTRIDGE PL NE,Local Access,2,509,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,509,0
+55540,6498,NE VENA ST,Local Access,2,207,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,207,0
+51762,5165,NE PINECREST DR,Local Access,2,491,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,491,0
+51671,4969,NE WOODS CT,Local Access,2,1066,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1066,0
+51670,9581,NE WOODS PL,Local Access,2,224,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,224,0
+51762,10348,NE PINECREST DR,Local Access,2,298,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,298,0
+51762,6603,NE PINECREST DR,Local Access,2,172,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,172,0
+51780,676,NE MICHELLE CT,Local Access,2,291,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,291,0
+55740,9525,NE DAWN RD,Local Access,2,1131,Urban,1131,15,Pinecrest Elementary,2,Pinecrest Elementary,87,NA,1,NA,5,NA,NA,1,0,1,1,87,87
+51762,1051,NE PINECREST DR,Local Access,2,613,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,613,0
+51690,500,PINE RD NE,Major Collector,2,272,Urban,272,15,Pinecrest Elementary,2,Pinecrest Elementary,53,NA,4,NA,6,NA,NA,1,0,1,1,53,53
+51690,500,PINE RD NE,Major Collector,2,272,Urban,272,15,Pinecrest Elementary,2,Pinecrest Elementary,50,NA,NA,4,6,NA,NA,0,1,1,1,50,50
+51690,500,PINE RD NE,Major Collector,2,272,Urban,272,15,Pinecrest Elementary,2,Pinecrest Elementary,83,NA,4,4,6,NA,NA,1,1,2,2,83,166
+56140,8770,NE MCWILLIAMS RD,Minor Arterial,2,526,Urban,526,15,Pinecrest Elementary,2,Pinecrest Elementary,152,5,NA,NA,6,NA,NA,3,0,3,3,152,456
+56140,8770,NE MCWILLIAMS RD,Minor Arterial,2,526,Urban,526,15,Pinecrest Elementary,2,Pinecrest Elementary,48,NA,4,4,6,NA,NA,1,1,2,2,48,96
+56140,8770,NE MCWILLIAMS RD,Minor Arterial,2,526,Urban,526,15,Pinecrest Elementary,2,Pinecrest Elementary,80,NA,NA,4,6,NA,NA,0,1,1,1,80,80
+56140,8770,NE MCWILLIAMS RD,Minor Arterial,2,526,Urban,526,15,Pinecrest Elementary,2,Pinecrest Elementary,81,NA,4,NA,6,NA,NA,1,0,1,1,81,81
+55640,9180,NE FRANKLIN AVE,Local Access,2,668,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,668,0
+55720,3482,NE FUSON RD,Local Access,2,1343,Urban,1343,15,Pinecrest Elementary,2,Pinecrest Elementary,377,NA,4,4,5,NA,NA,1,1,2,2,377,754
+51690,11802,PINE RD NE,Major Collector,2,770,Urban,770,15,Pinecrest Elementary,2,Pinecrest Elementary,234,NA,4,4,6,NA,NA,1,1,2,2,234,468
+51690,12123,PINE RD NE,Major Collector,2,945,Urban,945,15,Pinecrest Elementary,2,Pinecrest Elementary,288,NA,4,4,6,NA,NA,1,1,2,2,288,576
+51690,13046,PINE RD NE,Major Collector,2,291,Urban,291,15,Pinecrest Elementary,2,Pinecrest Elementary,88,NA,4,4,6,NA,NA,1,1,2,2,88,176
+51690,3635,PINE RD NE,Major Collector,2,516,Urban,516,15,Pinecrest Elementary,2,Pinecrest Elementary,157,NA,4,4,6,NA,NA,1,1,2,2,157,314
+51690,5340,PINE RD NE,Major Collector,2,484,Urban,484,15,Pinecrest Elementary,2,Pinecrest Elementary,147,NA,4,4,6,NA,NA,1,1,2,2,147,294
+51690,5362,PINE RD NE,Major Collector,2,292,Urban,292,15,Pinecrest Elementary,2,Pinecrest Elementary,89,NA,4,4,6,NA,NA,1,1,2,2,89,178
+51690,6718,PINE RD NE,Major Collector,2,363,Urban,363,15,Pinecrest Elementary,2,Pinecrest Elementary,110,NA,4,4,6,NA,NA,1,1,2,2,110,220
+51690,6718,PINE RD NE,Major Collector,2,363,Urban,363,15,Pinecrest Elementary,2,Pinecrest Elementary,50,NA,4,4,6,NA,NA,1,1,2,2,50,100
+51690,6979,PINE RD NE,Major Collector,2,306,Urban,306,15,Pinecrest Elementary,2,Pinecrest Elementary,93,NA,4,4,6,NA,NA,1,1,2,2,93,186
+51690,10275,PINE RD NE,Major Collector,2,638,Urban,638,15,Pinecrest Elementary,2,Pinecrest Elementary,194,NA,4,4,6,NA,NA,1,1,2,2,194,388
+51690,10574,PINE RD NE,Major Collector,2,568,Urban,568,15,Pinecrest Elementary,2,Pinecrest Elementary,173,NA,4,4,6,NA,NA,1,1,2,2,173,346
+51710,3981,RIDGEMONT DR NE,Local Access,2,460,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,460,0
+51767,1106,PARKWAY CT NE,Local Access,2,360,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,360,0
+54600,1146,NE RIDDELL RD,Minor Arterial,2,258,Urban,258,15,Pinecrest Elementary,2,Pinecrest Elementary,45,NA,4,4,6,NA,NA,1,1,2,2,45,90
+53840,5080,NE DAVID DR,Local Access,2,252,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,252,0
+51690,16232,PINE RD NE,Major Collector,2,283,Urban,283,15,Pinecrest Elementary,2,Pinecrest Elementary,81,NA,4,4,6,NA,NA,1,1,2,2,81,162
+51764,8236,PINERIDGE CT NE,Local Access,2,37,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,37,0
+51763,2799,PINERIDGE DR NE,Local Access,2,204,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,204,0
+51765,2743,PINERIDGE PL NE,Local Access,2,102,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,102,0
+51769,9022,WOODLAND CT NE,Local Access,2,126,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,126,0
+51766,10800,NE VENA CT,Local Access,2,76,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,76,0
+51690,16061,PINE RD NE,Major Collector,2,146,Urban,146,15,Pinecrest Elementary,2,Pinecrest Elementary,44,NA,4,4,6,NA,NA,1,1,2,2,44,88
+51690,4616,PINE RD NE,Major Collector,2,110,Urban,110,15,Pinecrest Elementary,2,Pinecrest Elementary,33,NA,4,4,6,NA,NA,1,1,2,2,33,66
+55720,6056,NE FUSON RD,Local Access,2,1047,Urban,1047,15,Pinecrest Elementary,2,Pinecrest Elementary,50,NA,4,4,5,NA,NA,1,1,2,2,50,100

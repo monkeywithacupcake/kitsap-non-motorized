@@ -1,0 +1,6 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,PLAN_AREA,TYPE.1,DATE_ADOPT,BCC_RESOLU,islamird,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+21109,14991,SIDNEY RD SW,Major Collector,1,706,Rural,706,Port Orchard Airport,Employment Center - Type III,20160630,534-2016,1,Port Orchard Airport,29,6,NA,NA,6,NA,NA,0,5,5,5,29,145
+21109,14991,SIDNEY RD SW,Major Collector,1,706,Rural,706,Port Orchard Airport,Employment Center - Type III,20160630,534-2016,1,Port Orchard Airport,3,6,6,NA,6,NA,NA,5,5,10,10,3,30
+21109,14991,SIDNEY RD SW,Major Collector,1,706,Rural,706,Port Orchard Airport,Employment Center - Type III,20160630,534-2016,1,Port Orchard Airport,34,NA,6,NA,6,NA,NA,5,0,5,5,34,170
+21109,4297,SIDNEY RD SW,Major Collector,1,4821,Rural,4821,Port Orchard Airport,Employment Center - Type III,20160630,534-2016,1,Port Orchard Airport,4821,6,6,NA,6,NA,NA,5,5,10,10,4821,48210
+21109,606,SIDNEY RD SW,Major Collector,1,572,Rural,572,Port Orchard Airport,Employment Center - Type III,20160630,534-2016,1,Port Orchard Airport,241,6,6,NA,6,NA,NA,5,5,10,10,241,2410

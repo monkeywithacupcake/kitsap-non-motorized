@@ -1,0 +1,46 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,sidewalk_right,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,score_left,score_right,score,the_score,the_length,w_score
+13770,10671,DICKEY RD NW,Major Collector,2,1152,Urban,1152,15,Silverdale Elementary,2,Silverdale Elementary,201,NA,3,3,6,NA,NA,1,1,2,2,201,402
+19809,7538,ENCHANTMENT AVE NW,Local Access,2,1149,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1149,0
+19816,2678,CASCADE PL NW,Local Access,2,572,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,572,0
+19815,4099,DRAGO CT NW,Local Access,2,534,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,534,0
+19807,4611,NW CASCADE ST,Local Access,2,322,Urban,322,15,Silverdale Elementary,2,Silverdale Elementary,41,3,NA,NA,5,NA,NA,0,1,1,1,41,41
+19807,7921,NW CASCADE ST,Local Access,2,180,Urban,180,15,Silverdale Elementary,2,Silverdale Elementary,38,3,NA,NA,5,NA,NA,0,1,1,1,38,38
+19813,8548,INLET VIEW CT NW,Local Access,2,232,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,232,0
+19807,3441,NW CASCADE ST,Local Access,2,1092,Urban,1092,15,Silverdale Elementary,2,Silverdale Elementary,36,3,NA,NA,5,NA,NA,0,1,1,1,36,36
+19807,1741,NW CASCADE ST,Local Access,2,299,Urban,299,15,Silverdale Elementary,2,Silverdale Elementary,91,3,NA,NA,5,NA,NA,0,1,1,1,91,91
+13770,9838,DICKEY RD NW,Major Collector,2,2579,Urban,2579,15,Silverdale Elementary,2,Silverdale Elementary,586,NA,12,8,6,NA,NA,2,2,4,4,586,2344
+13770,9380,DICKEY RD NW,Major Collector,2,801,Urban,801,15,Silverdale Elementary,2,Silverdale Elementary,53,NA,NA,12,6,NA,NA,2,0,2,2,53,106
+13770,9380,DICKEY RD NW,Major Collector,2,801,Urban,801,15,Silverdale Elementary,2,Silverdale Elementary,47,NA,4,NA,6,NA,NA,0,1,1,1,47,47
+13770,9380,DICKEY RD NW,Major Collector,2,801,Urban,801,15,Silverdale Elementary,2,Silverdale Elementary,243,NA,12,8,6,NA,NA,2,2,4,4,243,972
+13770,10823,DICKEY RD NW,Major Collector,2,1658,Urban,1658,15,Silverdale Elementary,2,Silverdale Elementary,154,NA,3,3,6,NA,NA,1,1,2,2,154,308
+13770,10823,DICKEY RD NW,Major Collector,2,1658,Urban,1658,15,Silverdale Elementary,2,Silverdale Elementary,453,NA,NA,12,6,NA,NA,2,0,2,2,453,906
+13770,10823,DICKEY RD NW,Major Collector,2,1658,Urban,1658,15,Silverdale Elementary,2,Silverdale Elementary,452,NA,4,NA,6,NA,NA,0,1,1,1,452,452
+13770,10823,DICKEY RD NW,Major Collector,2,1658,Urban,1658,15,Silverdale Elementary,2,Silverdale Elementary,53,NA,12,NA,6,NA,NA,0,2,2,2,53,106
+13770,10823,DICKEY RD NW,Major Collector,2,1658,Urban,1658,15,Silverdale Elementary,2,Silverdale Elementary,58,NA,NA,8,6,NA,NA,2,0,2,2,58,116
+13770,2075,DICKEY RD NW,Major Collector,2,742,Urban,742,15,Silverdale Elementary,2,Silverdale Elementary,226,NA,3,3,6,NA,NA,1,1,2,2,226,452
+13770,2164,DICKEY RD NW,Major Collector,2,847,Urban,847,15,Silverdale Elementary,2,Silverdale Elementary,258,NA,3,3,6,NA,NA,1,1,2,2,258,516
+13770,19010,DICKEY RD NW,Major Collector,2,573,Urban,573,15,Silverdale Elementary,2,Silverdale Elementary,174,NA,3,3,6,NA,NA,1,1,2,2,174,348
+13862,13228,NW WALGREN DR,Local Access,2,836,Urban,836,15,Silverdale Elementary,2,Silverdale Elementary,47,3,NA,NA,5,NA,NA,0,1,1,1,47,47
+13862,19301,NW WALGREN DR,Local Access,2,103,Urban,103,15,Silverdale Elementary,2,Silverdale Elementary,20,3,NA,NA,5,NA,NA,0,1,1,1,20,20
+19808,202,NW DREAM CT,Local Access,2,218,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,218,0
+19804,11148,NW DISCOVERY RIDGE CT,Local Access,2,230,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,230,0
+19814,3902,GLACIER VIEW DR NW,Local Access,2,481,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,481,0
+19812,10485,MORNING SIDE DR NW,Local Access,2,1610,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1610,0
+19804,8535,NW DISCOVERY RIDGE CT,Local Access,2,670,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,670,0
+19807,6393,NW CASCADE ST,Local Access,2,432,Urban,432,15,Silverdale Elementary,2,Silverdale Elementary,131,3,NA,NA,5,NA,NA,0,1,1,1,131,131
+19807,4590,NW CASCADE ST,Local Access,2,787,Urban,787,15,Silverdale Elementary,2,Silverdale Elementary,239,3,NA,NA,5,NA,NA,0,1,1,1,239,239
+19804,5603,NW DISCOVERY RIDGE CT,Local Access,2,185,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,185,0
+19808,4161,NW DREAM CT,Local Access,2,967,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,967,0
+19804,3583,NW DISCOVERY RIDGE CT,Local Access,2,262,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,262,0
+19804,9825,NW DISCOVERY RIDGE CT,Local Access,2,540,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,540,0
+19818,11474,NW WHISPER ST,Local Access,2,1214,Urban,1214,15,Silverdale Elementary,2,Silverdale Elementary,240,3,NA,NA,5,NA,NA,0,1,1,1,240,240
+19817,4086,DAVIS PL NW,Local Access,2,398,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,398,0
+13840,6339,NW KNUTE ANDERSON RD,Local Access,2,1647,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1647,0
+13840,7250,NW KNUTE ANDERSON RD,Local Access,2,181,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,181,0
+13771,268,DICKEY PL NW,Local Access,2,693,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,693,0
+13840,408,NW KNUTE ANDERSON RD,Local Access,2,125,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,125,0
+13840,831,NW KNUTE ANDERSON RD,Local Access,2,1617,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1617,0
+19811,242,NW MYSTIC CT,Local Access,2,315,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,315,0
+19809,9092,ENCHANTMENT AVE NW,Local Access,2,638,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,638,0
+13771,2909,DICKEY PL NW,Local Access,2,317,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,317,0
+13840,14334,NW KNUTE ANDERSON RD,Local Access,2,21,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,21,0

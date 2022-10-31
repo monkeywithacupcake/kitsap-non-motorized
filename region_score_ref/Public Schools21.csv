@@ -1,0 +1,29 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,sidewalk_right,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,score_left,score_right,score,the_score,the_length,w_score
+86671,19176,NE WEST KINGSTON RD,Major Collector,2,1568,Urban,1568,15,Kingston High,2,Kingston High,448,NA,10,10,6,NA,NA,2,2,4,4,448,1792
+86671,19176,NE WEST KINGSTON RD,Major Collector,2,1568,Urban,1568,15,Kingston High,2,Kingston High,67,NA,10,10,6,NA,NA,2,2,4,4,67,268
+86671,18091,NE WEST KINGSTON RD,Major Collector,2,542,Urban,542,15,Kingston High,2,Kingston High,47,NA,NA,6,6,NA,NA,2,0,2,2,47,94
+86671,18091,NE WEST KINGSTON RD,Major Collector,2,542,Urban,542,15,Kingston High,2,Kingston High,48,NA,6,NA,6,NA,NA,0,2,2,2,48,96
+86671,18091,NE WEST KINGSTON RD,Major Collector,2,542,Urban,542,15,Kingston High,2,Kingston High,163,NA,6,6,6,NA,NA,2,2,4,4,163,652
+86685,16124,SOUTH KINGSTON RD NE,Major Collector,2,332,Urban,332,15,Kingston High,2,Kingston High,18,NA,5,5,6,NA,NA,1,1,2,2,18,36
+83690,4880,BARBER CUT OFF RD NE,Local Access,2,1239,Urban,1239,15,Kingston High,2,Kingston High,34,NA,6,2,5,NA,NA,1,2,3,3,34,102
+86671,11287,NE WEST KINGSTON RD,Major Collector,2,1761,Urban,1761,15,Kingston High,2,Kingston High,33,NA,10,10,6,NA,NA,2,2,4,4,33,132
+86671,11287,NE WEST KINGSTON RD,Major Collector,2,1761,Urban,1761,15,Kingston High,2,Kingston High,376,NA,10,10,6,NA,NA,2,2,4,4,376,1504
+86671,11287,NE WEST KINGSTON RD,Major Collector,2,1761,Urban,1761,15,Kingston High,2,Kingston High,261,NA,10,10,6,NA,NA,2,2,4,4,261,1044
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Kingston High,2,Kingston High,190,NA,10,10,6,NA,NA,2,2,4,4,190,760
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Kingston High,2,Kingston High,147,NA,10,10,6,NA,NA,2,2,4,4,147,588
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Kingston High,2,Kingston High,41,NA,NA,10,6,NA,NA,2,0,2,2,41,82
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Kingston High,2,Kingston High,115,NA,NA,10,6,NA,NA,2,0,2,2,115,230
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Kingston High,2,Kingston High,114,NA,10,NA,6,NA,NA,0,2,2,2,114,228
+86671,13321,NE WEST KINGSTON RD,Major Collector,2,826,Urban,826,15,Kingston High,2,Kingston High,42,NA,10,NA,6,NA,NA,0,2,2,2,42,84
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Kingston High,2,Kingston High,212,NA,6,6,6,NA,NA,2,2,4,4,212,848
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Kingston High,2,Kingston High,91,NA,10,10,6,NA,NA,2,2,4,4,91,364
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Kingston High,2,Kingston High,147,NA,10,10,6,NA,NA,2,2,4,4,147,588
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Kingston High,2,Kingston High,183,NA,6,6,6,NA,NA,2,2,4,4,183,732
+86671,6219,NE WEST KINGSTON RD,Major Collector,2,1293,Urban,1293,15,Kingston High,2,Kingston High,152,NA,6,6,6,NA,NA,2,2,4,4,152,608
+86671,18285,NE WEST KINGSTON RD,Major Collector,2,318,Urban,318,15,Kingston High,2,Kingston High,96,NA,10,10,6,NA,NA,2,2,4,4,96,384
+86671,18285,NE WEST KINGSTON RD,Major Collector,2,318,Urban,318,15,Kingston High,2,Kingston High,9,NA,10,10,6,NA,NA,2,2,4,4,9,36
+86671,18285,NE WEST KINGSTON RD,Major Collector,2,318,Urban,318,15,Kingston High,2,Kingston High,58,NA,10,10,6,NA,NA,2,2,4,4,58,232
+83210,12709,NORMAN RD NE,Local Access,2,1283,Urban,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1283,0
+83690,9406,BARBER CUT OFF RD NE,Local Access,2,3133,Urban,3133,15,Kingston High,2,Kingston High,419,NA,6,2,5,NA,NA,1,2,3,3,419,1257
+83695,8760,TUCKERMAN AVE NE,Local Access,2,500,Urban,500,15,Kingston High,2,Kingston High,126,3,NA,NA,5,NA,NA,0,1,1,1,126,126
+83695,404,TUCKERMAN AVE NE,Local Access,2,266,Urban,266,15,Kingston High,2,Kingston High,81,3,NA,NA,5,NA,NA,0,1,1,1,81,81

@@ -1,0 +1,90 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,sidewalk_left,sidewalk_right,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,score_left,score_right,score,the_score,the_length,w_score
+92133,19275,SE MOOSE HILL CT,Local Access,1,660,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,660,0
+23830,8658,TRIVIERE TRL SE,Local Access,1,1069,Rural,1069,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,52,NA,NA,1,1,NA,3,1,1,2,2,52,104
+23830,8658,TRIVIERE TRL SE,Local Access,1,1069,Rural,1069,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,326,NA,NA,1,1,NA,3,1,1,2,2,326,652
+23830,19299,TRIVIERE TRL SE,Local Access,1,474,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,474,0
+23830,19300,TRIVIERE TRL SE,Local Access,1,277,Rural,277,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,42,NA,NA,1,NA,NA,3,0,1,1,1,42,42
+23830,19300,TRIVIERE TRL SE,Local Access,1,277,Rural,277,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,43,NA,NA,NA,1,NA,3,1,0,1,1,43,43
+23650,516,SW LOTUS CT,Local Access,1,164,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,164,0
+23810,8948,RIDGE RIM TRL SE,Local Access,1,1307,Rural,1307,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,398,NA,NA,2,2,NA,3,1,1,2,2,398,796
+23800,8230,SW LAKEWAY BLVD,Minor Arterial,1,433,Rural,433,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,131,NA,NA,6,6,NA,4,5,5,10,10,131,1310
+23845,10302,SW MARION DR,Local Access,1,225,Rural,225,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,68,NA,NA,1,1,NA,3,1,1,2,2,68,136
+23800,9218,SW LAKEWAY BLVD,Minor Arterial,1,813,Rural,813,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,247,NA,NA,6,6,NA,4,5,5,10,10,247,2470
+23800,9218,SW LAKEWAY BLVD,Minor Arterial,1,813,Rural,813,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,50,NA,NA,6,6,NA,4,5,5,10,10,50,500
+23800,7272,SW LAKEWAY BLVD,Major Collector,1,657,Rural,657,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,199,NA,NA,6,6,NA,6,5,5,10,10,199,1990
+23800,7272,SW LAKEWAY BLVD,Major Collector,1,657,Rural,657,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,51,NA,NA,6,6,NA,6,5,5,10,10,51,510
+23800,7272,SW LAKEWAY BLVD,Major Collector,1,657,Rural,657,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,50,NA,NA,4,4,NA,6,3,3,6,6,50,300
+24290,7449,ELDER AVE SW,Local Access,1,979,Rural,979,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,257,NA,NA,1,1,NA,3,1,1,2,2,257,514
+24290,8925,ELDER AVE SW,Local Access,1,159,Rural,159,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,48,NA,NA,1,1,NA,3,1,1,2,2,48,96
+23845,7045,SW MARION DR,Local Access,1,256,Rural,256,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,78,NA,NA,1,1,NA,3,1,1,2,2,78,156
+23835,7050,GABLE AVE SW,Local Access,1,1269,Rural,1269,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,386,NA,NA,1,1,NA,3,1,1,2,2,386,772
+23855,9625,CARTER AVE SW,Local Access,1,983,Rural,983,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,90,NA,NA,1,1,NA,3,1,1,2,2,90,180
+22890,4171,MADRONA RD SW,Local Access,1,467,Rural,467,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,46,NA,NA,4,4,NA,3,5,5,10,10,46,460
+22890,4171,MADRONA RD SW,Local Access,1,467,Rural,467,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,142,NA,NA,4,4,NA,3,5,5,10,10,142,1420
+23845,4394,SW MARION DR,Local Access,1,218,Rural,218,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,66,NA,NA,1,1,NA,3,1,1,2,2,66,132
+23845,5428,SW MARION DR,Local Access,1,255,Rural,255,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,77,NA,NA,1,1,NA,3,1,1,2,2,77,154
+23800,3919,SW LAKEWAY BLVD,Minor Arterial,1,689,Rural,689,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,50,NA,NA,6,6,NA,4,5,5,10,10,50,500
+23800,3919,SW LAKEWAY BLVD,Minor Arterial,1,689,Rural,689,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,209,NA,NA,6,6,NA,4,5,5,10,10,209,2090
+24210,2683,DENNY AVE SW,Local Access,1,1281,Rural,1281,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,390,NA,NA,1,1,NA,3,1,1,2,2,390,780
+23645,1692,SW ODELL ST,Local Access,1,1335,Rural,1335,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,406,NA,NA,2,2,NA,3,1,1,2,2,406,812
+22890,2727,MADRONA RD SW,Local Access,1,850,Rural,850,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,259,NA,NA,4,4,NA,3,5,5,10,10,259,2590
+22890,2727,MADRONA RD SW,Local Access,1,850,Rural,850,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,57,NA,NA,NA,4,NA,3,5,0,5,5,57,285
+22890,2727,MADRONA RD SW,Local Access,1,850,Rural,850,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,55,NA,NA,4,NA,NA,3,0,5,5,5,55,275
+22890,1871,MADRONA RD SW,Local Access,1,374,Rural,374,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,114,NA,NA,4,4,NA,3,5,5,10,10,114,1140
+23800,12408,SW LAKEWAY BLVD,Minor Arterial,1,255,Rural,255,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,77,NA,NA,6,6,NA,4,5,5,10,10,77,770
+23835,12333,GABLE AVE SW,Local Access,1,972,Rural,972,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,108,NA,NA,1,1,NA,3,1,1,2,2,108,216
+23870,10799,FAIRVIEW BLVD SW,Local Access,1,1979,Rural,1979,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,603,NA,NA,2,2,NA,3,1,1,2,2,603,1206
+24290,10740,ELDER AVE SW,Local Access,1,1283,Rural,1283,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,391,NA,NA,1,1,NA,3,1,1,2,2,391,782
+24290,10740,ELDER AVE SW,Local Access,1,1283,Rural,1283,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,50,NA,NA,1,1,NA,3,1,1,2,2,50,100
+22890,10697,MADRONA RD SW,Local Access,1,313,Rural,313,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,95,NA,NA,4,4,NA,3,5,5,10,10,95,950
+24110,12207,BUTLER AVE SW,Local Access,1,979,Rural,979,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,9,NA,NA,1,1,NA,3,1,1,2,2,9,18
+23857,15775,MAYFAIR AVE SW,Local Access,1,328,Rural,328,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,100,NA,NA,5,5,NA,3,5,5,10,10,100,1000
+23857,15774,MAYFAIR AVE SW,Local Access,1,229,Rural,229,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,70,NA,NA,5,5,NA,3,5,5,10,10,70,700
+23820,13147,SE WILDAIRE DR,Local Access,1,667,Rural,667,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,202,NA,NA,2,2,NA,3,1,1,2,2,202,404
+23857,7200,MAYFAIR AVE SW,Local Access,1,725,Rural,725,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,220,NA,NA,5,5,NA,3,5,5,10,10,220,2200
+23857,7200,MAYFAIR AVE SW,Local Access,1,725,Rural,725,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,47,NA,NA,5,NA,NA,3,0,5,5,5,47,235
+23857,7200,MAYFAIR AVE SW,Local Access,1,725,Rural,725,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,49,NA,NA,NA,5,NA,3,5,0,5,5,49,245
+23655,7175,SW BISHOP CT,Local Access,1,168,Rural,168,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,51,3,3,NA,NA,NA,3,5,5,10,10,51,510
+23800,7161,SE LAKEWAY BLVD,Major Collector,1,1986,Rural,1986,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,590,NA,NA,3,3,NA,6,1,1,2,2,590,1180
+23800,7161,SE LAKEWAY BLVD,Major Collector,1,1986,Rural,1986,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,45,NA,NA,4,4,NA,6,3,3,6,6,45,270
+23830,3235,SE TRIVIERE TRL,Local Access,1,2396,Rural,2396,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,394,NA,NA,1,1,NA,3,1,1,2,2,394,788
+23830,3235,SE TRIVIERE TRL,Local Access,1,2396,Rural,2396,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,48,NA,NA,1,1,NA,3,1,1,2,2,48,96
+23800,1699,SE LAKEWAY BLVD,Major Collector,1,1320,Rural,1320,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,57,NA,NA,3,3,NA,6,1,1,2,2,57,114
+23800,1699,SE LAKEWAY BLVD,Major Collector,1,1320,Rural,1320,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,401,NA,NA,4,4,NA,6,3,3,6,6,401,2406
+23800,1699,SE LAKEWAY BLVD,Major Collector,1,1320,Rural,1320,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,51,NA,NA,4,4,NA,6,3,3,6,6,51,306
+23800,2203,SE LAKEWAY BLVD,Major Collector,1,656,Rural,656,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,50,NA,NA,4,4,NA,6,3,3,6,6,50,300
+23800,2203,SE LAKEWAY BLVD,Major Collector,1,656,Rural,656,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,199,NA,NA,4,4,NA,6,3,3,6,6,199,1194
+24350,374,FRY AVE SW,Local Access,1,981,Rural,981,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,197,NA,NA,1,1,NA,3,1,1,2,2,197,394
+22890,1298,MADRONA RD SW,Local Access,1,1019,Rural,1019,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,90,NA,NA,4,4,NA,3,5,5,10,10,90,900
+21138,10326,SW ASHTON CT,Local Access,1,345,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,345,0
+24210,3588,DENNY AVE SW,Local Access,1,980,Rural,980,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,186,NA,NA,1,1,NA,3,1,1,2,2,186,372
+23870,13239,FAIRVIEW BLVD SW,Local Access,1,1983,Rural,1983,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,155,NA,NA,2,2,NA,3,1,1,2,2,155,310
+23800,645,SW LAKEWAY BLVD,Major Collector,1,659,Rural,659,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,50,NA,NA,6,6,NA,6,5,5,10,10,50,500
+23800,645,SW LAKEWAY BLVD,Major Collector,1,659,Rural,659,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,200,NA,NA,4,4,NA,6,3,3,6,6,200,1200
+24350,13115,FRY AVE SW,Local Access,1,1283,Rural,1283,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,391,NA,NA,1,1,NA,3,1,1,2,2,391,782
+23900,638,SW VIEW DR,Local Access,1,254,Rural,254,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,50,NA,NA,1,1,NA,3,1,1,2,2,50,100
+23900,638,SW VIEW DR,Local Access,1,254,Rural,254,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,77,NA,NA,1,1,NA,3,1,1,2,2,77,154
+23900,1744,SW VIEW DR,Local Access,1,255,Rural,255,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,77,NA,NA,1,1,NA,3,1,1,2,2,77,154
+23900,4375,SW VIEW DR,Local Access,1,88,Rural,88,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,27,NA,NA,1,1,NA,3,1,1,2,2,27,54
+23860,8908,SW TERRACE LN,Local Access,1,657,Rural,657,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,175,NA,NA,1,1,NA,3,1,1,2,2,175,350
+23870,10666,FAIRVIEW BLVD SW,Local Access,1,1316,Rural,1316,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,401,NA,NA,2,2,NA,3,1,1,2,2,401,802
+23810,2486,RIDGE RIM TRL SE,Local Access,1,1098,Rural,1098,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,19,NA,NA,2,2,NA,3,1,1,2,2,19,38
+23810,4657,RIDGE RIM TRL SE,Local Access,1,1290,Rural,1290,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,40,NA,NA,2,2,NA,3,1,1,2,2,40,80
+23810,4657,RIDGE RIM TRL SE,Local Access,1,1290,Rural,1290,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,393,NA,NA,2,2,NA,3,1,1,2,2,393,786
+23900,6522,SW VIEW DR,Local Access,1,251,Rural,251,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,76,NA,NA,1,1,NA,3,1,1,2,2,76,152
+23900,7825,SW VIEW DR,Local Access,1,261,Rural,261,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,79,NA,NA,1,1,NA,3,1,1,2,2,79,158
+23900,7825,SW VIEW DR,Local Access,1,261,Rural,261,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,51,NA,NA,1,1,NA,3,1,1,2,2,51,102
+23855,13190,CARTER AVE SW,Local Access,1,1277,Rural,1277,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,389,NA,NA,1,1,NA,3,1,1,2,2,389,778
+23820,6517,SW WILDAIRE DR,Local Access,1,647,Rural,647,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,196,NA,NA,2,2,NA,3,1,1,2,2,196,392
+23900,12006,SW VIEW DR,Local Access,1,260,Rural,260,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,79,NA,NA,1,1,NA,3,1,1,2,2,79,158
+23900,12334,SW VIEW DR,Local Access,1,258,Rural,258,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,12,NA,NA,1,1,NA,3,1,1,2,2,12,24
+22890,15729,MADRONA RD SW,Local Access,1,988,Rural,988,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,301,NA,NA,4,4,NA,3,5,5,10,10,301,3010
+21109,4297,SIDNEY RD SW,Major Collector,1,4821,Rural,4821,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,93,NA,NA,6,6,NA,6,5,5,10,10,93,930
+21709,11292,BETHEL BURLEY RD SE,Major Collector,1,2679,Rural,2679,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,1,NA,NA,NA,5,NA,6,3,0,3,3,1,3
+21109,682,SIDNEY RD SW,Major Collector,1,335,Rural,335,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,47,NA,NA,6,6,NA,6,5,5,10,10,47,470
+21109,606,SIDNEY RD SW,Major Collector,1,572,Rural,572,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,50,NA,NA,6,6,NA,6,5,5,10,10,50,500
+21109,606,SIDNEY RD SW,Major Collector,1,572,Rural,572,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,174,NA,NA,6,6,NA,6,5,5,10,10,174,1740
+21109,1782,SIDNEY RD SW,Major Collector,1,724,Rural,724,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,220,NA,NA,6,6,NA,6,5,5,10,10,220,2200
+21109,1782,SIDNEY RD SW,Major Collector,1,724,Rural,724,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,50,NA,NA,6,NA,NA,6,0,5,5,5,50,250
+21109,1782,SIDNEY RD SW,Major Collector,1,724,Rural,724,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,49,NA,NA,NA,6,NA,6,5,0,5,5,49,245
+23660,10880,SW WYCOFF RD,Local Access,1,657,Rural,657,15,Burley Glenwood Elementary,2,Burley Glenwood Elementary,199,NA,NA,1,1,NA,3,1,1,2,2,199,398

@@ -1,0 +1,42 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+59750,15200,SCANDIA CT NW,Local Access,1,1037,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1037,0
+59611,13085,PEARSON POINT RD NE,Local Access,1,1133,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1133,0
+59650,19360,THORPE RD NE,Local Access,1,760,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,760,0
+59650,1904,THORPE RD NE,Local Access,1,1032,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1032,0
+59725,4458,SCANDIA RD NW,Local Access,1,1263,Rural,1263,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,385,2,2,NA,3,NA,NA,1,1,2,2,385,770
+74200,1818,VIKING WAY NW,Minor Arterial,1,4077,Rural,4077,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,741,7,7,NA,4,NA,NA,5,5,10,10,741,7410
+58971,15061,COX AVE NW,Local Access,1,1321,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1321,0
+19515,10470,SILVERDALE WAY NW,Minor Arterial,1,510,Rural,510,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,155,8,8,NA,4,NA,NA,5,5,10,10,155,1550
+58821,7003,NW LUOTO CT,Local Access,1,1147,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1147,0
+19515,5617,SILVERDALE WAY NW,Minor Arterial,1,737,Rural,737,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,224,8,8,NA,4,NA,NA,5,5,10,10,224,2240
+19515,5617,SILVERDALE WAY NW,Minor Arterial,1,737,Rural,737,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,54,8,8,NA,4,NA,NA,5,5,10,10,54,540
+59725,4517,SCANDIA RD NW,Local Access,1,997,Rural,997,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,303,2,2,NA,3,NA,NA,1,1,2,2,303,606
+59725,694,SCANDIA RD NW,Local Access,1,849,Rural,849,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,258,2,2,NA,3,NA,NA,1,1,2,2,258,516
+58822,10367,NW KATY PL,Local Access,1,545,Rural,545,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,166,4,8,NA,3,NA,NA,5,5,10,10,166,1660
+59770,4940,SCANDIA LN NW,Local Access,1,549,Rural,549,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,93,2,2,NA,3,NA,NA,1,1,2,2,93,186
+59725,8445,SCANDIA RD NW,Local Access,1,348,Rural,348,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,106,2,2,NA,3,NA,NA,1,1,2,2,106,212
+59610,15199,PEARSON RD NE,Local Access,1,737,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,737,0
+59610,6908,PEARSON RD NE,Local Access,1,893,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,893,0
+59700,12936,NW SCANDIA RD,Local Access,1,1089,Rural,1089,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,1,NA,2,NA,3,NA,NA,1,0,1,1,1,1
+59700,12936,NW SCANDIA RD,Local Access,1,1089,Rural,1089,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,150,2,2,NA,3,NA,NA,1,1,2,2,150,300
+59700,11875,NW SCANDIA RD,Local Access,1,442,Rural,442,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,134,2,2,NA,3,NA,NA,1,1,2,2,134,268
+59700,11875,NW SCANDIA RD,Local Access,1,442,Rural,442,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,22,2,NA,NA,3,NA,NA,0,1,1,1,22,22
+59700,11875,NW SCANDIA RD,Local Access,1,442,Rural,442,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,31,NA,2,NA,3,NA,NA,1,0,1,1,31,31
+59110,6567,NE VIRGINIA LOOP RD,Local Access,1,774,Rural,774,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,235,2,2,NA,3,NA,NA,1,1,2,2,235,470
+59611,7394,PEARSON POINT RD NE,Local Access,1,482,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,482,0
+59615,5318,LEVIN RD NE,Local Access,1,1193,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1193,0
+59700,3494,NW SCANDIA RD,Local Access,1,177,Rural,177,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,54,2,2,NA,3,NA,NA,1,1,2,2,54,108
+59700,3494,NW SCANDIA RD,Local Access,1,177,Rural,177,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,46,2,NA,NA,3,NA,NA,0,1,1,1,46,46
+58840,3544,LEVIN RD NW,Local Access,1,1258,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1258,0
+59700,1943,NW SCANDIA RD,Local Access,1,228,Rural,228,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,45,2,2,NA,3,NA,NA,1,1,2,2,45,90
+59110,15198,NE VIRGINIA LOOP RD,Local Access,1,1667,Rural,1667,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,506,2,2,NA,3,NA,NA,1,1,2,2,506,1012
+59110,12188,VIRGINIA LOOP RD NE,Local Access,1,1283,Rural,1283,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,228,2,2,NA,3,NA,NA,1,1,2,2,228,456
+59110,9016,VIRGINIA LOOP RD NE,Local Access,1,2020,Rural,2020,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,152,2,2,NA,3,NA,NA,1,1,2,2,152,304
+59110,8839,NE VIRGINIA LOOP RD,Local Access,1,174,Rural,174,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,53,2,2,NA,3,NA,NA,1,1,2,2,53,106
+19515,10878,SILVERDALE WAY NW,Minor Arterial,2,2657,Urban,2657,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,47,8,8,6,NA,NA,NA,2,2,4,4,47,188
+19515,10878,SILVERDALE WAY NW,Minor Arterial,2,2657,Urban,2657,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,265,8,8,6,NA,NA,NA,2,2,4,4,265,1060
+59050,8800,CENTRAL VALLEY RD NW,Minor Arterial,1,654,Rural,654,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,199,5,5,NA,4,NA,NA,5,5,10,10,199,1990
+59050,10641,CENTRAL VALLEY RD NW,Minor Arterial,2,2610,Urban,2610,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,738,5,5,6,NA,NA,NA,1,1,2,2,738,1476
+59050,15981,CENTRAL VALLEY RD NW,Minor Arterial,2,1168,Urban,1168,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,356,5,5,6,NA,NA,NA,1,1,2,2,356,712
+59700,15201,NW SCANDIA RD,Local Access,1,86,Rural,86,15,Hilder Pearson Elementary,2,Hilder Pearson Elementary,26,2,2,NA,3,NA,NA,1,1,2,2,26,52
+59611,6021,PEARSON POINT RD NE,Local Access,1,368,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,368,0

@@ -1,0 +1,16 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+57770,14127,CLEAR CREEK RD NW,Minor Arterial,2,349,Urban,349,15,Clear Creek Elementary,2,Clear Creek Elementary,83,8,8,6,NA,NA,NA,2,2,4,4,83,332
+57770,14127,CLEAR CREEK RD NW,Minor Arterial,2,349,Urban,349,15,Clear Creek Elementary,2,Clear Creek Elementary,50,8,8,6,NA,NA,NA,2,2,4,4,50,200
+57760,3765,NW HALF MILE RD,Local Access,1,2560,Rural,2560,15,Clear Creek Elementary,2,Clear Creek Elementary,778,3,3,NA,3,NA,NA,5,5,10,10,778,7780
+57810,8891,OLD FRONTIER RD NW,Major Collector,1,1152,Rural,1152,15,Clear Creek Elementary,2,Clear Creek Elementary,351,3,3,NA,6,NA,NA,1,1,2,2,351,702
+57770,1372,CLEAR CREEK RD NW,Minor Arterial,1,1316,Rural,1316,15,Clear Creek Elementary,2,Clear Creek Elementary,50,8,8,NA,4,NA,NA,5,5,10,10,50,500
+57770,1372,CLEAR CREEK RD NW,Minor Arterial,1,1316,Rural,1316,15,Clear Creek Elementary,2,Clear Creek Elementary,55,8,8,NA,4,NA,NA,5,5,10,10,55,550
+57820,11698,NW SUNDE RD,Local Access,1,417,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,417,0
+57820,16342,WINTER CREEK AVE NW,Local Access,1,1349,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1349,0
+57817,16343,WINTER CREEK AVE NW,Local Access,1,800,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,800,0
+57810,2905,OLD FRONTIER RD NW,Major Collector,1,1325,Rural,1325,15,Clear Creek Elementary,2,Clear Creek Elementary,309,3,3,NA,6,NA,NA,1,1,2,2,309,618
+57950,4536,NW TRIGGER AVE,Minor Arterial,2,2587,Urban,2587,15,Clear Creek Elementary,2,Clear Creek Elementary,713,10,10,6,NA,NA,NA,2,2,4,4,713,2852
+57940,5507,NW GUSTAFSON RD,Local Access,1,660,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,660,0
+57940,12158,NW GUSTAFSON RD,Local Access,1,1141,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1141,0
+57950,9880,NW TRIGGER AVE,Minor Arterial,2,365,Urban,365,15,Clear Creek Elementary,2,Clear Creek Elementary,111,10,10,6,NA,NA,NA,2,2,4,4,111,444
+57820,12751,OLD FRONTIER RD NW,Local Access,1,164,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,164,0

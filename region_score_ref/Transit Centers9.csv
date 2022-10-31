@@ -1,0 +1,15 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+70400,461,HANSVILLE RD NE,Major Collector,1,1974,Rural,1974,15,George's Corner Park & Ride,2,George's Corner Park & Ride,601,7,8,NA,6,NA,NA,5,5,10,10,601,6010
+70400,19331,HANSVILLE RD NE,Major Collector,1,314,Rural,314,15,George's Corner Park & Ride,2,George's Corner Park & Ride,95,7,8,NA,6,NA,NA,5,5,10,10,95,950
+8006,9460,NE CARRIAGE DR,Local Access,1,970,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,970,0
+8006,5854,NE CARRIAGE DR,Local Access,1,314,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,314,0
+8007,3070,SHANNON LN NE,Local Access,1,982,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,982,0
+70370,10592,MILLER BAY RD NE,Major Collector,1,2693,Rural,2693,15,George's Corner Park & Ride,2,George's Corner Park & Ride,155,3,3,NA,6,NA,NA,1,1,2,2,155,310
+75210,1032,HIGHLAND RD NE,Local Access,1,4837,Rural,4837,15,George's Corner Park & Ride,2,George's Corner Park & Ride,76,2,4.5,NA,3,NA,NA,5,1,6,6,76,456
+70400,12259,HANSVILLE RD NE,Major Collector,1,338,Rural,338,15,George's Corner Park & Ride,2,George's Corner Park & Ride,103,7,8,NA,6,NA,NA,5,5,10,10,103,1030
+70400,5150,HANSVILLE RD NE,Major Collector,1,622,Rural,622,15,George's Corner Park & Ride,2,George's Corner Park & Ride,189,7,8,NA,6,NA,NA,5,5,10,10,189,1890
+84430,6659,BALMORAL PL NE,Local Access,1,1474,Rural,1474,15,George's Corner Park & Ride,2,George's Corner Park & Ride,117,3,3,NA,3,NA,NA,5,5,10,10,117,1170
+70400,2162,HANSVILLE RD NE,Major Collector,1,1974,Rural,1974,15,George's Corner Park & Ride,2,George's Corner Park & Ride,296,7,8,NA,6,NA,NA,5,5,10,10,296,2960
+70400,18540,HANSVILLE RD NE,Major Collector,1,54,Rural,54,15,George's Corner Park & Ride,2,George's Corner Park & Ride,16,7,8,NA,6,NA,NA,5,5,10,10,16,160
+70370,10518,MILLER BAY RD NE,Major Collector,1,1599,Rural,1599,15,George's Corner Park & Ride,2,George's Corner Park & Ride,487,3,3,NA,6,NA,NA,1,1,2,2,487,974
+70370,11860,MILLER BAY RD NE,Major Collector,1,1055,Rural,1055,15,George's Corner Park & Ride,2,George's Corner Park & Ride,321,3,3,NA,6,NA,NA,1,1,2,2,321,642

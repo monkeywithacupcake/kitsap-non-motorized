@@ -1,0 +1,78 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+31009,9661,SE MULLENIX RD,Major Collector,1,1170,Rural,1170,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,8,4,4,NA,6,NA,NA,3,3,6,6,8,48
+31009,9661,SE MULLENIX RD,Major Collector,1,1170,Rural,1170,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,355,4,4,NA,6,NA,NA,3,3,6,6,355,2130
+31009,2181,SE MULLENIX RD,Major Collector,1,1520,Rural,1520,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,200,4,4,NA,6,NA,NA,3,3,6,6,200,1200
+31009,5393,SE MULLENIX RD,Major Collector,1,1078,Rural,1078,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,327,4,4,NA,6,NA,NA,3,3,6,6,327,1962
+31009,5393,SE MULLENIX RD,Major Collector,1,1078,Rural,1078,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,92,4,4,NA,6,NA,NA,3,3,6,6,92,552
+33370,662,DORMAR DR SE,Local Access,1,2042,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,2042,0
+33370,19226,DORMAR DR SE,Local Access,1,675,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,675,0
+32950,410,LAWRENCE DR SE,Local Access,1,2009,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,2009,0
+33231,3647,SE TIMBERIDGE CT,Local Access,1,136,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,136,0
+31009,13058,SE MULLENIX RD,Major Collector,1,785,Rural,785,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,139,4,4,NA,6,NA,NA,3,3,6,6,139,834
+31009,13058,SE MULLENIX RD,Major Collector,1,785,Rural,785,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,119,5,NA,NA,6,NA,NA,0,3,3,3,119,357
+31009,13058,SE MULLENIX RD,Major Collector,1,785,Rural,785,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,179,NA,5,NA,6,NA,NA,3,0,3,3,179,537
+31009,13058,SE MULLENIX RD,Major Collector,1,785,Rural,785,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,121,NA,5,NA,6,NA,NA,3,0,3,3,121,363
+31009,13058,SE MULLENIX RD,Major Collector,1,785,Rural,785,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,177,5,NA,NA,6,NA,NA,0,3,3,3,177,531
+31009,13058,SE MULLENIX RD,Major Collector,1,785,Rural,785,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,50,5,NA,NA,6,NA,NA,0,3,3,3,50,150
+31009,13058,SE MULLENIX RD,Major Collector,1,785,Rural,785,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,94,5,NA,NA,6,NA,NA,0,3,3,3,94,282
+31009,13058,SE MULLENIX RD,Major Collector,1,785,Rural,785,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,51,NA,5,NA,6,NA,NA,3,0,3,3,51,153
+31009,13058,SE MULLENIX RD,Major Collector,1,785,Rural,785,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,96,NA,5,NA,6,NA,NA,3,0,3,3,96,288
+33242,6734,SE PENGUIN LN,Local Access,1,458,Rural,458,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,139,1,1,NA,3,NA,NA,1,1,2,2,139,278
+33350,18241,PHILLIPS RD SE,Major Collector,2,710,Urban,710,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,33,5,5,6,NA,NA,NA,1,1,2,2,33,66
+32799,12329,HORIZON LN SE,Local Access,1,522,Rural,522,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,159,2,2,NA,3,NA,NA,1,1,2,2,159,318
+32799,7044,HORIZON LN SE,Local Access,1,2498,Rural,2498,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,158,2,2,NA,3,NA,NA,1,1,2,2,158,316
+33350,16198,PHILLIPS RD SE,Major Collector,2,720,Urban,720,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,219,5,5,6,NA,NA,NA,1,1,2,2,219,438
+31009,12384,SE MULLENIX RD,Minor Arterial,1,315,Rural,315,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,95,4,4,NA,4,NA,NA,5,5,10,10,95,950
+31009,12235,SE MULLENIX RD,Minor Arterial,1,674,Rural,674,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,4,5,5,NA,4,NA,NA,5,5,10,10,4,40
+31009,12235,SE MULLENIX RD,Minor Arterial,1,674,Rural,674,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,158,5,5,NA,4,NA,NA,5,5,10,10,158,1580
+31009,12235,SE MULLENIX RD,Minor Arterial,1,674,Rural,674,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,48,5,NA,NA,4,NA,NA,0,5,5,5,48,240
+31009,12235,SE MULLENIX RD,Minor Arterial,1,674,Rural,674,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,147,4,NA,NA,4,NA,NA,0,5,5,5,147,735
+31009,12235,SE MULLENIX RD,Minor Arterial,1,674,Rural,674,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,148,NA,4,NA,4,NA,NA,5,0,5,5,148,740
+31009,12235,SE MULLENIX RD,Minor Arterial,1,674,Rural,674,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,49,NA,5,NA,4,NA,NA,5,0,5,5,49,245
+31009,10191,SE MULLENIX RD,Minor Arterial,1,1186,Rural,1186,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,47,NA,3,NA,4,NA,NA,1,0,1,1,47,47
+31009,10191,SE MULLENIX RD,Minor Arterial,1,1186,Rural,1186,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,360,4,4,NA,4,NA,NA,5,5,10,10,360,3600
+31009,10191,SE MULLENIX RD,Minor Arterial,1,1186,Rural,1186,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,80,4,4,NA,4,NA,NA,5,5,10,10,80,800
+33230,11963,DEERIDGE PL SE,Local Access,1,1129,Rural,1129,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,344,NA,2,NA,3,NA,NA,1,0,1,1,344,344
+33230,11963,DEERIDGE PL SE,Local Access,1,1129,Rural,1129,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,53,2,2,NA,3,NA,NA,1,1,2,2,53,106
+31009,12439,SE MULLENIX RD,Minor Arterial,1,520,Rural,520,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,158,4,4,NA,4,NA,NA,5,5,10,10,158,1580
+33220,12560,RAMILLER LN SE,Local Access,1,327,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,327,0
+33220,10745,RAMILLER LN SE,Local Access,1,632,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,632,0
+33220,1522,RAMILLER LN SE,Local Access,1,354,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,354,0
+33220,1681,RAMILLER LN SE,Local Access,1,215,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,215,0
+33220,11353,RAMILLER LN SE,Local Access,1,685,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,685,0
+31009,9972,SE MULLENIX RD,Minor Arterial,1,130,Rural,130,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,39,4,4,NA,4,NA,NA,5,5,10,10,39,390
+32801,8104,SE ARTHUR CT,Local Access,1,891,Rural,891,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,159,2,2,NA,3,NA,NA,1,1,2,2,159,318
+31009,7539,SE MULLENIX RD,Minor Arterial,1,367,Rural,367,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,111,4,4,NA,4,NA,NA,5,5,10,10,111,1110
+33211,9772,VAN DECAR RD SE,Local Access,2,2658,Urban,2658,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,528,2,2,5,NA,NA,NA,1,1,2,2,528,1056
+33240,7910,PELICAN LN SE,Local Access,1,1714,Rural,1714,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,522,1,1,NA,3,NA,NA,1,1,2,2,522,1044
+31009,7766,SE MULLENIX RD,Minor Arterial,1,144,Rural,144,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,5,4,3.6666666666666665,NA,4,NA,NA,1,5,6,6,5,30
+33759,7320,SE CAIN LN,Local Access,1,471,Rural,471,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,52,3,3,NA,3,NA,NA,5,5,10,10,52,520
+33350,5681,PHILLIPS RD SE,Local Access,1,918,Rural,918,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,279,5,5,NA,3,NA,NA,5,5,10,10,279,2790
+33230,8788,DEERIDGE PL SE,Local Access,1,252,Rural,252,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,49,NA,2,NA,3,NA,NA,1,0,1,1,49,49
+33230,8788,DEERIDGE PL SE,Local Access,1,252,Rural,252,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,76,2,2,NA,3,NA,NA,1,1,2,2,76,152
+33240,8045,PELICAN LN SE,Local Access,1,662,Rural,662,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,201,1,1,NA,3,NA,NA,1,1,2,2,201,402
+33350,6639,PHILLIPS RD SE,Major Collector,1,2583,Rural,2583,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,104,5,5,NA,6,NA,NA,3,3,6,6,104,624
+33350,6639,PHILLIPS RD SE,Major Collector,1,2583,Rural,2583,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,8,5,5,NA,6,NA,NA,3,3,6,6,8,48
+33350,6639,PHILLIPS RD SE,Major Collector,1,2583,Rural,2583,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,80,5,5,NA,6,NA,NA,3,3,6,6,80,480
+33350,6639,PHILLIPS RD SE,Major Collector,1,2583,Rural,2583,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,784,5,NA,NA,6,NA,NA,0,3,3,3,784,2352
+33350,6639,PHILLIPS RD SE,Major Collector,1,2583,Rural,2583,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,46,5,5,NA,6,NA,NA,3,3,6,6,46,276
+33350,6639,PHILLIPS RD SE,Major Collector,1,2583,Rural,2583,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,783,NA,5,NA,6,NA,NA,3,0,3,3,783,2349
+31009,6635,SE MULLENIX RD,Minor Arterial,1,483,Rural,483,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,147,4,4,NA,4,NA,NA,5,5,10,10,147,1470
+31009,4573,SE MULLENIX RD,Minor Arterial,1,690,Rural,690,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,209,4,4,NA,4,NA,NA,5,5,10,10,209,2090
+33243,3721,SE MERGANSER LN,Local Access,1,442,Rural,442,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,134,1,1,NA,3,NA,NA,1,1,2,2,134,268
+31009,13200,SE MULLENIX RD,Minor Arterial,1,1116,Rural,1116,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,339,4,4,NA,4,NA,NA,5,5,10,10,339,3390
+33220,4157,RAMILLER LN SE,Local Access,1,644,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,644,0
+33350,15126,PHILLIPS RD SE,Local Access,1,662,Rural,662,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,19,5,NA,NA,3,NA,NA,0,5,5,5,19,95
+33350,15126,PHILLIPS RD SE,Local Access,1,662,Rural,662,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,201,5,5,NA,3,NA,NA,5,5,10,10,201,2010
+33350,15126,PHILLIPS RD SE,Local Access,1,662,Rural,662,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,54,5,5,NA,3,NA,NA,5,5,10,10,54,540
+33350,15126,PHILLIPS RD SE,Local Access,1,662,Rural,662,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,92,5,5,NA,3,NA,NA,5,5,10,10,92,920
+33350,15126,PHILLIPS RD SE,Local Access,1,662,Rural,662,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,20,NA,5,NA,3,NA,NA,5,0,5,5,20,100
+33232,12946,SE GREENRIDGE CT,Local Access,1,116,Rural,116,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,35,2,2,NA,3,NA,NA,1,1,2,2,35,70
+33210,13104,SPRING CREEK RD SE,Local Access,1,2729,Rural,2729,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,54,2,2,NA,3,NA,NA,1,1,2,2,54,108
+33244,7271,SE PUFFIN LN,Local Access,1,453,Rural,453,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,137,1,1,NA,3,NA,NA,1,1,2,2,137,274
+33241,1209,SE PARAKEET LN,Local Access,1,450,Rural,450,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,133,2,2,NA,3,NA,NA,1,1,2,2,133,266
+33241,1209,SE PARAKEET LN,Local Access,1,450,Rural,450,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,103,2,NA,NA,3,NA,NA,0,1,1,1,103,103
+33350,3079,PHILLIPS RD SE,Local Access,1,260,Rural,260,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,52,3,3,NA,3,NA,NA,5,5,10,10,52,520
+33350,3079,PHILLIPS RD SE,Local Access,1,260,Rural,260,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,79,5,5,NA,3,NA,NA,5,5,10,10,79,790
+33350,8466,PHILLIPS RD SE,Local Access,1,2322,Rural,2322,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,443,3,3,NA,3,NA,NA,5,5,10,10,443,4430
+33350,8466,PHILLIPS RD SE,Local Access,1,2322,Rural,2322,15,Mullenix Ridge Elementary,2,Mullenix Ridge Elementary,47,5,5,NA,3,NA,NA,5,5,10,10,47,470

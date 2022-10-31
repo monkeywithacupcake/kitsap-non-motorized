@@ -1,0 +1,12 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+70200,2902,NE LAURA LOOP,Local Access,1,444,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,444,0
+70200,633,NE LAURA LOOP,Local Access,1,1541,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1541,0
+70200,13495,NE LAURA LOOP,Local Access,1,1348,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1348,0
+70310,12517,SUQUAMISH WAY NE,Major Collector,1,1345,Rural,1345,15,Hwy. 305 & Suquamish Way,2,Hwy. 305 & Suquamish Way,265,5,5,NA,6,NA,NA,3,3,6,6,265,1590
+70230,141,ARROWHEAD PL NE,Local Access,1,1321,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1321,0
+70310,11911,SUQUAMISH WAY NE,Major Collector,1,1921,Rural,1921,15,Hwy. 305 & Suquamish Way,2,Hwy. 305 & Suquamish Way,439,5,NA,NA,6,NA,NA,0,3,3,3,439,1317
+70310,11911,SUQUAMISH WAY NE,Major Collector,1,1921,Rural,1921,15,Hwy. 305 & Suquamish Way,2,Hwy. 305 & Suquamish Way,247,5,NA,NA,6,NA,NA,0,3,3,3,247,741
+70310,11911,SUQUAMISH WAY NE,Major Collector,1,1921,Rural,1921,15,Hwy. 305 & Suquamish Way,2,Hwy. 305 & Suquamish Way,248,NA,5,NA,6,NA,NA,3,0,3,3,248,744
+70310,11911,SUQUAMISH WAY NE,Major Collector,1,1921,Rural,1921,15,Hwy. 305 & Suquamish Way,2,Hwy. 305 & Suquamish Way,442,NA,5,NA,6,NA,NA,3,0,3,3,442,1326
+70050,2888,SANDY HOOK RD NE,Local Access,1,343,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,343,0
+70050,11433,SANDY HOOK RD NE,Local Access,1,2460,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,2460,0

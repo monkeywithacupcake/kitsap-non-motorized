@@ -1,0 +1,179 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,sidewalk_left,sidewalk_right,shoulder_left,shoulder_right,standard_sidewalk,standard_shoulder,score_left,score_right,score,the_score,the_length,w_score
+500,10854,OLD MAN STATE PARK WAY,Local Access,1,180,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,180,0
+72380,6967,NE PEAR ST,Local Access,1,264,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,264,0
+72380,15623,NE PEAR ST,Local Access,1,165,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,165,0
+7014,11366,4TH AVE NE,Local Access,1,255,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,255,0
+7007,11204,IRWIN AVE NE,Local Access,1,1097,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1097,0
+71991,417,DIVISION AVE NE,Local Access,1,404,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,404,0
+73240,8886,NE FERN ST,Local Access,1,263,Rural,263,15,Suquamish Elementary,2,Suquamish Elementary,79,NA,NA,2,2,NA,3,1,1,2,2,79,158
+71991,14225,DIVISION AVE NE,Minor Arterial,1,24,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,24,0
+74866,1237,NE NEWTON ST,Local Access,1,949,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,949,0
+74866,19381,NE NEWTON ST,Local Access,1,631,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,631,0
+72325,3498,URBAN AVE NE,Local Access,1,192,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,192,0
+73195,4504,NE PEBBLE BEACH DR,Local Access,1,356,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,356,0
+70320,10869,AUGUSTA AVE NE,Minor Arterial,1,1422,Rural,1422,15,Suquamish Elementary,2,Suquamish Elementary,247,NA,NA,NA,2,NA,4,0,1,1,1,247,247
+70320,10869,AUGUSTA AVE NE,Minor Arterial,1,1422,Rural,1422,15,Suquamish Elementary,2,Suquamish Elementary,50,NA,NA,2,2,NA,4,1,1,2,2,50,100
+70320,10869,AUGUSTA AVE NE,Minor Arterial,1,1422,Rural,1422,15,Suquamish Elementary,2,Suquamish Elementary,286,NA,NA,5,5,NA,4,5,5,10,10,286,2860
+70320,10869,AUGUSTA AVE NE,Minor Arterial,1,1422,Rural,1422,15,Suquamish Elementary,2,Suquamish Elementary,248,NA,NA,2,NA,NA,4,1,0,1,1,248,248
+72900,3475,NE CEDAR ST,Local Access,1,298,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,298,0
+72740,388,NE CENTER ST,Local Access,1,621,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,621,0
+72450,9015,BROCKTON AVE NE,Local Access,1,214,Rural,214,15,Suquamish Elementary,2,Suquamish Elementary,65,NA,3,NA,NA,NA,3,0,5,5,5,65,325
+72450,1896,BROCKTON AVE NE,Local Access,1,205,Rural,205,15,Suquamish Elementary,2,Suquamish Elementary,62,NA,3,NA,NA,NA,3,0,5,5,5,62,310
+70370,6320,MILLER BAY RD NE,Minor Arterial,1,969,Rural,969,15,Suquamish Elementary,2,Suquamish Elementary,110,NA,NA,3,3,NA,4,1,1,2,2,110,220
+74670,13169,NE COLUMBIA ST,Minor Arterial,1,661,Rural,661,15,Suquamish Elementary,2,Suquamish Elementary,201,NA,NA,2,2,NA,4,1,1,2,2,201,402
+71991,7986,DIVISION AVE NE,Minor Arterial,1,213,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,213,0
+71991,2684,DIVISION AVE NE,Minor Arterial,1,215,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,215,0
+71991,4787,DIVISION AVE NE,Minor Arterial,1,212,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,212,0
+73190,11491,SOUNDVIEW BLVD NE,Local Access,1,1236,Rural,1236,15,Suquamish Elementary,2,Suquamish Elementary,376,NA,NA,NA,1,NA,3,0,1,1,1,376,376
+73190,16767,SOUNDVIEW BLVD NE,Local Access,1,991,Rural,991,15,Suquamish Elementary,2,Suquamish Elementary,238,NA,NA,NA,1,NA,3,0,1,1,1,238,238
+73190,16767,SOUNDVIEW BLVD NE,Local Access,1,991,Rural,991,15,Suquamish Elementary,2,Suquamish Elementary,242,NA,NA,1,NA,NA,3,1,0,1,1,242,242
+73190,16767,SOUNDVIEW BLVD NE,Local Access,1,991,Rural,991,15,Suquamish Elementary,2,Suquamish Elementary,166,NA,NA,NA,1,NA,3,0,1,1,1,166,166
+71991,3380,DIVISION AVE NE,Minor Arterial,1,218,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,218,0
+72794,11664,NE PARKWAY ST,Local Access,1,82,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,82,0
+73190,15995,SOUNDVIEW BLVD NE,Local Access,1,631,Rural,631,15,Suquamish Elementary,2,Suquamish Elementary,192,NA,NA,1,1,NA,3,1,1,2,2,192,384
+72380,15058,NE PEAR ST,Local Access,1,835,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,835,0
+72200,12269,NE SOUTH ST,Local Access,1,213,Rural,213,15,Suquamish Elementary,2,Suquamish Elementary,54,5,NA,NA,NA,NA,3,5,0,5,5,54,270
+72200,9362,NE SOUTH ST,Local Access,1,118,Rural,118,15,Suquamish Elementary,2,Suquamish Elementary,35,5,NA,NA,NA,NA,3,5,0,5,5,35,175
+72200,4656,NE SOUTH ST,Local Access,1,307,Rural,307,15,Suquamish Elementary,2,Suquamish Elementary,86,5,NA,NA,NA,NA,3,5,0,5,5,86,430
+72200,888,NE SOUTH ST,Local Access,1,336,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,336,0
+72200,5876,NE SOUTH ST,Local Access,1,97,Rural,97,15,Suquamish Elementary,2,Suquamish Elementary,29,5,NA,NA,NA,NA,3,5,0,5,5,29,145
+72200,8820,NE SOUTH ST,Local Access,1,421,Rural,421,15,Suquamish Elementary,2,Suquamish Elementary,128,5,NA,NA,NA,NA,3,5,0,5,5,128,640
+72670,11639,1ST AVE NE,Local Access,1,701,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,701,0
+72540,11289,NE FIR ST,Local Access,1,467,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,467,0
+71991,9746,DIVISION AVE NE,Local Access,1,889,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,889,0
+71991,8396,DIVISION AVE NE,Local Access,1,548,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,548,0
+70320,12617,AUGUSTA AVE NE,Minor Arterial,1,672,Rural,672,15,Suquamish Elementary,2,Suquamish Elementary,204,NA,NA,2,2,NA,4,1,1,2,2,204,408
+72740,10274,NE CENTER ST,Local Access,1,238,Rural,238,15,Suquamish Elementary,2,Suquamish Elementary,72,NA,NA,3,3,NA,3,5,5,10,10,72,720
+72110,10866,ANGELINE AVENUE SOUTH NE,Local Access,1,971,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,971,0
+71991,3004,DIVISION AVE NE,Minor Arterial,1,220,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,220,0
+72040,5899,NE MCKINSTRY ST,Local Access,1,403,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,403,0
+71991,9033,DIVISION AVE NE,Local Access,1,1551,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1551,0
+70310,184,SUQUAMISH WAY NE,Minor Arterial,1,616,Rural,616,15,Suquamish Elementary,2,Suquamish Elementary,50,NA,NA,NA,7,NA,4,0,5,5,5,50,250
+70310,184,SUQUAMISH WAY NE,Minor Arterial,1,616,Rural,616,15,Suquamish Elementary,2,Suquamish Elementary,140,NA,NA,NA,1,NA,4,0,1,1,1,140,140
+70310,184,SUQUAMISH WAY NE,Minor Arterial,1,616,Rural,616,15,Suquamish Elementary,2,Suquamish Elementary,147,NA,NA,NA,5,NA,4,0,5,5,5,147,735
+70310,184,SUQUAMISH WAY NE,Minor Arterial,1,616,Rural,616,15,Suquamish Elementary,2,Suquamish Elementary,6,NA,NA,NA,5,NA,4,0,5,5,5,6,30
+70310,184,SUQUAMISH WAY NE,Minor Arterial,1,616,Rural,616,15,Suquamish Elementary,2,Suquamish Elementary,51,NA,NA,6,5,NA,4,5,5,10,10,51,510
+70310,184,SUQUAMISH WAY NE,Minor Arterial,1,616,Rural,616,15,Suquamish Elementary,2,Suquamish Elementary,100,NA,NA,NA,5,NA,4,0,5,5,5,100,500
+70310,184,SUQUAMISH WAY NE,Minor Arterial,1,616,Rural,616,15,Suquamish Elementary,2,Suquamish Elementary,49,NA,NA,5,NA,NA,4,5,0,5,5,49,245
+70310,184,SUQUAMISH WAY NE,Minor Arterial,1,616,Rural,616,15,Suquamish Elementary,2,Suquamish Elementary,5,NA,NA,5,NA,NA,4,5,0,5,5,5,25
+70310,184,SUQUAMISH WAY NE,Minor Arterial,1,616,Rural,616,15,Suquamish Elementary,2,Suquamish Elementary,141,NA,NA,2,NA,NA,4,1,0,1,1,141,141
+70310,184,SUQUAMISH WAY NE,Minor Arterial,1,616,Rural,616,15,Suquamish Elementary,2,Suquamish Elementary,99,NA,NA,5,NA,NA,4,5,0,5,5,99,495
+70310,184,SUQUAMISH WAY NE,Minor Arterial,1,616,Rural,616,15,Suquamish Elementary,2,Suquamish Elementary,148,NA,NA,5,NA,NA,4,5,0,5,5,148,740
+70310,4576,SUQUAMISH WAY NE,Major Collector,1,1814,Rural,1814,15,Suquamish Elementary,2,Suquamish Elementary,1,NA,NA,NA,5,NA,6,0,3,3,3,1,3
+70310,4576,SUQUAMISH WAY NE,Major Collector,1,1814,Rural,1814,15,Suquamish Elementary,2,Suquamish Elementary,136,NA,NA,NA,5,NA,6,0,3,3,3,136,408
+70310,4576,SUQUAMISH WAY NE,Major Collector,1,1814,Rural,1814,15,Suquamish Elementary,2,Suquamish Elementary,95,NA,NA,5,5,NA,6,3,3,6,6,95,570
+70310,4576,SUQUAMISH WAY NE,Major Collector,1,1814,Rural,1814,15,Suquamish Elementary,2,Suquamish Elementary,471,NA,NA,NA,7,NA,6,0,5,5,5,471,2355
+70310,4576,SUQUAMISH WAY NE,Major Collector,1,1814,Rural,1814,15,Suquamish Elementary,2,Suquamish Elementary,51,NA,NA,NA,5,NA,6,0,3,3,3,51,153
+70310,4576,SUQUAMISH WAY NE,Major Collector,1,1814,Rural,1814,15,Suquamish Elementary,2,Suquamish Elementary,469,NA,NA,6,NA,NA,6,5,0,5,5,469,2345
+70310,4576,SUQUAMISH WAY NE,Major Collector,1,1814,Rural,1814,15,Suquamish Elementary,2,Suquamish Elementary,134,NA,NA,5,NA,NA,6,3,0,3,3,134,402
+70310,4576,SUQUAMISH WAY NE,Major Collector,1,1814,Rural,1814,15,Suquamish Elementary,2,Suquamish Elementary,49,NA,NA,5,NA,NA,6,3,0,3,3,49,147
+70310,4576,SUQUAMISH WAY NE,Major Collector,1,1814,Rural,1814,15,Suquamish Elementary,2,Suquamish Elementary,0,NA,NA,5,NA,NA,6,3,0,3,3,0,0
+70310,13151,SUQUAMISH WAY NE,Minor Arterial,1,747,Rural,747,15,Suquamish Elementary,2,Suquamish Elementary,227,NA,NA,6,7,NA,4,5,5,10,10,227,2270
+70310,13151,SUQUAMISH WAY NE,Minor Arterial,1,747,Rural,747,15,Suquamish Elementary,2,Suquamish Elementary,49,NA,NA,NA,1,NA,4,0,1,1,1,49,49
+70310,13151,SUQUAMISH WAY NE,Minor Arterial,1,747,Rural,747,15,Suquamish Elementary,2,Suquamish Elementary,51,NA,NA,2,NA,NA,4,1,0,1,1,51,51
+72200,9962,NE SOUTH ST,Local Access,1,144,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,144,0
+72740,1455,NE CENTER ST,Local Access,1,251,Rural,251,15,Suquamish Elementary,2,Suquamish Elementary,76,NA,NA,3,3,NA,3,5,5,10,10,76,760
+72740,8320,NE CENTER ST,Local Access,1,224,Rural,224,15,Suquamish Elementary,2,Suquamish Elementary,68,NA,NA,3,3,NA,3,5,5,10,10,68,680
+71991,13201,DIVISION AVE NE,Minor Arterial,1,208,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,208,0
+71991,5850,DIVISION AVE NE,Minor Arterial,1,219,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,219,0
+71991,3043,DIVISION AVE NE,Minor Arterial,1,264,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,264,0
+70310,996,SUQUAMISH WAY NE,Minor Arterial,1,150,Rural,150,15,Suquamish Elementary,2,Suquamish Elementary,45,NA,NA,6,7,NA,4,5,5,10,10,45,450
+72110,6552,ANGELINE AVENUE SOUTH NE,Local Access,1,1285,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1285,0
+70320,1625,AUGUSTA AVE NE,Minor Arterial,1,680,Rural,680,15,Suquamish Elementary,2,Suquamish Elementary,207,NA,NA,2,2,NA,4,1,1,2,2,207,414
+70320,1625,AUGUSTA AVE NE,Minor Arterial,1,680,Rural,680,15,Suquamish Elementary,2,Suquamish Elementary,50,NA,NA,2,2,NA,4,1,1,2,2,50,100
+70320,64,AUGUSTA AVE NE,Minor Arterial,1,632,Rural,632,15,Suquamish Elementary,2,Suquamish Elementary,192,NA,NA,2,2,NA,4,1,1,2,2,192,384
+72830,6739,ANGELINE AVE NE,Local Access,1,625,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,625,0
+72790,284,HARRIS AVE NE,Local Access,1,525,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,525,0
+72450,5846,BROCKTON AVE NE,Local Access,1,225,Rural,225,15,Suquamish Elementary,2,Suquamish Elementary,56,NA,3,NA,NA,NA,3,0,5,5,5,56,280
+72830,6354,ANGELINE AVE NE,Local Access,1,516,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,516,0
+72740,7437,NE CENTER ST,Local Access,1,667,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,667,0
+72380,5714,NE PEAR ST,Local Access,1,654,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,654,0
+74840,1993,NE PLUM ST,Local Access,1,610,Rural,610,15,Suquamish Elementary,2,Suquamish Elementary,185,NA,NA,2,2,NA,3,1,1,2,2,185,370
+72960,3206,NE PINE ST,Local Access,1,1063,Rural,1063,15,Suquamish Elementary,2,Suquamish Elementary,317,NA,NA,NA,2,NA,3,0,1,1,1,317,317
+72960,9726,NE PINE ST,Local Access,1,657,Rural,657,15,Suquamish Elementary,2,Suquamish Elementary,199,NA,NA,NA,2,NA,3,0,1,1,1,199,199
+72960,9726,NE PINE ST,Local Access,1,657,Rural,657,15,Suquamish Elementary,2,Suquamish Elementary,49,NA,NA,NA,2,NA,3,0,1,1,1,49,49
+72325,10369,URBAN AVE NE,Local Access,1,441,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,441,0
+71991,935,DIVISION AVE NE,Local Access,1,215,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,215,0
+72830,7029,ANGELINE AVE NE,Local Access,1,375,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,375,0
+72830,3892,ANGELINE AVE NE,Local Access,1,652,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,652,0
+72610,2007,5TH AVE NE,Local Access,1,638,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,638,0
+72610,12886,5TH AVE NE,Local Access,1,697,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,697,0
+72450,2092,BROCKTON AVE NE,Local Access,1,194,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,194,0
+70320,13275,AUGUSTA AVE NE,Minor Arterial,1,632,Rural,632,15,Suquamish Elementary,2,Suquamish Elementary,50,NA,NA,2,2,NA,4,1,1,2,2,50,100
+70320,13275,AUGUSTA AVE NE,Minor Arterial,1,632,Rural,632,15,Suquamish Elementary,2,Suquamish Elementary,192,NA,NA,2,2,NA,4,1,1,2,2,192,384
+71991,3938,DIVISION AVE NE,Local Access,1,219,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,219,0
+73189,6980,2ND AVE NE,Local Access,1,645,Rural,645,15,Suquamish Elementary,2,Suquamish Elementary,196,NA,NA,1,1,NA,3,1,1,2,2,196,392
+72450,9042,BROCKTON AVE NE,Local Access,1,220,Rural,220,15,Suquamish Elementary,2,Suquamish Elementary,67,NA,3,NA,NA,NA,3,0,5,5,5,67,335
+71991,861,DIVISION AVE NE,Local Access,1,222,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,222,0
+72320,7738,NE GENEVA ST,Local Access,1,153,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,153,0
+72450,11684,BROCKTON AVE NE,Local Access,1,215,Rural,215,15,Suquamish Elementary,2,Suquamish Elementary,65,NA,3,NA,NA,NA,3,0,5,5,5,65,325
+70370,8702,MILLER BAY RD NE,Minor Arterial,1,561,Rural,561,15,Suquamish Elementary,2,Suquamish Elementary,62,NA,NA,3,3,NA,4,1,1,2,2,62,124
+74872,14244,NE MIDDLE ST,Local Access,1,282,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,282,0
+71990,13125,PARK BLVD NE,Local Access,1,1316,Rural,1316,15,Suquamish Elementary,2,Suquamish Elementary,78,5,NA,NA,NA,NA,3,5,0,5,5,78,390
+72450,8272,BROCKTON AVE NE,Local Access,1,215,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,215,0
+72320,7836,NE GENEVA ST,Local Access,1,231,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,231,0
+72320,11194,NE GENEVA ST,Local Access,1,230,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,230,0
+72450,6278,BROCKTON AVE NE,Local Access,1,226,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,226,0
+72540,9648,NE FIR ST,Local Access,1,661,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,661,0
+72320,5050,NE GENEVA ST,Local Access,1,81,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,81,0
+72450,3467,BROCKTON AVE NE,Local Access,1,220,Rural,220,15,Suquamish Elementary,2,Suquamish Elementary,67,NA,3,NA,NA,NA,3,0,5,5,5,67,335
+72450,7151,BROCKTON AVE NE,Local Access,1,219,Rural,219,15,Suquamish Elementary,2,Suquamish Elementary,66,NA,3,NA,NA,NA,3,0,5,5,5,66,330
+72450,11692,BROCKTON AVE NE,Local Access,1,430,Rural,430,15,Suquamish Elementary,2,Suquamish Elementary,131,NA,3,NA,NA,NA,3,0,5,5,5,131,655
+71991,11773,DIVISION AVE NE,Local Access,1,221,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,221,0
+72320,3883,NE GENEVA ST,Local Access,1,660,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,660,0
+72320,9586,NE GENEVA ST,Local Access,1,667,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,667,0
+72320,12897,NE GENEVA ST,Local Access,1,241,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,241,0
+72320,9788,NE GENEVA ST,Local Access,1,264,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,264,0
+72320,12750,NE GENEVA ST,Local Access,1,235,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,235,0
+73340,12689,NE JAMES ST,Local Access,1,237,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,237,0
+72320,6274,NE GENEVA ST,Local Access,1,245,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,245,0
+73290,1513,NE UNION ST,Local Access,1,231,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,231,0
+74864,8775,NE NELSON ST,Local Access,1,628,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,628,0
+73295,8813,NE WINFRED ST,Local Access,1,220,Rural,220,15,Suquamish Elementary,2,Suquamish Elementary,67,NA,NA,1,2,NA,3,1,1,2,2,67,134
+73295,614,NE WINFRED ST,Local Access,1,257,Rural,257,15,Suquamish Elementary,2,Suquamish Elementary,78,NA,NA,1,2,NA,3,1,1,2,2,78,156
+73340,11129,NE JAMES ST,Local Access,1,243,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,243,0
+72790,8066,HARRIS AVE NE,Local Access,1,632,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,632,0
+72790,8717,HARRIS AVE NE,Local Access,1,644,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,644,0
+72790,1935,HARRIS AVE NE,Local Access,1,157,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,157,0
+72790,4476,HARRIS AVE NE,Local Access,1,513,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,513,0
+72790,5381,HARRIS AVE NE,Local Access,1,365,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,365,0
+73190,1593,SOUNDVIEW BLVD NE,Local Access,1,154,Rural,154,15,Suquamish Elementary,2,Suquamish Elementary,47,NA,NA,1,1,NA,3,1,1,2,2,47,94
+72830,8985,ANGELINE AVE NE,Local Access,1,307,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,307,0
+72450,12417,BROCKTON AVE NE,Local Access,1,213,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,213,0
+72740,11853,NE CENTER ST,Local Access,1,236,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,236,0
+72325,13093,URBAN AVE NE,Local Access,1,221,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,221,0
+72740,10462,NE CENTER ST,Local Access,1,241,Rural,241,15,Suquamish Elementary,2,Suquamish Elementary,49,NA,NA,NA,3,NA,3,0,5,5,5,49,245
+72740,10462,NE CENTER ST,Local Access,1,241,Rural,241,15,Suquamish Elementary,2,Suquamish Elementary,51,NA,NA,3,NA,NA,3,5,0,5,5,51,255
+72900,8649,NE CEDAR ST,Local Access,1,657,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,657,0
+73240,8332,NE FERN ST,Local Access,1,659,Rural,659,15,Suquamish Elementary,2,Suquamish Elementary,200,NA,NA,2,2,NA,3,1,1,2,2,200,400
+72450,8401,BROCKTON AVE NE,Local Access,1,215,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,215,0
+72794,8150,NE PARKWAY ST,Local Access,1,183,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,183,0
+73070,7718,4TH AVE NE,Local Access,1,638,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,638,0
+73130,3391,3RD AVE NE,Local Access,1,637,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,637,0
+72740,7407,NE CENTER ST,Local Access,1,653,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,653,0
+72325,8277,URBAN AVE NE,Local Access,1,211,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,211,0
+72740,11529,NE CENTER ST,Local Access,1,661,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,661,0
+72740,12966,NE CENTER ST,Local Access,1,245,Rural,245,15,Suquamish Elementary,2,Suquamish Elementary,50,NA,NA,NA,3,NA,3,0,5,5,5,50,250
+72740,12966,NE CENTER ST,Local Access,1,245,Rural,245,15,Suquamish Elementary,2,Suquamish Elementary,52,NA,NA,3,NA,NA,3,5,0,5,5,52,260
+72740,11314,NE CENTER ST,Local Access,1,122,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,122,0
+74800,2939,NE MADISON ST,Local Access,1,659,Rural,659,15,Suquamish Elementary,2,Suquamish Elementary,200,NA,NA,2,2,NA,3,1,1,2,2,200,400
+74800,8705,NE MADISON ST,Local Access,1,598,Rural,598,15,Suquamish Elementary,2,Suquamish Elementary,182,NA,NA,2,2,NA,3,1,1,2,2,182,364
+72740,2988,NE CENTER ST,Local Access,1,244,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,244,0
+74650,20,NE PROSPECT ST,Local Access,1,327,Rural,327,15,Suquamish Elementary,2,Suquamish Elementary,99,NA,NA,2,2,NA,3,1,1,2,2,99,198
+74650,20,NE PROSPECT ST,Local Access,1,327,Rural,327,15,Suquamish Elementary,2,Suquamish Elementary,26,NA,NA,NA,2,NA,3,0,1,1,1,26,26
+74650,20,NE PROSPECT ST,Local Access,1,327,Rural,327,15,Suquamish Elementary,2,Suquamish Elementary,27,NA,NA,2,NA,NA,3,1,0,1,1,27,27
+74650,10566,NE PROSPECT ST,Local Access,1,629,Rural,629,15,Suquamish Elementary,2,Suquamish Elementary,105,NA,NA,2,2,NA,3,1,1,2,2,105,210
+74840,7099,NE PLUM ST,Local Access,1,660,Rural,660,15,Suquamish Elementary,2,Suquamish Elementary,200,NA,NA,2,2,NA,3,1,1,2,2,200,400
+72960,923,NE PINE ST,Local Access,1,662,Rural,662,15,Suquamish Elementary,2,Suquamish Elementary,50,NA,NA,NA,2,NA,3,0,1,1,1,50,50
+72960,923,NE PINE ST,Local Access,1,662,Rural,662,15,Suquamish Elementary,2,Suquamish Elementary,201,NA,NA,NA,2,NA,3,0,1,1,1,201,201
+74820,2057,NE MAPLE ST,Local Access,1,609,Rural,609,15,Suquamish Elementary,2,Suquamish Elementary,185,NA,NA,2,2,NA,3,1,1,2,2,185,370
+74820,10455,NE MAPLE ST,Local Access,1,659,Rural,659,15,Suquamish Elementary,2,Suquamish Elementary,200,NA,NA,2,2,NA,3,1,1,2,2,200,400
+74862,9071,NE BELL ST,Local Access,1,633,Rural,633,15,Suquamish Elementary,2,Suquamish Elementary,192,NA,NA,2,2,NA,3,1,1,2,2,192,384
+74670,6362,NE COLUMBIA ST,Major Collector,1,692,Rural,692,15,Suquamish Elementary,2,Suquamish Elementary,50,NA,NA,2,2,NA,6,1,1,2,2,50,100
+74670,8362,COLUMBIA ST NE,Major Collector,1,2931,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,2931,0
+74872,5880,NE MIDDLE ST,Local Access,1,372,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,372,0
+72450,1734,BROCKTON AVE NE,Local Access,1,1074,Rural,1074,15,Suquamish Elementary,2,Suquamish Elementary,327,NA,3,NA,NA,NA,3,0,5,5,5,327,1635
+71991,9484,DIVISION AVE NE,Minor Arterial,1,234,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,234,0
+71990,1889,PARK BLVD NE,Local Access,1,1450,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1450,0
+500,3861,NORTH URBAN AVE NE,Local Access,1,710,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,710,0
+71991,2959,DIVISION AVE NE,Local Access,1,767,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,767,0

@@ -1,0 +1,37 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+70370,9149,MILLER BAY RD NE,Major Collector,1,290,Rural,290,15,Miller Bay & Indianola,2,Miller Bay & Indianola,88,8,8,NA,6,NA,NA,5,5,10,10,88,880
+70370,9149,MILLER BAY RD NE,Major Collector,1,290,Rural,290,15,Miller Bay & Indianola,2,Miller Bay & Indianola,64,8,8,NA,6,NA,NA,5,5,10,10,64,640
+70370,9149,MILLER BAY RD NE,Major Collector,1,290,Rural,290,15,Miller Bay & Indianola,2,Miller Bay & Indianola,50,8,8,NA,6,NA,NA,5,5,10,10,50,500
+70370,9149,MILLER BAY RD NE,Major Collector,1,290,Rural,290,15,Miller Bay & Indianola,2,Miller Bay & Indianola,3,8,NA,NA,6,NA,NA,0,5,5,5,3,15
+70370,9149,MILLER BAY RD NE,Major Collector,1,290,Rural,290,15,Miller Bay & Indianola,2,Miller Bay & Indianola,1,NA,8,NA,6,NA,NA,5,0,5,5,1,5
+70370,10986,MILLER BAY RD NE,Major Collector,1,4114,Rural,4114,15,Miller Bay & Indianola,2,Miller Bay & Indianola,205,3,3,NA,6,NA,NA,1,1,2,2,205,410
+70370,10986,MILLER BAY RD NE,Major Collector,1,4114,Rural,4114,15,Miller Bay & Indianola,2,Miller Bay & Indianola,203,3,NA,NA,6,NA,NA,0,1,1,1,203,203
+70370,10986,MILLER BAY RD NE,Major Collector,1,4114,Rural,4114,15,Miller Bay & Indianola,2,Miller Bay & Indianola,163,3,3,NA,6,NA,NA,1,1,2,2,163,326
+70370,10986,MILLER BAY RD NE,Major Collector,1,4114,Rural,4114,15,Miller Bay & Indianola,2,Miller Bay & Indianola,207,NA,3,NA,6,NA,NA,1,0,1,1,207,207
+70370,10986,MILLER BAY RD NE,Major Collector,1,4114,Rural,4114,15,Miller Bay & Indianola,2,Miller Bay & Indianola,190,3,3,NA,6,NA,NA,1,1,2,2,190,380
+70370,10986,MILLER BAY RD NE,Major Collector,1,4114,Rural,4114,15,Miller Bay & Indianola,2,Miller Bay & Indianola,802,3,3,NA,6,NA,NA,1,1,2,2,802,1604
+70370,10986,MILLER BAY RD NE,Major Collector,1,4114,Rural,4114,15,Miller Bay & Indianola,2,Miller Bay & Indianola,191,3,3,NA,6,NA,NA,1,1,2,2,191,382
+70370,2196,MILLER BAY RD NE,Major Collector,1,815,Rural,815,15,Miller Bay & Indianola,2,Miller Bay & Indianola,50,8,8,NA,6,NA,NA,5,5,10,10,50,500
+70370,2196,MILLER BAY RD NE,Major Collector,1,815,Rural,815,15,Miller Bay & Indianola,2,Miller Bay & Indianola,130,8,8,NA,6,NA,NA,5,5,10,10,130,1300
+70370,2196,MILLER BAY RD NE,Major Collector,1,815,Rural,815,15,Miller Bay & Indianola,2,Miller Bay & Indianola,5,8,8,NA,6,NA,NA,5,5,10,10,5,50
+70370,2196,MILLER BAY RD NE,Major Collector,1,815,Rural,815,15,Miller Bay & Indianola,2,Miller Bay & Indianola,218,8,8,NA,6,NA,NA,5,5,10,10,218,2180
+70370,2749,MILLER BAY RD NE,Major Collector,1,2128,Rural,2128,15,Miller Bay & Indianola,2,Miller Bay & Indianola,94,8,NA,NA,6,NA,NA,0,5,5,5,94,470
+70370,2749,MILLER BAY RD NE,Major Collector,1,2128,Rural,2128,15,Miller Bay & Indianola,2,Miller Bay & Indianola,49,8,NA,NA,6,NA,NA,0,5,5,5,49,245
+70370,2749,MILLER BAY RD NE,Major Collector,1,2128,Rural,2128,15,Miller Bay & Indianola,2,Miller Bay & Indianola,95,NA,8,NA,6,NA,NA,5,0,5,5,95,475
+70370,2749,MILLER BAY RD NE,Major Collector,1,2128,Rural,2128,15,Miller Bay & Indianola,2,Miller Bay & Indianola,207,8,8,NA,6,NA,NA,5,5,10,10,207,2070
+70370,2749,MILLER BAY RD NE,Major Collector,1,2128,Rural,2128,15,Miller Bay & Indianola,2,Miller Bay & Indianola,50,NA,8,NA,6,NA,NA,5,0,5,5,50,250
+70370,2749,MILLER BAY RD NE,Major Collector,1,2128,Rural,2128,15,Miller Bay & Indianola,2,Miller Bay & Indianola,545,3,3,NA,6,NA,NA,1,1,2,2,545,1090
+70370,535,MILLER BAY RD NE,Major Collector,1,408,Rural,408,15,Miller Bay & Indianola,2,Miller Bay & Indianola,37,8,8,NA,6,NA,NA,5,5,10,10,37,370
+70370,535,MILLER BAY RD NE,Major Collector,1,408,Rural,408,15,Miller Bay & Indianola,2,Miller Bay & Indianola,124,8,8,NA,6,NA,NA,5,5,10,10,124,1240
+70370,14256,MILLER BAY RD NE,Major Collector,1,2900,Rural,2900,15,Miller Bay & Indianola,2,Miller Bay & Indianola,140,3,3,NA,6,NA,NA,1,1,2,2,140,280
+74597,1400,NE ORSETH RD,Local Access,1,1013,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1013,0
+74660,12065,NE GUNDERSON RD,Major Collector,1,3118,Rural,3118,15,Miller Bay & Indianola,2,Miller Bay & Indianola,90,4,4,NA,6,NA,NA,3,3,6,6,90,540
+74660,12065,NE GUNDERSON RD,Major Collector,1,3118,Rural,3118,15,Miller Bay & Indianola,2,Miller Bay & Indianola,64,4,NA,NA,6,NA,NA,0,3,3,3,64,192
+74660,12065,NE GUNDERSON RD,Major Collector,1,3118,Rural,3118,15,Miller Bay & Indianola,2,Miller Bay & Indianola,63,NA,7,NA,6,NA,NA,5,0,5,5,63,315
+80415,9804,INDIANOLA RD NE,Minor Collector,1,3903,Rural,3903,15,Miller Bay & Indianola,2,Miller Bay & Indianola,133,NA,4,NA,4,NA,NA,5,0,5,5,133,665
+80415,9804,INDIANOLA RD NE,Minor Collector,1,3903,Rural,3903,15,Miller Bay & Indianola,2,Miller Bay & Indianola,575,4,4,NA,4,NA,NA,5,5,10,10,575,5750
+80415,9804,INDIANOLA RD NE,Minor Collector,1,3903,Rural,3903,15,Miller Bay & Indianola,2,Miller Bay & Indianola,132,4,NA,NA,4,NA,NA,0,5,5,5,132,660
+70370,5561,MILLER BAY RD NE,Major Collector,1,4043,Rural,4043,15,Miller Bay & Indianola,2,Miller Bay & Indianola,50,8,8,NA,6,NA,NA,5,5,10,10,50,500
+70370,5561,MILLER BAY RD NE,Major Collector,1,4043,Rural,4043,15,Miller Bay & Indianola,2,Miller Bay & Indianola,99,8,NA,NA,6,NA,NA,0,5,5,5,99,495
+70370,5561,MILLER BAY RD NE,Major Collector,1,4043,Rural,4043,15,Miller Bay & Indianola,2,Miller Bay & Indianola,128,8,8,NA,6,NA,NA,5,5,10,10,128,1280
+70370,5561,MILLER BAY RD NE,Major Collector,1,4043,Rural,4043,15,Miller Bay & Indianola,2,Miller Bay & Indianola,98,NA,8,NA,6,NA,NA,5,0,5,5,98,490

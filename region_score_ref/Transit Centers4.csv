@@ -1,0 +1,33 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+41409,10327,OLYMPIAD DR SE,Local Access,1,426,Rural,426,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,95,1,1,NA,3,NA,NA,1,1,2,2,95,190
+45310,8795,NOKOMIS RD SE,Local Access,1,2135,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,2135,0
+700,9559,SOUTHWORTH FERRY,Minor Arterial,1,803,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,803,0
+4032,4496,SE GLENDALE AVE,Local Access,1,384,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,384,0
+4040,5190,CHERRY PL SE,Local Access,1,159,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,159,0
+41409,6966,OLYMPIAD DR SE,Local Access,1,361,Rural,361,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,110,1,1,NA,3,NA,NA,1,1,2,2,110,220
+45580,1321,SE BEAN RD,Local Access,1,566,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,566,0
+45560,1206,SE SEBRING RD,Local Access,1,722,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,722,0
+45540,11049,SE TOLA RD,Local Access,1,519,Rural,519,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,157,1,1,NA,3,NA,NA,1,1,2,2,157,314
+41409,10675,OLYMPIAD DR SE,Local Access,1,471,Rural,471,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,143,1,1,NA,3,NA,NA,1,1,2,2,143,286
+41409,1273,OLYMPIAD DR SE,Local Access,1,280,Rural,280,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,85,1,1,NA,3,NA,NA,1,1,2,2,85,170
+45471,12090,CHERRY ST SE,Local Access,1,940,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,940,0
+45471,1058,SE CHERRY ST,Local Access,1,1171,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1171,0
+45600,813,SE RAE CT,Local Access,1,96,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,96,0
+45420,7403,SE FLINT ST,Local Access,1,367,Rural,367,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,111,1,1,NA,3,NA,NA,1,1,2,2,111,222
+38030,10664,RIDGE CREST WAY SE,Local Access,1,1467,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1467,0
+38030,11912,RIDGE CREST WAY SE,Local Access,1,453,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,453,0
+45390,4444,OLYMPIC CT SE,Local Access,1,653,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,653,0
+41409,6752,OLYMPIAD DR SE,Local Access,1,308,Rural,308,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,93,1,1,NA,3,NA,NA,1,1,2,2,93,186
+45390,12893,OLYMPIC CT SE,Local Access,1,952,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,952,0
+41409,1264,OLYMPIAD DR SE,Local Access,1,87,Rural,87,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,26,1,1,NA,3,NA,NA,1,1,2,2,26,52
+38010,1900,SE SOUTHWORTH DR,Minor Arterial,1,103,Rural,103,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,31,5,5,NA,4,NA,NA,5,5,10,10,31,310
+45110,10590,WILSON CREEK RD SE,Local Access,1,1326,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1326,0
+38010,5630,SE SOUTHWORTH DR,Minor Arterial,1,951,Rural,951,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,289,5,5,NA,4,NA,NA,5,5,10,10,289,2890
+38010,16511,SE SOUTHWORTH DR,Minor Arterial,1,344,Rural,344,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,104,5,5,NA,4,NA,NA,5,5,10,10,104,1040
+38030,15119,RIDGE CREST WAY SE,Local Access,1,210,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,210,0
+38070,1332,VESPER PL SE,Local Access,1,405,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,405,0
+38010,7160,SE SOUTHWORTH DR,Minor Arterial,1,1018,Rural,1018,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,309,5,5,NA,4,NA,NA,5,5,10,10,309,3090
+38010,7160,SE SOUTHWORTH DR,Minor Arterial,1,1018,Rural,1018,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,52,5,5,NA,4,NA,NA,5,5,10,10,52,520
+38010,6993,SE SOUTHWORTH DR,Minor Arterial,1,324,Rural,324,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,98,5,5,NA,4,NA,NA,5,5,10,10,98,980
+38010,6394,SE SOUTHWORTH DR,Minor Arterial,1,389,Rural,389,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,118,5,5,NA,4,NA,NA,5,5,10,10,118,1180
+38010,9891,SE SOUTHWORTH DR,Minor Arterial,1,651,Rural,651,15,Southworth Ferry Terminal,2,Southworth Ferry Terminal,28,5,5,NA,4,NA,NA,5,5,10,10,28,280

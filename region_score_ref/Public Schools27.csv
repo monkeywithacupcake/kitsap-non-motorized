@@ -1,0 +1,29 @@
+RD_LOG_ID_R,SEGMENT_ID_R,FULL_NAME_R,road_class,RUCODE,LENGTH,setting,LENGTH_R,time,id,OBJECTID,tomatch,distance,shoulder_right,shoulder_left,standard_sidewalk,standard_shoulder,sidewalk_left,sidewalk_right,score_left,score_right,score,the_score,the_length,w_score
+23760,4882,SE BURLEY OLALLA RD,Major Collector,1,1332,Rural,1332,15,Olalla Elementary,2,Olalla Elementary,49,5,NA,NA,6,NA,NA,0,3,3,3,49,147
+23760,4882,SE BURLEY OLALLA RD,Major Collector,1,1332,Rural,1332,15,Olalla Elementary,2,Olalla Elementary,51,NA,5,NA,6,NA,NA,3,0,3,3,51,153
+23760,4882,SE BURLEY OLALLA RD,Major Collector,1,1332,Rural,1332,15,Olalla Elementary,2,Olalla Elementary,404,5,5,NA,6,NA,NA,3,3,6,6,404,2424
+23760,4696,SE BURLEY OLALLA RD,Major Collector,1,4173,Rural,4173,15,Olalla Elementary,2,Olalla Elementary,425,5,5,NA,6,NA,NA,3,3,6,6,425,2550
+23760,4696,SE BURLEY OLALLA RD,Major Collector,1,4173,Rural,4173,15,Olalla Elementary,2,Olalla Elementary,52,5,5,NA,6,NA,NA,3,3,6,6,52,312
+30910,8913,WALLACE RD SE,Major Collector,1,403,Rural,403,15,Olalla Elementary,2,Olalla Elementary,49,1,NA,NA,6,NA,NA,0,1,1,1,49,49
+30910,8913,WALLACE RD SE,Major Collector,1,403,Rural,403,15,Olalla Elementary,2,Olalla Elementary,47,NA,1,NA,6,NA,NA,1,0,1,1,47,47
+30910,8913,WALLACE RD SE,Major Collector,1,403,Rural,403,15,Olalla Elementary,2,Olalla Elementary,122,1,1,NA,6,NA,NA,1,1,2,2,122,244
+31350,7280,FORSMAN RD SE,Local Access,1,3052,Rural,3052,15,Olalla Elementary,2,Olalla Elementary,817,4,4,NA,3,NA,NA,5,5,10,10,817,8170
+32170,1934,ORCHARD AVE SE,Local Access,1,3833,Rural,3833,15,Olalla Elementary,2,Olalla Elementary,147,2,2,NA,3,NA,NA,1,1,2,2,147,294
+30519,8202,OLALLA VALLEY RD SE,Major Collector,1,561,Rural,561,15,Olalla Elementary,2,Olalla Elementary,170,4,4,NA,6,NA,NA,3,3,6,6,170,1020
+30519,5676,OLALLA VALLEY RD SE,Major Collector,1,5305,Rural,5305,15,Olalla Elementary,2,Olalla Elementary,366,4,4,NA,6,NA,NA,3,3,6,6,366,2196
+30519,5676,OLALLA VALLEY RD SE,Major Collector,1,5305,Rural,5305,15,Olalla Elementary,2,Olalla Elementary,736,4,4,NA,6,NA,NA,3,3,6,6,736,4416
+30519,5676,OLALLA VALLEY RD SE,Major Collector,1,5305,Rural,5305,15,Olalla Elementary,2,Olalla Elementary,176,4,NA,NA,6,NA,NA,0,3,3,3,176,528
+30519,5676,OLALLA VALLEY RD SE,Major Collector,1,5305,Rural,5305,15,Olalla Elementary,2,Olalla Elementary,175,NA,4,NA,6,NA,NA,3,0,3,3,175,525
+30910,3541,WALLACE RD SE,Local Access,1,1932,Rural,1932,15,Olalla Elementary,2,Olalla Elementary,470,1,1,NA,3,NA,NA,1,1,2,2,470,940
+30910,3541,WALLACE RD SE,Local Access,1,1932,Rural,1932,15,Olalla Elementary,2,Olalla Elementary,51,1,1,NA,3,NA,NA,1,1,2,2,51,102
+30519,2456,OLALLA VALLEY RD SE,Major Collector,1,1372,Rural,1372,15,Olalla Elementary,2,Olalla Elementary,417,4,4,NA,6,NA,NA,3,3,6,6,417,2502
+30770,5070,FAGERUD RD SE,Local Access,1,3828,Rural,3828,15,Olalla Elementary,2,Olalla Elementary,379,NA,2,NA,3,NA,NA,1,0,1,1,379,379
+30900,7845,SE DENNY BOND BLVD,Local Access,1,522,Rural,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,522,0
+30519,5416,OLALLA VALLEY RD SE,Major Collector,1,838,Rural,838,15,Olalla Elementary,2,Olalla Elementary,254,4,4,NA,6,NA,NA,3,3,6,6,254,1524
+30519,13282,OLALLA VALLEY RD SE,Major Collector,1,1454,Rural,1454,15,Olalla Elementary,2,Olalla Elementary,442,4,4,NA,6,NA,NA,3,3,6,6,442,2652
+30519,13282,OLALLA VALLEY RD SE,Major Collector,1,1454,Rural,1454,15,Olalla Elementary,2,Olalla Elementary,50,4,NA,NA,6,NA,NA,0,3,3,3,50,150
+30519,13282,OLALLA VALLEY RD SE,Major Collector,1,1454,Rural,1454,15,Olalla Elementary,2,Olalla Elementary,51,NA,4,NA,6,NA,NA,3,0,3,3,51,153
+30519,4175,OLALLA VALLEY RD SE,Major Collector,1,3754,Rural,3754,15,Olalla Elementary,2,Olalla Elementary,54,4,4,NA,6,NA,NA,3,3,6,6,54,324
+30519,4175,OLALLA VALLEY RD SE,Major Collector,1,3754,Rural,3754,15,Olalla Elementary,2,Olalla Elementary,193,4,4,NA,6,NA,NA,3,3,6,6,193,1158
+23760,14344,SE BURLEY OLALLA RD,Major Collector,1,11,Rural,11,15,Olalla Elementary,2,Olalla Elementary,3,5,5,NA,6,NA,NA,3,3,6,6,3,18
+30519,14345,OLALLA VALLEY RD SE,Major Collector,1,54,Rural,54,15,Olalla Elementary,2,Olalla Elementary,16,4,4,NA,6,NA,NA,3,3,6,6,16,96
